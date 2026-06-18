@@ -51,7 +51,8 @@ const SYSTEM =
   "confidence-building, clear. No 'guess the diagnosis' game, no 'not medical advice' disclaimer, no emoji " +
   "spam. Every clinical fact MUST be correct and exam-standard; if unsure, pick a safer, well-established " +
   "topic. Each post is 6 slides: a hook, exactly 4 value slides, and a CTA. The CTA drives to the Recall " +
-  "Engine app (turn any lecture into questions, flashcards, and notes).";
+  "Engine app (turn any lecture into questions, flashcards, and notes). " +
+  "Captions must use NO dashes of any kind and commas only inside a genuine list; split other clauses into short sentences.";
 
 function userPrompt(n: number, existingTitles: string[]): string {
   return (
