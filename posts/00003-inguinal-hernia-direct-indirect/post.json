@@ -1,29 +1,56 @@
 {
   "slug": "00003-inguinal-hernia-direct-indirect",
   "number": 3,
+  "draft": true,
   "subject": "Groin Hernias",
   "title": "Direct vs Indirect Inguinal Hernia",
   "hook": "One artery tells you which is which. Miss it and you lose the classic groin question.",
   "points": [
     {
       "heading": "The inferior epigastric artery is the line",
-      "body": "Indirect hernias have a neck lateral to the inferior epigastric artery. Direct hernias have a neck medial to it. This single landmark is how examiners ask you to classify a groin hernia."
+      "icon": "an artery with a hernia neck crossing it",
+      "bullets": [
+        "Indirect: neck lateral to the inferior epigastric artery.",
+        "Direct: neck medial to the inferior epigastric artery.",
+        "This single landmark classifies any groin hernia."
+      ]
     },
     {
       "heading": "Indirect is congenital, direct is acquired",
-      "body": "Indirect hernias travel through a preexisting sac, a patent processus vaginalis, so they are developmental. Direct hernias are acquired and push straight through Hesselbach's triangle, making them more common in the elderly."
+      "icon": "a groin hernia bulge",
+      "bullets": [
+        "Indirect runs through a patent processus vaginalis sac.",
+        "Direct pushes straight through Hesselbach's triangle.",
+        "Direct is acquired, so more common in the elderly."
+      ]
     },
     {
       "heading": "Into the scrotum favours indirect",
-      "body": "A hernia that descends into the scrotum is almost always indirect. On coughing, an indirect bulge moves down the canal, while a direct hernia bulges straight out near the external ring."
+      "icon": "a scrotum with a descending hernia",
+      "bullets": [
+        "Descent into the scrotum is almost always indirect.",
+        "On coughing, indirect moves down the canal.",
+        "Direct bulges straight out near the external ring."
+      ]
     },
     {
       "heading": "Know the numbers",
-      "body": "Inguinal hernias are about 75% of all abdominal hernias, and most of those are indirect. The deep ring sits lateral to the inferior epigastric artery, about 1.25 cm above the midpoint of the inguinal ligament."
+      "icon": "an inguinal ligament with a marked deep ring",
+      "bullets": [
+        "Inguinal hernias: about 75% of abdominal hernias.",
+        "Most of those are indirect.",
+        "Deep ring: 1.25 cm above the ligament midpoint."
+      ]
     }
   ],
   "cta": "Lock in the groin landmarks",
-  "caption": "The inferior epigastric artery is the highest-yield landmark in groin hernia questions. Indirect is lateral and congenital, direct is medial and acquired, and scrotal descent strongly favours indirect. Recall Engine turns any lecture into SBAs, flashcards and high-yield notes so anatomy like this sticks the first time. Start free, link in bio.",
+  "captionLines": [
+    "One artery tells you which is which.",
+    "Indirect sits lateral to the inferior epigastric artery and is congenital. Direct sits medial and is acquired.",
+    "Scrotal descent strongly favours indirect, so use that landmark to nail the classic groin question.",
+    "Recall Engine turns any lecture into SBAs, MCQs, flashcards and high-yield notes, so hernia anatomy like this sticks the first time. 🧠",
+    "Start free, link in bio. 👇"
+  ],
   "hashtags": ["medstudent", "plab", "usmle", "surgery", "anatomy"],
   "postAt": "2026-06-20T19:00:00Z"
 }

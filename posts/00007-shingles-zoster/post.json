@@ -1,29 +1,56 @@
 {
   "slug": "00007-shingles-zoster",
   "number": 7,
+  "draft": true,
   "subject": "Virology",
   "title": "Shingles: The Zoster Decode",
   "hook": "Shingles is one fact away from a wrong answer. Here is the zoster story examiners test.",
   "points": [
     {
       "heading": "One virus, two diseases",
-      "body": "Primary VZV infection causes chickenpox in children. Reactivation years later causes herpes zoster, or shingles, driven by a decline in cell-mediated immunity. Most patients are over 50."
+      "icon": "a virus",
+      "bullets": [
+        "Primary VZV gives kids chickenpox.",
+        "Reactivation years later is herpes zoster.",
+        "Driven by waning cell-mediated immunity, mostly over 50."
+      ]
     },
     {
       "heading": "Latency in the dorsal root ganglia",
-      "body": "After chickenpox resolves, VZV stays dormant in the dorsal root ganglia. On reactivation it travels down a single sensory nerve, which is why zoster is unilateral and dermatomal."
+      "icon": "a dorsal root ganglion on a nerve",
+      "bullets": [
+        "After chickenpox, VZV lies dormant in dorsal root ganglia.",
+        "It reactivates down one sensory nerve.",
+        "That makes zoster unilateral and dermatomal."
+      ]
     },
     {
       "heading": "Pain comes before the rash",
-      "body": "A pre-eruptive phase of dermatomal pain or paraesthesia precedes the vesicles by 2 to 3 days. The rash is grouped vesicles on an erythematous base. Zoster sine herpete is dermatomal pain with no rash."
+      "icon": "a cluster of grouped vesicles",
+      "bullets": [
+        "Dermatomal pain or paraesthesia precedes vesicles by 2 to 3 days.",
+        "Rash is grouped vesicles on an erythematous base.",
+        "Zoster sine herpete: dermatomal pain, no rash."
+      ]
     },
     {
       "heading": "PHN: know the cutoff",
-      "body": "Post-herpetic neuralgia is pain persisting more than 3 months after the onset of the rash. Antivirals started within 72 hours shorten the attack and ease acute pain, though their benefit for preventing PHN is limited."
+      "icon": "a calendar with a clock",
+      "bullets": [
+        "PHN is pain over 3 months after rash onset.",
+        "Antivirals within 72 hours shorten attack, ease acute pain.",
+        "Their benefit for preventing PHN is limited."
+      ]
     }
   ],
   "cta": "Turn this lecture into recall",
-  "caption": "Shingles is a guaranteed exam topic, and it rewards precision: dorsal root ganglia latency, a unilateral dermatomal rash, PHN at more than 3 months after the rash, and the 72-hour antiviral window. Lock those four and you will not lose marks here. Recall Engine turns any lecture into SBAs, flashcards and high-yield notes, so your herpesvirus slides become a full question bank in minutes. Start free, link in bio.",
+  "captionLines": [
+    "Shingles is one fact away from a wrong answer.",
+    "Dorsal root ganglia latency, a unilateral dermatomal rash, PHN at more than 3 months after the rash, and the 72-hour antiviral window.",
+    "Lock those four and you will not lose marks here. 🎯",
+    "Recall Engine turns any lecture into SBAs, MCQs, flashcards and high-yield notes, so your herpesvirus slides become a full question bank in minutes.",
+    "Start free, link in bio. 👇"
+  ],
   "hashtags": ["medstudent", "usmle", "plab", "shingles", "medicalschool"],
   "postAt": "2026-06-24T19:00:00Z"
 }

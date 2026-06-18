@@ -1,29 +1,56 @@
 {
   "slug": "00004-hernia-strangulation-traps",
   "number": 4,
+  "draft": true,
   "subject": "Hernia Emergencies",
   "title": "Hernia Traps: Richter's and Femoral",
   "hook": "Some hernias kill bowel while looking almost normal. These are the strangulation traps.",
   "points": [
     {
       "heading": "Richter's: necrosis without obstruction",
-      "body": "In a Richter's hernia only one side of the bowel wall, the antimesenteric border, is trapped. The lumen stays patent, so the bowel can become ischaemic and perforate with no obstructive symptoms."
+      "icon": "a pinched loop of bowel",
+      "bullets": [
+        "Only the antimesenteric wall gets trapped.",
+        "The lumen stays patent, so no obstruction.",
+        "Bowel can still go ischaemic and perforate."
+      ]
     },
     {
       "heading": "Femoral hernias strangulate",
-      "body": "The femoral ring is rigid and narrow, so femoral hernias strangulate far more often than inguinal ones. They are commoner in older women, though inguinal remains the commonest hernia in women overall."
+      "icon": "a femoral hernia at the groin",
+      "bullets": [
+        "Rigid, narrow femoral ring strangulates more than inguinal.",
+        "Commoner in older women.",
+        "Inguinal is still the commonest hernia in women."
+      ]
     },
     {
       "heading": "The occult femoral hernia",
-      "body": "Consider an occult femoral hernia in an elderly woman with small bowel obstruction and no history of abdominal surgery. A tender groin lump without obstruction may be a Richter's hernia."
+      "icon": "an elderly woman silhouette",
+      "bullets": [
+        "Elderly woman, small bowel obstruction, no prior surgery.",
+        "Suspect an occult femoral hernia.",
+        "Tender groin lump without obstruction? Think Richter's."
+      ]
     },
     {
       "heading": "Never reduce a strangulated hernia",
-      "body": "A strangulated hernia is tender, irreducible and has no cough impulse, with toxicity and fever. Do not try to reduce it: you risk pushing ischaemic or gangrenous bowel back into the abdomen, where it can perforate and cause peritonitis."
+      "icon": "a hand crossed out over a lump",
+      "bullets": [
+        "Tender, irreducible, no cough impulse, toxic, febrile.",
+        "Reducing it pushes gangrenous bowel back inside.",
+        "That bowel can perforate and cause peritonitis."
+      ]
     }
   ],
   "cta": "Spot the strangulation traps",
-  "caption": "Richter's and femoral hernias are the high-yield traps: they can necrose bowel while masking the usual obstructive signs, and a strangulated hernia must never be forced back. Suspect an occult femoral hernia in an older woman with bowel obstruction and no surgical history. Recall Engine turns any lecture into SBAs, flashcards and high-yield notes so these classic traps become automatic. Start free, link in bio.",
+  "captionLines": [
+    "Some hernias kill bowel while looking almost normal.",
+    "Richter's stays patent so it necroses without obstruction, and the rigid femoral ring strangulates far more often than inguinal.",
+    "Suspect an occult femoral hernia in an older woman with bowel obstruction and no surgical history, and never force a strangulated hernia back.",
+    "Recall Engine turns any lecture into SBAs, MCQs, flashcards and high-yield notes, so these classic strangulation traps become automatic. 🩺",
+    "Start free, link in bio. 👇"
+  ],
   "hashtags": ["medstudent", "surgery", "plab", "usmle", "generalsurgery"],
   "postAt": "2026-06-21T19:00:00Z"
 }

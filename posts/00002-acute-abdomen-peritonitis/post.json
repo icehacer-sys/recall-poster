@@ -1,29 +1,56 @@
 {
   "slug": "00002-acute-abdomen-peritonitis",
   "number": 2,
+  "draft": true,
   "subject": "Acute Abdomen",
   "title": "Peritonitis: CXR vs Lipase Decoded",
   "hook": "One erect chest X-ray can point your peritonitic patient toward theatre. Here is the exam logic.",
   "points": [
     {
       "heading": "Spot peritonitis from the door",
-      "body": "Peritonitis is continuous pain, worse on movement or coughing, and the patient lies dead still. Contrast this with colic, where they are doubled up and restless."
+      "icon": "a patient lying still on a bed",
+      "bullets": [
+        "Continuous pain, worse on movement or coughing.",
+        "The patient lies dead still.",
+        "Colic is the opposite: doubled up, restless."
+      ]
     },
     {
       "heading": "Order the right two tests",
-      "body": "In generalised peritonitis the key investigations are an erect chest X-ray and serum lipase, or amylase if lipase is unavailable. Together they help separate the surgical causes from the ones you do not cut."
+      "icon": "a test tube and an X-ray film",
+      "bullets": [
+        "Generalised peritonitis: erect chest X-ray plus serum lipase.",
+        "No lipase? Amylase is your fallback.",
+        "Together they separate surgical from non-surgical causes."
+      ]
     },
     {
       "heading": "Air under the diaphragm",
-      "body": "Free gas under the diaphragm usually means a perforated viscus and, in a peritonitic patient, points to urgent surgery. A normal film does not exclude perforation, and a raised lipase with no free gas points to pancreatitis instead."
+      "icon": "a diaphragm with free gas beneath it",
+      "bullets": [
+        "Free gas usually means a perforated viscus, urgent surgery.",
+        "A normal film does not exclude perforation.",
+        "Raised lipase with no free gas? Think pancreatitis."
+      ]
     },
     {
       "heading": "Pancreatitis: hands off the knife",
-      "body": "Pancreatitis can cause generalised peritonitis but usually needs no laparotomy. Recognising this prevents a needless operation, and that decision is a classic exam point."
+      "icon": "a pancreas",
+      "bullets": [
+        "Pancreatitis can cause generalised peritonitis too.",
+        "But it usually needs no laparotomy.",
+        "Spotting it avoids a needless operation. Classic exam point."
+      ]
     }
   ],
   "cta": "Master the surgical emergency calls",
-  "caption": "Generalised peritonitis is a guaranteed exam topic, and the erect chest X-ray versus serum lipase split is how examiners test your reasoning. Free air usually means perforation and urgent surgery, though a normal film does not exclude it; a high lipase points to pancreatitis you usually do not operate on. Recall Engine turns any lecture into SBAs, flashcards and high-yield notes, so a single surgery PDF becomes a full set of exam questions. Start free, link in bio.",
+  "captionLines": [
+    "One erect chest X-ray can point your peritonitic patient toward theatre. 🩻",
+    "Generalised peritonitis is a guaranteed exam topic, and the erect chest X-ray versus serum lipase split is how examiners test your reasoning.",
+    "Free air usually means perforation and urgent surgery, though a normal film does not exclude it; a high lipase points to pancreatitis you usually do not operate on.",
+    "Recall Engine turns any lecture into SBAs, MCQs, flashcards and high-yield notes, so a single surgery PDF becomes a full set of acute-abdomen exam questions.",
+    "Start free, link in bio. 👇"
+  ],
   "hashtags": ["medstudent", "plab", "usmle", "surgery", "medicalstudent"],
   "postAt": "2026-06-19T19:00:00Z"
 }
