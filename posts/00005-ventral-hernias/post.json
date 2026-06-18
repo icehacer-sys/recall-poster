@@ -2,12 +2,12 @@
   "slug": "00005-ventral-hernias",
   "number": 5,
   "subject": "Ventral Hernias",
-  "title": "Ventral Hernias: The 80% Rule",
-  "hook": "One ventral hernia fact shows up on almost every exam. Most students miss the rest.",
+  "title": "Ventral Hernias: Classify and Don't Miss",
+  "hook": "Get the classification right and the dangerous one never slips past you. Swipe.",
   "points": [
     {
-      "heading": "Incisional hernias are 80%",
-      "body": "Incisional hernias are the most common ventral hernia, around 80% of cases. They follow laparotomy and, less often, laparoscopic port sites. Wound infection is the single most important cause."
+      "heading": "Incisional: the post-op hernia",
+      "body": "Incisional hernias are a common ventral hernia after abdominal surgery, especially after a laparotomy. Wound infection is the single most important risk factor. They occur far less often after laparoscopic port sites."
     },
     {
       "heading": "Epigastric vs paraumbilical",
@@ -22,8 +22,8 @@
       "body": "A Spigelian hernia sits along the linea semilunaris, with most below the umbilicus, where the defect lies under an intact external oblique. The landmark name is usually the answer."
     }
   ],
-  "cta": "Lock in every hernia number",
-  "caption": "Ventral hernias are pure exam gold: the 80% incisional rule, the narrow-neck paraumbilical trap, and the silent Richter's strangulation all turn up again and again. Master the classification and the landmarks and these become free marks. Recall Engine turns any lecture into SBAs, flashcards and high-yield notes so you can drill these exact facts until they stick. Start free, link in bio.",
+  "cta": "Lock in the hernia map",
+  "caption": "Ventral hernias are exam gold once you can classify them: incisional after surgery, the narrow-neck paraumbilical that loves to strangulate, the silent Richter's, and the Spigelian along the linea semilunaris. Master the map and the landmarks and these become free marks. Recall Engine turns any lecture into SBAs, flashcards and high-yield notes so you can drill these exact facts until they stick. Start free, link in bio.",
   "hashtags": ["medstudent", "surgery", "plab", "usmle", "medicalfinals"],
   "postAt": "2026-06-22T19:00:00Z"
 }

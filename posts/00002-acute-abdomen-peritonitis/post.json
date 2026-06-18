@@ -2,8 +2,8 @@
   "slug": "00002-acute-abdomen-peritonitis",
   "number": 2,
   "subject": "Acute Abdomen",
-  "title": "Peritonitis: CXR vs Amylase Decoded",
-  "hook": "One erect chest X-ray can decide whether your patient goes to theatre. Here is the exam logic.",
+  "title": "Peritonitis: CXR vs Lipase Decoded",
+  "hook": "One erect chest X-ray can point your peritonitic patient toward theatre. Here is the exam logic.",
   "points": [
     {
       "heading": "Spot peritonitis from the door",
@@ -11,11 +11,11 @@
     },
     {
       "heading": "Order the right two tests",
-      "body": "In generalised peritonitis the key investigations are an erect chest X-ray and serum amylase. Together they separate the surgical causes from the ones you do not cut."
+      "body": "In generalised peritonitis the key investigations are an erect chest X-ray and serum lipase, or amylase if lipase is unavailable. Together they help separate the surgical causes from the ones you do not cut."
     },
     {
       "heading": "Air under the diaphragm",
-      "body": "Free gas under the diaphragm on an erect chest X-ray means a perforated viscus, and that is your signal for laparotomy. No free gas with a markedly raised amylase points to pancreatitis instead."
+      "body": "Free gas under the diaphragm usually means a perforated viscus and, in a peritonitic patient, points to urgent surgery. A normal film does not exclude perforation, and a raised lipase with no free gas points to pancreatitis instead."
     },
     {
       "heading": "Pancreatitis: hands off the knife",
@@ -23,7 +23,7 @@
     }
   ],
   "cta": "Master the surgical emergency calls",
-  "caption": "Generalised peritonitis is a guaranteed exam topic, and the erect chest X-ray versus serum amylase split is exactly how examiners test your reasoning. Free air means perforation and theatre; a high amylase points to pancreatitis you usually do not operate on. Recall Engine turns any lecture into SBAs, flashcards and high-yield notes, so a single surgery PDF becomes a full set of exam questions. Start free, link in bio.",
+  "caption": "Generalised peritonitis is a guaranteed exam topic, and the erect chest X-ray versus serum lipase split is how examiners test your reasoning. Free air usually means perforation and urgent surgery, though a normal film does not exclude it; a high lipase points to pancreatitis you usually do not operate on. Recall Engine turns any lecture into SBAs, flashcards and high-yield notes, so a single surgery PDF becomes a full set of exam questions. Start free, link in bio.",
   "hashtags": ["medstudent", "plab", "usmle", "surgery", "medicalstudent"],
   "postAt": "2026-06-19T19:00:00Z"
 }

@@ -2,28 +2,28 @@
   "slug": "00006-varicocele",
   "number": 6,
   "subject": "Urology",
-  "title": "Varicocele: Why It Is Always Left",
+  "title": "Varicocele: Why It's Almost Always Left",
   "hook": "A bag of worms that empties when he lies down, and almost always on the left. Here is why.",
   "points": [
     {
       "heading": "The classic vignette",
-      "body": "A varicocele is dilated pampiniform plexus veins felt as a bag of worms. It empties on lying down and on elevating the scrotum, and reappears on standing."
+      "body": "A varicocele is dilated pampiniform plexus veins felt as a bag of worms. It empties on lying down and reappears on standing. One that fails to empty, or an isolated right-sided varicocele, is a red flag for a retroperitoneal mass."
     },
     {
       "heading": "Why the left side dominates",
       "body": "The left testicular vein is longer and joins the left renal vein at a right angle, raising pressure. The left renal vein can also be compressed between the aorta and SMA, the nutcracker effect."
     },
     {
-      "heading": "The number that defines it",
-      "body": "Normal pampiniform veins measure about 0.5 to 1.5 mm. A varicocele is diagnosed when the diameter exceeds 2 mm. Confirm with colour Doppler while standing or on Valsalva."
+      "heading": "How it is diagnosed",
+      "body": "Diagnose on ultrasound when the vein diameter exceeds about 3 mm with venous reflux on Valsalva. Diameter alone is not enough; you need the reflux. Confirm with colour Doppler standing or on Valsalva."
     },
     {
       "heading": "Fertility and management",
-      "body": "Raised scrotal temperature impairs spermatogenesis and can cause oligospermia. Varicocele is found in 15 to 20% of men but around 40% of infertile men. Asymptomatic cases need only reassurance and support."
+      "body": "Raised scrotal temperature impairs spermatogenesis and can cause oligospermia. Varicocele is found in 15 to 20% of men but around 40% of infertile men. Consider repair for testicular atrophy, abnormal semen analysis or significant symptoms; otherwise reassure."
     }
   ],
   "cta": "Lock in the left-side logic",
-  "caption": "Varicocele is a guaranteed mark if you can explain why it is almost always left: a longer vein, a right-angle renal entry, and the nutcracker compression between aorta and SMA. Add the bag of worms that empties on lying down and the 2 mm cutoff, and the vignette writes itself. Recall Engine turns any lecture into SBAs, flashcards and high-yield notes so anatomy like this becomes automatic recall. Start free, link in bio.",
+  "caption": "Varicocele is a guaranteed mark if you can explain why it is almost always left: a longer vein, a right-angle renal entry, and the nutcracker compression between aorta and SMA. Add the bag of worms that empties on lying down and the reflux on Valsalva, and the vignette writes itself. Remember the red flag: an isolated right-sided or non-emptying varicocele needs investigation for a retroperitoneal cause. Recall Engine turns any lecture into SBAs, flashcards and high-yield notes. Start free, link in bio.",
   "hashtags": ["medstudent", "plab", "usmle", "anatomy", "urology"],
   "postAt": "2026-06-23T19:00:00Z"
 }
