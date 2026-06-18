@@ -27,8 +27,10 @@ export interface Post {
   points: SlidePoint[];
   /** CTA slide headline (1-2 lines). The product pitch lives in the caption. */
   cta: string;
-  /** Caption body (hashtags are appended from `hashtags`). */
-  caption: string;
+  /** Caption as blocks, joined with a blank line between each (preferred). Add light emoji. */
+  captionLines?: string[];
+  /** Legacy single-string caption, used only if captionLines is absent. */
+  caption?: string;
   /** Hashtags without the leading '#'. Capped at 30. */
   hashtags: string[];
   /** ISO timestamp the post should go live. */

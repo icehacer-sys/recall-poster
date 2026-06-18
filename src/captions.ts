@@ -12,7 +12,9 @@ export function buildCaption(post: Post): string {
     .map((t) => `#${t.replace(/^#/, "").trim()}`)
     .filter((t) => t.length > 1)
     .join(" ");
-  const body = post.caption.trim();
+  const body = post.captionLines?.length
+    ? post.captionLines.map((l) => l.trim()).filter(Boolean).join("\n\n")
+    : (post.caption ?? "").trim();
   const full = tags ? `${body}\n\n${tags}` : body;
   return full.length > MAX_CAPTION ? full.slice(0, MAX_CAPTION) : full;
 }
