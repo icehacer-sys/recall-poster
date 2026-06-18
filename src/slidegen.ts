@@ -23,15 +23,14 @@ const BRAND =
   "background with the faint grid, the cyan 'R' recall logomark together with the 'Recall Engine' " +
   "wordmark, the bright cyan accent colour, the heavy white sans-serif typography, and the clean premium " +
   "medical-tech layout. Replace ALL existing words with ONLY the new text given below, spelled exactly and " +
-  "correctly, with no leftover text from the reference. No anatomical drawings, no photographs, no watermark.";
+  "correctly, with no leftover text from the reference. No anatomical drawings, no photographs, no watermark. " +
+  "Never add or double any trailing punctuation.";
 
-/** Bullet lines for a point: explicit bullets, else the paragraph body split into sentences. */
+/** Bullet lines for a point: explicit bullets, else the paragraph body split into sentences.
+ *  Trailing full stops are stripped because gpt-image-2 occasionally duplicates them into "..". */
 function pointLines(p: SlidePoint): string[] {
-  if (p.bullets && p.bullets.length) return p.bullets.map((b) => b.trim()).filter(Boolean);
-  return (p.body ?? "")
-    .split(/(?<=[.!?])\s+/)
-    .map((s) => s.trim())
-    .filter(Boolean);
+  const raw = p.bullets && p.bullets.length ? p.bullets : (p.body ?? "").split(/(?<=[.!?])\s+/);
+  return raw.map((b) => b.trim().replace(/\s*\.+$/, "")).filter(Boolean);
 }
 
 function hookPrompt(post: Post): string {
