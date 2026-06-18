@@ -1,0 +1,29 @@
+{
+  "slug": "00001-testicular-torsion",
+  "number": 1,
+  "subject": "Urology",
+  "title": "Testicular Torsion: The 6-Hour Clock",
+  "hook": "A teenager with sudden scrotal pain is a clock you cannot stop. Move, or lose the testis.",
+  "points": [
+    {
+      "heading": "Why it twists",
+      "body": "Torsion twists the spermatic cord, first obstructing venous outflow. Oedema builds, then arterial inflow fails, ending in necrosis. The classic predisposer is the bell clapper deformity, a high insertion of the tunica vaginalis."
+    },
+    {
+      "heading": "The exam-defining sign",
+      "body": "The cremasteric reflex is absent on the affected side. This is the hallmark that separates torsion from its mimics. Pair it with sudden severe pain, nausea and vomiting."
+    },
+    {
+      "heading": "Doppler confirms, never delays",
+      "body": "Doppler shows absent central testicular flow. If Doppler is unavailable or the picture is doubtful, explore surgically rather than wait. Imaging must never cost you the testis."
+    },
+    {
+      "heading": "Fix both sides",
+      "body": "Treatment is exploration, detorsion and orchidopexy of the affected testis. Always fix the contralateral testis too, because the same anatomy predisposes it to torsion."
+    }
+  ],
+  "cta": "Beat the clock on torsion",
+  "caption": "Testicular torsion is the question examiners love because the answer is time. Salvage is near 100% within 6 hours and falls sharply beyond 24 hours, so absent cremasteric reflex plus sudden pain means theatre, not delay. Recall Engine turns any lecture into SBAs, flashcards and high-yield notes so the 6-hour rule sticks before exam day. Start free, link in bio.",
+  "hashtags": ["medstudent", "plab", "usmle", "urology", "surgery"],
+  "postAt": "2026-06-18T19:00:00Z"
+}
