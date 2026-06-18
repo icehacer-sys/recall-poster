@@ -3,27 +3,47 @@
   "number": 1,
   "subject": "Urology",
   "title": "Testicular Torsion: The 6-Hour Clock",
-  "hook": "A teenager with sudden scrotal pain is a clock you cannot stop. Move, or lose the testis.",
+  "hook": "Sudden scrotal pain in a teenager is a clock you cannot stop. Move, or lose the testis.",
   "points": [
     {
       "heading": "Why it twists",
-      "body": "Torsion twists the spermatic cord, first obstructing venous outflow. Oedema builds, then arterial inflow fails, ending in necrosis. The classic predisposer is the bell clapper deformity, a high insertion of the tunica vaginalis."
+      "icon": "a twisted spiral cord",
+      "bullets": [
+        "The cord twists and blocks venous outflow first",
+        "Then the artery is choked and the testis necroses",
+        "Classic setup: the bell clapper deformity"
+      ]
     },
     {
       "heading": "A useful but imperfect sign",
-      "body": "The cremasteric reflex is usually absent on the affected side, a helpful pointer but not reliable on its own. A present reflex does not exclude torsion. Pair it with sudden severe pain, nausea and vomiting, and never let it delay exploration."
+      "icon": "a warning triangle",
+      "bullets": [
+        "Cremasteric reflex is usually absent on that side",
+        "But a present reflex does NOT rule out torsion",
+        "Sudden severe pain, often nausea and vomiting"
+      ]
     },
     {
       "heading": "Doppler confirms, never delays",
-      "body": "Doppler shows absent central testicular flow. If Doppler is unavailable or the picture is doubtful, explore surgically rather than wait. Imaging must never cost you the testis."
+      "icon": "an ultrasound waveform",
+      "bullets": [
+        "Doppler shows absent central testicular flow",
+        "No scan or a doubtful picture means explore now",
+        "Imaging must never cost you the testis"
+      ]
     },
     {
       "heading": "Fix both sides",
-      "body": "Treatment is exploration, detorsion and orchidopexy of the affected testis. Always fix the contralateral testis too, because the same anatomy predisposes it to torsion."
+      "icon": "two testes with a clock",
+      "bullets": [
+        "Explore, detorse and orchidopexy the affected side",
+        "Always fix the other testis too, same anatomy",
+        "The 6-hour window decides if it survives"
+      ]
     }
   ],
   "cta": "Beat the clock on torsion",
-  "caption": "Testicular torsion is the question examiners love because the answer is time. Salvage is near 100% within 6 hours and falls sharply beyond 24 hours, so sudden pain with a high-riding testis means theatre, not delay. Recall Engine turns any lecture into SBAs, flashcards and high-yield notes so the 6-hour rule sticks before exam day. Start free, link in bio.",
+  "caption": "You see a teenager with sudden, severe scrotal pain. The clock is already running. Salvage is near 100% inside 6 hours, then it falls off a cliff after 24. So when the cremasteric reflex is gone and the pain came on fast, that is theatre, not \"wait for the scan.\" Miss the window and the testis is lost. Save this for your surgery rotation. Recall Engine turns any lecture into SBAs, MCQs, flashcards and notes, so facts like this stick before exam day. Start free, link in bio.",
   "hashtags": [
     "medstudent",
     "plab",

@@ -1,9 +1,14 @@
 // Shared contracts for the poster.
 
-/** One value slide: a short heading + body. */
+/** One value slide: a short heading + a few spaced bullet lines + an optional icon hint. */
 export interface SlidePoint {
   heading: string;
-  body: string;
+  /** Preferred: short bullet lines, rendered as a spaced list (not a paragraph). */
+  bullets?: string[];
+  /** Legacy paragraph body; split into sentence lines when no bullets are given. */
+  body?: string;
+  /** Hint for the small on-slide infographic icon (cyan line art). */
+  icon?: string;
 }
 
 /** A single carousel post. Persisted as posts/<slug>/post.json. */
