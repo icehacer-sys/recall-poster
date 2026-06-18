@@ -41,7 +41,8 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
-          GITHUB_RAW_BASE: ${{ secrets.GITHUB_RAW_BASE }}
+          # Derived from the repo so there is no secret to set (and no placeholder to get wrong).
+          GITHUB_RAW_BASE: https://raw.githubusercontent.com/${{ github.repository }}/main
           BOT_CONFIRM_LIVE: "yes"
         run: |
           set -u
