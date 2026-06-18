@@ -78,13 +78,18 @@ export async function generateSlides(post: Post): Promise<Buffer[]> {
   const cover = await sharp(readFileSync(COVER_REF)).png().toBuffer();
   const content = await sharp(readFileSync(CONTENT_REF)).png().toBuffer();
 
-  const jobs: Array<Promise<Buffer>> = [];
-  jobs.push(generateSlideImageRef(hookPrompt(post), cover));
-  post.points.forEach((_, i) => jobs.push(generateSlideImageRef(pointPrompt(post, i), content)));
-  jobs.push(generateSlideImageRef(ctaPrompt(post), cover));
+  const jobs: Array<{ prompt: string; ref: Buffer }> = [
+    { prompt: hookPrompt(post), ref: cover },
+    ...post.points.map((_, i) => ({ prompt: pointPrompt(post, i), ref: content })),
+    { prompt: ctaPrompt(post), ref: cover },
+  ];
 
-  const raw = await Promise.all(jobs);
-  return Promise.all(raw.map((b) => toSquareJpeg(b)));
+  // Render sequentially to respect the gpt-image-2 input-images/min rate limit (concurrency 429s).
+  const out: Buffer[] = [];
+  for (const job of jobs) {
+    out.push(await toSquareJpeg(await generateSlideImageRef(job.prompt, job.ref)));
+  }
+  return out;
 }
 
 /** Normalize a generated image to a config.slideSize square JPEG. */

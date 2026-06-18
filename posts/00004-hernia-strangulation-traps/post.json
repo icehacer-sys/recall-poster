@@ -1,7 +1,6 @@
 {
   "slug": "00004-hernia-strangulation-traps",
   "number": 4,
-  "draft": true,
   "subject": "Hernia Emergencies",
   "title": "Hernia Traps: Richter's and Femoral",
   "hook": "Some hernias kill bowel while looking almost normal. These are the strangulation traps.",
@@ -51,6 +50,20 @@
     "Recall Engine turns any lecture into SBAs, MCQs, flashcards and high-yield notes, so these classic strangulation traps become automatic. 🩺",
     "Start free, link in bio. 👇"
   ],
-  "hashtags": ["medstudent", "surgery", "plab", "usmle", "generalsurgery"],
-  "postAt": "2026-06-21T19:00:00Z"
+  "hashtags": [
+    "medstudent",
+    "surgery",
+    "plab",
+    "usmle",
+    "generalsurgery"
+  ],
+  "postAt": "2026-06-21T19:00:00Z",
+  "slides": [
+    "slide1.jpg",
+    "slide2.jpg",
+    "slide3.jpg",
+    "slide4.jpg",
+    "slide5.jpg",
+    "slide6.jpg"
+  ]
 }

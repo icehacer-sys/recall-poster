@@ -7,11 +7,12 @@
 //                    nothing. The runner commits + pushes these, so the image URLs are public
 //                    BEFORE --live fetches them.
 //   --dry-run        Like --render, but also prints each caption. Posts nothing. (default)
-//   --live           Publish every due post (postAt <= now) whose slides are already rendered
-//                    AND committed. Never generates inline (freshly generated slides are not
-//                    public yet). Requires BOT_CONFIRM_LIVE=yes and GITHUB_RAW_BASE.
+//   --live           Publish every due post (postAt <= now) whose slides exist on disk (and so,
+//                    once committed, are public). Never generates inline. Requires
+//                    BOT_CONFIRM_LIVE=yes and GITHUB_RAW_BASE.
 //
-// state.json guarantees a post is never published twice.
+// "Slides ready" is judged by the actual files on disk, not a JSON field, so editing a post.json
+// can never make a rendered post look unrendered. state.json records postedAt for idempotency.
 
 import { writeFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
@@ -44,22 +45,19 @@ function isBlockedDraft(post: Post): boolean {
   return Boolean(post.draft);
 }
 
-/** True only when every slide image for the post actually exists on disk. */
+/** Expected slide filenames (slide1.jpg .. slideN.jpg), N = 4 points + hook + cta. */
+function expectedSlides(post: Post): string[] {
+  return Array.from({ length: post.points.length + 2 }, (_, i) => slideFile(i + 1));
+}
+
+/** Ready to publish when every expected slide image is on disk (committed -> publicly hosted). */
 function slidesPresent(post: Post): boolean {
-  return (
-    Boolean(post.slides?.length) &&
-    post.slides!.every((f) => existsSync(join(config.postsDir, post.folder!, f)))
-  );
+  return expectedSlides(post).every((f) => existsSync(join(config.postsDir, post.folder!, f)));
 }
 
-/** Slides are usable for publishing only when generated AND present on disk (committable). */
-function slidesReady(post: Post, state: State): boolean {
-  return Boolean(state.get(post.slug).slidesGeneratedAt) && slidesPresent(post);
-}
-
-/** Generate + persist slide images for a post unless already ready on disk (or force). */
+/** Generate + persist slide images for a post unless already on disk (or force). */
 async function renderSlides(post: Post, state: State, force = false): Promise<string[]> {
-  if (!force && slidesReady(post, state)) return post.slides!;
+  if (!force && slidesPresent(post)) return expectedSlides(post);
 
   const count = post.points.length + 2;
   console.log(`  generating ${count} slides for ${post.folder} ...`);
@@ -115,7 +113,7 @@ async function main(): Promise<void> {
     return;
   }
 
-  // --- live: publish every due post whose slides are already rendered AND committed ---
+  // --- live: publish every due post whose slides exist on disk ---
   if (!config.confirmLive) throw new Error("Live posting requires BOT_CONFIRM_LIVE=yes.");
   if (!config.githubRawBase) {
     throw new Error("GITHUB_RAW_BASE must be set so Meta can fetch the slide images.");
@@ -128,13 +126,14 @@ async function main(): Promise<void> {
 
     // Never generate here: only already-committed slides have public URLs that resolve when
     // Meta fetches them. Render + push first; this run picks them up on the next pass.
-    if (!slidesReady(post, state)) {
-      console.log(`  ${post.folder}: slides not rendered+committed yet, skipping (run --render then push).`);
+    if (!slidesPresent(post)) {
+      console.log(`  ${post.folder}: slides not on disk yet, skipping (run --render then push).`);
       continue;
     }
-    const urls = post.slides!.map((f) => imageUrl(post.folder!, f));
+    const files = expectedSlides(post);
+    const urls = files.map((f) => imageUrl(post.folder!, f));
     const caption = buildCaption(post);
-    console.log(`Publishing ${post.folder} (${post.slides!.length} slides) ...`);
+    console.log(`Publishing ${post.folder} (${files.length} slides) ...`);
     try {
       const id = await publishCarousel(urls, caption);
       state.set(post.slug, { postedAt: new Date().toISOString(), igMediaId: id });

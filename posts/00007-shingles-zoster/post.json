@@ -1,7 +1,6 @@
 {
   "slug": "00007-shingles-zoster",
   "number": 7,
-  "draft": true,
   "subject": "Virology",
   "title": "Shingles: The Zoster Decode",
   "hook": "Shingles is one fact away from a wrong answer. Here is the zoster story examiners test.",
@@ -51,6 +50,20 @@
     "Recall Engine turns any lecture into SBAs, MCQs, flashcards and high-yield notes, so your herpesvirus slides become a full question bank in minutes.",
     "Start free, link in bio. 👇"
   ],
-  "hashtags": ["medstudent", "usmle", "plab", "shingles", "medicalschool"],
-  "postAt": "2026-06-24T19:00:00Z"
+  "hashtags": [
+    "medstudent",
+    "usmle",
+    "plab",
+    "shingles",
+    "medicalschool"
+  ],
+  "postAt": "2026-06-24T19:00:00Z",
+  "slides": [
+    "slide1.jpg",
+    "slide2.jpg",
+    "slide3.jpg",
+    "slide4.jpg",
+    "slide5.jpg",
+    "slide6.jpg"
+  ]
 }

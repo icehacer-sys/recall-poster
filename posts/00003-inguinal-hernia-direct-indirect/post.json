@@ -1,7 +1,6 @@
 {
   "slug": "00003-inguinal-hernia-direct-indirect",
   "number": 3,
-  "draft": true,
   "subject": "Groin Hernias",
   "title": "Direct vs Indirect Inguinal Hernia",
   "hook": "One artery tells you which is which. Miss it and you lose the classic groin question.",
@@ -12,7 +11,7 @@
       "bullets": [
         "Indirect: neck lateral to the inferior epigastric artery.",
         "Direct: neck medial to the inferior epigastric artery.",
-        "This single landmark classifies any groin hernia."
+        "This landmark separates direct from indirect inguinal hernias."
       ]
     },
     {
@@ -39,7 +38,7 @@
       "bullets": [
         "Inguinal hernias: about 75% of abdominal hernias.",
         "Most of those are indirect.",
-        "Deep ring: 1.25 cm above the ligament midpoint."
+        "Deep ring: ~1.25 cm above the mid-inguinal point."
       ]
     }
   ],
@@ -51,6 +50,20 @@
     "Recall Engine turns any lecture into SBAs, MCQs, flashcards and high-yield notes, so hernia anatomy like this sticks the first time. 🧠",
     "Start free, link in bio. 👇"
   ],
-  "hashtags": ["medstudent", "plab", "usmle", "surgery", "anatomy"],
-  "postAt": "2026-06-20T19:00:00Z"
+  "hashtags": [
+    "medstudent",
+    "plab",
+    "usmle",
+    "surgery",
+    "anatomy"
+  ],
+  "postAt": "2026-06-20T19:00:00Z",
+  "slides": [
+    "slide1.jpg",
+    "slide2.jpg",
+    "slide3.jpg",
+    "slide4.jpg",
+    "slide5.jpg",
+    "slide6.jpg"
+  ]
 }

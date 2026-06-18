@@ -1,7 +1,6 @@
 {
   "slug": "00002-acute-abdomen-peritonitis",
   "number": 2,
-  "draft": true,
   "subject": "Acute Abdomen",
   "title": "Peritonitis: CXR vs Lipase Decoded",
   "hook": "One erect chest X-ray can point your peritonitic patient toward theatre. Here is the exam logic.",
@@ -51,6 +50,20 @@
     "Recall Engine turns any lecture into SBAs, MCQs, flashcards and high-yield notes, so a single surgery PDF becomes a full set of acute-abdomen exam questions.",
     "Start free, link in bio. 👇"
   ],
-  "hashtags": ["medstudent", "plab", "usmle", "surgery", "medicalstudent"],
-  "postAt": "2026-06-19T19:00:00Z"
+  "hashtags": [
+    "medstudent",
+    "plab",
+    "usmle",
+    "surgery",
+    "medicalstudent"
+  ],
+  "postAt": "2026-06-19T19:00:00Z",
+  "slides": [
+    "slide1.jpg",
+    "slide2.jpg",
+    "slide3.jpg",
+    "slide4.jpg",
+    "slide5.jpg",
+    "slide6.jpg"
+  ]
 }

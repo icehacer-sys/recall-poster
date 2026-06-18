@@ -58,15 +58,23 @@ jobs:
             return 1
           }
 
+          # Top up the content queue once per chain link (not on every poll).
+          npm run generate || true
+          git add -A
+          git commit -m "chore: queue top-up [skip ci]" || true
+          push_retry || echo "warn: queue push failed"
+
+          # Poll every 60s so a due post publishes within ~1 minute of its scheduled time.
           end=$(( $(date +%s) + 5 * 3600 ))
           while [ "$(date +%s)" -lt "$end" ]; do
             git pull --rebase --autostash || true   # adopt state from any sibling chain link
 
-            npm run generate || true
             npm run render || true
             git add -A
-            git commit -m "chore: render slides + queue [skip ci]" || true
-            push_retry || echo "warn: slide/queue push failed, will retry next loop"
+            if ! git diff --cached --quiet; then
+              git commit -m "chore: render slides [skip ci]"
+              push_retry || echo "warn: slide push failed, will retry next loop"
+            fi
 
             npm run live || true
             git add -A
@@ -76,7 +84,7 @@ jobs:
               push_retry || { echo "FATAL: could not push post state; aborting to avoid double-post"; exit 1; }
             fi
 
-            sleep 900
+            sleep 60
           done
 
       - name: rechain

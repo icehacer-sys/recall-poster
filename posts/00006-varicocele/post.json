@@ -1,7 +1,6 @@
 {
   "slug": "00006-varicocele",
   "number": 6,
-  "draft": true,
   "subject": "Urology",
   "title": "Varicocele: Why It's Almost Always Left",
   "hook": "A bag of worms that empties when he lies down, and almost always on the left. Here is why.",
@@ -51,6 +50,20 @@
     "Recall Engine turns any lecture into SBAs, MCQs, flashcards and high-yield notes, so the left-side logic and reflux criteria stick before your exam.",
     "Start free, link in bio. 👇"
   ],
-  "hashtags": ["medstudent", "plab", "usmle", "anatomy", "urology"],
-  "postAt": "2026-06-23T19:00:00Z"
+  "hashtags": [
+    "medstudent",
+    "plab",
+    "usmle",
+    "anatomy",
+    "urology"
+  ],
+  "postAt": "2026-06-23T19:00:00Z",
+  "slides": [
+    "slide1.jpg",
+    "slide2.jpg",
+    "slide3.jpg",
+    "slide4.jpg",
+    "slide5.jpg",
+    "slide6.jpg"
+  ]
 }

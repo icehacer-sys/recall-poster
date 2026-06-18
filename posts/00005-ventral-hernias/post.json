@@ -1,7 +1,6 @@
 {
   "slug": "00005-ventral-hernias",
   "number": 5,
-  "draft": true,
   "subject": "Ventral Hernias",
   "title": "Ventral Hernias: Classify and Don't Miss",
   "hook": "Get the classification right and the dangerous one never slips past you. Swipe.",
@@ -51,6 +50,20 @@
     "Recall Engine turns any lecture into SBAs, MCQs, flashcards and high-yield notes, so you can drill these exact hernia facts until they stick.",
     "Start free, link in bio. 👇"
   ],
-  "hashtags": ["medstudent", "surgery", "plab", "usmle", "medicalfinals"],
-  "postAt": "2026-06-22T19:00:00Z"
+  "hashtags": [
+    "medstudent",
+    "surgery",
+    "plab",
+    "usmle",
+    "medicalfinals"
+  ],
+  "postAt": "2026-06-22T19:00:00Z",
+  "slides": [
+    "slide1.jpg",
+    "slide2.jpg",
+    "slide3.jpg",
+    "slide4.jpg",
+    "slide5.jpg",
+    "slide6.jpg"
+  ]
 }

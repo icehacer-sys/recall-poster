@@ -45,7 +45,16 @@ export async function generateSlideImage(prompt: string, size = config.imageSize
  * keeps the reference's logo, grid, colours and layout and applies the prompt's new text.
  * `ref` must be a PNG buffer.
  */
-export async function generateSlideImageRef(prompt: string, refPng: Buffer, size = config.imageSize): Promise<Buffer> {
+function sleepMs(ms: number): Promise<void> {
+  return new Promise((r) => setTimeout(r, ms));
+}
+
+export async function generateSlideImageRef(
+  prompt: string,
+  refPng: Buffer,
+  size = config.imageSize,
+  attempt = 0,
+): Promise<Buffer> {
   const form = new FormData();
   form.append("model", config.imageModel);
   form.append("prompt", prompt);
@@ -59,6 +68,15 @@ export async function generateSlideImageRef(prompt: string, refPng: Buffer, size
     body: form,
   });
   const text = await res.text();
+
+  // gpt-image-2 has a low input-images/min limit; honour 429 and retry after the suggested wait.
+  if (res.status === 429 && attempt < 6) {
+    const m = text.match(/try again in ([\d.]+)\s*s/i);
+    const waitMs = (m ? Math.ceil(parseFloat(m[1]) * 1000) : 15000) + 1500;
+    await sleepMs(waitMs);
+    return generateSlideImageRef(prompt, refPng, size, attempt + 1);
+  }
+
   let json: any;
   try {
     json = text ? JSON.parse(text) : {};
