@@ -1,0 +1,29 @@
+{
+  "slug": "00007-antibiotics-mechanism",
+  "number": 7,
+  "subject": "Pharmacology",
+  "title": "Antibiotics by mechanism, made memorable",
+  "hook": "Stop memorising lists. Group them by what they attack. Swipe.",
+  "points": [
+    {
+      "heading": "Cell wall",
+      "body": "Beta-lactams (penicillins, cephalosporins, carbapenems) and glycopeptides such as vancomycin attack the bacterial cell wall."
+    },
+    {
+      "heading": "Protein synthesis",
+      "body": "Macrolides, tetracyclines, aminoglycosides and chloramphenicol jam the ribosome. Aminoglycosides and tetracyclines hit the 30S subunit; the rest hit the 50S."
+    },
+    {
+      "heading": "DNA and folate",
+      "body": "Fluoroquinolones inhibit DNA gyrase. Trimethoprim and sulfonamides block folate synthesis the bacteria need to make DNA."
+    },
+    {
+      "heading": "Why it matters",
+      "body": "Mechanism predicts spectrum, side effects and resistance. Group the drugs by target and the details fall into place."
+    }
+  ],
+  "cta": "Understand it once, recall it forever",
+  "caption": "Antibiotics stop being a memory dump the moment you group them by target. Cell wall, protein synthesis, DNA and folate: four buckets that organise almost everything. Mechanism then predicts spectrum, side effects and resistance. Save this for your micro and pharmacology exams. Recall Engine builds questions and flashcards from your own pharmacology lectures. Start free, link in bio.",
+  "hashtags": ["medstudent", "medschool", "meded", "usmle", "pharmacology", "antibiotics", "microbiology", "osce", "step1", "plab", "mbbs", "futuredoctor", "medicalstudent", "highyield", "medstudygram"],
+  "postAt": "2026-06-24T19:00:00Z"
+}

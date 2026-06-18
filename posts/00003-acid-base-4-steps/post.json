@@ -1,0 +1,29 @@
+{
+  "slug": "00003-acid-base-4-steps",
+  "number": 3,
+  "subject": "Acid-Base",
+  "title": "Acid-base disorders in 4 steps",
+  "hook": "The approach that turns a scary ABG into easy marks. Swipe.",
+  "points": [
+    {
+      "heading": "Step 1: read the pH",
+      "body": "Is the patient acidotic (pH below 7.35) or alkalotic (pH above 7.45)? This sets the primary direction before anything else."
+    },
+    {
+      "heading": "Step 2: find the driver",
+      "body": "Look at CO2 and bicarbonate. In respiratory disorders the pH and CO2 move in opposite directions. In metabolic disorders the pH and bicarbonate move in the same direction."
+    },
+    {
+      "heading": "Step 3: check compensation",
+      "body": "Is the other system compensating? Compensation shifts the values back toward normal but never overcorrects the pH past the midline."
+    },
+    {
+      "heading": "Step 4: anion gap",
+      "body": "For a metabolic acidosis, calculate the anion gap. A high gap points to lactate, ketones, toxins or renal failure. A normal gap points to GI or renal bicarbonate loss."
+    }
+  ],
+  "cta": "Frameworks make facts stick",
+  "caption": "ABGs feel scary until you have a system. Read the pH, find whether CO2 or bicarbonate is driving it, check for compensation, then work the anion gap for a metabolic acidosis. Four steps, every time. Save this for placement. Recall Engine turns your respiratory and renal lectures into practice questions and flashcards. Start free, link in bio.",
+  "hashtags": ["medstudent", "medschool", "meded", "usmle", "abg", "acidbase", "medicine", "osce", "step1", "plab", "mbbs", "futuredoctor", "medicalstudent", "highyield", "medstudygram"],
+  "postAt": "2026-06-20T19:00:00Z"
+}

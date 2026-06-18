@@ -1,0 +1,44 @@
+// Shared contracts for the poster.
+
+/** One value slide: a short heading + body. */
+export interface SlidePoint {
+  heading: string;
+  body: string;
+}
+
+/** A single carousel post. Persisted as posts/<slug>/post.json. */
+export interface Post {
+  /** Stable id, also the folder name (e.g. "00001-heart-murmurs"). */
+  slug: string;
+  /** Sequence number (derived from the folder's leading digits if absent). */
+  number?: number;
+  /** Subject eyebrow, e.g. "Cardiology". */
+  subject: string;
+  /** Slide 1 headline (the hook). */
+  title: string;
+  /** Slide 1 subline. */
+  hook: string;
+  /** Value slides (aim for 4 -> 6 total slides with hook + CTA). */
+  points: SlidePoint[];
+  /** CTA slide headline (1-2 lines). The product pitch lives in the caption. */
+  cta: string;
+  /** Caption body (hashtags are appended from `hashtags`). */
+  caption: string;
+  /** Hashtags without the leading '#'. Capped at 30. */
+  hashtags: string[];
+  /** ISO timestamp the post should go live. */
+  postAt: string;
+  /** Generated slide image filenames, in order. Filled by the renderer. */
+  slides?: string[];
+  /** Generator-created topics start as drafts; they only post when approved/auto-approved. */
+  draft?: boolean;
+  /** Set by the loader = directory name. Not persisted. */
+  folder?: string;
+}
+
+/** Per-post run state, persisted in state.json keyed by slug. */
+export interface PostState {
+  slidesGeneratedAt?: string;
+  postedAt?: string;
+  igMediaId?: string;
+}

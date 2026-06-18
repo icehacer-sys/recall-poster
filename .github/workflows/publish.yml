@@ -1,0 +1,68 @@
+name: publish
+
+# Perpetual poll-and-rechain runner. GitHub throttles fine-grained cron, so one job
+# loops for ~5h (top-up queue -> render+commit slides -> publish due posts), then
+# re-dispatches itself. A sparse safety cron restarts the chain if it ever dies.
+#
+# Posting is idempotent (state.json records postedAt), so an occasional overlap of two
+# runs never double-posts.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *" # safety net: relaunch a dead chain (concurrency keeps it to one)
+
+concurrency:
+  group: recall-poster
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - run: npm ci
+
+      - name: poll, render, publish loop
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          GITHUB_RAW_BASE: ${{ secrets.GITHUB_RAW_BASE }}
+          BOT_CONFIRM_LIVE: "yes"
+        run: |
+          git config user.name "recall-poster bot"
+          git config user.email "bot@users.noreply.github.com"
+          end=$(( $(date +%s) + 5 * 3600 ))
+          while [ "$(date +%s)" -lt "$end" ]; do
+            npm run generate || true
+            npm run render || true
+            git add -A && git commit -m "chore: render slides + queue [skip ci]" || true
+            git pull --rebase --autostash || true
+            git push || true
+
+            npm run live || true
+            git add -A && git commit -m "chore: record post state [skip ci]" || true
+            git pull --rebase --autostash || true
+            git push || true
+
+            sleep 900
+          done
+
+      - name: rechain
+        if: ${{ always() }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run publish.yml

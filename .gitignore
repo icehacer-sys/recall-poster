@@ -1,0 +1,18 @@
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Deps + build
+node_modules/
+dist/
+
+# Logs / OS
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# NOTE: posts/ and state.json are intentionally TRACKED.
+# Slide images must be public (raw.githubusercontent.com) for Meta to fetch them,
+# and state.json is committed back by the runner so restarts never double-post.

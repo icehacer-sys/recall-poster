@@ -1,0 +1,29 @@
+{
+  "slug": "00001-heart-murmurs",
+  "number": 1,
+  "subject": "Cardiology",
+  "title": "4 heart murmurs that win you marks",
+  "hook": "Get these right and you bank easy exam points. Swipe.",
+  "points": [
+    {
+      "heading": "Aortic stenosis",
+      "body": "Ejection systolic murmur, loudest at the right 2nd intercostal space, radiating to the carotids. Slow-rising pulse and narrow pulse pressure. Classic triad: syncope, angina, dyspnoea."
+    },
+    {
+      "heading": "Mitral regurgitation",
+      "body": "Pansystolic murmur at the apex, radiating to the axilla. Soft S1, often a third heart sound. Causes include post-MI, mitral valve prolapse and LV dilatation."
+    },
+    {
+      "heading": "Aortic regurgitation",
+      "body": "Early diastolic murmur at the left sternal edge, best heard sitting forward in expiration. Collapsing pulse and wide pulse pressure."
+    },
+    {
+      "heading": "Mitral stenosis",
+      "body": "Mid-diastolic rumble at the apex with a loud S1 and an opening snap. Strongly linked to atrial fibrillation and rheumatic heart disease."
+    }
+  ],
+  "cta": "Turn your lectures into exam questions",
+  "caption": "Four murmurs that turn up in almost every cardiology exam, and the ones students mix up most. Aortic stenosis radiates to the carotids, mitral regurgitation to the axilla, and aortic regurgitation gives you the collapsing pulse. Master one system at a time and the marks follow. Want this for your own lectures? Recall Engine turns any lecture into SBAs, flashcards and high-yield notes. Start free, link in bio.",
+  "hashtags": ["medstudent", "medschool", "meded", "usmle", "cardiology", "medicine", "osce", "step1", "plab", "mbbs", "futuredoctor", "medicalstudent", "highyield", "studygram", "medstudygram"],
+  "postAt": "2026-06-18T19:00:00Z"
+}

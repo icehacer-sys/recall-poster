@@ -1,0 +1,29 @@
+{
+  "slug": "00002-dka-vs-hhs",
+  "number": 2,
+  "subject": "Endocrinology",
+  "title": "DKA vs HHS without the confusion",
+  "hook": "Two emergencies, one comparison you must know cold. Swipe.",
+  "points": [
+    {
+      "heading": "Who and how fast",
+      "body": "DKA: younger, type 1 diabetes, onset over hours. HHS: older, type 2 diabetes, onset over days with marked dehydration."
+    },
+    {
+      "heading": "Glucose and ketones",
+      "body": "DKA: raised glucose with high ketones, pH below 7.3 and low bicarbonate. HHS: very high glucose (often above 30 mmol/L) with minimal ketones and near-normal pH."
+    },
+    {
+      "heading": "Osmolality",
+      "body": "HHS is defined by a very high serum osmolality (above 320), which drives the hyperosmolar state. In DKA the osmolality is usually less extreme."
+    },
+    {
+      "heading": "Management priorities",
+      "body": "Both need fluids first, then insulin and careful potassium. HHS needs slower correction and VTE prophylaxis. In DKA, watch for cerebral oedema, especially in younger patients."
+    }
+  ],
+  "cta": "Stop re-reading. Start recalling.",
+  "caption": "DKA and HHS get confused under pressure, so lock in the differences now. DKA is a ketoacidosis in younger type 1 patients over hours; HHS is a hyperosmolar state in older type 2 patients over days. Fluids come first in both. Save this before your next on-call. Recall Engine builds the questions and flashcards from your own endocrine lectures. Start free, link in bio.",
+  "hashtags": ["medstudent", "medschool", "meded", "usmle", "endocrinology", "diabetes", "medicine", "osce", "step1", "plab", "mbbs", "futuredoctor", "medicalstudent", "highyield", "medstudygram"],
+  "postAt": "2026-06-19T19:00:00Z"
+}
