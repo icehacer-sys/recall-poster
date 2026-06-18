@@ -1,6 +1,7 @@
 // Queue top-up. Keeps BOT_QUEUE_TARGET un-posted posts ahead by asking Claude for new
 // high-yield topics in the Recall Engine voice. New topics are written as draft posts the
-// owner reviews (they only go live once BOT_AUTO_APPROVE=on or `draft` is removed).
+// owner reviews; they only go live once `draft` is removed/false. BOT_AUTO_APPROVE controls
+// whether the GENERATOR writes them pre-approved (draft:false) — it never affects publishing.
 //
 // Run standalone: `npm run generate`.
 
@@ -60,15 +61,29 @@ function userPrompt(n: number, existingTitles: string[]): string {
     `{"subject": string, "title": string, "hook": string, ` +
     `"points": [{"heading": string, "body": string} x4], "cta": string, ` +
     `"caption": string, "hashtags": [string x15 without '#']}\n` +
-    `Keep each point body to 2-3 short sentences. Keep the title under 50 characters.`
+    `Keep each point body to 2-3 short sentences. Keep the title under 50 characters. Output the array only.`
   );
 }
 
+/** Parse a JSON array from model output: try the whole string, then an outer-bracket slice. */
 function extractJson(text: string): Draft[] {
+  const tryParse = (s: string): Draft[] | null => {
+    try {
+      const v = JSON.parse(s);
+      return Array.isArray(v) ? (v as Draft[]) : null;
+    } catch {
+      return null;
+    }
+  };
+  const direct = tryParse(text.trim());
+  if (direct) return direct;
   const start = text.indexOf("[");
   const end = text.lastIndexOf("]");
-  if (start === -1 || end === -1) throw new Error(`No JSON array in model output:\n${text.slice(0, 300)}`);
-  return JSON.parse(text.slice(start, end + 1)) as Draft[];
+  if (start !== -1 && end > start) {
+    const sliced = tryParse(text.slice(start, end + 1));
+    if (sliced) return sliced;
+  }
+  throw new Error(`No JSON array in model output:\n${text.slice(0, 300)}`);
 }
 
 async function main(): Promise<void> {
@@ -94,6 +109,7 @@ async function main(): Promise<void> {
   let number = posts.reduce((m, p) => Math.max(m, p.number ?? 0), 0);
   let latest = posts.reduce((d, p) => (p.postAt && new Date(p.postAt) > d ? new Date(p.postAt) : d), new Date(0));
 
+  let added = 0;
   for (const draft of drafts.slice(0, need)) {
     number += 1;
     const slug = `${pad5(number)}-${slugify(draft.title)}`;
@@ -113,12 +129,14 @@ async function main(): Promise<void> {
       caption: draft.caption,
       hashtags: draft.hashtags,
       postAt,
-      draft: true,
+      // Pre-approved only if BOT_AUTO_APPROVE is on; otherwise a draft the owner must approve.
+      draft: !config.autoApprove,
     };
     writeFileSync(join(dir, "post.json"), JSON.stringify(post, null, 2) + "\n");
-    console.log(`  + drafted ${slug} for ${postAt}`);
+    console.log(`  + drafted ${slug} for ${postAt}${post.draft ? " (draft)" : ""}`);
+    added += 1;
   }
-  console.log(`Done. Review draft posts and set "draft": false (or BOT_AUTO_APPROVE=on) to schedule them.`);
+  console.log(`Done: ${added} topic(s) added. Review drafts and set "draft": false to schedule them.`);
 }
 
 main().catch((e) => {

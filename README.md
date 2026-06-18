@@ -58,7 +58,8 @@ npm run typecheck
 
 - Seeded posts are vetted and always post on their `postAt`.
 - `npm run generate` adds new Claude-drafted topics as `"draft": true`. They post only after you set
-  `"draft": false` (or run with `BOT_AUTO_APPROVE=on`). Keep the review gate on for medical accuracy.
+  `"draft": false` after review (or run the generator with `BOT_AUTO_APPROVE=on` to pre-approve). A draft
+  post never publishes, regardless of any other flag. Keep the review gate on for medical accuracy.
 
 ## Operational notes
 

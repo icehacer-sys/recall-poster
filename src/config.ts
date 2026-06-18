@@ -48,7 +48,8 @@ export const config = {
   postsDir: process.env.BOT_POSTS_DIR ?? "./posts",
   stateFile: process.env.BOT_STATE_FILE ?? "./state.json",
   queueTarget: num("BOT_QUEUE_TARGET", 7),
-  // Off = generator's NEW topics need owner review before they post. Seeded posts always post.
+  // Off = generate.ts writes new topics as draft:true (owner reviews before they post). On =
+  // the generator writes them pre-approved. Never bypasses the publish-time draft gate by itself.
   autoApprove: bool("BOT_AUTO_APPROVE", false),
   // Pre-render (and let the runner commit) slides for posts due within this many hours,
   // so images are public before the publish call fetches them.

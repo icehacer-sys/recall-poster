@@ -1,17 +1,21 @@
 // Instagram publishing client. Posts a carousel (or single image) via the
 // Instagram Graph API:
-//   1. create an item container per image
+//   1. create an item container per image, and wait for each to be FINISHED
 //   2. create the carousel container referencing the item ids
-//   3. poll the container until status_code === "FINISHED"
+//   3. poll the carousel container until status_code === "FINISHED"
 //   4. media_publish the container -> published media id
 //
-// Reused almost verbatim from the proven xray-poster. Slide image URLs MUST be
-// public at publish time (Meta fetches them server-side).
+// Reused from the proven xray-poster, hardened: child containers are polled before the
+// carousel is assembled, the polling budget is larger (remote image fetches can be slow),
+// and the access token is sent only via the Authorization header (never in the URL).
+//
+// Slide image URLs MUST be public at publish time (Meta fetches them server-side).
 
 import { config, requireEnv } from "./config.js";
 
-const STATUS_TRIES = 6;
-const STATUS_DELAY_MS = 2000;
+// ~2 minutes of polling: remote raw.githubusercontent.com fetches of 6 images can be slow.
+const STATUS_TRIES = 30;
+const STATUS_DELAY_MS = 4000;
 
 function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -40,12 +44,10 @@ async function igPost(path: string, params: Record<string, string>): Promise<any
   return json;
 }
 
-/** GET from the IG Graph API and return the parsed JSON. */
+/** GET from the IG Graph API (Authorization header only) and return the parsed JSON. */
 async function igGet(path: string): Promise<any> {
-  const sep = path.includes("?") ? "&" : "?";
-  const token = requireEnv("IG_ACCESS_TOKEN");
-  const res = await fetch(`${config.igBase}${path}${sep}access_token=${encodeURIComponent(token)}`, {
-    headers: { Authorization: `Bearer ${token}` },
+  const res = await fetch(`${config.igBase}${path}`, {
+    headers: { Authorization: `Bearer ${requireEnv("IG_ACCESS_TOKEN")}` },
   });
   const text = await res.text();
   let json: any;
@@ -81,8 +83,8 @@ async function publishContainer(containerId: string): Promise<string> {
 }
 
 /**
- * Publish a carousel post. Creates an item container per image, then a CAROUSEL
- * container referencing them, polls until ready, and publishes. Returns the media id.
+ * Publish a carousel post. Creates an item container per image (waiting for each to be ready),
+ * then a CAROUSEL container referencing them, polls until ready, and publishes. Returns the id.
  */
 export async function publishCarousel(imageUrls: string[], caption: string): Promise<string> {
   if (imageUrls.length < 2) {
@@ -94,6 +96,7 @@ export async function publishCarousel(imageUrls: string[], caption: string): Pro
   const childIds: string[] = [];
   for (const image_url of imageUrls) {
     const { id } = await igPost("/me/media", { image_url, is_carousel_item: "true" });
+    await waitForContainer(id); // each child must finish fetching its image before we reference it
     childIds.push(id);
   }
   const { id: containerId } = await igPost("/me/media", {

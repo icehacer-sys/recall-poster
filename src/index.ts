@@ -2,17 +2,18 @@
 //
 // Modes:
 //   --sample [slug]  Generate slides for one post (default: the next one) to disk + print the
-//                    caption. Posts nothing. For local design QA.
-//   --render         Generate (and let the runner commit) slides for every post due within
-//                    BOT_RENDER_LOOKAHEAD_H. Posts nothing. Run + push BEFORE --live so the
-//                    slide URLs are public when Meta fetches them.
+//                    caption. Posts nothing. For local design QA. Ignores the draft gate.
+//   --render         Generate slides for every post due within BOT_RENDER_LOOKAHEAD_H. Posts
+//                    nothing. The runner commits + pushes these, so the image URLs are public
+//                    BEFORE --live fetches them.
 //   --dry-run        Like --render, but also prints each caption. Posts nothing. (default)
-//   --live           Publish every due post (postAt <= now) not yet posted. Requires
-//                    BOT_CONFIRM_LIVE=yes and GITHUB_RAW_BASE.
+//   --live           Publish every due post (postAt <= now) whose slides are already rendered
+//                    AND committed. Never generates inline (freshly generated slides are not
+//                    public yet). Requires BOT_CONFIRM_LIVE=yes and GITHUB_RAW_BASE.
 //
-// State in state.json guarantees a post is never published twice.
+// state.json guarantees a post is never published twice.
 
-import { writeFileSync } from "node:fs";
+import { writeFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { config } from "./config.js";
 import { loadPosts, imageUrl, savePost } from "./posts.js";
@@ -38,15 +39,27 @@ function parseArgs(): { mode: Mode; slug?: string } {
 
 const slideFile = (n: number) => `slide${n}.jpg`;
 
-/** True when a post should not be considered (an unapproved generator draft). */
+/** Drafts (generator-created, unreviewed) never render or post. Approve by setting draft:false. */
 function isBlockedDraft(post: Post): boolean {
-  return Boolean(post.draft) && !config.autoApprove;
+  return Boolean(post.draft);
 }
 
-/** Generate + persist slide images for a post unless already done (or force). Returns filenames. */
-async function ensureSlides(post: Post, state: State, force = false): Promise<string[]> {
-  const done = state.get(post.slug).slidesGeneratedAt;
-  if (!force && done && post.slides && post.slides.length) return post.slides;
+/** True only when every slide image for the post actually exists on disk. */
+function slidesPresent(post: Post): boolean {
+  return (
+    Boolean(post.slides?.length) &&
+    post.slides!.every((f) => existsSync(join(config.postsDir, post.folder!, f)))
+  );
+}
+
+/** Slides are usable for publishing only when generated AND present on disk (committable). */
+function slidesReady(post: Post, state: State): boolean {
+  return Boolean(state.get(post.slug).slidesGeneratedAt) && slidesPresent(post);
+}
+
+/** Generate + persist slide images for a post unless already ready on disk (or force). */
+async function renderSlides(post: Post, state: State, force = false): Promise<string[]> {
+  if (!force && slidesReady(post, state)) return post.slides!;
 
   const count = post.points.length + 2;
   console.log(`  generating ${count} slides for ${post.folder} ...`);
@@ -74,13 +87,13 @@ async function main(): Promise<void> {
     return;
   }
 
-  // --- sample: one post, to disk, no posting ---
+  // --- sample: one post, to disk, no posting (allowed on drafts) ---
   if (mode === "sample") {
     const post = slug
       ? posts.find((p) => p.slug === slug || p.folder === slug)
       : posts.find((p) => !state.get(p.slug).postedAt) ?? posts[0];
     if (!post) throw new Error(`sample: post not found${slug ? ` for "${slug}"` : ""}`);
-    const files = await ensureSlides(post, state, true);
+    const files = await renderSlides(post, state, true);
     console.log(`\nSample written to ${join(config.postsDir, post.folder!)}: ${files.join(", ")}`);
     console.log(`\n--- caption ---\n${buildCaption(post)}`);
     return;
@@ -94,7 +107,7 @@ async function main(): Promise<void> {
       if (isBlockedDraft(post)) continue;
       if (state.get(post.slug).postedAt) continue;
       if (new Date(post.postAt) > lookahead) continue;
-      await ensureSlides(post, state);
+      await renderSlides(post, state);
       touched++;
       if (mode === "dry-run") console.log(`\n[${post.folder}] caption:\n${buildCaption(post)}\n`);
     }
@@ -102,7 +115,7 @@ async function main(): Promise<void> {
     return;
   }
 
-  // --- live: publish every due post ---
+  // --- live: publish every due post whose slides are already rendered AND committed ---
   if (!config.confirmLive) throw new Error("Live posting requires BOT_CONFIRM_LIVE=yes.");
   if (!config.githubRawBase) {
     throw new Error("GITHUB_RAW_BASE must be set so Meta can fetch the slide images.");
@@ -113,10 +126,15 @@ async function main(): Promise<void> {
     if (state.get(post.slug).postedAt) continue;
     if (new Date(post.postAt) > now) continue;
 
-    const files = await ensureSlides(post, state);
-    const urls = files.map((f) => imageUrl(post.folder!, f));
+    // Never generate here: only already-committed slides have public URLs that resolve when
+    // Meta fetches them. Render + push first; this run picks them up on the next pass.
+    if (!slidesReady(post, state)) {
+      console.log(`  ${post.folder}: slides not rendered+committed yet, skipping (run --render then push).`);
+      continue;
+    }
+    const urls = post.slides!.map((f) => imageUrl(post.folder!, f));
     const caption = buildCaption(post);
-    console.log(`Publishing ${post.folder} (${files.length} slides) ...`);
+    console.log(`Publishing ${post.folder} (${post.slides!.length} slides) ...`);
     try {
       const id = await publishCarousel(urls, caption);
       state.set(post.slug, { postedAt: new Date().toISOString(), igMediaId: id });
