@@ -39,3 +39,38 @@ export async function generateSlideImage(prompt: string, size = config.imageSize
   }
   return Buffer.from(b64, "base64");
 }
+
+/**
+ * Generate a slide that matches a brand reference via the image-edit endpoint. gpt-image-2
+ * keeps the reference's logo, grid, colours and layout and applies the prompt's new text.
+ * `ref` must be a PNG buffer.
+ */
+export async function generateSlideImageRef(prompt: string, refPng: Buffer, size = config.imageSize): Promise<Buffer> {
+  const form = new FormData();
+  form.append("model", config.imageModel);
+  form.append("prompt", prompt);
+  form.append("size", size);
+  form.append("n", "1");
+  form.append("image", new Blob([new Uint8Array(refPng)], { type: "image/png" }), "ref.png");
+
+  const res = await fetch("https://api.openai.com/v1/images/edits", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${requireEnv("OPENAI_API_KEY")}` },
+    body: form,
+  });
+  const text = await res.text();
+  let json: any;
+  try {
+    json = text ? JSON.parse(text) : {};
+  } catch {
+    throw new Error(`OpenAI image edit returned non-JSON (${res.status}): ${text.slice(0, 200)}`);
+  }
+  if (!res.ok || json?.error) {
+    throw new Error(`OpenAI image edit failed (${res.status}): ${json?.error?.message ?? text.slice(0, 200)}`);
+  }
+  const b64 = json?.data?.[0]?.b64_json;
+  if (!b64) {
+    throw new Error(`OpenAI image edit returned no image data: ${text.slice(0, 200)}`);
+  }
+  return Buffer.from(b64, "base64");
+}
