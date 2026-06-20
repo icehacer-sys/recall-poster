@@ -13,7 +13,7 @@ import { loadPosts } from "./posts.js";
 import type { Post, SlidePoint } from "./types.js";
 
 const DAY_MS = 86_400_000;
-const POST_HOUR_UTC = 17; // 20:00 Africa/Cairo (UTC+3 in summer)
+const POST_HOUR_UTC = 16; // 19:00 Africa/Cairo (UTC+3 in summer)
 
 function slugify(s: string): string {
   return s
@@ -27,7 +27,7 @@ function pad5(n: number): string {
   return String(n).padStart(5, "0");
 }
 
-/** Next 17:00 UTC slot strictly after the latest scheduled post (or after now). */
+/** Next 16:00 UTC slot strictly after the latest scheduled post (or after now). */
 function nextSlot(latest: Date): string {
   const base = new Date(Math.max(latest.getTime(), Date.now()));
   const d = new Date(base.getTime() + DAY_MS);

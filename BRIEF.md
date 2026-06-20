@@ -55,7 +55,7 @@ that project's plumbing only, not its product, voice, or rules.
 
 ## Schedule
 
-- Once daily, **20:00 Africa/Cairo** (= 17:00 UTC; Egypt is UTC+3 in summer). Encoded as explicit
+- Once daily, **19:00 Africa/Cairo** (= 16:00 UTC; Egypt is UTC+3 in summer). Encoded as explicit
   `postAt` ISO timestamps per post.
 - Runner: GitHub Actions perpetual poll-and-rechain (see `.github/workflows/publish.yml`).
 

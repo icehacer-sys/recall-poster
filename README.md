@@ -68,4 +68,4 @@ npm run typecheck
   in-progress + pending runs, then dispatch a fresh run on the new commit.
 - **Always** `git pull --rebase --autostash` before pushing locally; the bot commits `state.json` and
   rendered slides back to the repo.
-- Schedule is encoded as `postAt` per post (20:00 Africa/Cairo = 17:00 UTC).
+- Schedule is encoded as `postAt` per post (19:00 Africa/Cairo = 16:00 UTC).
