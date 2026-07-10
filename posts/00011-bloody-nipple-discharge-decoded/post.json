@@ -51,6 +51,20 @@
     "Recall Engine turns any lecture into SBAs, MCQs, flashcards and high-yield notes so nipple discharge questions stop catching you out.",
     "Link in bio 🔗"
   ],
-  "hashtags": ["medstudent", "surgery", "breast", "usmle", "plab"],
-  "postAt": "2026-07-13T16:00:00Z"
+  "hashtags": [
+    "medstudent",
+    "surgery",
+    "breast",
+    "usmle",
+    "plab"
+  ],
+  "postAt": "2026-07-13T16:00:00Z",
+  "slides": [
+    "slide1.jpg",
+    "slide2.jpg",
+    "slide3.jpg",
+    "slide4.jpg",
+    "slide5.jpg",
+    "slide6.jpg"
+  ]
 }

@@ -54,6 +54,20 @@
     "Recall Engine turns any lecture into SBAs, MCQs, flashcards and high-yield notes so risk stratification numbers stop blurring together.",
     "Link in bio 🔗"
   ],
-  "hashtags": ["medstudent", "surgery", "breast", "usmle", "plab"],
-  "postAt": "2026-07-16T16:00:00Z"
+  "hashtags": [
+    "medstudent",
+    "surgery",
+    "breast",
+    "usmle",
+    "plab"
+  ],
+  "postAt": "2026-07-16T16:00:00Z",
+  "slides": [
+    "slide1.jpg",
+    "slide2.jpg",
+    "slide3.jpg",
+    "slide4.jpg",
+    "slide5.jpg",
+    "slide6.jpg"
+  ]
 }
