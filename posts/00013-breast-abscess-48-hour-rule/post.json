@@ -1,0 +1,55 @@
+{
+  "slug": "00013-breast-abscess-48-hour-rule",
+  "number": 13,
+  "subject": "Breast",
+  "title": "Breast Abscess and the 48-Hour Rule",
+  "hook": "One number decides who gets referred for a breast abscess.",
+  "points": [
+    {
+      "heading": "Three flavors of mastitis",
+      "icon": "a breastfeeding infant",
+      "bullets": [
+        "Neonatal, lactational and nonlactational are the three types",
+        "Neonatal mastitis is a rare Staph aureus infection",
+        "Witch's milk is a separate benign newborn finding"
+      ]
+    },
+    {
+      "heading": "Lactational infection",
+      "icon": "a cracked nipple",
+      "bullets": [
+        "Staph aureus enters through cracked nipples",
+        "Milk acts as the perfect culture medium",
+        "Marking erythema tracks spread over time"
+      ]
+    },
+    {
+      "heading": "Where the pus sits",
+      "icon": "three labeled zones on a breast",
+      "bullets": [
+        "Subareolar, intramammary and retromammary are the three types",
+        "Retromammary causes include TB and infected haematoma",
+        "Ultrasound shows an ill-defined collection with oedema"
+      ]
+    },
+    {
+      "heading": "The 48-hour rule",
+      "icon": "a clock reading 48",
+      "bullets": [
+        "No improvement on antibiotics by 48 hours means referral",
+        "Needle aspiration is standard for confirmed abscesses",
+        "Neonatal abscess needs a small peripheral incision"
+      ]
+    }
+  ],
+  "cta": "Learn the 48-hour rule",
+  "captionLines": [
+    "One rule decides who gets referred for a breast abscess. ⏱️",
+    "Antibiotics without improvement by 48 hours means urgent referral.",
+    "Abscess location, subareolar, intramammary or retromammary, changes the whole workup.",
+    "Recall Engine turns any lecture into SBAs, MCQs, flashcards and high-yield notes so mastitis and abscess questions become automatic.",
+    "Start free. Link in bio. 👇"
+  ],
+  "hashtags": ["medstudent", "surgery", "breast", "usmle", "plab"],
+  "postAt": "2026-07-15T16:00:00Z"
+}

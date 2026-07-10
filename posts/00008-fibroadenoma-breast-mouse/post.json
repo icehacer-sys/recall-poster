@@ -1,0 +1,55 @@
+{
+  "slug": "00008-fibroadenoma-breast-mouse",
+  "number": 8,
+  "subject": "Breast",
+  "title": "Fibroadenoma: The Breast Mouse",
+  "hook": "A rubbery mobile lump in her 20s is a fibroadenoma until proven otherwise.",
+  "points": [
+    {
+      "heading": "Classic exam picture",
+      "icon": "a well-defined mobile breast lump",
+      "bullets": [
+        "Rubbery, lobulated and mobile mass",
+        "Non-tender and slips under your fingers",
+        "Most common in the 20s"
+      ]
+    },
+    {
+      "heading": "Ultrasound signature",
+      "icon": "an ultrasound probe",
+      "bullets": [
+        "Round or oval and well-circumscribed",
+        "Solid, homogeneous, low-level internal echoes",
+        "Mild posterior acoustic enhancement usually"
+      ]
+    },
+    {
+      "heading": "Reassure, do not cut",
+      "icon": "a reassuring open hand",
+      "bullets": [
+        "Biopsy-proven masses under 3cm need reassurance",
+        "Avoid surgery for small confirmed lesions",
+        "Patient refusal is a valid reason too"
+      ]
+    },
+    {
+      "heading": "When to excise",
+      "icon": "a surgical scalpel",
+      "bullets": [
+        "Juvenile or large fibroadenomas come out",
+        "Symptomatic or distorting masses need excision",
+        "Fibroadenomas are non-tender so pain may persist"
+      ]
+    }
+  ],
+  "cta": "Never mistake it for cancer again",
+  "captionLines": [
+    "That rubbery lump in a 22-year-old? Classic fibroadenoma. 🩺",
+    "Rubbery, mobile, non-tender and homogeneous on ultrasound.",
+    "Biopsy-proven and under 3cm? Reassure. Excise only if juvenile, large or symptomatic.",
+    "Recall Engine turns any lecture into SBAs, MCQs, flashcards and high-yield notes so benign breast lumps become easy marks.",
+    "Start free. Link in bio. 👇"
+  ],
+  "hashtags": ["medstudent", "surgery", "breast", "usmle", "plab"],
+  "postAt": "2026-07-10T16:00:00Z"
+}

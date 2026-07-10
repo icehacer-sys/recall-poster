@@ -1,0 +1,55 @@
+{
+  "slug": "00014-benign-breast-disease-risk-ladder",
+  "number": 14,
+  "subject": "Breast",
+  "title": "The Breast Risk Ladder Decoded",
+  "hook": "Not every breast lesion carries the same cancer risk.",
+  "points": [
+    {
+      "heading": "The risk ladder",
+      "icon": "a ladder with breast tissue on each rung",
+      "bullets": [
+        "Nonproliferative change carries no extra cancer risk",
+        "Proliferative disease raises risk 1.5 to 2-fold",
+        "Atypia pushes risk up to 4 to 5-fold"
+      ]
+    },
+    {
+      "heading": "LCIS vs DCIS",
+      "icon": "abnormal cells filling a duct",
+      "bullets": [
+        "LCIS is a bilateral risk marker, about 8 to 10-fold",
+        "DCIS is true noninvasive carcinoma, already malignant",
+        "DCIS needs surgical excision, unlike the lower rungs"
+      ]
+    },
+    {
+      "heading": "ALH vs ADH",
+      "icon": "two side by side duct cross-sections",
+      "bullets": [
+        "Atypical lobular hyperplasia parallels atypical ductal hyperplasia",
+        "Both show some but not all in situ features",
+        "Neither one is the same as true carcinoma"
+      ]
+    },
+    {
+      "heading": "Why it matters",
+      "icon": "a risk reduction pill",
+      "bullets": [
+        "Tamoxifen is used for high-risk benign disease",
+        "It blocks oestrogen effects in breast tissue",
+        "This is risk reduction, not active cancer treatment"
+      ]
+    }
+  ],
+  "cta": "Know your risk multipliers",
+  "captionLines": [
+    "Not every breast lesion carries the same cancer risk. 📈",
+    "Proliferative changes raise risk 1.5 to 2-fold. Atypia pushes it to 4 to 5-fold. LCIS raises it 8 to 10-fold. DCIS is already cancer rather than a risk marker.",
+    "These risk markers guide surveillance and chemoprevention. DCIS itself needs surgical excision rather than watching.",
+    "Recall Engine turns any lecture into SBAs, MCQs, flashcards and high-yield notes so risk stratification numbers stop blurring together.",
+    "Start free. Link in bio. 👇"
+  ],
+  "hashtags": ["medstudent", "surgery", "breast", "usmle", "plab"],
+  "postAt": "2026-07-16T16:00:00Z"
+}

@@ -1,0 +1,55 @@
+{
+  "slug": "00009-triple-assessment-breast-lump",
+  "number": 9,
+  "subject": "Breast",
+  "title": "Triple Assessment of a Breast Lump",
+  "hook": "Every palpable breast lump needs clinical exam, imaging and biopsy.",
+  "points": [
+    {
+      "heading": "Ask two questions first",
+      "icon": "a question mark",
+      "bullets": [
+        "Is the lump painful or painless",
+        "What is the patient age",
+        "Age is the most critical factor"
+      ]
+    },
+    {
+      "heading": "Age picks the scan",
+      "icon": "an ultrasound probe",
+      "bullets": [
+        "Under 35 uses ultrasound first",
+        "Young breasts are radiodense and hide lesions",
+        "Over 35 adds mammography"
+      ]
+    },
+    {
+      "heading": "The three pillars",
+      "icon": "three stacked pillars",
+      "bullets": [
+        "Clinical examination of the mass",
+        "Imaging with ultrasound or mammography",
+        "Biopsy by FNA or core"
+      ]
+    },
+    {
+      "heading": "The occult cancer trap",
+      "icon": "a warning triangle",
+      "bullets": [
+        "15% of cancers are mammographically occult",
+        "A negative mammogram does not exclude cancer",
+        "Biopsy any clinically suspicious mass"
+      ]
+    }
+  ],
+  "cta": "Never miss a breast cancer",
+  "captionLines": [
+    "One palpable breast lump, three mandatory steps. 🔍",
+    "Triple assessment means clinical exam, imaging and biopsy together.",
+    "Age drives imaging. Ultrasound under 35. Add mammography over 35. A negative mammogram still needs biopsy if suspicious.",
+    "Recall Engine turns any lecture into SBAs, MCQs, flashcards and high-yield notes so the breast lump algorithm becomes second nature.",
+    "Start free. Link in bio. 👇"
+  ],
+  "hashtags": ["medstudent", "surgery", "breast", "usmle", "plab"],
+  "postAt": "2026-07-11T16:00:00Z"
+}
