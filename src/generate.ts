@@ -41,7 +41,7 @@ interface Draft {
   hook: string;
   points: SlidePoint[];
   cta: string;
-  caption: string;
+  captionLines: string[];
   hashtags: string[];
 }
 
@@ -52,17 +52,25 @@ const SYSTEM =
   "spam. Every clinical fact MUST be correct and exam-standard; if unsure, pick a safer, well-established " +
   "topic. Each post is 6 slides: a hook, exactly 4 value slides, and a CTA. The CTA drives to the Recall " +
   "Engine app (turn any lecture into questions, flashcards, and notes). " +
-  "Captions must use NO em or en dashes (hyphenated compounds are fine) and commas only inside a genuine list; split other clauses into short sentences.";
+  "Each value slide needs an 'icon' hint: one simple concrete object for a single small cyan line icon " +
+  "(e.g. 'an ultrasound probe', 'a biopsy needle'), and exactly 3 short punchy 'bullets' (max ~9 words each). " +
+  "captionLines is an array of SHORT blocks, ONE SENTENCE PER BLOCK (never merge two sentences into one " +
+  "block): a hook sentence, then each key fact as its own sentence, then the product pitch sentence " +
+  "('Recall Engine turns any lecture into SBAs, MCQs, flashcards and high-yield notes so <benefit>.'), then " +
+  "the final block must be exactly 'Link in bio 🔗' (never 'Start free' and never a different closing line). " +
+  "No em or en dashes anywhere (hyphenated compounds are fine, e.g. high-yield, 72-hour); commas only inside " +
+  "a genuine list of items, never as a clause separator; use 1-2 tasteful emojis total across the caption.";
 
 function userPrompt(n: number, existingTitles: string[]): string {
   return (
     `Propose ${n} NEW carousel topics. Avoid anything close to these existing titles:\n` +
     existingTitles.map((t) => `- ${t}`).join("\n") +
     `\n\nReturn ONLY a JSON array of ${n} objects, each exactly:\n` +
-    `{"subject": string, "title": string, "hook": string, ` +
-    `"points": [{"heading": string, "body": string} x4], "cta": string, ` +
-    `"caption": string, "hashtags": [string x15 without '#']}\n` +
-    `Keep each point body to 2-3 short sentences. Keep the title under 50 characters. Output the array only.`
+    `{"subject": string, "title": string (under 50 chars), "hook": string, ` +
+    `"points": [{"heading": string, "icon": string, "bullets": [string x3]} x4], "cta": string, ` +
+    `"captionLines": [string x5-9, one sentence per block, last one exactly "Link in bio 🔗"], ` +
+    `"hashtags": [string x5 without '#']}\n` +
+    `Output the array only.`
   );
 }
 
@@ -127,7 +135,7 @@ async function main(): Promise<void> {
       hook: draft.hook,
       points: draft.points,
       cta: draft.cta,
-      caption: draft.caption,
+      captionLines: draft.captionLines,
       hashtags: draft.hashtags,
       postAt,
       // Pre-approved only if BOT_AUTO_APPROVE is on; otherwise a draft the owner must approve.

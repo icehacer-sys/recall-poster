@@ -44,12 +44,29 @@
   ],
   "cta": "Never mistake it for cancer again",
   "captionLines": [
-    "That rubbery lump in a 22-year-old? Classic fibroadenoma. 🩺",
+    "That rubbery lump in a 22-year-old?",
+    "Classic fibroadenoma. 🩺",
     "Rubbery, mobile, non-tender and homogeneous on ultrasound.",
-    "Biopsy-proven and under 3cm? Reassure. Excise only if juvenile, large or symptomatic.",
+    "Biopsy-proven and under 3cm?",
+    "Reassure.",
+    "Excise only if juvenile, large or symptomatic.",
     "Recall Engine turns any lecture into SBAs, MCQs, flashcards and high-yield notes so benign breast lumps become easy marks.",
-    "Start free. Link in bio. 👇"
+    "Link in bio 🔗"
   ],
-  "hashtags": ["medstudent", "surgery", "breast", "usmle", "plab"],
-  "postAt": "2026-07-10T16:00:00Z"
+  "hashtags": [
+    "medstudent",
+    "surgery",
+    "breast",
+    "usmle",
+    "plab"
+  ],
+  "postAt": "2026-07-10T16:00:00Z",
+  "slides": [
+    "slide1.jpg",
+    "slide2.jpg",
+    "slide3.jpg",
+    "slide4.jpg",
+    "slide5.jpg",
+    "slide6.jpg"
+  ]
 }
