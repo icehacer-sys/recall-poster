@@ -2,7 +2,7 @@
 //
 //   --sync       Scan REELS_SOURCE_DIR (READY-TO-SCHEDULE/<NN-case>/) and write or refresh
 //                reels/<slug>/reel.json: caption snapshot, chosen mp4, cover, file size + hash.
-//                New reels get the next free day at REELS_POST_TIME (19:00) Africa/Cairo.
+//                New reels get the next free day at REELS_POST_TIME (20:00) Africa/Cairo.
 //                An existing postAt is never moved. Posts nothing, no token needed.
 //   --dry-run    (default) Print every scheduled reel: status, the exact REELS container
 //                params (video_url, cover_url, share_to_feed, caption) and the preflight checks.
@@ -57,8 +57,8 @@ const reelsCfg = {
   dir: process.env.REELS_DIR ?? "./reels",
   sourceDir:
     process.env.REELS_SOURCE_DIR ?? "W:/Recall Engine Review/reels-week1-20261023/READY-TO-SCHEDULE",
-  // Owner 24 Oct: every reel posts at 19:00 Cairo by default (override per reel in reel.json).
-  postTime: process.env.REELS_POST_TIME ?? "19:00",
+  // Owner 24 Oct: every reel posts at 20:00 Cairo by default (owner moved it from 19:00 on 24 Oct) (override per reel in reel.json).
+  postTime: process.env.REELS_POST_TIME ?? "20:00",
   // First day a NEW reel may take (YYYY-MM-DD, Cairo). Default: tomorrow in Cairo.
   startDate: process.env.REELS_START_DATE ?? "",
   // "master" = the full-quality mp4; "phone" = the smaller *-phone.mp4 render.

@@ -1,6 +1,6 @@
 name: comments
 
-# Replies to comments under @recallengine reels, 19:00 to 02:00 Cairo (owner GO, 24 Oct 2026).
+# Replies to comments under @recallengine reels, 20:00 to 02:00 Cairo (owner GO, 24 Oct 2026).
 # Caps: 40 model calls a day, a 5 USD monthly guard, 20 replies per reel per day, 40 a day, 1 per thread.
 # Privacy: this repo is PUBLIC. state.json, review-queue.json, and spend.json (commenters' names and
 # texts) are never committed. They travel as one AES-256-GCM file (key derived from CLAUDE_API_KEY) in
@@ -9,7 +9,7 @@ name: comments
 # in that thread, and today's reply counts are recounted from Instagram.
 # Owner list on the laptop: cd comments, then npm run review
 # Cron is UTC. Egypt is UTC+3 until 29 Oct 2026, then UTC+2: the cron covers both and the gate keeps
-# 19:00 to 02:00 Cairo. Stop it: gh variable set CLOUD_BOTS --body off
+# 20:00 to 02:00 Cairo. Stop it: gh variable set CLOUD_BOTS --body off
 on:
   schedule:
     - cron: "7-59/15 16-23 * * *"
@@ -48,8 +48,8 @@ jobs:
         run: |
           now=$(TZ=Africa/Cairo date +%H%M)
           n=$((10#$now))
-          if [ "$EVENT" = schedule ] && [ "$n" -lt 1900 ] && [ "$n" -ge 200 ]; then
-            echo "outside 19:00 to 02:00 Cairo (now $now). Nothing to do."
+          if [ "$EVENT" = schedule ] && [ "$n" -lt 2000 ] && [ "$n" -ge 200 ]; then
+            echo "outside 20:00 to 02:00 Cairo (now $now). Nothing to do."
             echo "go=no" >> "$GITHUB_OUTPUT"
             exit 0
           fi

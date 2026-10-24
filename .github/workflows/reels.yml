@@ -6,10 +6,10 @@ name: reels
 # Safety: both live latches, the 3-hour late window, one reel per run, reels/state.json committed back,
 # and an Instagram caption check before any new container (so lost state never double-posts).
 # Cron is UTC. Egypt is UTC+3 until 29 Oct 2026, then UTC+2: the cron covers both and the gate
-# keeps 17:45 to 22:00 Cairo. Stop it: gh variable set CLOUD_BOTS --body off
+# keeps 18:45 to 23:00 Cairo. Stop it: gh variable set CLOUD_BOTS --body off
 on:
   schedule:
-    - cron: "3-59/10 14-20 * * *"
+    - cron: "3-59/10 14-21 * * *"
   workflow_dispatch:
     inputs:
       mode:
@@ -40,8 +40,8 @@ jobs:
         run: |
           now=$(TZ=Africa/Cairo date +%H%M)
           n=$((10#$now))
-          if [ "$EVENT" = schedule ] && { [ "$n" -lt 1745 ] || [ "$n" -gt 2200 ]; }; then
-            echo "outside 17:45 to 22:00 Cairo (now $now). Nothing to do."
+          if [ "$EVENT" = schedule ] && { [ "$n" -lt 1845 ] || [ "$n" -gt 2300 ]; }; then
+            echo "outside 18:45 to 23:00 Cairo (now $now). Nothing to do."
             echo "go=no" >> "$GITHUB_OUTPUT"
             exit 0
           fi
