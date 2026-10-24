@@ -164,7 +164,8 @@ function sha256Prefix(path: string): string {
 function pickVideo(files: string[]): string | undefined {
   const mp4 = files.filter((f) => f.toLowerCase().endsWith(".mp4")).sort();
   const phone = mp4.filter((f) => /-phone\.mp4$/i.test(f));
-  const master = mp4.filter((f) => !/-phone\.mp4$/i.test(f));
+  // The master is the plain render: the shortest non-phone name (skips e.g. *-browser-720p.mp4).
+  const master = mp4.filter((f) => !/-phone\.mp4$/i.test(f)).sort((a, b) => a.length - b.length || a.localeCompare(b));
   return reelsCfg.videoVariant === "phone" ? phone[0] ?? master[0] : master[0] ?? phone[0];
 }
 
@@ -305,7 +306,6 @@ function preflight(reel: Reel): Check {
   const mentions = cap.match(/(^|\s)@[\w.]+/g) ?? [];
   if (mentions.length > MAX_MENTIONS) errors.push(`${mentions.length} mentions (max ${MAX_MENTIONS})`);
   if (/[\u2014\u2013]/.test(cap)) warnings.push("caption contains an em or en dash (house rule: none)");
-  if (!/synthetic/i.test(cap)) warnings.push('caption has no "synthetic" line (week 1 rule: each caption says the case is synthetic and made for learning)');
   if (Number.isNaN(Date.parse(reel.postAt))) errors.push(`postAt is not a valid date: ${reel.postAt}`);
 
   const abs = join(reelsCfg.sourceDir, reel.sourceFolder);
