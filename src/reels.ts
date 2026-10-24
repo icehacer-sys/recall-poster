@@ -230,6 +230,9 @@ function runSync(): void {
       manual: prev?.manual,
       note: prev?.note,
     };
+    // Keep the signed media only while it still matches this exact video; a new render must be re-uploaded.
+    if (prev?.media && prev.video === video && prev.media.videoBytes === reel.videoBytes && prev.videoSha256 === reel.videoSha256) reel.media = prev.media;
+    else if (prev?.media) console.log(`  ${folder}: the video changed, so its signed media was dropped. Run npm run reels:upload -- ${folder}`);
     saveReel(reel);
     console.log(`  ${prev ? "refreshed" : "added    "} ${folder}  ${reel.postAtCairo}  (${video})`);
   }

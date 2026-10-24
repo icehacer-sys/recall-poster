@@ -10,8 +10,18 @@
   "thumbOffsetMs": 0,
   "shareToFeed": true,
   "storyDay": "day-26",
-  "videoBytes": 82413596,
-  "videoSha256": "053445b0a8fc9818",
+  "videoBytes": 78546776,
+  "videoSha256": "882aaec76367f645",
   "draft": false,
-  "note": "cloud publishes it on Sat 24 Oct 2026 at 19:00 Cairo (owner, 24 Oct)"
+  "note": "cloud publishes it on Sat 24 Oct 2026 at 19:00 Cairo (owner, 24 Oct)",
+  "media": {
+    "bucket": "ig-reel-media",
+    "videoPath": "02-hypoglycaemia/20261024T141455-reel-case-02-day-26.mp4",
+    "coverPath": "02-hypoglycaemia/20261024T141455-cover.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/02-hypoglycaemia/20261024T141455-reel-case-02-day-26.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzAyLWh5cG9nbHljYWVtaWEvMjAyNjEwMjRUMTQxNDU1LXJlZWwtY2FzZS0wMi1kYXktMjYubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5Mjg1MTMzOCwiZXhwIjoxNzkzNDU2MTM4fQ.olmQIQUF4kcMPWBuC0PHef36ZcIb_8gDRf5tCNtllcU",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/02-hypoglycaemia/20261024T141455-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzAyLWh5cG9nbHljYWVtaWEvMjAyNjEwMjRUMTQxNDU1LWNvdmVyLmpwZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTI4NTEzMzksImV4cCI6MTc5MzQ1NjEzOX0.mpiBgEmD_jUXNZmyfr9OW50Rp4xhBK0aA4uFRNAysdo",
+    "videoBytes": 78546776,
+    "uploadedAt": "2026-10-24T14:15:35.549Z",
+    "expiresAt": "2026-10-31T14:14:35.549Z"
+  }
 }
