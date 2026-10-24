@@ -36,7 +36,8 @@ function vettedTakeaways(md: string): string {
   for (const line of list.split("\n")) {
     const m = line.match(/^\s+\d+\.\s+(.+?)\s*$/);
     if (!m) continue;
-    const t = m[1].replace(/\s*\((?:takeaway|stem)\)\.?$/i, "").trim();
+    // Drop the trailing source label, e.g. "(takeaway)" or "(item a8de9624 explanation)".
+    const t = m[1].replace(/\s*\([^)]*\b(?:takeaway|stem|explanation|items?)\b[^)]*\)\.?$/i, "").trim();
     out.push(/[.!?]$/.test(t) ? t : `${t}.`);
   }
   return out.join(" ");
@@ -44,15 +45,16 @@ function vettedTakeaways(md: string): string {
 
 function sourcedOnScreen(md: string): string[] {
   const out: string[] = [];
-  const table = md.split(/## (?:Every number and clinical claim|Claim map)/)[1]?.split(/\n## /)[0] ?? "";
+  const table = md.split(/## (?:Every number and clinical claim|Claim map|On-screen numbers and clinical claims)/)[1]?.split(/\n## /)[0] ?? "";
   for (const line of table.split("\n")) {
     const cells = line.split("|").map((c) => c.trim());
     if (cells.length < 5 || !/^\d/.test(cells[1])) continue;
     const [, , onScreen, source] = cells;
     if (/story dressing/i.test(source)) continue; // invented details are never facts
     if (/cliff/i.test(onScreen)) continue;
-    // Drop production notes such as "(still shot-15.png, the spasm diagram)".
-    out.push(onScreen.replace(/\s*\([^)]*\.png[^)]*\)/g, "").replace(/\s*;\s*/g, ". "));
+    // Drop production notes such as "(still shot-15.png, the spasm diagram)" or "(section 8, 24 Oct)".
+    const note = /\s*\([^)]*(?:\.png|section \d|\d+ Oct|voiceover)[^)]*\)/gi;
+    out.push(onScreen.replace(note, "").replace(/\s*;\s*/g, ". "));
   }
   return out;
 }
