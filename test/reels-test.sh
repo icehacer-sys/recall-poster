@@ -15,6 +15,13 @@ r.postAt=new Date(Date.now()-10*60e3).toISOString();delete r.manual;delete r.dra
 fs.writeFileSync(process.argv[1]+"/reels/'"$SLUG"'/reel.json",JSON.stringify(r));
 process.stdout.write(String(r.videoBytes));' "$TMP" > "$TMP/bytes"
 export MOCK_VIDEO_BYTES="$(cat "$TMP/bytes")"
+# A fake source folder so the test runs anywhere (CI has no W: drive): an mp4 of the same byte size,
+# a tiny cover, and the caption file.
+export REELS_SOURCE_DIR="$TMP/src"
+node -e '
+const fs=require("fs");const r=JSON.parse(fs.readFileSync("reels/'"$SLUG"'/reel.json","utf8"));const d=process.argv[1]+"/src/"+r.sourceFolder;
+fs.mkdirSync(d,{recursive:true});const fd=fs.openSync(d+"/"+r.video,"w");fs.ftruncateSync(fd,r.videoBytes);fs.closeSync(fd);
+fs.writeFileSync(d+"/cover.jpg",Buffer.alloc(1000));fs.writeFileSync(d+"/"+r.captionFile,r.caption);' "$TMP"
 export REELS_DIR="$TMP/reels" BOT_STATE_FILE="$TMP/state.json" REELS_STATE_FILE="$TMP/state.json"
 export REELS_HOSTING=supabase SUPABASE_URL="https://sb.test" SUPABASE_SECRET_KEY="fake-test-key"
 export IG_ACCESS_TOKEN="fake-test-token" BOT_CONFIRM_LIVE=yes REELS_CONFIRM_LIVE=yes

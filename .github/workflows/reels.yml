@@ -91,7 +91,7 @@ jobs:
           git add reels/state.json
           if git diff --cached --quiet; then echo "reel state unchanged"; exit 0; fi
           git commit -m "chore(reels): record reel state [skip ci]"
-          for i in 1 2 3 4 5; do
+          for _ in 1 2 3 4 5; do
             git pull --rebase && git push && exit 0
             sleep 5
           done
