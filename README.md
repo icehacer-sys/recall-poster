@@ -90,28 +90,55 @@ cannot post a reel by itself.
    (`media_type=REELS`, `video_url`, `cover_url`, `share_to_feed`), the full caption, and a
    preflight against Meta's Reels specs (size, moov before mdat, codec, fps, duration, caption
    length, hashtag count). `npm run reels:check` also HEADs the public video and cover URLs.
-4. `npm run reels:live` publishes a reel only when all of this holds: it is due, it is less than
+4. `npm run reels:live` stages and publishes. About an hour before a reel's slot
+   (`REELS_STAGE_MINUTES`, 60) it uploads the mp4 and cover to the public Supabase bucket
+   `ig-reel-staging`. At the slot it publishes only when all of this holds: the reel is less than
    `REELS_MAX_LATE_HOURS` (3) late, preflight passes, the public `video_url` answers 200 with the
    same byte size as the local file, the cover URL answers 200, and fewer than 25 API posts were
    made in the last 24 h. Flow: create the REELS container, save its id to `state.json`, poll
-   `status_code` every 15 s until `FINISHED`, then `media_publish`. `postedAt` and the media id go
-   into `state.json` under `reel:<slug>`. A rerun reuses the saved container or records it as
-   already `PUBLISHED`, so a reel is never posted twice. One reel per run (`REELS_MAX_PER_RUN`).
-5. `npm run reels:test` runs the live path offline against a faked Graph API (publish once,
-   second run posts nothing, latch refuses without `REELS_CONFIRM_LIVE`).
+   `status_code` every 15 s until `FINISHED`, then `media_publish`, then delete both staged files.
+   A failed publish keeps the files for the retry window, and once the reel is past it the files
+   are deleted and nothing posts. A rerun reuses the saved container or records it as already
+   `PUBLISHED`, so a reel is never posted twice. One reel per run (`REELS_MAX_PER_RUN`).
+   A reel with `"manual": true` (posted by hand) is never published by the bot.
+5. `npm run reels:test` runs the live path offline against a faked Graph API and a faked Supabase
+   Storage (stage, publish once, delete, no second post, latch refusal, failure cleanup).
+   `npm run reels:stage-test` uploads a tiny dummy jpeg to the real bucket, checks its public
+   URL, and deletes it. `npm run reels:bucket` creates the bucket if it is missing.
 
 ### Hosting the video (Meta fetches `video_url` itself)
 
 Instagram Login tokens (`graph.instagram.com`) publish reels from a public `video_url`. Meta's
 docs describe a resumable upload only for Facebook Login apps, so it is not used here.
-`REELS_PUBLIC_BASE` decides where the files are expected: `<base>/<slug>/<video>` and
-`<base>/<slug>/cover.jpg`.
 
-| Option | How | Trade-off |
-|---|---|---|
-| **Public bucket, staged on the day (recommended)** | Supabase Storage public bucket `reels-media` (or Cloudflare R2 public bucket). Upload the mp4 and cover into `<slug>/` an hour before 19:00, delete them after the reel is live. `REELS_PUBLIC_BASE=https://<ref>.supabase.co/storage/v1/object/public/reels-media` | Correct `video/mp4` type, no git bloat, no key in GitHub. The URL is public but unlisted for about an hour. One manual upload per reel. |
-| Public GitHub repo (default if unset) | Commit `reels-media/<slug>/` to this public repo right before publishing | Zero setup, but every reel stays public in git history forever and the repo grows 25 to 80 MB per reel (the master is over GitHub's 50 MB warning). Use the `phone` variant here. raw.githubusercontent serves `application/octet-stream`, which Meta usually accepts but is not guaranteed. |
-| Push only at publish time from the runner | Not possible today: the GitHub runner cannot read `W:` | Needs the files in cloud storage first, which is the bucket option. |
+**Owner decision (24 Oct 2026): Supabase Storage.** Bucket `ig-reel-staging` in project
+`mlmdecvfiyizhuwvyptp`: public, `video/mp4` and `image/jpeg` only, 100 MB per file. Files live
+at `ig-reel-staging/<slug>/<file>` for about an hour before the slot until publishing ends.
+The Supabase URL and secret key are read at run time from `W:/Projects/recall-engine/.env.local`
+(`NEXT_PUBLIC_SUPABASE_URL`, `SUPABASE_SECRET_KEY`) or from the environment (`SUPABASE_URL`,
+`SUPABASE_SECRET_KEY`), and are never printed. `REELS_HOSTING=url` with `REELS_PUBLIC_BASE`
+switches back to files that are already public somewhere else.
+
+### Running it on a schedule
+
+The mp4s live on this laptop (`W:`), so the simplest runner is **Windows Task Scheduler on this
+laptop**: `npm run reels:live` every 10 minutes from 17:45 to 22:00 Cairo with both latches set.
+The laptop must be on and awake from about 17:50 on reel days.
+
+A GitHub Actions runner cannot read `W:`. It would also need the mp4 and cover uploaded somewhere
+it can reach before the slot, which this change does not do. If the owner wants a workflow later,
+these are the repository secrets it would need (do not add them before GO):
+
+| Secret | Value |
+|---|---|
+| `IG_ACCESS_TOKEN` | already exists for the carousels: replace it with the new Instagram Login token |
+| `SUPABASE_URL` | `https://mlmdecvfiyizhuwvyptp.supabase.co` |
+| `SUPABASE_SECRET_KEY` | the project's secret key (full Storage and database access: see the warning below) |
+
+Plus `REELS_CONFIRM_LIVE: "yes"` as a plain workflow env value, set only on GO. Warning: this
+repo is public and that secret key opens the whole Supabase project. A scoped option is a
+separate Storage-only credential (for example Cloudflare R2 with a bucket-scoped token) before
+any cloud runner gets it.
 
 ### GO steps (owner)
 
@@ -122,13 +149,9 @@ docs describe a resumable upload only for Facebook Login apps, so it is not used
    `instagram_business_manage_comments` (the last one is for the comment bot, so one token serves
    both). The helper lives in `W:/Projects/recallengine-ig-bot`: `npm run token:url`, then
    `npm run token -- <code>`, then copy its `IG_ACCESS_TOKEN=` line into this repo's `.env`
-   (full steps in that README). Update the `IG_ACCESS_TOKEN` GitHub secret only if a workflow
-   will publish reels.
-2. Pick the hosting option and set `REELS_PUBLIC_BASE` in `.env`.
-3. `npm run reels:sync` then `npm run reels:dry` and read every caption and time.
-4. On the day: stage the mp4 and cover, run `npm run reels:check` until both HEADs say 200 and
-   the size matches.
-5. At or after 19:00 Cairo (within 3 h): `BOT_CONFIRM_LIVE=yes REELS_CONFIRM_LIVE=yes npm run reels:live`.
-   Watch it finish, open the reel on Instagram, then delete the staged files.
-6. Only after a few clean manual runs: schedule the same command (Windows Task Scheduler at
-   19:05 Cairo, or a workflow step once the files live in a bucket the runner can reach).
+   (full steps in that README).
+2. `npm run reels:sync` then `npm run reels:dry` and read every caption and time.
+3. `npm run reels:stage-test` once to confirm the bucket still works.
+4. On the reel day, from about 17:50 Cairo: `BOT_CONFIRM_LIVE=yes REELS_CONFIRM_LIVE=yes npm run reels:live`
+   every 10 minutes (by hand the first time, then Task Scheduler). The first run after 18:00
+   stages, the first run after 19:00 publishes and deletes the files. Open the reel on Instagram.

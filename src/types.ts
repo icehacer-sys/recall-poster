@@ -52,6 +52,10 @@ export interface PostState {
    *  rerun reuses it (or detects that it already published) instead of posting twice. */
   reelContainerId?: string;
   reelContainerCreatedAt?: string;
+  /** Reels only: files uploaded to the public staging bucket, and when they were removed. */
+  stagedAt?: string;
+  stagedPaths?: string[];
+  cleanedAt?: string;
 }
 
 /** A scheduled reel. Persisted as reels/<slug>/reel.json (tracked, small, no media). */
@@ -83,4 +87,8 @@ export interface Reel {
   videoSha256?: string;
   /** A draft reel never publishes. */
   draft?: boolean;
+  /** Posted by the owner by hand: the bot never publishes it (the comment bot still covers it). */
+  manual?: boolean;
+  /** Free note shown in the dry run. */
+  note?: string;
 }

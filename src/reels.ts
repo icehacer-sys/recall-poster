@@ -30,6 +30,16 @@ import {
   type ReelContainerParams,
 } from "./instagram.js";
 import type { Reel } from "./types.js";
+import {
+  STAGING_BUCKET,
+  createBucket,
+  deleteFromStaging,
+  getBucket,
+  stagingPath,
+  stagingPublicUrlFor,
+  supabaseCreds,
+  uploadToStaging,
+} from "./staging.js";
 
 // ---------------------------------------------------------------- settings
 
@@ -51,7 +61,13 @@ const reelsCfg = {
   startDate: process.env.REELS_START_DATE ?? "",
   // "master" = the full-quality mp4; "phone" = the smaller *-phone.mp4 render.
   videoVariant: (process.env.REELS_VIDEO_VARIANT ?? "master").toLowerCase(),
-  // Public base the video and cover are staged under at publish time: <base>/<slug>/<file>.
+  // Owner 24 Oct: "supabase" stages video + cover in the public ig-reel-staging bucket shortly
+  // before the slot and deletes them after publishing. "url" = files already public under
+  // REELS_PUBLIC_BASE/<slug>/<file>.
+  hosting: (process.env.REELS_HOSTING ?? "supabase").toLowerCase() === "url" ? "url" : "supabase",
+  // Upload this many minutes before the slot.
+  stageMinutes: num("REELS_STAGE_MINUTES", 60),
+  // Only for REELS_HOSTING=url: public base the files sit under.
   publicBase: (process.env.REELS_PUBLIC_BASE ?? (config.githubRawBase ? `${config.githubRawBase}/reels-media` : ""))
     .replace(/\/+$/, ""),
   // A reel more than this many hours past its postAt is NOT auto-posted (laptop was off etc.).
@@ -202,6 +218,8 @@ function runSync(): void {
       videoBytes: statSync(join(abs, video)).size,
       videoSha256: sha256Prefix(join(abs, video)),
       draft: prev?.draft ?? false,
+      manual: prev?.manual,
+      note: prev?.note,
     };
     saveReel(reel);
     console.log(`  ${prev ? "refreshed" : "added    "} ${folder}  ${reel.postAtCairo}  (${video})`);
@@ -338,7 +356,17 @@ function readCaptionSafe(path: string): string | null {
 
 // ---------------------------------------------------------------- container params
 
+/** Project URL for building staging URLs in the dry run (no key needed). */
+function supabaseProjectUrl(): string {
+  try {
+    return supabaseCreds().url;
+  } catch {
+    return process.env.SUPABASE_URL ?? "https://<project>.supabase.co";
+  }
+}
+
 function publicUrl(slug: string, file: string): string {
+  if (reelsCfg.hosting === "supabase") return stagingPublicUrlFor(supabaseProjectUrl(), slug, file);
   if (!reelsCfg.publicBase) return `<REELS_PUBLIC_BASE unset>/${slug}/${file}`;
   return `${reelsCfg.publicBase}/${encodeURIComponent(slug)}/${encodeURIComponent(file)}`;
 }
@@ -368,13 +396,14 @@ async function headUrl(url: string): Promise<{ ok: boolean; status: number; byte
 
 // ---------------------------------------------------------------- status
 
-type Status = "posted" | "draft" | "due" | "missed" | "scheduled";
+type Status = "posted" | "manual" | "draft" | "staging" | "due" | "missed" | "scheduled";
 
 function statusOf(reel: Reel, state: State, now: number): Status {
   if (state.get(stateKey(reel.slug)).postedAt) return "posted";
+  if (reel.manual) return "manual";
   if (reel.draft) return "draft";
   const at = Date.parse(reel.postAt);
-  if (at > now) return "scheduled";
+  if (at > now) return at - now <= reelsCfg.stageMinutes * 60_000 ? "staging" : "scheduled";
   return now - at <= reelsCfg.maxLateHours * 3_600_000 ? "due" : "missed";
 }
 
@@ -384,26 +413,43 @@ async function runDry(checkUrls: boolean): Promise<void> {
   const reels = loadReels();
   const state = new State();
   const now = Date.now();
-  console.log(`\nREELS DRY RUN at ${cairoLabel(new Date(now).toISOString())}. Nothing is posted.`);
-  console.log(`Default slot ${reelsCfg.postTime} ${TZ}. Public base: ${reelsCfg.publicBase || "(unset)"}. Live latches: BOT_CONFIRM_LIVE=${config.confirmLive ? "yes" : "no"}, REELS_CONFIRM_LIVE=${reelsCfg.confirmLive ? "yes" : "no"}.\n`);
+  console.log(`\nREELS DRY RUN at ${cairoLabel(new Date(now).toISOString())}. Nothing is uploaded or posted.`);
+  const hostLine =
+    reelsCfg.hosting === "supabase"
+      ? `Supabase Storage bucket "${STAGING_BUCKET}" (upload ${reelsCfg.stageMinutes} min before the slot, delete after publish)`
+      : `REELS_PUBLIC_BASE ${reelsCfg.publicBase || "(unset)"}`;
+  console.log(`Default slot ${reelsCfg.postTime} ${TZ}. Hosting: ${hostLine}. Live latches: BOT_CONFIRM_LIVE=${config.confirmLive ? "yes" : "no"}, REELS_CONFIRM_LIVE=${reelsCfg.confirmLive ? "yes" : "no"}.\n`);
   if (reels.length === 0) {
     console.log("No reels in", reelsCfg.dir, "(run npm run reels:sync).");
     return;
   }
   console.log("Schedule:");
   for (const r of reels) {
-    console.log(`  ${statusOf(r, state, now).padEnd(9)} ${cairoLabel(r.postAt).padEnd(36)} ${r.postAt}  ${r.slug}`);
+    const extra = r.manual ? `  (${r.note ?? "posted by hand"})` : "";
+    console.log(`  ${statusOf(r, state, now).padEnd(9)} ${cairoLabel(r.postAt).padEnd(36)} ${r.postAt}  ${r.slug}${extra}`);
   }
   for (const r of reels) {
     const st = statusOf(r, state, now);
+    if (st === "manual") {
+      console.log(`\n=== ${r.slug}  [manual]  ${r.note ?? "posted by hand"}. The bot does not publish it.`);
+      continue;
+    }
     const params = containerParams(r);
     const check = preflight(r);
+    const stageAt = new Date(Date.parse(r.postAt) - reelsCfg.stageMinutes * 60_000).toISOString();
     console.log(`\n=== ${r.slug}  [${st}]  ${cairoLabel(r.postAt)}  (UTC ${r.postAt})`);
     console.log(`source: ${join(reelsCfg.sourceDir, r.sourceFolder)}  video ${r.video}${r.videoBytes ? ` (${(r.videoBytes / 1e6).toFixed(1)} MB)` : ""}  story ${r.storyDay ?? "?"}`);
+    if (reelsCfg.hosting === "supabase") {
+      console.log(`1. stage at ${cairoLabel(stageAt)}: upload ${r.video}${r.cover ? ` and ${r.cover}` : ""} to ${STAGING_BUCKET}/${r.slug}/`);
+      console.log(`2. at the slot: HEAD both public URLs (200 and matching size), then:`);
+    }
     console.log("POST /me/media (form fields, token in the Authorization header only):");
     const shown = { ...params, caption: `<${[...params.caption].length} chars, see below>` };
     console.log(JSON.stringify(shown, null, 2).replace(/^/gm, "  "));
     console.log("then: poll GET /<container-id>?fields=status_code every 15 s until FINISHED, then POST /me/media_publish {creation_id}");
+    if (reelsCfg.hosting === "supabase") {
+      console.log(`3. delete both staged files after publish (or after ${reelsCfg.maxLateHours} h if publishing keeps failing).`);
+    }
     if (checkUrls) {
       for (const [label, url] of [["video_url", params.video_url], ["cover_url", params.cover_url]] as const) {
         if (!url) continue;
@@ -418,7 +464,37 @@ async function runDry(checkUrls: boolean): Promise<void> {
     console.log("--- caption ---");
     console.log(r.caption);
   }
-  console.log("\nreels dry-run: nothing posted.");
+  console.log("\nreels dry-run: nothing uploaded, nothing posted.");
+}
+
+// ---------------------------------------------------------------- staging (live only)
+
+/** Upload the reel's video and cover to the public staging bucket. Records paths in state. */
+async function stageReel(r: Reel, state: State): Promise<void> {
+  const abs = join(reelsCfg.sourceDir, r.sourceFolder);
+  const files = [r.video, ...(r.cover ? [r.cover] : [])];
+  const paths: string[] = [];
+  for (const f of files) {
+    const p = stagingPath(r.slug, f);
+    await uploadToStaging(p, readFileSync(join(abs, f)), f);
+    paths.push(p);
+  }
+  state.set(stateKey(r.slug), { stagedAt: new Date().toISOString(), stagedPaths: paths, cleanedAt: undefined });
+  console.log(`  ${r.slug}: staged ${files.join(" and ")} in ${STAGING_BUCKET}.`);
+}
+
+/** Delete the reel's staged files (after publish, or once the retry window has passed). */
+async function cleanupReel(r: Reel, state: State, why: string): Promise<void> {
+  const s = state.get(stateKey(r.slug));
+  const paths = s.stagedPaths ?? [];
+  if (!paths.length || s.cleanedAt) return;
+  try {
+    const n = await deleteFromStaging(paths);
+    state.set(stateKey(r.slug), { cleanedAt: new Date().toISOString() });
+    console.log(`  ${r.slug}: deleted ${n} staged file(s) (${why}).`);
+  } catch (e) {
+    console.error(`  ${r.slug}: staged files NOT deleted yet, retried next run: ${(e as Error).message}`);
+  }
 }
 
 // ---------------------------------------------------------------- live
@@ -427,30 +503,47 @@ async function runLive(): Promise<void> {
   if (!config.confirmLive || !reelsCfg.confirmLive) {
     throw new Error("Reel publishing requires BOTH BOT_CONFIRM_LIVE=yes and REELS_CONFIRM_LIVE=yes.");
   }
-  if (!reelsCfg.publicBase) throw new Error("REELS_PUBLIC_BASE (or GITHUB_RAW_BASE) must be set.");
+  if (reelsCfg.hosting !== "supabase" && !reelsCfg.publicBase) throw new Error("REELS_PUBLIC_BASE must be set when REELS_HOSTING=url.");
   const reels = loadReels();
   const state = new State();
   const now = Date.now();
   let published = 0;
 
   for (const r of reels) {
-    if (published >= reelsCfg.maxPerRun) break;
     const st = statusOf(r, state, now);
+    const key = stateKey(r.slug);
+    const staged = !!state.get(key).stagedPaths?.length && !state.get(key).cleanedAt;
+
+    // Cleanup first: posted or missed reels never keep public files around.
+    if (reelsCfg.hosting === "supabase" && staged && (st === "posted" || st === "missed" || st === "draft" || st === "manual")) {
+      await cleanupReel(r, state, st === "posted" ? "published" : `status ${st}`);
+      continue;
+    }
     if (st === "missed") {
       console.log(`  ${r.slug}: missed its slot (${cairoLabel(r.postAt)}) by more than ${reelsCfg.maxLateHours} h. Not posting. Move its postAt.`);
       continue;
     }
-    if (st !== "due") continue;
+    if (st !== "due" && st !== "staging") continue;
 
     const check = preflight(r);
     if (check.errors.length) {
       console.log(`  ${r.slug}: preflight failed, not posting: ${check.errors.join("; ")}`);
       continue;
     }
+    if (reelsCfg.hosting === "supabase" && !staged) {
+      try {
+        await stageReel(r, state);
+      } catch (e) {
+        console.error(`  ${r.slug}: staging failed: ${(e as Error).message}`);
+        continue;
+      }
+    }
+    if (st !== "due" || published >= reelsCfg.maxPerRun) continue; // staged early, publish at the slot
+
     const params = containerParams(r);
     const v = await headUrl(params.video_url);
     if (!v.ok || (r.videoBytes && v.bytes && v.bytes !== r.videoBytes)) {
-      console.log(`  ${r.slug}: video_url not staged (HEAD ${v.status}${v.bytes ? `, ${v.bytes} bytes` : ""}). Not posting.`);
+      console.log(`  ${r.slug}: video_url not reachable (HEAD ${v.status}${v.bytes ? `, ${v.bytes} bytes` : ""}). Not posting.`);
       continue;
     }
     if (params.cover_url && !(await headUrl(params.cover_url)).ok) {
@@ -463,7 +556,6 @@ async function runLive(): Promise<void> {
       continue;
     }
 
-    const key = stateKey(r.slug);
     try {
       let containerId = state.get(key).reelContainerId;
       if (containerId) {
@@ -471,6 +563,7 @@ async function runLive(): Promise<void> {
         if (s === "PUBLISHED") {
           state.set(key, { postedAt: new Date().toISOString() });
           console.log(`  ${r.slug}: container ${containerId} was already PUBLISHED. Recorded, not reposted.`);
+          if (reelsCfg.hosting === "supabase") await cleanupReel(r, state, "published");
           continue;
         }
         if (s !== "FINISHED" && s !== "IN_PROGRESS") containerId = undefined; // ERROR / EXPIRED / unknown
@@ -484,11 +577,47 @@ async function runLive(): Promise<void> {
       state.set(key, { postedAt: new Date().toISOString(), igMediaId: id });
       console.log(`  published as ${id}`);
       published++;
+      if (reelsCfg.hosting === "supabase") await cleanupReel(r, state, "published");
     } catch (e) {
+      // Files stay staged for the retry window; the missed branch above deletes them after it.
       console.error(`  FAILED to publish ${r.slug}: ${(e as Error).message}`);
     }
   }
   console.log(`reels live: ${published} reel(s) published.`);
+}
+
+// ---------------------------------------------------------------- bucket setup and test
+
+/** Create the staging bucket if it does not exist (owner-authorized, 24 Oct 2026). */
+async function runBucket(): Promise<void> {
+  let b = await getBucket();
+  if (!b) {
+    await createBucket();
+    console.log(`Created bucket ${STAGING_BUCKET}.`);
+    b = await getBucket();
+  }
+  console.log(`Bucket ${STAGING_BUCKET}: public=${b?.public}, file_size_limit=${b?.file_size_limit}, allowed_mime_types=${JSON.stringify(b?.allowed_mime_types)}`);
+}
+
+/** Upload a tiny dummy jpeg, HEAD its public URL, delete it, HEAD again. No reel media involved. */
+async function runStageTest(): Promise<void> {
+  // A valid 1x1 JPEG (125 bytes).
+  const jpeg = Buffer.from(
+    "/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAP//////////////////////////////////////////////////////////////////////////////////////wgALCAABAAEBAREA/8QAFBABAAAAAAAAAAAAAAAAAAAAAP/aAAgBAQABPxA=",
+    "base64",
+  );
+  const p = stagingPath("_selftest", `dummy-${Date.now()}.jpg`);
+  const url = `${supabaseCreds().url}/storage/v1/object/public/${STAGING_BUCKET}/${p}`;
+  await uploadToStaging(p, jpeg, "dummy.jpg");
+  const before = await headUrl(url);
+  console.log(`uploaded ${p} (${jpeg.length} bytes). HEAD public URL: ${before.status} ${before.type ?? ""} ${before.bytes ?? "?"} bytes`);
+  const n = await deleteFromStaging([p]);
+  console.log(`deleted ${n} file(s).`);
+  const after = await headUrl(`${url}?t=${Date.now()}`);
+  console.log(`HEAD after delete: ${after.status}`);
+  const ok = before.ok && before.bytes === jpeg.length && n === 1 && !after.ok;
+  console.log(ok ? "stage test: PASS" : "stage test: FAIL");
+  if (!ok) process.exitCode = 1;
 }
 
 // ---------------------------------------------------------------- main
@@ -496,6 +625,8 @@ async function runLive(): Promise<void> {
 async function main(): Promise<void> {
   const a = process.argv.slice(2);
   if (a.includes("--sync")) return runSync();
+  if (a.includes("--bucket")) return runBucket();
+  if (a.includes("--stage-test")) return runStageTest();
   if (a.includes("--live")) return runLive();
   return runDry(a.includes("--check-urls"));
 }
