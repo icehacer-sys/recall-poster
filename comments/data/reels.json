@@ -834,6 +834,80 @@
         "replacement"
       ],
       "storyDressing": "- Sherif, his age (twenties), type 1 diabetes (cast notes only, never on screen or in the voiceover), and his friend Omar. - The Zagazig setting (HOSPITALS.md), the clock stamps, the oranges, the high five, and the breakfast of baladi bread and tea. - \"It was fine before\" is voiced as the viewer's own tempting thought. No staff member misses anything. - The calm morning. The items give no outcome. The reel shows only monitoring and replacement working. - Sherif the butcher, Omar the mechanic, the oranges, the kofta, the oil-change joke, and the sheep line are satire-layer story dressing. No line suggests food or fluids change his potassium. - Satire layer (owner, 23 Oct): the family's lines, trades, costumes, and props are story dressing. No joke adds a clinical fact and no joke lands on a medical line."
+    },
+    {
+      "slug": "13-the-family-group-agreed",
+      "storyDay": "day-06",
+      "title": "Case 13: fever, headache, sore neck, and photophobia in the clinic",
+      "question": "What is the emergency management in the clinic?",
+      "mediaId": "",
+      "shortcode": "",
+      "captionStart": "دور برد؟ ولا meningitis؟ 🩺",
+      "stem": "A 7-year-old boy has had fever and headache for 2 days, worsening. He now has a sore neck, dislikes the lights, sleeps most of the day, and vomits when he drinks. He is seen in the clinic. What is the emergency management in the clinic?",
+      "answer": "Intramuscular benzylpenicillin and immediate referral to hospital",
+      "takeaway": "Suspected bacterial meningitis in the clinic needs intramuscular benzylpenicillin and immediate hospital referral. A non-blanching rash with lesions over 2 mm, an ill-looking child, and slow capillary refill point to meningococcal disease.",
+      "onScreen": [
+        "A 7-year-old boy",
+        "Fever and headache for 2 days",
+        "Worsening",
+        "Sore neck",
+        "Dislikes the lights",
+        "Sleeps most of the day",
+        "Vomits when he drinks",
+        "Intramuscular benzylpenicillin and immediate referral to hospital, in the clinic",
+        "Hospital treatment: a third-generation cephalosporin with dexamethasone",
+        "Fever, headache, neck stiffness, and photophobia suggest bacterial meningitis",
+        "Home care advice is for a green-group child with no diagnosis (the trap)",
+        "Third-generation cephalosporin with dexamethasone is the hospital treatment, not the clinic step (SBA option أ)",
+        "On brown or black skin look at the whites of the eyes, the palate, the palms, and the soles, and use the glass test there",
+        "An ill child with non-blanching lesions over 2 mm and capillary refill of 4 s: meningococcal disease",
+        "Never wait for a rash"
+      ],
+      "acceptedAnswers": [
+        "IM benzylpenicillin and refer",
+        "IM penicillin and urgent referral",
+        "benzylpenicillin IM and send to hospital",
+        "IM benpen and transfer",
+        "حقنة benzylpenicillin في العضل وتحويل فوري للمستشفى"
+      ],
+      "partialAnswers": [
+        "refer to hospital urgently",
+        "IM benzylpenicillin"
+      ],
+      "medicalTerms": [
+        "IM",
+        "intramuscular",
+        "benzylpenicillin",
+        "penicillin",
+        "benpen",
+        "referral",
+        "hospital",
+        "clinic",
+        "bacterial",
+        "meningitis",
+        "meningococcal",
+        "cephalosporin",
+        "dexamethasone",
+        "fever",
+        "headache",
+        "neck",
+        "stiffness",
+        "photophobia",
+        "non",
+        "blanching",
+        "rash",
+        "petechiae",
+        "capillary",
+        "refill",
+        "glass",
+        "test",
+        "palate",
+        "palms",
+        "soles",
+        "conjunctivae",
+        "mm"
+      ],
+      "storyDressing": "- Ziad, his mother Om Ziad, the flashback at home, the damp cloth, the jacket, and the cup of water. - The Shubra clinic and the Abbassia fever hospital (HOSPITALS.md), the clock stamps, and the ambulance. - \"It's just a virus\" and \"Can we take him home?\" are the mother's words. No staff member suggests sending him home. - The calmer frame on the ward. The items give no outcome. The reel shows only the right action working. - The family WhatsApp group, the aunts' votes, the lemon-and-mint suggestion (the mother's words, never endorsed), and muting the group are satire-layer story dressing. Ziad is never the joke. - Satire layer (owner, 23 Oct): the family's lines, trades, costumes, and props are story dressing. No joke adds a clinical fact and no joke lands on a medical line."
     }
   ]
 }
