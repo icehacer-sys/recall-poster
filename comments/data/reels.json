@@ -575,6 +575,71 @@
         "CKD"
       ],
       "storyDressing": "- Amm Hassan, his daughter Samah, the oranges, the prayer beads, the cup, and the glasses. - The El Hussein setting (HOSPITALS.md), the clock stamps, and the flashback of the faint at home (the stem says only that he was brought in after a syncope). - \"He says he's fine\" and \"bring the potassium down first?\": the second is voiced as the viewer's own tempting thought. No staff member makes a mistake. - Samah's relief and his calmer frame. The items give no outcome. The reel shows only the right order and no complication. - Amm Hassan as a Delta farmer, the field, the buffalo, the hoe, the harvest, and the yearly check-up are satire-layer story dressing. The stem says only that he was brought in after a syncope. - Satire layer (owner, 23 Oct): the family's lines, trades, costumes, and props are story dressing. No joke adds a clinical fact and no joke lands on a medical line."
+    },
+    {
+      "slug": "09-terrible-film",
+      "storyDay": "day-02",
+      "title": "Case 09: painful eye and haloes after a dark cinema",
+      "question": "Which treatment brings immediate relief?",
+      "mediaId": "",
+      "shortcode": "",
+      "captionStart": "قوس قزح حوالين النور؟ ممكن يكون acute angle-closure glaucoma 👁️",
+      "stem": "A woman with a shallow anterior chamber develops a painful eye with misty vision and rainbow haloes after her pupil dilates in a dark room. The cornea is slightly opaque. Which treatment brings immediate relief?",
+      "answer": "A miotic drug such as pilocarpine",
+      "takeaway": "A miotic drug such as pilocarpine gives immediate relief in acute angle-closure glaucoma by constricting the pupil. The pupil constricts and pulls away from the filtration angle, which the base of the iris had blocked. A peripheral iridectomy may subsequently be performed to prevent further attacks.",
+      "onScreen": [
+        "The pupil dilates in a dark room (the cinema)",
+        "Painful eye",
+        "Misty vision",
+        "Rainbow haloes",
+        "Shallow anterior chamber and a slightly opaque cornea",
+        "A miotic drug such as pilocarpine brings immediate relief",
+        "The miotic constricts the pupil and the iris pulls away from the filtration angle",
+        "The base of the iris had blocked the filtration angle",
+        "A peripheral iridectomy may subsequently be performed to prevent further attacks",
+        "Acute angle-closure glaucoma: a miotic gives immediate relief"
+      ],
+      "acceptedAnswers": [
+        "miotic",
+        "a miotic",
+        "pilocarpine",
+        "miotic drops",
+        "pilocarpine drops",
+        "أ",
+        "option أ",
+        "بيلوكاربين",
+        "الـ miotic"
+      ],
+      "partialAnswers": [
+        "constrict the pupil",
+        "miosis"
+      ],
+      "medicalTerms": [
+        "miotic",
+        "pilocarpine",
+        "pupil",
+        "constrict",
+        "constricts",
+        "miosis",
+        "iris",
+        "filtration",
+        "angle",
+        "closure",
+        "acute",
+        "glaucoma",
+        "anterior",
+        "chamber",
+        "shallow",
+        "cornea",
+        "opaque",
+        "haloes",
+        "misty",
+        "vision",
+        "peripheral",
+        "iridectomy",
+        "drug"
+      ],
+      "storyDressing": "- Laila, her husband Amm Sayed, the roasted seeds, the tea at home, and her age (sixties, never on screen). - The cinema as the stem's dark room, the street, the right eye, the Ophthalmology Institute setting (HOSPITALS.md), and the clock stamps. - \"She blames the screen\" and \"straight to surgery?\": the second is voiced as the viewer's own tempting thought. No staff member makes a mistake. - Her calm morning at home. The item gives no outcome beyond immediate relief. - Laila as a retired teacher, Abu Faisal the Kuwaiti visitor (CS-26), the ta'meya, the wallet, and the private-room offer are satire-layer story dressing. Abu Faisal is a warm, generous character and the joke is only that money does not replace the right drug. - Satire layer (owner, 23 Oct): the family's lines, trades, costumes, and props are story dressing. No joke adds a clinical fact and no joke lands on a medical line."
     }
   ]
 }

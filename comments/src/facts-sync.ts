@@ -37,7 +37,7 @@ function vettedTakeaways(md: string): string {
     const m = line.match(/^\s+\d+\.\s+(.+?)\s*$/);
     if (!m) continue;
     // Drop the trailing source label, e.g. "(takeaway)" or "(item a8de9624 explanation)".
-    const t = m[1].replace(/\s*\([^)]*\b(?:takeaway|stem|explanation|items?)\b[^)]*\)\.?$/i, "").trim();
+    const t = m[1].replace(/\s*\([^)]*\b(?:takeaway|stem|explanation|items?|claim)\b[^)]*\)\.?$/i, "").trim();
     out.push(/[.!?]$/.test(t) ? t : `${t}.`);
   }
   return out.join(" ");
