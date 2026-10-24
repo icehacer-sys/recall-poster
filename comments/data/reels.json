@@ -100,7 +100,7 @@
         "Between episodes normal",
         "CT head normal",
         "No diabetes, no medicines",
-        "Measure her plasma glucose during an episode",
+        "Measure her plasma glucose during an episode. the EEG is not wrong, but the low sugar comes first",
         "Catch it while it happens",
         "Fasting and exercise drop the sugar. a sweet drink brings it back",
         "One cause: an insulinoma",
@@ -146,7 +146,8 @@
         "CT",
         "diabetes",
         "seizure",
-        "carbohydrate"
+        "carbohydrate",
+        "EEG"
       ],
       "storyDressing": "- Names: Hoda (CS-03) and her husband Karim (CS-23). - Setting: home in Cairo, then الدمرداش psychiatry clinic and its emergency corridor. The stem says only \"referred to psychiatry\". The hospital is named once in the voice and never in an image. - Clock stamps: 6:40 and 10:00 a.m. - The kitchen, the mug, the orange juice, the fridge full of juice, the riverside run, and the Egyptian breakfast. - The next-episode corridor and the blood draw scene show the keyed move working. No glucose value or diagnosis result is shown or claimed. - Every spoken character line. - The patient's age (44) is in the stem and never appears on screen. Tant Afaf (Karim's mother, voice only) and her \"nerves\" theory, the phone and social media jokes, Hoda's no-breakfast routine, and every joke line. No line claims the routine caused the episodes. The reveal stays the glucose during an episode."
     },
