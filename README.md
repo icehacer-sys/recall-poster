@@ -115,8 +115,15 @@ docs describe a resumable upload only for Facebook Login apps, so it is not used
 
 ### GO steps (owner)
 
-1. Refresh the Instagram token for @recallengine (the one in this repo's `.env` expired on
-   17 Aug 2026). It needs `instagram_business_basic` and `instagram_business_content_publish`.
+1. Create a new Instagram token for @recallengine (the one in this repo's `.env` expired on
+   17 Aug 2026). Use **Instagram API with Instagram Login** only (`graph.instagram.com`). No
+   Facebook Page or Facebook Login is needed, because @recallengine cannot be linked to a Page.
+   Scopes: `instagram_business_basic`, `instagram_business_content_publish`, and
+   `instagram_business_manage_comments` (the last one is for the comment bot, so one token serves
+   both). The helper lives in `W:/Projects/recallengine-ig-bot`: `npm run token:url`, then
+   `npm run token -- <code>`, then copy its `IG_ACCESS_TOKEN=` line into this repo's `.env`
+   (full steps in that README). Update the `IG_ACCESS_TOKEN` GitHub secret only if a workflow
+   will publish reels.
 2. Pick the hosting option and set `REELS_PUBLIC_BASE` in `.env`.
 3. `npm run reels:sync` then `npm run reels:dry` and read every caption and time.
 4. On the day: stage the mp4 and cover, run `npm run reels:check` until both HEADs say 200 and

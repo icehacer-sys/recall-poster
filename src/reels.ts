@@ -287,6 +287,7 @@ function preflight(reel: Reel): Check {
   const mentions = cap.match(/(^|\s)@[\w.]+/g) ?? [];
   if (mentions.length > MAX_MENTIONS) errors.push(`${mentions.length} mentions (max ${MAX_MENTIONS})`);
   if (/[\u2014\u2013]/.test(cap)) warnings.push("caption contains an em or en dash (house rule: none)");
+  if (!/synthetic/i.test(cap)) warnings.push('caption has no "synthetic" line (week 1 rule: each caption says the case is synthetic and made for learning)');
   if (Number.isNaN(Date.parse(reel.postAt))) errors.push(`postAt is not a valid date: ${reel.postAt}`);
 
   const abs = join(reelsCfg.sourceDir, reel.sourceFolder);
