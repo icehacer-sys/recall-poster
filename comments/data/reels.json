@@ -640,6 +640,72 @@
         "drug"
       ],
       "storyDressing": "- Laila, her husband Amm Sayed, the roasted seeds, the tea at home, and her age (sixties, never on screen). - The cinema as the stem's dark room, the street, the right eye, the Ophthalmology Institute setting (HOSPITALS.md), and the clock stamps. - \"She blames the screen\" and \"straight to surgery?\": the second is voiced as the viewer's own tempting thought. No staff member makes a mistake. - Her calm morning at home. The item gives no outcome beyond immediate relief. - Laila as a retired teacher, Abu Faisal the Kuwaiti visitor (CS-26), the ta'meya, the wallet, and the private-room offer are satire-layer story dressing. Abu Faisal is a warm, generous character and the joke is only that money does not replace the right drug. - Satire layer (owner, 23 Oct): the family's lines, trades, costumes, and props are story dressing. No joke adds a clinical fact and no joke lands on a medical line."
+    },
+    {
+      "slug": "10-who-collapses-from-a-sneeze",
+      "storyDay": "day-03",
+      "title": "Case 10: sudden severe headache on sneezing with collapse",
+      "question": "Which imaging is best?",
+      "mediaId": "",
+      "shortcode": "",
+      "captionStart": "صداع مذاكرة؟ ولا subarachnoid haemorrhage؟ 🩺",
+      "stem": "A woman aged 20 collapses after a sudden severe headache that began when she sneezed. She keeps covering her eyes because light bothers her and she has double vision. She is drowsy but fully conscious, and her blood pressure is 180/90. Which imaging is best?",
+      "answer": "CT brain and CT angiography head and neck",
+      "takeaway": "Subarachnoid haemorrhage is imaged with CT brain and CT angiography of the head and neck. Carotid duplex and echo are TIA investigations, not the imaging for a sudden severe headache with collapse.",
+      "onScreen": [
+        "A woman aged 20",
+        "A sudden severe headache that began when she sneezed",
+        "She collapses",
+        "She keeps covering her eyes because light bothers her (photophobia)",
+        "Double vision",
+        "Drowsy but fully conscious",
+        "Blood pressure 180/90",
+        "CT brain and CT angiography of the head and neck is the best imaging",
+        "Sudden headache after sneezing with photophobia and double vision is subarachnoid haemorrhage",
+        "Carotid duplex and echo are TIA investigations"
+      ],
+      "acceptedAnswers": [
+        "CT brain and CT angiography",
+        "CT and CTA",
+        "CT brain + CTA",
+        "non-contrast CT then CT angiography",
+        "CT head and CTA head and neck",
+        "سي تي على المخ و CT angiography"
+      ],
+      "partialAnswers": [
+        "CT brain",
+        "CT head",
+        "CT",
+        "CT angiography",
+        "CTA"
+      ],
+      "medicalTerms": [
+        "CT",
+        "CTA",
+        "brain",
+        "head",
+        "neck",
+        "angiography",
+        "imaging",
+        "subarachnoid",
+        "haemorrhage",
+        "hemorrhage",
+        "SAH",
+        "headache",
+        "photophobia",
+        "double",
+        "vision",
+        "collapse",
+        "drowsy",
+        "conscious",
+        "BP",
+        "carotid",
+        "duplex",
+        "echo",
+        "cardiac",
+        "TIA"
+      ],
+      "storyDressing": "- Salma, her mother Om Salma, the flat in Tanta, the desk, the laptop, the tissues, and the tea tray. - The Tanta setting (HOSPITALS.md), the clock stamps, the rush to the scanner, and the dawn on the ward. - \"Duplex and echo?\" is voiced as the viewer's own tempting thought. No staff member orders the wrong tests. - The calm ending. The item gives no outcome. The reel shows only the right imaging and no complication. - Om Salma's koshary shop, her apron, the ladle, the koshary at dawn, and \"it's from studying\" are satire-layer story dressing. Nobody feeds Salma in the reel. - Satire layer (owner, 23 Oct): the family's lines, trades, costumes, and props are story dressing. No joke adds a clinical fact and no joke lands on a medical line."
     }
   ]
 }
