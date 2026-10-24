@@ -48,4 +48,63 @@ export interface PostState {
   slidesGeneratedAt?: string;
   postedAt?: string;
   igMediaId?: string;
+  /** Reels only: the REELS container created for this reel, saved BEFORE publishing so a
+   *  rerun reuses it (or detects that it already published) instead of posting twice. */
+  reelContainerId?: string;
+  reelContainerCreatedAt?: string;
+  /** Reels only: files uploaded to the public staging bucket, and when they were removed. */
+  stagedAt?: string;
+  stagedPaths?: string[];
+  cleanedAt?: string;
+  /** How the post was recorded: "published" by this bot, or "found" on Instagram (already live). */
+  recordedFrom?: string;
+}
+
+/** A scheduled reel. Persisted as reels/<slug>/reel.json (tracked, small, no media). */
+export interface Reel {
+  /** Stable id and folder name, e.g. "02-hypoglycaemia" (the READY-TO-SCHEDULE folder name). */
+  slug: string;
+  /** Folder under REELS_SOURCE_DIR that holds the final mp4, cover.jpg, and caption-instagram.txt. */
+  sourceFolder: string;
+  /** The mp4 to publish (file name inside sourceFolder and inside the public staging folder). */
+  video: string;
+  /** Cover image file name, or "" to use thumbOffsetMs instead. */
+  cover: string;
+  /** Caption file name inside sourceFolder (snapshotted into `caption` by --sync). */
+  captionFile: string;
+  /** Caption snapshot, exactly as it will be posted. Refreshed from captionFile by --sync. */
+  caption: string;
+  /** When to publish (UTC ISO). Default: one reel per day at REELS_POST_TIME Africa/Cairo. */
+  postAt: string;
+  /** Human-readable postAt, e.g. "Sun 25 Oct 2026 19:00 Africa/Cairo". Informational only. */
+  postAtCairo?: string;
+  /** Used only when cover is "": the frame (ms) Instagram uses as the cover. */
+  thumbOffsetMs?: number;
+  /** Also show the reel in the main grid/feed (default true). */
+  shareToFeed?: boolean;
+  /** Story day folder in v2-story (sources.md + script.md), e.g. "day-26". Used by the comment bot. */
+  storyDay?: string;
+  /** Local file facts captured by --sync (bytes, sha256 prefix) so drift is visible. */
+  videoBytes?: number;
+  videoSha256?: string;
+  /** A draft reel never publishes. */
+  draft?: boolean;
+  /** Posted by the owner by hand: the bot never publishes it (the comment bot still covers it). */
+  manual?: boolean;
+  /** Free note shown in the dry run. */
+  note?: string;
+  /** Cloud mode: signed URLs to the PRIVATE bucket, written by `npm run reels:upload` on the laptop. */
+  media?: ReelMedia;
+}
+
+export interface ReelMedia {
+  bucket: string;
+  videoPath: string;
+  coverPath?: string;
+  videoUrl: string;
+  coverUrl?: string;
+  videoBytes: number;
+  uploadedAt: string;
+  /** When the signed URLs stop working (UTC ISO). */
+  expiresAt: string;
 }

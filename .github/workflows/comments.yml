@@ -1,0 +1,149 @@
+name: comments
+
+# Replies to comments under @recallengine reels, 19:00 to 02:00 Cairo (owner GO, 24 Oct 2026).
+# Caps: 40 model calls a day, a 5 USD monthly guard, 20 replies per reel per day, 40 a day, 1 per thread.
+# Privacy: this repo is PUBLIC. state.json, review-queue.json, and spend.json (commenters' names and
+# texts) are never committed. They travel as one AES-256-GCM file (key derived from CLAUDE_API_KEY) in
+# the Actions cache, with a 7-day artifact as backup. The run log hides names and texts (BOT_PUBLIC_LOG).
+# Lost state is safe: before every reply the bot asks Instagram whether @recallengine already replied
+# in that thread, and today's reply counts are recounted from Instagram.
+# Owner list on the laptop: cd comments, then npm run review
+# Cron is UTC. Egypt is UTC+3 until 29 Oct 2026, then UTC+2: the cron covers both and the gate keeps
+# 19:00 to 02:00 Cairo. Stop it: gh variable set CLOUD_BOTS --body off
+on:
+  schedule:
+    - cron: "7-59/15 16-23 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "dry = read comments and log decisions (redacted). live = post replies (window and caps still apply)."
+        type: choice
+        options: [dry, live]
+        default: dry
+
+concurrency:
+  group: recall-comments
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  reply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: comments
+    steps:
+      - name: gate
+        id: gate
+        working-directory: .
+        env:
+          IG: ${{ secrets.IG_ACCESS_TOKEN }}
+          CLAUDE: ${{ secrets.CLAUDE_API_KEY }}
+          SWITCH: ${{ vars.CLOUD_BOTS }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          now=$(TZ=Africa/Cairo date +%H%M)
+          n=$((10#$now))
+          if [ "$EVENT" = schedule ] && [ "$n" -lt 1900 ] && [ "$n" -ge 200 ]; then
+            echo "outside 19:00 to 02:00 Cairo (now $now). Nothing to do."
+            echo "go=no" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ -z "$IG" ] || [ -z "$CLAUDE" ]; then
+            echo "secrets missing (IG_ACCESS_TOKEN and CLAUDE_API_KEY): run set-secrets.ps1. Nothing posted."
+            echo "go=no" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "$SWITCH" = off ]; then
+            echo "CLOUD_BOTS is off. Nothing posted."
+            echo "go=no" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "Cairo time $now."
+          echo "go=yes" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.go == 'yes'
+
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.go == 'yes'
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: comments/package-lock.json
+
+      - if: steps.gate.outputs.go == 'yes'
+        run: npm ci --no-audit --no-fund
+
+      - name: restore encrypted state
+        if: steps.gate.outputs.go == 'yes'
+        uses: actions/cache/restore@v4
+        with:
+          path: comments/cloud-state.enc
+          key: comment-state-${{ github.run_id }}
+          restore-keys: comment-state-
+
+      - name: fall back to the newest state artifact
+        if: steps.gate.outputs.go == 'yes' && hashFiles('comments/cloud-state.enc') == ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          id=$(gh run list -R "$GITHUB_REPOSITORY" -w comments.yml -s success -L 20 --json databaseId -q '.[].databaseId' | head -1 || true)
+          if [ -n "$id" ]; then gh run download "$id" -R "$GITHUB_REPOSITORY" -n comment-state -D . || echo "no artifact in run $id"; fi
+
+      - name: unpack state
+        if: steps.gate.outputs.go == 'yes'
+        env:
+          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
+        run: npm run -s cloud:unpack
+
+      - name: comments
+        if: steps.gate.outputs.go == 'yes'
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
+          BOT_PUBLIC_LOG: "yes"
+          BOT_WINDOW_HOURS: "168"
+          BOT_MAX_POSTS: "10"
+          BOT_DAILY_MODEL_CALLS: "40"
+          BOT_MONTHLY_USD: "5"
+          BOT_PER_REEL_DAILY_CAP: "20"
+          BOT_DAILY_CAP: "40"
+          BOT_CONFIRM_LIVE: ${{ (github.event_name == 'schedule' || inputs.mode == 'live') && 'yes' || '' }}
+        run: |
+          if [ "$BOT_CONFIRM_LIVE" = yes ]; then npm run -s live; else npm run -s dry; fi
+
+      - name: pack state
+        if: always() && steps.gate.outputs.go == 'yes'
+        env:
+          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
+        run: npm run -s cloud:pack
+
+      - name: save encrypted state
+        if: always() && steps.gate.outputs.go == 'yes' && hashFiles('comments/cloud-state.enc') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: comments/cloud-state.enc
+          key: comment-state-${{ github.run_id }}-${{ github.run_attempt }}
+
+      - name: upload encrypted state (backup and owner list)
+        if: always() && steps.gate.outputs.go == 'yes' && hashFiles('comments/cloud-state.enc') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: comment-state
+          path: comments/cloud-state.enc
+          retention-days: 7
+          overwrite: true
+
+      - name: prune old state caches
+        if: always() && steps.gate.outputs.go == 'yes'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh cache list -R "$GITHUB_REPOSITORY" --key comment-state- --sort created_at --order desc --limit 100 --json id -q '.[10:][].id' |
+            while read -r id; do gh cache delete "$id" -R "$GITHUB_REPOSITORY" || true; done

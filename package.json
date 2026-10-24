@@ -13,7 +13,16 @@
     "render": "tsx src/index.ts --render",
     "live": "tsx src/index.ts --live",
     "generate": "tsx src/generate.ts",
-    "typecheck": "tsc --noEmit"
+    "reels:sync": "tsx src/reels.ts --sync",
+    "reels:dry": "tsx src/reels.ts --dry-run",
+    "reels:check": "tsx src/reels.ts --dry-run --check-urls",
+    "reels:live": "tsx src/reels.ts --live",
+    "typecheck": "tsc --noEmit",
+    "reels:test": "bash test/reels-test.sh",
+    "reels:bucket": "tsx src/reels.ts --bucket",
+    "reels:stage-test": "tsx src/reels.ts --stage-test",
+    "reels:upload": "tsx src/reels.ts --upload",
+    "secret-scan": "node scripts/secret-scan.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.1",

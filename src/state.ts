@@ -10,10 +10,8 @@ type StateData = Record<string, PostState>;
 export class State {
   private data: StateData;
 
-  constructor() {
-    this.data = existsSync(config.stateFile)
-      ? (JSON.parse(readFileSync(config.stateFile, "utf8")) as StateData)
-      : {};
+  constructor(private readonly file: string = config.stateFile) {
+    this.data = existsSync(file) ? (JSON.parse(readFileSync(file, "utf8")) as StateData) : {};
   }
 
   get(slug: string): PostState {
@@ -26,6 +24,6 @@ export class State {
   }
 
   private save(): void {
-    writeFileSync(config.stateFile, JSON.stringify(this.data, null, 2) + "\n");
+    writeFileSync(this.file, JSON.stringify(this.data, null, 2) + "\n");
   }
 }

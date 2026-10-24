@@ -51,7 +51,7 @@ jobs:
 
           # Push the working tree; retry on rejection. Returns non-zero if it never succeeds.
           push_retry() {
-            for i in 1 2 3 4 5; do
+            for _ in 1 2 3 4 5; do
               git pull --rebase --autostash && git push && return 0
               sleep 5
             done
