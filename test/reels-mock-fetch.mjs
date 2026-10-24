@@ -28,12 +28,19 @@ globalThis.fetch = async (url, init = {}) => {
       return new Response(null, { status: 200, headers: { "content-length": size, "content-type": key.endsWith(".mp4") ? "video/mp4" : "image/jpeg" } });
     }
   }
+  // Signed URLs to the private bucket (cloud mode): HEAD answers with the size, no key involved.
+  if (u.startsWith("https://sb.test/storage/v1/object/sign/ig-reel-media/")) {
+    if (method !== "HEAD" && method !== "GET") throw new Error(`mock: signed URL used with ${method}`);
+    const size = u.includes(".mp4") ? process.env.MOCK_VIDEO_BYTES : "1000";
+    return new Response(null, { status: 200, headers: { "content-length": size, "content-type": u.includes(".mp4") ? "video/mp4" : "image/jpeg" } });
+  }
   if (u.startsWith("https://stage.test/")) {
     const size = u.endsWith(".mp4") ? process.env.MOCK_VIDEO_BYTES : "1000";
     return new Response(null, { status: 200, headers: { "content-length": size, "content-type": u.endsWith(".mp4") ? "video/mp4" : "image/jpeg" } });
   }
   if (u.startsWith("https://graph.instagram.com/")) {
     if (u.includes("content_publishing_limit")) return json({ data: [{ quota_usage: 1 }] });
+    if (u.includes("/me/media?") && method === "GET") return json({ data: JSON.parse(process.env.MOCK_IG_MEDIA ?? "[]") });
     if (u.endsWith("/me/media") && method === "POST") {
       const body = new URLSearchParams(init.body);
       if (body.get("media_type") !== "REELS" || !body.get("video_url")) return json({ error: { message: "bad params" } }, 400);

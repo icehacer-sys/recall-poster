@@ -1,0 +1,66 @@
+{
+  "_note": "Code owns every fact in these lines; the model never writes them (threads-bot/src/products.ts pattern). Only entries with approved: true are posted live. App replies: owner approved the threads-bot style on 24 Oct 2026 (facts: 7 days of the library free plus 50 credits, link in bio). Boundary lines: English copied verbatim from threads-bot/src/concerns.ts ACKNOWLEDGMENTS. Arabic boundary lines approved by the owner as written on 24 Oct 2026.",
+  "app_question": {
+    "en": {
+      "approved": true,
+      "price": [
+        "You can start free with 7 days of the library plus 50 credits. The link is in our bio.",
+        "It's free to try first. You get 7 days of the library plus 50 credits and the link's in our bio.",
+        "Nothing to pay to start. 7 days of the library are free plus 50 credits. Link's in our bio."
+      ],
+      "where": [
+        "This case is from the Recall Engine library. Your first 7 days are free plus 50 credits and the link is in our bio.",
+        "Right there in our bio. Your first 7 days of the library are free plus 50 credits.",
+        "The link's in our bio. You get 7 days of the library free plus 50 credits to try it."
+      ]
+    },
+    "ar": {
+      "approved": true,
+      "price": [
+        "تقدر تبدأ ببلاش. أول 7 أيام في الـ Library علينا ومعاهم 50 كريدت. اللينك في البايو",
+        "مش هتدفع حاجة في الأول. 7 أيام في الـ Library ببلاش و50 كريدت هدية واللينك في البايو",
+        "جرّب الأول ببلاش: 7 أيام في الـ Library ومعاهم 50 كريدت. اللينك عندنا في البايو"
+      ],
+      "where": [
+        "الحالة دي من الـ Library بتاعة Recall Engine نفسها. أول 7 أيام ببلاش ومعاهم 50 كريدت واللينك في البايو",
+        "اللينك في البايو وأول 7 أيام في الـ Library ببلاش ومعاهم 50 كريدت",
+        "هتلاقيه في البايو. ابدأ بـ 7 أيام في الـ Library ببلاش و50 كريدت هدية"
+      ]
+    }
+  },
+  "boundary": {
+    "personal": {
+      "en": {
+        "approved": true,
+        "text": "Personal medical advice needs an assessment by a clinician who knows your history."
+      },
+      "ar": {
+        "approved": true,
+        "text": "أي نصيحة طبية شخصية محتاجة دكتور يكشف بنفسه ويكون عارف تاريخك المرضي.",
+        "approvedBy": "owner, 24 Oct 2026 (approved as written)"
+      }
+    },
+    "scan": {
+      "en": {
+        "approved": true,
+        "text": "This account doesn't review personal scans. The clinician handling your care can interpret it with your history."
+      },
+      "ar": {
+        "approved": true,
+        "text": "الأكونت ده مش بيراجع أشعة أو تحاليل شخصية. الدكتور المتابع معاك هو اللي يقدر يقراها مع تاريخك المرضي.",
+        "approvedBy": "owner, 24 Oct 2026 (approved as written)"
+      }
+    },
+    "urgent": {
+      "en": {
+        "approved": true,
+        "text": "If someone is in immediate danger contact local emergency services now. This account cannot assess emergencies."
+      },
+      "ar": {
+        "approved": true,
+        "text": "لو حد في خطر دلوقتي كلّم الإسعاف فورًا. الأكونت ده مش بيقدر يقيّم حالات الطوارئ.",
+        "approvedBy": "owner, 24 Oct 2026 (approved as written)"
+      }
+    }
+  }
+}

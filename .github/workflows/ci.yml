@@ -1,0 +1,67 @@
+name: ci
+
+# Secret-free checks for every PR and push: lint (actionlint plus a secret scan), typecheck, offline
+# tests with faked Instagram and Supabase, and dry runs. No secrets are used, nothing is posted.
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: actionlint
+        run: docker run --rm -v "$PWD:/repo" -w /repo rhysd/actionlint:1.7.7 -color
+      - name: secret scan
+        run: node scripts/secret-scan.mjs
+
+  typecheck-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci --no-audit --no-fund
+      - run: npm ci --no-audit --no-fund
+        working-directory: comments
+      - name: typecheck (reels and carousels)
+        run: npm run -s typecheck
+      - name: typecheck (comments)
+        run: npm run -s typecheck
+        working-directory: comments
+      - name: reels offline test (faked Instagram and Supabase)
+        run: npm run -s reels:test
+      - name: comments rules and budget tests
+        run: npm test
+        working-directory: comments
+      - name: comments cloud test (lost state, thread check, caps, redaction, encryption)
+        run: npm run -s cloud:test
+        working-directory: comments
+
+  dry-run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci --no-audit --no-fund
+      - run: npm ci --no-audit --no-fund
+        working-directory: comments
+      - name: reels dry run (cloud mode, no secrets)
+        env:
+          REELS_HOSTING: signed
+        run: npm run -s reels:dry
+      - name: comments fixtures offline (no model, no Instagram)
+        run: npm run -s offline
+        working-directory: comments

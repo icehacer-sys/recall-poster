@@ -56,6 +56,8 @@ export interface PostState {
   stagedAt?: string;
   stagedPaths?: string[];
   cleanedAt?: string;
+  /** How the post was recorded: "published" by this bot, or "found" on Instagram (already live). */
+  recordedFrom?: string;
 }
 
 /** A scheduled reel. Persisted as reels/<slug>/reel.json (tracked, small, no media). */
@@ -91,4 +93,18 @@ export interface Reel {
   manual?: boolean;
   /** Free note shown in the dry run. */
   note?: string;
+  /** Cloud mode: signed URLs to the PRIVATE bucket, written by `npm run reels:upload` on the laptop. */
+  media?: ReelMedia;
+}
+
+export interface ReelMedia {
+  bucket: string;
+  videoPath: string;
+  coverPath?: string;
+  videoUrl: string;
+  coverUrl?: string;
+  videoBytes: number;
+  uploadedAt: string;
+  /** When the signed URLs stop working (UTC ISO). */
+  expiresAt: string;
 }

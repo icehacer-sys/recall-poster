@@ -12,5 +12,15 @@
   "storyDay": "day-27",
   "videoBytes": 77241216,
   "videoSha256": "17d2cc643c906396",
-  "draft": false
+  "draft": false,
+  "media": {
+    "bucket": "ig-reel-media",
+    "videoPath": "03-anaphylaxis/20261024T130322-reel-case-03-day-27.mp4",
+    "coverPath": "03-anaphylaxis/20261024T130322-cover.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/03-anaphylaxis/20261024T130322-reel-case-03-day-27.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzAzLWFuYXBoeWxheGlzLzIwMjYxMDI0VDEzMDMyMi1yZWVsLWNhc2UtMDMtZGF5LTI3Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTI4NDcwNDgsImV4cCI6MTc5MzQ1MTg0OH0.XcAzpphipGDaoG1tE-EQTu_wt8BQfOck1JjzANC7JFA",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/03-anaphylaxis/20261024T130322-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzAzLWFuYXBoeWxheGlzLzIwMjYxMDI0VDEzMDMyMi1jb3Zlci5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkyODQ3MDQ5LCJleHAiOjE3OTM0NTE4NDl9.1uOYTDiLr28hMvc_amBaRJVg6Zr-u2ELRmJHmt8l3KE",
+    "videoBytes": 77241216,
+    "uploadedAt": "2026-10-24T13:04:05.736Z",
+    "expiresAt": "2026-10-31T13:03:05.736Z"
+  }
 }

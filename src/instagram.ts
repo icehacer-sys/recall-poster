@@ -162,3 +162,9 @@ export async function publishingQuotaUsage(): Promise<number | null> {
     return null;
   }
 }
+
+/** Recent media on the account (newest first), used to spot a reel that is already live. */
+export async function recentMedia(): Promise<Array<{ id: string; caption?: string; timestamp?: string; permalink?: string; media_product_type?: string }>> {
+  const json = await igGet("/me/media?fields=id,caption,timestamp,permalink,media_product_type&limit=25");
+  return Array.isArray(json?.data) ? json.data : [];
+}

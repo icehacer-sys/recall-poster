@@ -70,7 +70,7 @@ npm run typecheck
   rendered slides back to the repo.
 - Schedule is encoded as `postAt` per post (19:00 Africa/Cairo = 16:00 UTC).
 
-## Reels (dry run only until the owner says GO)
+## Reels
 
 The reel series is published by a separate command, `src/reels.ts`. The carousel workflow never
 calls it, and it needs its own second latch (`REELS_CONFIRM_LIVE=yes`), so merging this code
@@ -119,39 +119,38 @@ The Supabase URL and secret key are read at run time from `W:/Projects/recall-en
 `SUPABASE_SECRET_KEY`), and are never printed. `REELS_HOSTING=url` with `REELS_PUBLIC_BASE`
 switches back to files that are already public somewhere else.
 
-### Running it on a schedule
+### Cloud mode (live since the owner's GO, 24 Oct 2026)
 
-The mp4s live on this laptop (`W:`), so the simplest runner is **Windows Task Scheduler on this
-laptop**: `npm run reels:live` every 10 minutes from 17:45 to 22:00 Cairo with both latches set.
-The laptop must be on and awake from about 17:50 on reel days.
+The reels and the comment bot run on GitHub Actions in this public repo. The laptop is not needed at
+post time.
 
-A GitHub Actions runner cannot read `W:`. It would also need the mp4 and cover uploaded somewhere
-it can reach before the slot, which this change does not do. If the owner wants a workflow later,
-these are the repository secrets it would need (do not add them before GO):
+| Workflow | Schedule (UTC cron, gated in Cairo time) | What it does |
+|---|---|---|
+| `.github/workflows/reels.yml` | every 10 min, 17:45 to 22:00 Cairo | publishes the due reel (`npm run reels:live`, `REELS_HOSTING=signed`) and commits `reels/state.json` |
+| `.github/workflows/comments.yml` | every 15 min, 19:00 to 02:00 Cairo | runs `comments/` live with an encrypted, uncommitted state |
+| `.github/workflows/ci.yml` | every PR and push | actionlint, secret scan, typecheck, offline tests, and dry runs (no secrets) |
 
-| Secret | Value |
-|---|---|
-| `IG_ACCESS_TOKEN` | already exists for the carousels: replace it with the new Instagram Login token |
-| `SUPABASE_URL` | `https://mlmdecvfiyizhuwvyptp.supabase.co` |
-| `SUPABASE_SECRET_KEY` | the project's secret key (full Storage and database access: see the warning below) |
+Egypt is UTC+3 until 29 Oct 2026 and UTC+2 after it. Each cron covers both offsets and the first step
+keeps only the Cairo window. GitHub cron can start late, so the 3-hour late window stays.
 
-Plus `REELS_CONFIRM_LIVE: "yes"` as a plain workflow env value, set only on GO. Warning: this
-repo is public and that secret key opens the whole Supabase project. A scoped option is a
-separate Storage-only credential (for example Cloudflare R2 with a bucket-scoped token) before
-any cloud runner gets it.
+**Media.** The runner has no Supabase key. Per reel, on the laptop:
 
-### GO steps (owner)
+```bash
+npm run reels:sync                                 # adds or refreshes reels/<slug>/reel.json
+npm run reels:upload -- <slug> --push              # private bucket ig-reel-media + 7-day signed URLs, then push
+```
 
-1. Create a new Instagram token for @recallengine (the one in this repo's `.env` expired on
-   17 Aug 2026). Use **Instagram API with Instagram Login** only (`graph.instagram.com`). No
-   Facebook Page or Facebook Login is needed, because @recallengine cannot be linked to a Page.
-   Scopes: `instagram_business_basic`, `instagram_business_content_publish`, and
-   `instagram_business_manage_comments` (the last one is for the comment bot, so one token serves
-   both). The helper lives in `W:/Projects/recallengine-ig-bot`: `npm run token:url`, then
-   `npm run token -- <code>`, then copy its `IG_ACCESS_TOKEN=` line into this repo's `.env`
-   (full steps in that README).
-2. `npm run reels:sync` then `npm run reels:dry` and read every caption and time.
-3. `npm run reels:stage-test` once to confirm the bucket still works.
-4. On the reel day, from about 17:50 Cairo: `BOT_CONFIRM_LIVE=yes REELS_CONFIRM_LIVE=yes npm run reels:live`
-   every 10 minutes (by hand the first time, then Task Scheduler). The first run after 18:00
-   stages, the first run after 19:00 publishes and deletes the files. Open the reel on Instagram.
+`reels:upload` reads the key from `W:/Projects/recall-engine/.env.local` (never printed), uploads the mp4
+and cover to the PRIVATE bucket `ig-reel-media`, checks the signed URL answers with the exact byte size,
+and writes `media` into `reel.json`. Upload no more than 7 days before the slot. A reel without valid
+signed media is never posted (the job fails so GitHub emails the owner).
+
+**Double posts.** The container id is saved before publishing, `reels/state.json` is committed back, and
+before creating any new container the publisher reads the account's recent media: a post whose first
+caption line matches is recorded as already live and never posted again.
+
+**Secrets** (owner only): `powershell -ExecutionPolicy Bypass -File scripts/set-secrets.ps1` sets
+`IG_ACCESS_TOKEN` and `CLAUDE_API_KEY`. Rerun it after every Instagram token refresh (about every 60
+days). Until both exist, the workflows exit with "secrets missing". Stop everything with
+`gh variable set CLOUD_BOTS --body off --repo icehacer-sys/recall-poster` (`on` or delete it to resume).
+No Supabase key ever goes to GitHub.

@@ -1,0 +1,36 @@
+{
+  "name": "recallengine-ig-bot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Comment reply bot for @recallengine reels. Confirms correct guesses, nudges wrong ones with the reel's own vetted facts, answers app questions with the approved template, and lists anything risky for the owner. Dry run by default.",
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "demo": "tsx src/index.ts --report reports/fixtures-latest.md",
+    "offline": "tsx src/index.ts --offline --report reports/fixtures-offline-latest.md",
+    "dry": "tsx src/index.ts --dry-run",
+    "live": "tsx src/index.ts --live",
+    "facts:sync": "tsx src/facts-sync.ts",
+    "test": "tsx src/selftest.ts && tsx src/budget-test.ts",
+    "typecheck": "tsc --noEmit",
+    "token:url": "tsx src/get-token.ts --url",
+    "token": "tsx src/get-token.ts",
+    "token:refresh": "tsx src/get-token.ts --refresh",
+    "key:check": "tsx src/key-check.ts",
+    "cloud:pack": "tsx src/cloud-state.ts pack",
+    "cloud:unpack": "tsx src/cloud-state.ts unpack",
+    "review": "tsx src/cloud-state.ts review",
+    "cloud:test": "bash test/cloud-test.sh"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.104.1",
+    "dotenv": "^17.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.2",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  }
+}

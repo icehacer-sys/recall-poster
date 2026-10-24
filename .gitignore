@@ -16,3 +16,16 @@ Thumbs.db
 # NOTE: posts/ and state.json are intentionally TRACKED.
 # Slide images must be public (raw.githubusercontent.com) for Meta to fetch them,
 # and state.json is committed back by the runner so restarts never double-post.
+
+# Comment bot (comments/): private state never goes to this PUBLIC repo. The cloud keeps it
+# encrypted in the Actions cache (see .github/workflows/comments.yml).
+/comments/state.json
+/comments/review-queue.json
+/comments/review-queue.cloud.json
+/comments/spend.json
+/comments/cloud-state.enc
+/comments/logs/
+/comments/reports/*live*
+/comments/reports/*dry*
+/comments/.orig-from-ig-bot/
+logs/

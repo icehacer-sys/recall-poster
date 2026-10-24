@@ -27,9 +27,11 @@ import {
   createReelContainer,
   publishingQuotaUsage,
   publishReelContainer,
+  recentMedia,
   type ReelContainerParams,
 } from "./instagram.js";
 import type { Reel } from "./types.js";
+import { MEDIA_BUCKET, ensureMediaBucket, probeUrl, redactUrl, signMedia, uploadMedia } from "./media.js";
 import {
   STAGING_BUCKET,
   createBucket,
@@ -64,7 +66,13 @@ const reelsCfg = {
   // Owner 24 Oct: "supabase" stages video + cover in the public ig-reel-staging bucket shortly
   // before the slot and deletes them after publishing. "url" = files already public under
   // REELS_PUBLIC_BASE/<slug>/<file>.
-  hosting: (process.env.REELS_HOSTING ?? "supabase").toLowerCase() === "url" ? "url" : "supabase",
+  // Cloud mode (owner GO, 24 Oct): "signed" = reel.json carries signed URLs to the PRIVATE bucket
+  // ig-reel-media, written by `npm run reels:upload` on the laptop. The runner needs no Supabase key.
+  hosting: ((h: string) => (h === "url" || h === "supabase" ? h : "signed"))((process.env.REELS_HOSTING ?? "signed").toLowerCase()) as "url" | "supabase" | "signed",
+  // Reel publish state (container ids, media ids). Separate from the carousel state.json.
+  stateFile: process.env.REELS_STATE_FILE ?? join(process.env.REELS_DIR ?? "./reels", "state.json"),
+  // Signed URL lifetime written by --upload.
+  signDays: num("REELS_SIGN_DAYS", 7),
   // Upload this many minutes before the slot.
   stageMinutes: num("REELS_STAGE_MINUTES", 60),
   // Only for REELS_HOSTING=url: public base the files sit under.
@@ -366,19 +374,22 @@ function supabaseProjectUrl(): string {
 }
 
 function publicUrl(slug: string, file: string): string {
+  if (reelsCfg.hosting === "signed") return `<run npm run reels:upload -- ${slug}>`;
   if (reelsCfg.hosting === "supabase") return stagingPublicUrlFor(supabaseProjectUrl(), slug, file);
   if (!reelsCfg.publicBase) return `<REELS_PUBLIC_BASE unset>/${slug}/${file}`;
   return `${reelsCfg.publicBase}/${encodeURIComponent(slug)}/${encodeURIComponent(file)}`;
 }
 
 export function containerParams(reel: Reel): ReelContainerParams {
+  const signed = reelsCfg.hosting === "signed" ? reel.media : undefined;
   const p: ReelContainerParams = {
     media_type: "REELS",
-    video_url: publicUrl(reel.slug, reel.video),
+    video_url: signed?.videoUrl ?? publicUrl(reel.slug, reel.video),
     caption: reel.caption,
     share_to_feed: reel.shareToFeed === false ? "false" : "true",
   };
-  if (reel.cover) p.cover_url = publicUrl(reel.slug, reel.cover);
+  if (signed?.coverUrl) p.cover_url = signed.coverUrl;
+  else if (reel.cover && !signed) p.cover_url = publicUrl(reel.slug, reel.cover);
   else p.thumb_offset = String(reel.thumbOffsetMs ?? 0);
   return p;
 }
@@ -411,13 +422,15 @@ function statusOf(reel: Reel, state: State, now: number): Status {
 
 async function runDry(checkUrls: boolean): Promise<void> {
   const reels = loadReels();
-  const state = new State();
+  const state = new State(reelsCfg.stateFile);
   const now = Date.now();
   console.log(`\nREELS DRY RUN at ${cairoLabel(new Date(now).toISOString())}. Nothing is uploaded or posted.`);
   const hostLine =
-    reelsCfg.hosting === "supabase"
-      ? `Supabase Storage bucket "${STAGING_BUCKET}" (upload ${reelsCfg.stageMinutes} min before the slot, delete after publish)`
-      : `REELS_PUBLIC_BASE ${reelsCfg.publicBase || "(unset)"}`;
+    reelsCfg.hosting === "signed"
+      ? `signed URLs to the private bucket "${MEDIA_BUCKET}" (written by npm run reels:upload)`
+      : reelsCfg.hosting === "supabase"
+        ? `Supabase Storage bucket "${STAGING_BUCKET}" (upload ${reelsCfg.stageMinutes} min before the slot, delete after publish)`
+        : `REELS_PUBLIC_BASE ${reelsCfg.publicBase || "(unset)"}`;
   console.log(`Default slot ${reelsCfg.postTime} ${TZ}. Hosting: ${hostLine}. Live latches: BOT_CONFIRM_LIVE=${config.confirmLive ? "yes" : "no"}, REELS_CONFIRM_LIVE=${reelsCfg.confirmLive ? "yes" : "no"}.\n`);
   if (reels.length === 0) {
     console.log("No reels in", reelsCfg.dir, "(run npm run reels:sync).");
@@ -444,7 +457,11 @@ async function runDry(checkUrls: boolean): Promise<void> {
       console.log(`2. at the slot: HEAD both public URLs (200 and matching size), then:`);
     }
     console.log("POST /me/media (form fields, token in the Authorization header only):");
-    const shown = { ...params, caption: `<${[...params.caption].length} chars, see below>` };
+    if (reelsCfg.hosting === "signed") {
+      const m = signedProblem(r, now);
+      console.log(m ? `  MEDIA: ${m}` : `  media: signed URLs valid until ${cairoLabel(r.media!.expiresAt)}`);
+    }
+    const shown = { ...params, caption: `<${[...params.caption].length} chars, see below>`, video_url: redactUrl(params.video_url), ...(params.cover_url ? { cover_url: redactUrl(params.cover_url) } : {}) };
     console.log(JSON.stringify(shown, null, 2).replace(/^/gm, "  "));
     console.log("then: poll GET /<container-id>?fields=status_code every 15 s until FINISHED, then POST /me/media_publish {creation_id}");
     if (reelsCfg.hosting === "supabase") {
@@ -453,7 +470,7 @@ async function runDry(checkUrls: boolean): Promise<void> {
     if (checkUrls) {
       for (const [label, url] of [["video_url", params.video_url], ["cover_url", params.cover_url]] as const) {
         if (!url) continue;
-        const h = await headUrl(url);
+        const h = await probeUrl(url);
         const match = h.ok && label === "video_url" && r.videoBytes && h.bytes ? (h.bytes === r.videoBytes ? ", size matches" : `, SIZE MISMATCH ${h.bytes} vs ${r.videoBytes}`) : "";
         console.log(`  HEAD ${label}: ${h.status || "unreachable"}${h.type ? ` ${h.type}` : ""}${match}`);
       }
@@ -499,13 +516,39 @@ async function cleanupReel(r: Reel, state: State, why: string): Promise<void> {
 
 // ---------------------------------------------------------------- live
 
+/** Why a signed-mode reel cannot publish now, or null when its media is ready. */
+function signedProblem(r: Reel, now: number): string | null {
+  if (!r.media?.videoUrl) return `no signed media yet: run npm run reels:upload -- ${r.slug} on the laptop`;
+  if (Date.parse(r.media.expiresAt) <= now + 15 * 60_000) return `signed URLs expired or expire within 15 min (${r.media.expiresAt}): rerun npm run reels:upload -- ${r.slug}`;
+  if (r.videoBytes && r.media.videoBytes !== r.videoBytes) return "uploaded video size differs from reel.json (rerun reels:sync and reels:upload)";
+  return null;
+}
+
+/** First caption line, normalised, to recognise a reel that is already live on Instagram. */
+export function captionKey(s: string): string {
+  const first = s.split("\n").map((l) => l.trim()).find((l) => l) ?? "";
+  return first.replace(/[\u064B-\u0652\u0640\u202A-\u202E\u200E\u200F]/g, "").replace(/\s+/g, " ").trim().toLowerCase();
+}
+
+/**
+ * Lost-state guard: before creating a new container, read the account's recent media. A post whose
+ * first caption line matches this reel means it is already live (posted earlier, by hand, or by a run
+ * whose state was not saved). Throws when Instagram cannot be read, so nothing posts blind.
+ */
+async function alreadyLive(r: Reel): Promise<{ id: string; timestamp?: string } | null> {
+  const key = captionKey(r.caption);
+  if (!key) return null;
+  const media = await recentMedia();
+  return media.find((m) => captionKey(m.caption ?? "") === key) ?? null;
+}
+
 async function runLive(): Promise<void> {
   if (!config.confirmLive || !reelsCfg.confirmLive) {
     throw new Error("Reel publishing requires BOTH BOT_CONFIRM_LIVE=yes and REELS_CONFIRM_LIVE=yes.");
   }
-  if (reelsCfg.hosting !== "supabase" && !reelsCfg.publicBase) throw new Error("REELS_PUBLIC_BASE must be set when REELS_HOSTING=url.");
+  if (reelsCfg.hosting === "url" && !reelsCfg.publicBase) throw new Error("REELS_PUBLIC_BASE must be set when REELS_HOSTING=url.");
   const reels = loadReels();
-  const state = new State();
+  const state = new State(reelsCfg.stateFile);
   const now = Date.now();
   let published = 0;
 
@@ -530,6 +573,14 @@ async function runLive(): Promise<void> {
       console.log(`  ${r.slug}: preflight failed, not posting: ${check.errors.join("; ")}`);
       continue;
     }
+    if (reelsCfg.hosting === "signed") {
+      const problem = signedProblem(r, now);
+      if (problem) {
+        console.log(`  ${r.slug}: ${problem}. Not posting.`);
+        if (st === "due") process.exitCode = 1;
+        continue;
+      }
+    }
     if (reelsCfg.hosting === "supabase" && !staged) {
       try {
         await stageReel(r, state);
@@ -541,13 +592,15 @@ async function runLive(): Promise<void> {
     if (st !== "due" || published >= reelsCfg.maxPerRun) continue; // staged early, publish at the slot
 
     const params = containerParams(r);
-    const v = await headUrl(params.video_url);
+    const v = await probeUrl(params.video_url);
     if (!v.ok || (r.videoBytes && v.bytes && v.bytes !== r.videoBytes)) {
-      console.log(`  ${r.slug}: video_url not reachable (HEAD ${v.status}${v.bytes ? `, ${v.bytes} bytes` : ""}). Not posting.`);
+      console.log(`  ${r.slug}: video_url not reachable (${v.status}${v.bytes ? `, ${v.bytes} bytes` : ""}). Not posting.`);
+      process.exitCode = 1;
       continue;
     }
-    if (params.cover_url && !(await headUrl(params.cover_url)).ok) {
+    if (params.cover_url && !(await probeUrl(params.cover_url)).ok) {
       console.log(`  ${r.slug}: cover_url not reachable. Not posting.`);
+      process.exitCode = 1;
       continue;
     }
     const usage = await publishingQuotaUsage();
@@ -569,21 +622,107 @@ async function runLive(): Promise<void> {
         if (s !== "FINISHED" && s !== "IN_PROGRESS") containerId = undefined; // ERROR / EXPIRED / unknown
       }
       if (!containerId) {
+        const live = await alreadyLive(r);
+        if (live) {
+          state.set(key, { postedAt: live.timestamp ?? new Date().toISOString(), igMediaId: live.id, recordedFrom: "found" });
+          console.log(`  ${r.slug}: already live on Instagram as ${live.id}. Recorded, not reposted.`);
+          if (reelsCfg.hosting === "supabase") await cleanupReel(r, state, "already live");
+          continue;
+        }
         containerId = await createReelContainer(params);
         state.set(key, { reelContainerId: containerId, reelContainerCreatedAt: new Date().toISOString() });
       }
       console.log(`Publishing reel ${r.slug} (container ${containerId}) ...`);
       const id = await publishReelContainer(containerId);
-      state.set(key, { postedAt: new Date().toISOString(), igMediaId: id });
+      state.set(key, { postedAt: new Date().toISOString(), igMediaId: id, recordedFrom: "published" });
       console.log(`  published as ${id}`);
       published++;
       if (reelsCfg.hosting === "supabase") await cleanupReel(r, state, "published");
     } catch (e) {
       // Files stay staged for the retry window; the missed branch above deletes them after it.
       console.error(`  FAILED to publish ${r.slug}: ${(e as Error).message}`);
+      process.exitCode = 1;
     }
   }
   console.log(`reels live: ${published} reel(s) published.`);
+}
+
+// ---------------------------------------------------------------- upload (laptop, cloud mode)
+
+/**
+ * npm run reels:upload -- [slug ...] [--push]
+ * Uploads each reel's mp4 and cover to the PRIVATE bucket ig-reel-media and writes signed URLs
+ * (valid REELS_SIGN_DAYS) into reels/<slug>/reel.json. With no slug: every upcoming reel that is not
+ * manual or draft and has no signed media yet (or media that expires before its slot window ends).
+ * --push commits and pushes those reel.json files so the cloud workflow sees them.
+ * The Supabase key is read locally and never printed.
+ */
+async function runUpload(args: string[]): Promise<void> {
+  const push = args.includes("--push");
+  const force = args.includes("--force");
+  const wanted = args.filter((a) => !a.startsWith("--"));
+  const all = loadReels();
+  const now = Date.now();
+  const windowEnd = (r: Reel) => Date.parse(r.postAt) + reelsCfg.maxLateHours * 3_600_000;
+  const picked: Reel[] = [];
+  for (const s of wanted) {
+    const r = all.find((x) => x.slug === s);
+    if (!r) throw new Error(`no reels/${s}/reel.json (run npm run reels:sync first)`);
+    picked.push(r);
+  }
+  if (!wanted.length) picked.push(...all.filter((r) => !r.manual && !r.draft && windowEnd(r) > now && (!r.media || Date.parse(r.media.expiresAt) < windowEnd(r))));
+  if (!picked.length) {
+    console.log("Nothing to upload: every upcoming reel already has signed media.");
+    return;
+  }
+  await ensureMediaBucket();
+  const seconds = Math.round(reelsCfg.signDays * 86_400);
+  const changed: string[] = [];
+  for (const r of picked) {
+    if ((r.manual || r.draft) && !force) {
+      console.log(`  ${r.slug}: ${r.manual ? "manual" : "draft"}, skipped. Use --force to upload anyway.`);
+      continue;
+    }
+    const abs = join(reelsCfg.sourceDir, r.sourceFolder);
+    const videoPath = join(abs, r.video);
+    if (!existsSync(videoPath)) throw new Error(`${r.slug}: ${videoPath} not found`);
+    const bytes = statSync(videoPath).size;
+    if (r.videoBytes && r.videoBytes !== bytes) throw new Error(`${r.slug}: the mp4 changed since the last sync (${bytes} vs ${r.videoBytes} bytes). Run npm run reels:sync first.`);
+    const check = preflight(r);
+    if (check.errors.length) throw new Error(`${r.slug}: preflight failed: ${check.errors.join("; ")}`);
+    const stamp = new Date().toISOString().replace(/[-:]/g, "").slice(0, 15);
+    const vPath = `${r.slug}/${stamp}-${r.video}`;
+    await uploadMedia(vPath, readFileSync(videoPath), "video/mp4");
+    const videoUrl = await signMedia(vPath, seconds);
+    let coverPath: string | undefined;
+    let coverUrl: string | undefined;
+    if (r.cover) {
+      coverPath = `${r.slug}/${stamp}-${r.cover}`;
+      await uploadMedia(coverPath, readFileSync(join(abs, r.cover)), "image/jpeg");
+      coverUrl = await signMedia(coverPath, seconds);
+    }
+    const v = await probeUrl(videoUrl);
+    if (!v.ok || v.bytes !== bytes) throw new Error(`${r.slug}: the signed video URL did not answer with the right size (${v.status}, ${v.bytes} vs ${bytes})`);
+    if (coverUrl && !(await probeUrl(coverUrl)).ok) throw new Error(`${r.slug}: the signed cover URL does not answer`);
+    r.media = { bucket: MEDIA_BUCKET, videoPath: vPath, coverPath, videoUrl, coverUrl, videoBytes: bytes, uploadedAt: new Date().toISOString(), expiresAt: new Date(Date.now() + seconds * 1000 - 60_000).toISOString() };
+    saveReel(r);
+    changed.push(reelFile(r.slug));
+    console.log(`  ${r.slug}: uploaded ${(bytes / 1e6).toFixed(1)} MB${r.cover ? " and the cover" : ""} to ${MEDIA_BUCKET}. Signed URLs valid until ${cairoLabel(r.media.expiresAt)}. Posts ${cairoLabel(r.postAt)}.`);
+  }
+  if (!changed.length) return;
+  if (!push) {
+    console.log(`\nNext: commit and push ${changed.join(", ")} to main (or rerun with --push).`);
+    return;
+  }
+  const git = (...a: string[]) => {
+    const res = spawnSync("git", a, { stdio: "inherit" });
+    if (res.status !== 0) throw new Error(`git ${a[0]} failed`);
+  };
+  git("add", ...changed);
+  git("commit", "-m", `chore(reels): signed media for ${picked.map((r) => r.slug).join(", ")}`);
+  git("pull", "--rebase", "--autostash");
+  git("push");
+  console.log("Pushed. The cloud workflow publishes it at the slot.");
 }
 
 // ---------------------------------------------------------------- bucket setup and test
@@ -625,6 +764,7 @@ async function runStageTest(): Promise<void> {
 async function main(): Promise<void> {
   const a = process.argv.slice(2);
   if (a.includes("--sync")) return runSync();
+  if (a.includes("--upload")) return runUpload(a.filter((x) => x !== "--upload"));
   if (a.includes("--bucket")) return runBucket();
   if (a.includes("--stage-test")) return runStageTest();
   if (a.includes("--live")) return runLive();

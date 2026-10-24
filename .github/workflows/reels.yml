@@ -1,0 +1,99 @@
+name: reels
+
+# Publishes the due @recallengine reel from the cloud (owner GO, 24 Oct 2026). No laptop needed.
+# Media: reels/<slug>/reel.json carries 7-day signed URLs to the PRIVATE Supabase bucket ig-reel-media,
+# written on the laptop by `npm run reels:upload -- <slug> --push`. This workflow has no Supabase key.
+# Safety: both live latches, the 3-hour late window, one reel per run, reels/state.json committed back,
+# and an Instagram caption check before any new container (so lost state never double-posts).
+# Cron is UTC. Egypt is UTC+3 until 29 Oct 2026, then UTC+2: the cron covers both and the gate
+# keeps 17:45 to 22:00 Cairo. Stop it: gh variable set CLOUD_BOTS --body off
+on:
+  schedule:
+    - cron: "3-59/10 14-20 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "dry = print the schedule only. live = publish a due reel (same checks as the schedule)."
+        type: choice
+        options: [dry, live]
+        default: dry
+
+concurrency:
+  group: recall-reels
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: gate
+        id: gate
+        env:
+          IG: ${{ secrets.IG_ACCESS_TOKEN }}
+          CLAUDE: ${{ secrets.CLAUDE_API_KEY }}
+          SWITCH: ${{ vars.CLOUD_BOTS }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          now=$(TZ=Africa/Cairo date +%H%M)
+          n=$((10#$now))
+          if [ "$EVENT" = schedule ] && { [ "$n" -lt 1745 ] || [ "$n" -gt 2200 ]; }; then
+            echo "outside 17:45 to 22:00 Cairo (now $now). Nothing to do."
+            echo "go=no" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # CLAUDE_API_KEY marks that the owner ran set-secrets.ps1 (an old, expired IG token predates it).
+          if [ -z "$IG" ] || [ -z "$CLAUDE" ]; then
+            echo "secrets missing (IG_ACCESS_TOKEN and CLAUDE_API_KEY): run set-secrets.ps1. Nothing posted."
+            echo "go=no" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "$SWITCH" = off ]; then
+            echo "CLOUD_BOTS is off. Nothing posted."
+            echo "go=no" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "Cairo time $now."
+          echo "go=yes" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.go == 'yes'
+
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.go == 'yes'
+        with:
+          node-version: "22"
+          cache: npm
+
+      - if: steps.gate.outputs.go == 'yes'
+        run: npm ci --no-audit --no-fund
+
+      - name: reels
+        if: steps.gate.outputs.go == 'yes'
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          REELS_HOSTING: signed
+          REELS_STATE_FILE: reels/state.json
+          BOT_CONFIRM_LIVE: ${{ (github.event_name == 'schedule' || inputs.mode == 'live') && 'yes' || '' }}
+          REELS_CONFIRM_LIVE: ${{ (github.event_name == 'schedule' || inputs.mode == 'live') && 'yes' || '' }}
+        run: |
+          if [ "$REELS_CONFIRM_LIVE" = yes ]; then npm run -s reels:live; else npm run -s reels:dry; fi
+
+      - name: save reel state
+        if: always() && steps.gate.outputs.go == 'yes'
+        run: |
+          [ -f reels/state.json ] || { echo "no reel state yet"; exit 0; }
+          git config user.name "recall-poster bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add reels/state.json
+          if git diff --cached --quiet; then echo "reel state unchanged"; exit 0; fi
+          git commit -m "chore(reels): record reel state [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase && git push && exit 0
+            sleep 5
+          done
+          echo "::error::could not push reels/state.json. The Instagram caption check still prevents a double post."
+          exit 1
