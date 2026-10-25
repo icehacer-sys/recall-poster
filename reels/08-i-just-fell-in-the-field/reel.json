@@ -10,17 +10,17 @@
   "thumbOffsetMs": 0,
   "shareToFeed": true,
   "storyDay": "day-01",
-  "videoBytes": 74450347,
-  "videoSha256": "57c70e8da465c712",
+  "videoBytes": 72213600,
+  "videoSha256": "7eee390c3b3c59af",
   "draft": false,
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "08-i-just-fell-in-the-field/20261024T185315-reel-case-08-day-01.mp4",
-    "coverPath": "08-i-just-fell-in-the-field/20261024T185315-cover.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/08-i-just-fell-in-the-field/20261024T185315-reel-case-08-day-01.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA4LWktanVzdC1mZWxsLWluLXRoZS1maWVsZC8yMDI2MTAyNFQxODUzMTUtcmVlbC1jYXNlLTA4LWRheS0wMS5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkyODY4MDMxLCJleHAiOjE3OTM0NzI4MzF9.kMJF0QWHqmo_3k02Npu4iNmJ0_iXQZF3Bu0U7weeFuE",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/08-i-just-fell-in-the-field/20261024T185315-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA4LWktanVzdC1mZWxsLWluLXRoZS1maWVsZC8yMDI2MTAyNFQxODUzMTUtY292ZXIuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5Mjg2ODAzMiwiZXhwIjoxNzkzNDcyODMyfQ.UMrCXxTwGizdPRJpntFmS_N8_Vh0iWBwbybp__8r8sA",
-    "videoBytes": 74450347,
-    "uploadedAt": "2026-10-24T18:53:48.054Z",
-    "expiresAt": "2026-10-31T18:52:48.054Z"
+    "videoPath": "08-i-just-fell-in-the-field/20261025T022414-reel-case-08-day-01.mp4",
+    "coverPath": "08-i-just-fell-in-the-field/20261025T022414-cover.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/08-i-just-fell-in-the-field/20261025T022414-reel-case-08-day-01.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA4LWktanVzdC1mZWxsLWluLXRoZS1maWVsZC8yMDI2MTAyNVQwMjI0MTQtcmVlbC1jYXNlLTA4LWRheS0wMS5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkyODk1MDg5LCJleHAiOjE3OTM0OTk4ODl9.DGUuVt1KksgzSMd8uR9OCPv9MXJUNVz46SNhRq2BJGo",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/08-i-just-fell-in-the-field/20261025T022414-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA4LWktanVzdC1mZWxsLWluLXRoZS1maWVsZC8yMDI2MTAyNVQwMjI0MTQtY292ZXIuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5Mjg5NTA4OSwiZXhwIjoxNzkzNDk5ODg5fQ.vEUSXZHF0i7uY56tmtzdS2c9wN-dA9kLPO8GNShnIjc",
+    "videoBytes": 72213600,
+    "uploadedAt": "2026-10-25T02:24:45.512Z",
+    "expiresAt": "2026-11-01T02:23:45.512Z"
   }
 }
