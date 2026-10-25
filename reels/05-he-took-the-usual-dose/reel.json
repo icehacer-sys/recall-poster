@@ -10,17 +10,17 @@
   "thumbOffsetMs": 0,
   "shareToFeed": true,
   "storyDay": "day-29",
-  "videoBytes": 61607313,
-  "videoSha256": "24b6acd0a8ebc9ec",
+  "videoBytes": 61608267,
+  "videoSha256": "3b602fab41779496",
   "draft": false,
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "05-he-took-the-usual-dose/20261024T202919-reel-case-05-day-29.mp4",
-    "coverPath": "05-he-took-the-usual-dose/20261024T202919-cover.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/05-he-took-the-usual-dose/20261024T202919-reel-case-05-day-29.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA1LWhlLXRvb2stdGhlLXVzdWFsLWRvc2UvMjAyNjEwMjRUMjAyOTE5LXJlZWwtY2FzZS0wNS1kYXktMjkubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5Mjg3Mzc5NSwiZXhwIjoxNzkzNDc4NTk1fQ.uyF8iPzUyvgQSY2y2o1gNqv5abmZSxtJiUylUL9qf60",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/05-he-took-the-usual-dose/20261024T202919-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA1LWhlLXRvb2stdGhlLXVzdWFsLWRvc2UvMjAyNjEwMjRUMjAyOTE5LWNvdmVyLmpwZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTI4NzM3OTYsImV4cCI6MTc5MzQ3ODU5Nn0.etW43stdxszzQ170rS8BiG9rXW94IVLAGG4_f8vavh4",
-    "videoBytes": 61607313,
-    "uploadedAt": "2026-10-24T20:29:52.789Z",
-    "expiresAt": "2026-10-31T20:28:52.789Z"
+    "videoPath": "05-he-took-the-usual-dose/20261025T023834-reel-case-05-day-29.mp4",
+    "coverPath": "05-he-took-the-usual-dose/20261025T023834-cover.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/05-he-took-the-usual-dose/20261025T023834-reel-case-05-day-29.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA1LWhlLXRvb2stdGhlLXVzdWFsLWRvc2UvMjAyNjEwMjVUMDIzODM0LXJlZWwtY2FzZS0wNS1kYXktMjkubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5Mjg5NTk0NiwiZXhwIjoxNzkzNTAwNzQ2fQ.YqLinT699DIwynRCoPRfMxj_5_6ApHQDBAuI3eUDMq4",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/05-he-took-the-usual-dose/20261025T023834-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA1LWhlLXRvb2stdGhlLXVzdWFsLWRvc2UvMjAyNjEwMjVUMDIzODM0LWNvdmVyLmpwZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTI4OTU5NDcsImV4cCI6MTc5MzUwMDc0N30.5ePBDjylBHLgg_bTWxQAIpTuH9ivIYG6lpSiU3iL2aQ",
+    "videoBytes": 61608267,
+    "uploadedAt": "2026-10-25T02:39:02.537Z",
+    "expiresAt": "2026-11-01T02:38:02.537Z"
   }
 }
