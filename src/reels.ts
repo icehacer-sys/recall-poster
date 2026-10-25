@@ -170,7 +170,8 @@ function sha256Prefix(path: string): string {
 }
 
 function pickVideo(files: string[]): string | undefined {
-  const mp4 = files.filter((f) => f.toLowerCase().endsWith(".mp4")).sort();
+  // Skip half-written encodes (e.g. up.tmp.mp4): a sync during a re-encode once picked one as the master.
+  const mp4 = files.filter((f) => f.toLowerCase().endsWith(".mp4") && !/(^|\.)(tmp|part)\./i.test(f)).sort();
   const phone = mp4.filter((f) => /-phone\.mp4$/i.test(f));
   // The master is the plain render: the shortest non-phone name (skips e.g. *-browser-720p.mp4).
   const master = mp4.filter((f) => !/-phone\.mp4$/i.test(f)).sort((a, b) => a.length - b.length || a.localeCompare(b));
