@@ -10,17 +10,17 @@
   "thumbOffsetMs": 0,
   "shareToFeed": true,
   "storyDay": "day-28",
-  "videoBytes": 96878754,
-  "videoSha256": "6f813013695a9a3d",
+  "videoBytes": 79765738,
+  "videoSha256": "1436f4c08a90ea1c",
   "draft": false,
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "04-the-cuff-gave-her-away/20261024T184516-reel-case-04-day-28.mp4",
-    "coverPath": "04-the-cuff-gave-her-away/20261024T184516-cover.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/04-the-cuff-gave-her-away/20261024T184516-reel-case-04-day-28.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA0LXRoZS1jdWZmLWdhdmUtaGVyLWF3YXkvMjAyNjEwMjRUMTg0NTE2LXJlZWwtY2FzZS0wNC1kYXktMjgubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5Mjg2NzU2NywiZXhwIjoxNzkzNDcyMzY3fQ.9xy5g_HvS6cmVyt_XyR0zcN3hFnPQKoHqjpPTqnVpUQ",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/04-the-cuff-gave-her-away/20261024T184516-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA0LXRoZS1jdWZmLWdhdmUtaGVyLWF3YXkvMjAyNjEwMjRUMTg0NTE2LWNvdmVyLmpwZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTI4Njc1NjcsImV4cCI6MTc5MzQ3MjM2N30.oo8Uwv951O3qVEH1HrmMLyqNAz4ZNkDzNx0F8IqS5dY",
-    "videoBytes": 96878754,
-    "uploadedAt": "2026-10-24T18:46:03.398Z",
-    "expiresAt": "2026-10-31T18:45:03.398Z"
+    "videoPath": "04-the-cuff-gave-her-away/20261025T204310-reel-case-04-day-28.mp4",
+    "coverPath": "04-the-cuff-gave-her-away/20261025T204310-cover.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/04-the-cuff-gave-her-away/20261025T204310-reel-case-04-day-28.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA0LXRoZS1jdWZmLWdhdmUtaGVyLWF3YXkvMjAyNjEwMjVUMjA0MzEwLXJlZWwtY2FzZS0wNC1kYXktMjgubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5Mjk2MTA2NywiZXhwIjoxNzkzNTY1ODY3fQ.mVMRVQm9XgpNd7fDyNkPt4KvitbwjYgEhukFMMQ6VvE",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/04-the-cuff-gave-her-away/20261025T204310-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA0LXRoZS1jdWZmLWdhdmUtaGVyLWF3YXkvMjAyNjEwMjVUMjA0MzEwLWNvdmVyLmpwZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTI5NjEwNjgsImV4cCI6MTc5MzU2NTg2OH0.fiClpfRvUcjEy7jRZU0hhHiisc0dShC5aI7DssV62eQ",
+    "videoBytes": 79765738,
+    "uploadedAt": "2026-10-25T20:44:28.725Z",
+    "expiresAt": "2026-11-01T20:43:28.725Z"
   }
 }
