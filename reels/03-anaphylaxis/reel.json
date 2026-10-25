@@ -10,17 +10,17 @@
   "thumbOffsetMs": 0,
   "shareToFeed": true,
   "storyDay": "day-27",
-  "videoBytes": 77242292,
-  "videoSha256": "6033873f49de575c",
+  "videoBytes": 77248263,
+  "videoSha256": "d9a3a0889f225092",
   "draft": false,
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "03-anaphylaxis/20261024T221049-reel-case-03-day-27.mp4",
-    "coverPath": "03-anaphylaxis/20261024T221049-cover.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/03-anaphylaxis/20261024T221049-reel-case-03-day-27.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzAzLWFuYXBoeWxheGlzLzIwMjYxMDI0VDIyMTA0OS1yZWVsLWNhc2UtMDMtZGF5LTI3Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTI4Nzk4ODQsImV4cCI6MTc5MzQ4NDY4NH0.hly24yP3pd8WXD69cFevHfSe2dxSLwNAvzwx2n1htyM",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/03-anaphylaxis/20261024T221049-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzAzLWFuYXBoeWxheGlzLzIwMjYxMDI0VDIyMTA0OS1jb3Zlci5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkyODc5ODg1LCJleHAiOjE3OTM0ODQ2ODV9.Yj-IqmpPBxBn8QmUgrauhXtdu6sDHtdSYBX5__goUVM",
-    "videoBytes": 77242292,
-    "uploadedAt": "2026-10-24T22:11:20.991Z",
-    "expiresAt": "2026-10-31T22:10:20.991Z"
+    "videoPath": "03-anaphylaxis/20261025T154146-reel-case-03-day-27.mp4",
+    "coverPath": "03-anaphylaxis/20261025T154146-cover.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/03-anaphylaxis/20261025T154146-reel-case-03-day-27.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzAzLWFuYXBoeWxheGlzLzIwMjYxMDI1VDE1NDE0Ni1yZWVsLWNhc2UtMDMtZGF5LTI3Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTI5NDI5MzgsImV4cCI6MTc5MzU0NzczOH0.eppell8iSBdIf9adPKoaqTJRuY-y1WJg4wB_BHY1vBc",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/03-anaphylaxis/20261025T154146-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzAzLWFuYXBoeWxheGlzLzIwMjYxMDI1VDE1NDE0Ni1jb3Zlci5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkyOTQyOTM4LCJleHAiOjE3OTM1NDc3Mzh9.Jto5SL0CbqmjUH4AmD-asDLxUckaMkLueqVZ6kbpQmk",
+    "videoBytes": 77248263,
+    "uploadedAt": "2026-10-25T15:42:19.507Z",
+    "expiresAt": "2026-11-01T15:41:19.507Z"
   }
 }
