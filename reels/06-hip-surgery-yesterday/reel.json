@@ -10,17 +10,17 @@
   "thumbOffsetMs": 0,
   "shareToFeed": true,
   "storyDay": "day-30",
-  "videoBytes": 75502951,
-  "videoSha256": "ab8b63c206313d01",
+  "videoBytes": 73060147,
+  "videoSha256": "91d02ac09684086a",
   "draft": false,
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "06-hip-surgery-yesterday/20261024T192205-reel-case-06-day-30.mp4",
-    "coverPath": "06-hip-surgery-yesterday/20261024T192205-cover.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/06-hip-surgery-yesterday/20261024T192205-reel-case-06-day-30.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA2LWhpcC1zdXJnZXJ5LXllc3RlcmRheS8yMDI2MTAyNFQxOTIyMDUtcmVlbC1jYXNlLTA2LWRheS0zMC5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkyODY5NzkzLCJleHAiOjE3OTM0NzQ1OTN9.B5uaonDmhTGl1N771GXcQ3mQOzANTQ8jlKLy4sUSUB0",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/06-hip-surgery-yesterday/20261024T192205-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA2LWhpcC1zdXJnZXJ5LXllc3RlcmRheS8yMDI2MTAyNFQxOTIyMDUtY292ZXIuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5Mjg2OTc5NCwiZXhwIjoxNzkzNDc0NTk0fQ.0mvNubHcm57uRcC4AJVeapOzl7ezbX9x5td6lRiaadA",
-    "videoBytes": 75502951,
-    "uploadedAt": "2026-10-24T19:23:09.846Z",
-    "expiresAt": "2026-10-31T19:22:09.846Z"
+    "videoPath": "06-hip-surgery-yesterday/20261026T053543-reel-case-06-day-30.mp4",
+    "coverPath": "06-hip-surgery-yesterday/20261026T053543-cover.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/06-hip-surgery-yesterday/20261026T053543-reel-case-06-day-30.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA2LWhpcC1zdXJnZXJ5LXllc3RlcmRheS8yMDI2MTAyNlQwNTM1NDMtcmVlbC1jYXNlLTA2LWRheS0zMC5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkyOTkzMDA3LCJleHAiOjE3OTM1OTc4MDd9.M_DFXFE4XU002uPYBm5n0Sgb1sPJePR02r-7z5bV0o0",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/06-hip-surgery-yesterday/20261026T053543-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA2LWhpcC1zdXJnZXJ5LXllc3RlcmRheS8yMDI2MTAyNlQwNTM1NDMtY292ZXIuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5Mjk5MzAwOSwiZXhwIjoxNzkzNTk3ODA5fQ.krOi8iQKJdcO_DZGfzIgcvZvALOlEGh_vY1TY7coIOg",
+    "videoBytes": 73060147,
+    "uploadedAt": "2026-10-26T05:36:48.816Z",
+    "expiresAt": "2026-11-02T05:35:48.816Z"
   }
 }
