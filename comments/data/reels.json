@@ -294,13 +294,13 @@
       "storyDressing": "- The names Dina (CS-05) and Hesham (CS-31), Hesham himself, and every character line. - The setting: surgical ward, المنصورة (short name only, never in an image). Staff are shown as competent hands and backs. - The night-before flashback at home and her worry about the scar. - Day 0 evening on the ward, the thermos, the prayer beads, the foil-wrapped food, and the tea glasses. - The clock stamps 8:10, 8:20, 8:30, and 8:40 a.m., the lab phone call, the corridor walk, and the 3 minutes clock shot. - \"You tap\": the viewer plays the examining student from the stem. - The relaxed hand and the afternoon smile after treatment."
     },
     {
-      "slug": "05-he-took-the-usual-dose",
+      "slug": "04-he-took-the-usual-dose",
       "storyDay": "day-29",
-      "title": "Case 05: respiratory depression on codeine with a high morphine level",
+      "title": "Case 04: respiratory depression on codeine with a high morphine level",
       "question": "Which genotype explains this?",
       "mediaId": "",
       "shortcode": "",
-      "captionStart": "«جرعتي المعتادة» من الـ codeine… وبعدها مش بيفوق 🩺",
+      "captionStart": "ماخدش غير برشامته من الـ codeine… ودلوقتي مش بيفوق 🩺",
       "stem": "A man taking codeine for pain develops respiratory depression, and his serum morphine level is high. Which genotype explains this?",
       "answer": "Gene amplification of CYP2D6",
       "takeaway": "CYP2D6 gene amplification makes a patient an ultra-rapid metaboliser, and codeine then raises serum morphine enough to cause respiratory depression. Pinpoint pupils with shallow breathing after an opioid point to opioid toxicity; naloxone reverses it.",
