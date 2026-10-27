@@ -12,7 +12,7 @@
   "storyDay": "day-29",
   "videoBytes": 57085586,
   "videoSha256": "bb3ef9fb2bad6d54",
-  "draft": false,
+  "draft": true,
   "media": {
     "bucket": "ig-reel-media",
     "videoPath": "05-he-took-the-usual-dose/20261026T010851-reel-case-05-day-29.mp4",
