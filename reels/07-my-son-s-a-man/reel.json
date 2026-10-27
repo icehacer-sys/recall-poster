@@ -12,7 +12,7 @@
   "storyDay": "day-31",
   "videoBytes": 69358276,
   "videoSha256": "7024beb61a17f883",
-  "draft": false,
+  "draft": true,
   "media": {
     "bucket": "ig-reel-media",
     "videoPath": "07-my-son-s-a-man/20261025T231957-reel-case-07-day-31.mp4",

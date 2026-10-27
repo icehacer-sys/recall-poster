@@ -12,7 +12,7 @@
   "storyDay": "day-04",
   "videoBytes": 69015599,
   "videoSha256": "caf4e7b1542d6e2c",
-  "draft": false,
+  "draft": true,
   "media": {
     "bucket": "ig-reel-media",
     "videoPath": "11-the-sharbat-is-ready/20261026T183749-reel-case-11-day-04.mp4",

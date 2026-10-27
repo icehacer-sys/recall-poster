@@ -12,7 +12,7 @@
   "storyDay": "day-03",
   "videoBytes": 71845258,
   "videoSha256": "c8cf4f51ce47a815",
-  "draft": false,
+  "draft": true,
   "media": {
     "bucket": "ig-reel-media",
     "videoPath": "10-who-collapses-from-a-sneeze/20261026T002917-reel-case-10-day-03.mp4",

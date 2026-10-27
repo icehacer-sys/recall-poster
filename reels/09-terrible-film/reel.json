@@ -12,7 +12,7 @@
   "storyDay": "day-02",
   "videoBytes": 74849628,
   "videoSha256": "fda364b54c894d6e",
-  "draft": false,
+  "draft": true,
   "media": {
     "bucket": "ig-reel-media",
     "videoPath": "09-terrible-film/20261026T011444-reel-case-09-day-02.mp4",
