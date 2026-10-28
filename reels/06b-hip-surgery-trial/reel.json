@@ -11,17 +11,17 @@
   "shareToFeed": true,
   "trial": "MANUAL",
   "storyDay": "day-30",
-  "videoBytes": 52732103,
-  "videoSha256": "41d9282bf397ddbd",
-  "draft": true,
+  "videoBytes": 50306245,
+  "videoSha256": "2ce565c77ba1f89b",
+  "draft": false,
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "06b-hip-surgery-trial/20261028T085023-reel-case-06-day-30-trial.mp4",
-    "coverPath": "06b-hip-surgery-trial/20261028T085023-cover.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/06b-hip-surgery-trial/20261028T085023-reel-case-06-day-30-trial.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA2Yi1oaXAtc3VyZ2VyeS10cmlhbC8yMDI2MTAyOFQwODUwMjMtcmVlbC1jYXNlLTA2LWRheS0zMC10cmlhbC5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzMTc3NDQ2LCJleHAiOjE3OTM3ODIyNDZ9.GzLjzh7ywHzbU2x8_gIeIDo9pFxLy2DBgMm2RLlwd88",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/06b-hip-surgery-trial/20261028T085023-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA2Yi1oaXAtc3VyZ2VyeS10cmlhbC8yMDI2MTAyOFQwODUwMjMtY292ZXIuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzE3NzQ0NywiZXhwIjoxNzkzNzgyMjQ3fQ.VYwCgH1R6RGifky75XZzCNonJXJsSexIZzwhAq4J_gw",
-    "videoBytes": 52732103,
-    "uploadedAt": "2026-10-28T08:50:47.893Z",
-    "expiresAt": "2026-11-04T08:49:47.893Z"
+    "videoPath": "06b-hip-surgery-trial/20261028T142142-reel-case-06-day-30-trial.mp4",
+    "coverPath": "06b-hip-surgery-trial/20261028T142142-cover.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/06b-hip-surgery-trial/20261028T142142-reel-case-06-day-30-trial.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA2Yi1oaXAtc3VyZ2VyeS10cmlhbC8yMDI2MTAyOFQxNDIxNDItcmVlbC1jYXNlLTA2LWRheS0zMC10cmlhbC5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzMTk3MzIzLCJleHAiOjE3OTM4MDIxMjN9.XSTHYbyJ3Pa3f29sULgH4AxqtEJ8d_9Su5HpC_Xtc-M",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/06b-hip-surgery-trial/20261028T142142-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA2Yi1oaXAtc3VyZ2VyeS10cmlhbC8yMDI2MTAyOFQxNDIxNDItY292ZXIuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzE5NzMyNCwiZXhwIjoxNzkzODAyMTI0fQ.mB5w0mFRtHcazvLGtLR4b2sNYl0pJ1-EySe90HYA0YI",
+    "videoBytes": 50306245,
+    "uploadedAt": "2026-10-28T14:22:05.169Z",
+    "expiresAt": "2026-11-04T14:21:05.169Z"
   }
 }
