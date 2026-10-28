@@ -224,6 +224,7 @@ function runSync(): void {
       postAtCairo: cairoLabel(postAt),
       thumbOffsetMs: prev?.thumbOffsetMs ?? 0,
       shareToFeed: prev?.shareToFeed ?? true,
+      trial: prev?.trial,
       storyDay: prev?.storyDay ?? (storyDay ? `day-${storyDay}` : undefined),
       videoBytes: statSync(join(abs, video)).size,
       videoSha256: sha256Prefix(join(abs, video)),
@@ -395,6 +396,9 @@ export function containerParams(reel: Reel): ReelContainerParams {
   if (signed?.coverUrl) p.cover_url = signed.coverUrl;
   else if (reel.cover && !signed) p.cover_url = publicUrl(reel.slug, reel.cover);
   else p.thumb_offset = String(reel.thumbOffsetMs ?? 0);
+  if (reel.trial === "MANUAL" || reel.trial === "SS_PERFORMANCE") {
+    p.trial_params = JSON.stringify({ graduation_strategy: reel.trial });
+  }
   return p;
 }
 

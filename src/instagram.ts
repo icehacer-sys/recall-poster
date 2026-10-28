@@ -129,6 +129,8 @@ export interface ReelContainerParams {
   share_to_feed: "true" | "false";
   cover_url?: string;
   thumb_offset?: string;
+  /** Trial reel: JSON, e.g. {"graduation_strategy":"MANUAL"}. */
+  trial_params?: string;
 }
 
 /** Create a REELS container and return its id (does not publish). */

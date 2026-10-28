@@ -82,6 +82,9 @@ export interface Reel {
   thumbOffsetMs?: number;
   /** Also show the reel in the main grid/feed (default true). */
   shareToFeed?: boolean;
+  /** Post as a trial reel, shown to non-followers first. MANUAL = the owner graduates it in the
+   * Instagram app; SS_PERFORMANCE = Instagram graduates it if it performs well. Unset = a normal reel. */
+  trial?: "MANUAL" | "SS_PERFORMANCE";
   /** Story day folder in v2-story (sources.md + script.md), e.g. "day-26". Used by the comment bot. */
   storyDay?: string;
   /** Local file facts captured by --sync (bytes, sha256 prefix) so drift is visible. */
