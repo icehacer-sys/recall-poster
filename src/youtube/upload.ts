@@ -14,6 +14,12 @@
 //                        notification. It ignores the slot window and needs no approval (only the owner
 //                        sees it). Every other check still runs. Needs the same as --live.
 //   --only <slug>        Limit a run to one reel.
+//   --media <slug ...>   Laptop: upload each reel's YouTube cut (youtube.json "video") to the private bucket
+//                        and record its signed URL in youtube.json. --push commits and pushes those files.
+//
+// The video: a youtube.json "video" entry names the YouTube cut, and the bot then uploads THAT file and
+// never the Instagram media (owner, 28 Oct 2026: the YouTube cuts carry a new voice, style A cards, and the
+// @recallengineapp handle). Without it the bot uploads the Instagram reel's media, as before.
 //
 // Live flow per reel: preflight -> signed URL problems -> channel check -> lost-state guard (the
 // channel's newest uploads, by the hidden tag re-<slug> or the title) -> download the mp4 and check its
@@ -23,11 +29,11 @@
 
 import { createHash } from "node:crypto";
 import { spawnSync } from "node:child_process";
-import { existsSync, readFileSync, writeFileSync } from "node:fs";
-import { join } from "node:path";
+import { existsSync, readFileSync, statSync, writeFileSync } from "node:fs";
+import { basename, isAbsolute, join } from "node:path";
 import type { Reel, ReelYoutube } from "../types.js";
 import { addDays, cairoLabel, loadReelsFrom, localToUtcIso, localYmd, signedProblem } from "../reels-manifest.js";
-import { probeUrl, redactUrl } from "../media.js";
+import { MEDIA_BUCKET, ensureMediaBucket, probeUrl, redactUrl, signMedia, uploadMedia } from "../media.js";
 import { yt } from "./config.js";
 import { YtState } from "./state.js";
 import { COST, QuotaError, YouTubeClient, missingSecrets, type VideoResource } from "./api.js";
@@ -126,17 +132,46 @@ function shouldUnschedule(e: Entry, state: YtState, now: number): boolean {
   return !!(e.y.skip || e.reel.trial || e.reel.draft || !e.y.approved);
 }
 
+// ---------------------------------------------------------------- the video
+
+/** The private bucket's per-file cap (src/media.ts creates ig-reel-media with 100 MB). */
+const MAX_BUCKET_BYTES = 100 * 1024 * 1024;
+
+/** What the bot uploads for this entry: the YouTube cut when youtube.json names one, else the Instagram media. */
+export function videoSource(e: Entry): { label: string; url?: string; expiresAt?: string; bytes?: number; sha256?: string } {
+  const v = e.y.video;
+  if (v) return { label: `YouTube cut ${basename(v.file)}`, url: v.media?.videoUrl, expiresAt: v.media?.expiresAt, bytes: v.bytes, sha256: v.sha256 };
+  return { label: "the Instagram reel's video", url: e.reel.media?.videoUrl, expiresAt: e.reel.media?.expiresAt, bytes: e.reel.videoBytes ?? e.reel.media?.videoBytes, sha256: e.reel.videoSha256 };
+}
+
+/** Why the video cannot be fetched now, or null. */
+export function videoProblem(e: Entry, now: number): string | null {
+  const v = e.y.video;
+  if (!v) return signedProblem(e.reel, now);
+  if (!v.media?.videoUrl) return `youtube.json names the YouTube cut ${basename(v.file)} but it has no signed URL yet: run npm run yt:media -- ${e.reel.slug} on the laptop`;
+  if (Date.parse(v.media.expiresAt) <= now + 15 * 60_000) return `the YouTube cut's signed URL expired or expires within 15 min (${v.media.expiresAt}): rerun npm run yt:media -- ${e.reel.slug}`;
+  if (v.media.videoBytes !== v.bytes) return "the uploaded YouTube cut's size differs from youtube.json (rerun npm run yt:media)";
+  return null;
+}
+
+/** sha256 of the bytes, compared at the length the manifest records (a 16-hex prefix or the whole digest). */
+function shaMatches(bytes: Buffer, want: string): boolean {
+  const sha = createHash("sha256").update(bytes).digest("hex");
+  return want.length > 0 && sha.startsWith(want.toLowerCase());
+}
+
 // ---------------------------------------------------------------- dry run
 
 function requestLines(e: Entry, now: number): string[] {
   const plan = insertPlan(e.reel.slug, e.y, now);
+  const src = videoSource(e);
   const q = `uploadType=resumable&part=snippet,status&notifySubscribers=${plan.notifySubscribers}`;
   return [
     `POST ${yt.apiBase}/upload/youtube/v3/videos?${q}`,
-    "  headers: Authorization: Bearer <access token>, X-Upload-Content-Type: video/mp4" + (e.reel.videoBytes ? `, X-Upload-Content-Length: ${e.reel.videoBytes}` : ""),
+    "  headers: Authorization: Bearer <access token>, X-Upload-Content-Type: video/mp4" + (src.bytes ? `, X-Upload-Content-Length: ${src.bytes}` : ""),
     "  body:",
     JSON.stringify(plan.body, null, 2).replace(/^/gm, "    "),
-    `then PUT <upload session URL> with the mp4 (${e.reel.videoBytes ? `${(e.reel.videoBytes / 1e6).toFixed(1)} MB` : "size unknown"}${e.reel.videoSha256 ? `, sha256 ${e.reel.videoSha256}... checked first` : ""})`,
+    `then PUT <upload session URL> with ${src.label} (${src.bytes ? `${(src.bytes / 1e6).toFixed(1)} MB` : "size unknown"}${src.sha256 ? `, sha256 ${src.sha256.slice(0, 16)}... checked first` : ""})`,
     `after upload: ${plan.outcome}`,
   ];
 }
@@ -178,11 +213,12 @@ async function runDry(only: string | undefined, checkUrls: boolean): Promise<voi
     if (st === "unapproved") console.log(e.source === "crosspost" ? "held: generated by YT_CROSSPOST. It never uploads until npm run yt:sync writes it to youtube.json and the owner approves it." : 'held: "approved" is false in youtube.json (the owner has not OKed this title and description).');
     if (st === "missed") console.log(`missed: the slot passed more than ${yt.maxLateHours} h ago. Move publishAt (or npm run yt:sync -- --reslot).`);
     if (st === "early") console.log(`uploads from ${cairoLabel(new Date(Date.parse(e.y.publishAt) - yt.leadHours * 3_600_000).toISOString())}.`);
-    const media = signedProblem(e.reel, now);
-    console.log(media ? `  MEDIA: ${media}` : `  media: signed video URL valid until ${cairoLabel(e.reel.media!.expiresAt)} (${redactUrl(e.reel.media!.videoUrl).replace(/^https:\/\/[^/]+/, "<supabase>")})`);
-    if (checkUrls && e.reel.media?.videoUrl) {
-      const h = await probeUrl(e.reel.media.videoUrl);
-      console.log(`  probe video URL: ${h.status || "unreachable"}${h.bytes ? `, ${h.bytes} bytes${e.reel.videoBytes ? (h.bytes === e.reel.videoBytes ? " (matches)" : " (SIZE MISMATCH)") : ""}` : ""}`);
+    const media = videoProblem(e, now);
+    const src = videoSource(e);
+    console.log(media ? `  MEDIA: ${media}` : `  media: ${src.label}, signed URL valid until ${cairoLabel(src.expiresAt!)} (${redactUrl(src.url!).replace(/^https:\/\/[^/]+/, "<supabase>")})`);
+    if (checkUrls && src.url) {
+      const h = await probeUrl(src.url);
+      console.log(`  probe video URL: ${h.status || "unreachable"}${h.bytes ? `, ${h.bytes} bytes${src.bytes ? (h.bytes === src.bytes ? " (matches)" : " (SIZE MISMATCH)") : ""}` : ""}`);
     }
     for (const line of requestLines(e, now)) console.log(line);
     const check = preflightYoutube(e.reel.slug, e.y);
@@ -197,14 +233,17 @@ async function runDry(only: string | undefined, checkUrls: boolean): Promise<voi
 // ---------------------------------------------------------------- live
 
 async function download(e: Entry): Promise<Buffer> {
-  const res = await fetch(e.reel.media!.videoUrl);
+  const src = videoSource(e);
+  const file = e.y.video ? "youtube.json" : "reel.json";
+  const res = await fetch(src.url!);
   if (!res.ok) throw new Error(`signed video URL answered ${res.status}`);
   const bytes = Buffer.from(await res.arrayBuffer());
-  const want = e.reel.videoBytes ?? e.reel.media!.videoBytes;
-  if (want && bytes.length !== want) throw new Error(`downloaded ${bytes.length} bytes, reel.json says ${want}`);
-  if (e.reel.videoSha256) {
+  if (src.bytes && bytes.length !== src.bytes) throw new Error(`downloaded ${bytes.length} bytes, ${file} says ${src.bytes}`);
+  // A YouTube cut must carry its sha256: it is the only check that this is the approved render.
+  if (e.y.video && !src.sha256) throw new Error('youtube.json "video" has no sha256: not uploading an unverified file');
+  if (src.sha256 && !shaMatches(bytes, src.sha256)) {
     const sha = createHash("sha256").update(bytes).digest("hex").slice(0, 16);
-    if (sha !== e.reel.videoSha256) throw new Error(`sha256 ${sha} does not match reel.json (${e.reel.videoSha256}): not the approved render`);
+    throw new Error(`sha256 ${sha} does not match ${file} (${src.sha256.slice(0, 16)}): not the approved render`);
   }
   return bytes;
 }
@@ -300,7 +339,7 @@ async function runLive(only: string | undefined, testSlug?: string): Promise<voi
       process.exitCode = 1;
       continue;
     }
-    const media = signedProblem(e.reel, now);
+    const media = videoProblem(e, now);
     if (media) {
       console.log(`  ${slug}: ${media}. Not uploading.`);
       process.exitCode = 1;
@@ -439,6 +478,72 @@ function runSync(args: string[]): void {
   console.log("yt:sync: nothing uploaded. New entries are \"approved\": false until the owner OKs the title and description.");
 }
 
+// ---------------------------------------------------------------- the YouTube cut to the bucket (laptop)
+
+/** The YouTube cut's local path: absolute, or YT_SOURCE_DIR/<folder or caseNumber>/<file>. */
+function localVideoPath(slug: string, y: ReelYoutube): string {
+  const v = y.video!;
+  if (isAbsolute(v.file)) return v.file;
+  const folder = v.folder ?? y.caseNumber;
+  if (!yt.sourceDir) throw new Error(`${slug}: set YT_SOURCE_DIR (or REELS_SOURCE_DIR) to find ${v.file}`);
+  if (!folder) throw new Error(`${slug}: youtube.json "video" needs "folder" (or "caseNumber") to find ${v.file} under ${yt.sourceDir}`);
+  return join(yt.sourceDir, folder, v.file);
+}
+
+/**
+ * npm run yt:media -- <slug ...> [--push]
+ * Uploads each named reel's YouTube cut (youtube.json "video") to the PRIVATE bucket under youtube/<slug>/,
+ * checks its size and sha256 against youtube.json first, and writes the signed URL into youtube.json.
+ * Nothing goes to YouTube. The Supabase key is read locally and never printed.
+ */
+async function runMedia(args: string[]): Promise<void> {
+  const push = args.includes("--push");
+  const slugs = args.filter((x) => !x.startsWith("--"));
+  if (!slugs.length) throw new Error("usage: npm run yt:media -- <slug ...> [--push]");
+  const seconds = Math.round(yt.signDays * 86_400);
+  const changed: string[] = [];
+  let bucketReady = false;
+  for (const slug of slugs) {
+    const y = readYoutube(slug);
+    if (!y) throw new Error(`${slug}: no reels/${slug}/youtube.json`);
+    if (!y.video) throw new Error(`${slug}: youtube.json has no "video", so the bot uploads the Instagram media. Nothing to do.`);
+    const path = localVideoPath(slug, y);
+    if (!existsSync(path)) throw new Error(`${slug}: ${path} not found`);
+    const size = statSync(path).size;
+    if (size !== y.video.bytes) throw new Error(`${slug}: ${basename(path)} is ${size} bytes but youtube.json says ${y.video.bytes}. Not uploading.`);
+    if (size > MAX_BUCKET_BYTES) throw new Error(`${slug}: ${basename(path)} is ${(size / 1e6).toFixed(1)} MB, over the bucket's 100 MB cap. Export a smaller master first.`);
+    const bytes = readFileSync(path);
+    if (!y.video.sha256 || !shaMatches(bytes, y.video.sha256)) throw new Error(`${slug}: the sha256 of ${basename(path)} does not match youtube.json. Not uploading.`);
+    if (!bucketReady) {
+      await ensureMediaBucket();
+      bucketReady = true;
+    }
+    const stamp = new Date().toISOString().replace(/[-:]/g, "").slice(0, 15);
+    const objectPath = `youtube/${slug}/${stamp}-${basename(path)}`;
+    await uploadMedia(objectPath, bytes, "video/mp4");
+    const videoUrl = await signMedia(objectPath, seconds);
+    const probe = await probeUrl(videoUrl);
+    if (!probe.ok || probe.bytes !== size) throw new Error(`${slug}: the signed URL did not answer with the right size (${probe.status}, ${probe.bytes} vs ${size})`);
+    y.video.media = { bucket: MEDIA_BUCKET, videoPath: objectPath, videoUrl, videoBytes: size, uploadedAt: new Date().toISOString(), expiresAt: new Date(Date.now() + seconds * 1000 - 60_000).toISOString() };
+    writeYoutube(slug, y);
+    changed.push(ytFile(slug));
+    console.log(`  ${slug}: uploaded ${basename(path)} (${(size / 1e6).toFixed(1)} MB) to ${MEDIA_BUCKET}/youtube/${slug}/. Signed URL valid until ${cairoLabel(y.video.media.expiresAt)}.`);
+  }
+  if (!push) {
+    console.log(`\nNext: commit and push ${changed.join(", ")} to main (or rerun with --push).`);
+    return;
+  }
+  const git = (...g: string[]) => {
+    const res = spawnSync("git", g, { stdio: "inherit" });
+    if (res.status !== 0) throw new Error(`git ${g[0]} failed`);
+  };
+  git("add", ...changed);
+  git("commit", "-m", `chore(youtube): signed media for the YouTube cuts of ${slugs.join(", ")}`);
+  git("pull", "--rebase", "--autostash");
+  git("push");
+  console.log("Pushed.");
+}
+
 // ---------------------------------------------------------------- main
 
 async function main(): Promise<void> {
@@ -446,6 +551,7 @@ async function main(): Promise<void> {
   const val = (flag: string) => (a.includes(flag) ? a[a.indexOf(flag) + 1] : undefined);
   const only = val("--only");
   if (a.includes("--sync")) return runSync(a);
+  if (a.includes("--media")) return runMedia(a);
   if (a.includes("--unschedule")) return runUnschedule(val("--unschedule") ?? "");
   if (a.includes("--live")) return runLive(only, a.includes("--test-upload") ? val("--test-upload") ?? "" : undefined);
   return runDry(only, a.includes("--check-urls"));

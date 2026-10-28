@@ -26,6 +26,10 @@ export const yt = {
   reelsDir,
   /** Public ids only (video ids, times, quota counts): committed back by the workflow. */
   stateFile: process.env.YT_STATE_FILE ?? join(reelsDir, "youtube-state.json"),
+  /** Laptop only: the folder holding the YouTube cuts (READY-TO-SCHEDULE-YT/<NN>/), for npm run yt:media. */
+  sourceDir: process.env.YT_SOURCE_DIR ?? (process.env.REELS_SOURCE_DIR ? `${process.env.REELS_SOURCE_DIR.replace(/[\\/]+$/, "")}-YT` : ""),
+  /** Signed URL lifetime for a YouTube cut, in days (the private bucket, like the Instagram media). */
+  signDays: Number(process.env.YT_SIGN_DAYS ?? process.env.REELS_SIGN_DAYS ?? 7),
   /** The Recall Engine channel id (repository variable). The token must resolve to it. */
   channelId: (process.env.YT_CHANNEL_ID ?? "").trim(),
   /** Live latch. Only the workflow sets it (YT_BOTS=on, plus a schedule or mode=live). */

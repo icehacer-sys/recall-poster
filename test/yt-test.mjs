@@ -201,6 +201,33 @@ check("YT_CROSSPOST=on: a live run never uploads generated text", /nothing due/.
 r = run(["--dry-run", "--only", "g-case"], { YT_CLIENT_ID: "" });
 check("YT_CROSSPOST off: no entry for it", /No YouTube entries/.test(r.out), r.out);
 
+// ---- the YouTube cut (youtube.json "video"): uploaded instead of the Instagram media (owner, 28 Oct 2026)
+makeReel("v-case", "09");
+const before = db().inserts ?? 0;
+const ytUrl = (slug) => `https://sb.test/storage/v1/object/sign/ig-reel-media/youtube/${slug}/cut.mp4?token=t`;
+const cutMedia = (slug, extra = {}) => ({ bucket: "ig-reel-media", videoPath: `youtube/${slug}/cut.mp4`, videoUrl: ytUrl(slug), videoBytes: BYTES, uploadedAt: inHours(-1), expiresAt: inHours(48), ...extra });
+writeFileSync(join(REELS, "v-case", "youtube.json"), JSON.stringify({ ...ytJson("a-case"), ...DECIDED, approved: true, publishAt: inHours(2), durationSec: 91.8, width: 1080, height: 1920, video: { file: "reel-case-09-yt.mp4", folder: "09", bytes: BYTES, sha256: SHA } }, null, 2));
+r = run(["--live", "--only", "v-case"], { YT_CONFIRM_LIVE: "yes" });
+check('"video" without a signed URL: refused, nothing fetched or uploaded', r.code !== 0 && /no signed URL yet: run npm run yt:media -- v-case/.test(r.out) && (db().inserts ?? 0) === before && !/object\/sign/.test(r.out.split("MOCK CALLS:")[1] ?? ""), r.out);
+setYt("v-case", { video: { ...ytJson("v-case").video, sha256: "deadbeefdeadbeef", media: cutMedia("v-case") } });
+r = run(["--live", "--only", "v-case"], { YT_CONFIRM_LIVE: "yes" });
+check('"video" whose bytes do not match its sha256: refused before any upload', r.code !== 0 && /does not match youtube\.json/.test(r.out) && (db().inserts ?? 0) === before, r.out);
+setYt("v-case", { video: { ...ytJson("v-case").video, sha256: SHA, media: cutMedia("v-case") } });
+r = run(["--dry-run", "--only", "v-case"], { YT_CLIENT_ID: "" });
+check("dry run names the YouTube cut as the file it sends", /media: YouTube cut reel-case-09-yt\.mp4/.test(r.out) && /with YouTube cut reel-case-09-yt\.mp4/.test(r.out), r.out);
+r = run(["--live", "--only", "v-case"], { YT_CONFIRM_LIVE: "yes" });
+const fetched = (r.out.split("MOCK CALLS:")[1] ?? "");
+check('"video": the YouTube cut is downloaded and uploaded, never the Instagram media', r.code === 0 && db().inserts === before + 1 && fetched.includes("/ig-reel-media/youtube/v-case/cut.mp4") && !fetched.includes("/ig-reel-media/v-case/x.mp4"), r.out);
+// yt:media refuses a file that is not the approved render, before any network call.
+const srcDir = join(TMP, "yt-src");
+mkdirSync(join(srcDir, "09"), { recursive: true });
+writeFileSync(join(srcDir, "09", "reel-case-09-yt.mp4"), Buffer.alloc(BYTES + 1));
+r = run(["--media", "v-case"], { YT_SOURCE_DIR: srcDir });
+check("yt:media refuses a file whose size differs from youtube.json, with no network call", r.code !== 0 && /is 1001 bytes but youtube\.json says 1000/.test(r.out) && r.out.includes("MOCK CALLS: none"), r.out);
+writeFileSync(join(srcDir, "09", "reel-case-09-yt.mp4"), Buffer.alloc(BYTES, 1));
+r = run(["--media", "v-case"], { YT_SOURCE_DIR: srcDir });
+check("yt:media refuses a file whose sha256 differs from youtube.json, with no network call", r.code !== 0 && /sha256 of reel-case-09-yt\.mp4 does not match/.test(r.out) && r.out.includes("MOCK CALLS: none"), r.out);
+
 // ---- the owner's sign-in helper: token straight into gh, never printed
 const ghLog = join(TMP, "gh.log");
 const clientJson = join(TMP, "client.json");

@@ -26,6 +26,7 @@
     "yt:sync": "tsx src/youtube/upload.ts --sync",
     "yt:dry": "tsx src/youtube/upload.ts --dry-run",
     "yt:check": "tsx src/youtube/upload.ts --dry-run --check-urls",
+    "yt:media": "tsx src/youtube/upload.ts --media",
     "yt:live": "tsx src/youtube/upload.ts --live",
     "yt:unschedule": "tsx src/youtube/upload.ts --unschedule",
     "yt:auth": "node scripts/youtube-auth.mjs",
