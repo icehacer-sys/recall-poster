@@ -125,8 +125,11 @@ export class YouTubeClient {
   /**
    * videos.insert as a resumable upload (1 unit in the upload bucket): POST the metadata for a
    * session URL, then PUT the bytes. A dropped connection is resumed from the byte YouTube confirms.
+   * onSession runs once YouTube hands out the session URL: from then on a video may exist even when
+   * this call fails. The caller records it before any byte goes out. A rejected start (4xx) creates no
+   * video and records nothing.
    */
-  async insertVideo(body: InsertBody, bytes: Buffer, notifySubscribers: boolean): Promise<VideoResource> {
+  async insertVideo(body: InsertBody, bytes: Buffer, notifySubscribers: boolean, onSession: () => void = () => {}): Promise<VideoResource> {
     this.charge(0, 1);
     const u = new URL(`${yt.apiBase}/upload/youtube/v3/videos`);
     u.searchParams.set("uploadType", "resumable");
@@ -145,6 +148,9 @@ export class YouTubeClient {
     if (!start.ok) throw await googleError(start, "POST videos (resumable start)");
     const session = start.headers.get("location");
     if (!session) throw new Error("YouTube API: no upload session URL in the response");
+    onSession();
+    // Google's resumable-upload guide sends the Bearer token on the session PUTs too.
+    const auth = { Authorization: `Bearer ${await this.token()}` };
 
     let offset = 0;
     for (let attempt = 1; attempt <= 4; attempt++) {
@@ -152,6 +158,7 @@ export class YouTubeClient {
         const res = await fetch(session, {
           method: "PUT",
           headers: {
+            ...auth,
             "Content-Type": "video/mp4",
             ...(offset > 0 ? { "Content-Range": `bytes ${offset}-${bytes.length - 1}/${bytes.length}` } : {}),
           },
@@ -164,7 +171,7 @@ export class YouTubeClient {
         if (attempt === 4) throw new Error(`upload failed after ${attempt} attempts: ${(e as Error).message}`);
       }
       // Ask YouTube how much arrived, then resume from there.
-      const probe = await fetch(session, { method: "PUT", headers: { "Content-Range": `bytes */${bytes.length}` } });
+      const probe = await fetch(session, { method: "PUT", headers: { ...auth, "Content-Range": `bytes */${bytes.length}` } });
       if (probe.ok) return (await probe.json()) as VideoResource;
       if (probe.status !== 308) throw await googleError(probe, "PUT upload status");
       const range = probe.headers.get("range")?.match(/bytes=0-(\d+)/);

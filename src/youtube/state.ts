@@ -18,11 +18,15 @@ export interface YtReelState {
   privacyStatusSeen?: string;
   publishAtSeen?: string;
   uploadStatusSeen?: string;
-  /** YouTube kept the video private although a publish time was sent (unverified API project). */
+  /** YouTube kept the video private although a publish time was sent (an API project still locked to private). */
   lockedPrivate?: boolean;
-  /** An insert started (set before the bytes go out). Cleared when the video id is saved. */
-  insertStartedAt?: string;
-  insertAttempts?: number;
+  /**
+   * YouTube opened an upload session (set before the bytes go out, cleared when the video id is saved).
+   * Set without a video id means a copy MAY exist: the bot never uploads that reel again by itself.
+   */
+  sessionOpenedAt?: string;
+  /** Set by --test-upload: private, outside the slot window, no subscriber notification. */
+  testUpload?: boolean;
   thumbnailSetAt?: string;
   /** The scheduled publish was cancelled because the reel went back to skip, draft, or unapproved. */
   unscheduledAt?: string;

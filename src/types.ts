@@ -123,10 +123,12 @@ export interface ReelYoutube {
   defaultAudioLanguage: string;
   madeForKids: boolean;
   /**
-   * YouTube "altered or synthetic content" disclosure (status.containsSyntheticMedia). The reels use an
-   * AI voice and AI-made illustrations, so the default is true. Must be a boolean or the upload is refused.
+   * YouTube "altered or synthetic content" disclosure (status.containsSyntheticMedia). Required only for
+   * realistic altered or synthetic content. The owner decides: null (the default) refuses the upload.
    */
   containsSyntheticMedia: boolean | null;
+  /** Owner OK that the music cannot draw a copyright claim (needed for a Short over 60 s). */
+  musicCleared?: boolean;
   notifySubscribers?: boolean;
   /** Case number shown in the reel ("02"), parsed from the video file name. */
   caseNumber?: string;

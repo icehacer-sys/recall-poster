@@ -38,7 +38,7 @@ export const yt = {
   leadHours: num("YT_LEAD_HOURS", 24),
   /** A slot more than this many hours in the past is not uploaded (move publishAt instead). */
   maxLateHours: num("YT_MAX_LATE_HOURS", 6),
-  /** A publishAt closer than this is never sent: the video goes public straight away instead (YT_PUBLIC=on only). */
+  /** A publishAt closer than this is never sent: the video stays private with no publish time and the owner publishes it in Studio. */
   minScheduleMinutes: num("YT_MIN_SCHEDULE_MINUTES", 15),
   maxPerRun: num("YT_MAX_PER_RUN", 1),
   /** Uploads per Cairo day. */
@@ -52,8 +52,9 @@ export const yt = {
   /** Default slot for new YouTube entries. */
   postTime: process.env.YT_POST_TIME ?? "20:00",
   siteUrl: "https://www.recallengine.app",
-  apiBase: (process.env.YT_API_BASE ?? "https://www.googleapis.com").replace(/\/+$/, ""),
-  tokenUrl: process.env.YT_TOKEN_URL ?? "https://oauth2.googleapis.com/token",
+  // Fixed hosts: the refresh token, client secret, and access token only ever go to Google (no env override).
+  apiBase: "https://www.googleapis.com",
+  tokenUrl: "https://oauth2.googleapis.com/token",
   tmpDir: process.env.YT_TMP_DIR ?? tmpdir(),
 };
 

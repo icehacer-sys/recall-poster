@@ -2,6 +2,9 @@
 .env
 .env.*
 !.env.example
+# Google OAuth client downloads (YouTube sign-in). Keep them OUTSIDE this public repo.
+client_secret*.json
+*.client_secret.json
 
 # Deps + build
 node_modules/

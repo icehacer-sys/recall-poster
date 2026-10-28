@@ -17,7 +17,7 @@
   "defaultLanguage": "ar",
   "defaultAudioLanguage": "ar",
   "madeForKids": false,
-  "containsSyntheticMedia": true,
+  "containsSyntheticMedia": null,
   "notifySubscribers": true,
   "caseNumber": "01",
   "approved": false,

@@ -26,9 +26,10 @@ const opt = (name, fallback) => (args.includes(name) ? args[args.indexOf(name) +
 const REPO = opt("--repo", "icehacer-sys/recall-poster");
 const HANDLE = opt("--handle", "@recallengineapp").toLowerCase();
 const SCOPE = "https://www.googleapis.com/auth/youtube.force-ssl";
-const AUTH_URL = process.env.YT_AUTH_URL ?? "https://accounts.google.com/o/oauth2/v2/auth";
-const TOKEN_URL = process.env.YT_TOKEN_URL ?? "https://oauth2.googleapis.com/token";
-const API = (process.env.YT_API_BASE ?? "https://www.googleapis.com").replace(/\/+$/, "");
+// Fixed hosts: the client secret and tokens only ever go to Google (no env override).
+const AUTH_URL = "https://accounts.google.com/o/oauth2/v2/auth";
+const TOKEN_URL = "https://oauth2.googleapis.com/token";
+const API = "https://www.googleapis.com";
 // Tests swap gh for a fake: YT_GH_CMD='["node","test/fake-gh.mjs"]'.
 const GH = process.env.YT_GH_CMD ? JSON.parse(process.env.YT_GH_CMD) : ["gh"];
 

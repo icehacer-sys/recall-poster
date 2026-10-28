@@ -106,8 +106,11 @@ export function buildYoutube(reel: Reel, publishAt: string, publishAtCairo: stri
     defaultLanguage: lang,
     defaultAudioLanguage: lang,
     madeForKids: false,
-    // AI voice and AI-made illustrations: disclose. Disclosure alone does not limit reach.
-    containsSyntheticMedia: true,
+    // The owner decides (null blocks the upload). YouTube requires the label only for REALISTIC altered or
+    // synthetic content (support.google.com/youtube/answer/14328491): a real person made to say or do
+    // something, altered real footage, a realistic scene that never happened, or AI music as the focus.
+    // Non-realistic animation is exempt. true puts an "Altered or synthetic content" label on the Short.
+    containsSyntheticMedia: null,
     notifySubscribers: true,
     caseNumber: caseNumberOf(reel),
     approved: false,
@@ -118,14 +121,27 @@ export interface InsertPlan {
   body: InsertBody;
   /** What happens to the video after the upload. */
   outcome: string;
+  /** The notifySubscribers query parameter. */
+  notifySubscribers: boolean;
+  /** YT_PUBLIC is on but the slot is too close or passed: uploaded private, the owner publishes it. */
+  tooLate?: boolean;
+}
+
+export interface PlanOpts {
+  /** YT_PUBLIC=on: send publishAt = the slot. */
+  public: boolean;
+  minScheduleMinutes: number;
+  /** --test-upload: private, no publish time, no subscriber notification. */
+  test?: boolean;
 }
 
 /**
  * The exact videos.insert body. privacyStatus is ALWAYS sent (YouTube defaults to public when it is
- * missing). Until YT_PUBLIC=on: private with no publish time. With YT_PUBLIC=on: private with
- * publishAt = the slot, or public straight away when the slot is less than 15 minutes ahead.
+ * missing) and the bot NEVER sends "public". Until YT_PUBLIC=on: private with no publish time. With
+ * YT_PUBLIC=on: private with publishAt = the slot. A slot less than 15 minutes ahead (or already
+ * passed) is never published by the bot: the video stays private and the owner publishes it in Studio.
  */
-export function insertPlan(slug: string, y: ReelYoutube, now: number, opts = { public: yt.public, minScheduleMinutes: yt.minScheduleMinutes }): InsertPlan {
+export function insertPlan(slug: string, y: ReelYoutube, now: number, opts: PlanOpts = { public: yt.public, minScheduleMinutes: yt.minScheduleMinutes }): InsertPlan {
   const at = Date.parse(y.publishAt);
   const tags = [...y.tags.filter((t) => t !== idempotencyTag(slug)), idempotencyTag(slug)];
   const status: InsertBody["status"] = {
@@ -136,13 +152,18 @@ export function insertPlan(slug: string, y: ReelYoutube, now: number, opts = { p
     license: "youtube",
   };
   let outcome = "stays PRIVATE with no publish time (YT_PUBLIC is off): the owner publishes it in YouTube Studio";
-  if (opts.public) {
+  let notifySubscribers = y.notifySubscribers !== false;
+  let tooLate = false;
+  if (opts.test) {
+    outcome = "TEST upload: stays PRIVATE with no publish time and no subscriber notification. The owner checks it in YouTube Studio";
+    notifySubscribers = false;
+  } else if (opts.public) {
     if (at - now >= opts.minScheduleMinutes * 60_000) {
       status.publishAt = new Date(at).toISOString();
       outcome = `private now, YouTube publishes it at ${status.publishAt}`;
     } else {
-      status.privacyStatus = "public";
-      outcome = "PUBLIC straight away (the slot is less than 15 minutes ahead or just passed)";
+      tooLate = true;
+      outcome = `stays PRIVATE with no publish time: the slot is less than ${opts.minScheduleMinutes} minutes ahead or passed. The owner publishes it in YouTube Studio`;
     }
   }
   return {
@@ -151,6 +172,8 @@ export function insertPlan(slug: string, y: ReelYoutube, now: number, opts = { p
       status,
     },
     outcome,
+    notifySubscribers,
+    tooLate,
   };
 }
 
@@ -172,14 +195,15 @@ export function preflightYoutube(slug: string, y: ReelYoutube): Check {
   const tags = [...(y.tags ?? []), idempotencyTag(slug)];
   if (tagsLength(tags) > MAX_TAGS_CHARS) errors.push(`tags are ${tagsLength(tags)} characters (max ${MAX_TAGS_CHARS})`);
   if (!y.categoryId) errors.push("categoryId is missing (27 = Education)");
-  if (typeof y.containsSyntheticMedia !== "boolean") errors.push("containsSyntheticMedia must be true or false (altered or synthetic content disclosure)");
+  if (typeof y.containsSyntheticMedia !== "boolean") errors.push("containsSyntheticMedia must be true or false: the owner decides the altered or synthetic content label (true only for realistic AI content)");
   if (typeof y.madeForKids !== "boolean") errors.push("madeForKids must be true or false");
   if (Number.isNaN(Date.parse(y.publishAt))) errors.push(`publishAt is not a valid date: ${y.publishAt}`);
   if (!y.defaultLanguage || !y.defaultAudioLanguage) errors.push("defaultLanguage and defaultAudioLanguage are required");
   if (y.durationSec == null) warnings.push("duration unknown (run npm run yt:sync on the laptop to record it)");
   else {
     if (y.durationSec > MAX_SHORT_SECONDS) errors.push(`video is ${y.durationSec.toFixed(1)} s: a Short is at most ${MAX_SHORT_SECONDS} s`);
-    if (y.durationSec > 60) warnings.push(`video is ${y.durationSec.toFixed(1)} s: a Short over 1 minute with an active copyright claim is blocked worldwide (licensed or own music only)`);
+    // support.google.com/youtube/answer/15424877: a Short over 1 minute with ANY active copyright claim is blocked worldwide.
+    if (y.durationSec > 60 && y.musicCleared !== true) errors.push(`video is ${y.durationSec.toFixed(1)} s: a Short over 1 minute with any copyright claim is blocked worldwide. The owner confirms the music is his own, AI-made, or licensed with no Content ID. Then he sets "musicCleared": true`);
   }
   if (y.width && y.height && y.width > y.height) errors.push(`video is ${y.width}x${y.height}: a Short must be vertical or square`);
   return { errors, warnings };

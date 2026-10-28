@@ -34,7 +34,7 @@ const env = {
   YT_CROSSPOST: "",
   YT_THUMBNAIL: "",
   YT_UNIT_BUDGET: "",
-  YT_UPLOAD_BUDGET: "",
+  YT_UPLOAD_BUDGET: "20",
   YT_MAX_PER_DAY: "10",
   MOCK_CHANNEL_ID: "",
   MOCK_LOCK_PRIVATE: "",
@@ -53,6 +53,8 @@ const state = () => (existsSync(STATE) ? JSON.parse(readFileSync(STATE, "utf8"))
 const ytJson = (slug) => JSON.parse(readFileSync(join(REELS, slug, "youtube.json"), "utf8"));
 const setYt = (slug, patch) => writeFileSync(join(REELS, slug, "youtube.json"), JSON.stringify({ ...ytJson(slug), ...patch }, null, 2));
 const inHours = (h) => new Date(Date.now() + h * 3_600_000).toISOString();
+// The owner's two decisions per reel: the synthetic-content label and music cleared for a Short over 60 s.
+const DECIDED = { containsSyntheticMedia: false, musicCleared: true };
 
 const source = JSON.parse(readFileSync(join(ROOT, "reels", "02-hypoglycaemia", "reel.json"), "utf8"));
 function makeReel(slug, caseNo, extra = {}) {
@@ -80,7 +82,7 @@ check("yt:sync writes youtube.json with approved false", r.code === 0 && a.appro
 check("title: approved hook line plus the case number, at most 100 characters", a.title === "نوبات هلع؟ ولا hypoglycaemia متنكرة؟ | حالة 02" && [...a.title].length <= 100, a.title);
 check("description: one line, the site link, then a short call to action", lines[1] === "https://www.recallengine.app" && lines[0].startsWith("نوبات هلع") && /Recall Engine/.test(lines[2]), a.description);
 check("description: #Shorts and the caption hashtags, no Instagram link line", /#Shorts #medstudent/.test(a.description) && /#RecallEngine/.test(a.description) && !/اللينك في صفحتنا/.test(a.description), a.description);
-check("Education category, not for kids, synthetic media disclosed", a.categoryId === "27" && a.madeForKids === false && a.containsSyntheticMedia === true);
+check("Education category, not for kids, synthetic-content label left for the owner (null)", a.categoryId === "27" && a.madeForKids === false && a.containsSyntheticMedia === null);
 
 r = run(["--dry-run"], { YT_CLIENT_ID: "", YT_CLIENT_SECRET: "", YT_REFRESH_TOKEN: "" });
 check("dry run prints the exact insert request with no secrets and no network", r.code === 0 && r.out.includes("POST https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status&notifySubscribers=true") && r.out.includes('"privacyStatus": "private"') && r.out.includes('"re-a-case"') && r.out.includes("MOCK CALLS: none"), r.out);
@@ -89,7 +91,10 @@ check("dry run: no publish time while YT_PUBLIC is off", !r.out.includes('"publi
 // ---- gates
 r = run(["--live"], { YT_CONFIRM_LIVE: "yes" });
 check("unapproved entry: live run uploads nothing and calls nothing", r.code === 0 && /nothing due/.test(r.out) && r.out.includes("MOCK CALLS: none"), r.out);
-setYt("a-case", { approved: true, publishAt: inHours(2), durationSec: 91.8, width: 1080, height: 1920 });
+setYt("a-case", { approved: true, publishAt: inHours(2), durationSec: 91.8, width: 1080, height: 1920, containsSyntheticMedia: false });
+r = run(["--live"], { YT_CONFIRM_LIVE: "yes" });
+check("a Short over 60 s without musicCleared is refused before any upload", r.code !== 0 && /musicCleared/.test(r.out) && !db().inserts, r.out);
+setYt("a-case", DECIDED);
 r = run(["--live"]);
 check("latch: YT_CONFIRM_LIVE unset refuses and calls nothing", r.code !== 0 && r.out.includes("MOCK CALLS: none"), r.out);
 
@@ -97,7 +102,8 @@ check("latch: YT_CONFIRM_LIVE unset refuses and calls nothing", r.code !== 0 && 
 r = run(["--live"], { YT_CONFIRM_LIVE: "yes" });
 let s = state()["yt:a-case"] ?? {};
 check("live: uploads exactly once, private, no publish time", r.code === 0 && db().inserts === 1 && s.videoId === "VID1" && s.privacyStatusSent === "private" && !s.publishAtSent && db().lastInsert?.status?.privacyStatus === "private", r.out);
-check("live: hidden idempotency tag and the Shorts metadata were sent", db().lastInsert?.snippet?.tags?.includes("re-a-case") && db().lastInsert?.snippet?.categoryId === "27" && db().lastInsert?.status?.selfDeclaredMadeForKids === false && db().lastInsert?.status?.containsSyntheticMedia === true);
+check("live: hidden idempotency tag and the Shorts metadata were sent", db().lastInsert?.snippet?.tags?.includes("re-a-case") && db().lastInsert?.snippet?.categoryId === "27" && db().lastInsert?.status?.selfDeclaredMadeForKids === false && db().lastInsert?.status?.containsSyntheticMedia === false);
+check("live: the session PUT carries the Bearer token", db().lastPutAuth === "Bearer fake-access-token", db().lastPutAuth);
 r = run(["--live"], { YT_CONFIRM_LIVE: "yes" });
 check("second run uploads nothing", db().inserts === 1 && /nothing due/.test(r.out), r.out);
 rmSync(STATE);
@@ -108,25 +114,25 @@ check("lost state: the video on the channel is recorded, not uploaded again", db
 makeReel("b-case", "03");
 run(["--sync"]);
 const slotB = inHours(3);
-setYt("b-case", { approved: true, publishAt: slotB });
+setYt("b-case", { approved: true, publishAt: slotB, ...DECIDED });
 r = run(["--live"], { YT_CONFIRM_LIVE: "yes", YT_PUBLIC: "on" });
 s = state()["yt:b-case"] ?? {};
 check("YT_PUBLIC=on: uploaded private with publishAt = the slot", db().inserts === 2 && db().lastInsert?.status?.publishAt === slotB && db().lastInsert?.status?.privacyStatus === "private" && s.publishAtSent === slotB, r.out);
 makeReel("c-case", "04");
 run(["--sync"]);
-setYt("c-case", { approved: true, publishAt: inHours(4) });
+setYt("c-case", { approved: true, publishAt: inHours(4), ...DECIDED });
 r = run(["--live"], { YT_CONFIRM_LIVE: "yes", YT_PUBLIC: "on", MOCK_LOCK_PRIVATE: "1" });
 check("a project still locked to private is detected and the job fails", r.code !== 0 && state()["yt:c-case"]?.lockedPrivate === true && /still locked/.test(r.out), r.out);
 
 // ---- refusals
 makeReel("d-case", "05", { media: { ...source.media, videoUrl: "https://sb.test/storage/v1/object/sign/ig-reel-media/d/x.mp4?token=t", videoBytes: BYTES, expiresAt: inHours(-1) } });
 run(["--sync"]);
-setYt("d-case", { approved: true, publishAt: inHours(1) });
+setYt("d-case", { approved: true, publishAt: inHours(1), ...DECIDED });
 r = run(["--live", "--only", "d-case"], { YT_CONFIRM_LIVE: "yes" });
 check("expired signed URL: refused and the job fails", r.code !== 0 && /expired/.test(r.out) && db().inserts === 3, r.out);
 makeReel("e-case", "06");
 run(["--sync"]);
-setYt("e-case", { approved: true, publishAt: inHours(1) });
+setYt("e-case", { approved: true, publishAt: inHours(1), ...DECIDED });
 r = run(["--live", "--only", "e-case"], { YT_CONFIRM_LIVE: "yes", MOCK_CORRUPT: "1" });
 check("sha256 mismatch: refused, nothing uploaded", r.code !== 0 && /sha256/.test(r.out) && db().inserts === 3, r.out);
 r = run(["--live", "--only", "e-case"], { YT_CONFIRM_LIVE: "yes", MOCK_CHANNEL_ID: "UC_OTHER" });
@@ -149,11 +155,49 @@ r = run(["--live"], { YT_CONFIRM_LIVE: "yes", YT_PUBLIC: "on" });
 const vb = db().videos.find((v) => v.id === state()["yt:b-case"].videoId);
 check("skip after upload: scheduled publish cancelled, video stays private", /CANCELLED/.test(r.out) && db().updates === 1 && vb?.status?.privacyStatus === "private" && !vb?.status?.publishAt && !!state()["yt:b-case"].unscheduledAt, r.out);
 
-// ---- cross-post flag: an approved Instagram reel without youtube.json
+// ---- the bot never makes a video public by itself: a slot too close stays private for the owner
+makeReel("h-case", "09");
+run(["--sync"]);
+setYt("h-case", { approved: true, publishAt: inHours(0.05), ...DECIDED });
+r = run(["--live", "--only", "h-case"], { YT_CONFIRM_LIVE: "yes", YT_PUBLIC: "on" });
+check("YT_PUBLIC=on, slot 3 minutes ahead: uploaded PRIVATE with no publish time, owner note, job flagged", r.code !== 0 && db().lastInsert?.status?.privacyStatus === "private" && !db().lastInsert?.status?.publishAt && /owner note/.test(r.out) && db().inserts === 4, r.out);
+
+// ---- an upload session that left no video id is never retried by the bot
+makeReel("i-case", "10");
+run(["--sync"]);
+setYt("i-case", { approved: true, publishAt: inHours(2), ...DECIDED });
+r = run(["--live", "--only", "i-case"], { YT_CONFIRM_LIVE: "yes", MOCK_START_FAIL: "1" });
+check("rejected start (4xx): no video, nothing recorded", r.code !== 0 && !state()["yt:i-case"]?.sessionOpenedAt && db().inserts === 4, r.out);
+r = run(["--live", "--only", "i-case"], { YT_CONFIRM_LIVE: "yes", MOCK_PUT_FAIL: "1" });
+check("failed after the session opened: sessionOpenedAt recorded, no video id", r.code !== 0 && !!state()["yt:i-case"]?.sessionOpenedAt && !state()["yt:i-case"]?.videoId, r.out);
+r = run(["--live", "--only", "i-case"], { YT_CONFIRM_LIVE: "yes" });
+check("next run (under 2 h): checks the channel, does not upload again", r.code === 0 && /checked again next run/i.test(r.out) && db().inserts === 4, r.out);
+const st = state();
+st["yt:i-case"].sessionOpenedAt = inHours(-3);
+writeFileSync(STATE, JSON.stringify(st));
+r = run(["--live", "--only", "i-case"], { YT_CONFIRM_LIVE: "yes" });
+check("after 2 h with no copy listed: owner note, job fails, still no second upload", r.code !== 0 && /Check YouTube Studio/.test(r.out) && db().inserts === 4, r.out);
+
+// ---- Phase 0 test upload: unapproved and outside the window, private, no subscriber notification
+makeReel("j-case", "11");
+run(["--sync"]);
+setYt("j-case", { publishAt: inHours(24 * 5), ...DECIDED });
+r = run(["--live", "--only", "j-case"], { YT_CONFIRM_LIVE: "yes" });
+check("a normal live run does not upload an unapproved reel 5 days out", /nothing due/.test(r.out) && db().inserts === 4, r.out);
+r = run(["--live", "--test-upload", "j-case"], { YT_CONFIRM_LIVE: "yes", YT_PUBLIC: "on" });
+check("--test-upload: uploaded PRIVATE now, no publish time, notifySubscribers=false, recorded as a test", r.code === 0 && db().inserts === 5 && db().lastInsert?.status?.privacyStatus === "private" && !db().lastInsert?.status?.publishAt && db().lastNotify === "false" && state()["yt:j-case"]?.testUpload === true, r.out);
+r = run(["--live", "--test-upload", "j-case"], { YT_CONFIRM_LIVE: "yes" });
+check("--test-upload twice: nothing uploaded again", /already on YouTube/.test(r.out) && db().inserts === 5, r.out);
+r = run(["--live", "--test-upload", "j-case"]);
+check("--test-upload without YT_CONFIRM_LIVE: refused", r.code !== 0 && db().inserts === 5, r.out);
+
+// ---- cross-post flag: an approved Instagram reel without youtube.json is listed, never uploaded
 makeReel("g-case", "08");
 writeFileSync(join(REELS, "state.json"), JSON.stringify({ "reel:g-case": { postedAt: inHours(-30) } }));
 r = run(["--dry-run", "--only", "g-case"], { YT_CROSSPOST: "on", YT_CLIENT_ID: "" });
-check("YT_CROSSPOST=on: an Instagram reel without youtube.json gets generated text and a free slot", /\(cross-post\)/.test(r.out) && /حالة 08/.test(r.out) && r.out.includes("MOCK CALLS: none"), r.out);
+check("YT_CROSSPOST=on: an Instagram reel without youtube.json is listed with generated text, held unapproved", /\(cross-post\)/.test(r.out) && /حالة 08/.test(r.out) && /generated by YT_CROSSPOST/.test(r.out) && r.out.includes("MOCK CALLS: none"), r.out);
+r = run(["--live", "--only", "g-case"], { YT_CROSSPOST: "on", YT_CONFIRM_LIVE: "yes" });
+check("YT_CROSSPOST=on: a live run never uploads generated text", /nothing due/.test(r.out) && db().inserts === 5, r.out);
 r = run(["--dry-run", "--only", "g-case"], { YT_CLIENT_ID: "" });
 check("YT_CROSSPOST off: no entry for it", /No YouTube entries/.test(r.out), r.out);
 

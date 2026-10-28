@@ -70,6 +70,8 @@ globalThis.fetch = async (input, init = {}) => {
     if (path === "/upload/youtube/v3/videos" && method === "POST" && u.searchParams.get("uploadType") === "resumable") {
       const meta = JSON.parse(String(init.body));
       if (!meta.status?.privacyStatus) return json({ error: { code: 400, message: "privacyStatus missing (test guard)" } }, 400);
+      if (process.env.MOCK_START_FAIL) return json({ error: { code: 403, message: "mock start refused", errors: [{ reason: "forbidden" }] } }, 403);
+      db.lastNotify = u.searchParams.get("notifySubscribers");
       const len = Number(headers["x-upload-content-length"]);
       const id = `S${(db.sessions?.length ?? 0) + 1}`;
       db.sessions = [...(db.sessions ?? []), { id, meta, len }];
@@ -78,6 +80,9 @@ globalThis.fetch = async (input, init = {}) => {
     }
     if (path === "/upload/youtube/v3/videos" && method === "PUT" && u.searchParams.get("upload_id")) {
       const s = (db.sessions ?? []).find((x) => x.id === u.searchParams.get("upload_id"));
+      db.lastPutAuth = headers.authorization ?? "";
+      save(db);
+      if (process.env.MOCK_PUT_FAIL) return json({ error: { code: 400, message: "mock bytes refused" } }, 400);
       const bytes = await bodyBytes(init);
       if (!s || bytes.length !== s.len) return json({ error: { code: 400, message: `size ${bytes.length} vs ${s?.len}` } }, 400);
       const v = { id: `VID${db.videos.length + 1}`, snippet: { ...s.meta.snippet, publishedAt: new Date().toISOString() }, status: { ...s.meta.status, uploadStatus: "uploaded" } };
