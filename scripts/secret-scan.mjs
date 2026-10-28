@@ -18,7 +18,10 @@ const PATTERNS = [
   ["Facebook token", /EAA[A-Za-z0-9]{40,}/],
   ["GitHub token", /(ghp|gho|ghs|ghu)_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,}/],
   ["private key", /-----BEGIN [A-Z ]*PRIVATE KEY-----/],
-  ["filled secret variable", /^[ 	]*(IG_ACCESS_TOKEN|CLAUDE_API_KEY|ANTHROPIC_API_KEY|OPENAI_API_KEY|SUPABASE_SECRET_KEY|SUPABASE_SERVICE_ROLE_KEY|IG_CLIENT_SECRET)[ 	]*=[ 	]*["']?[A-Za-z0-9_\-.]{12,}/m],
+  ["Google OAuth client secret", /GOCSPX-[A-Za-z0-9_-]{20,}/],
+  ["Google refresh token", /\b1\/\/0[A-Za-z0-9_-]{30,}/],
+  ["Google access token", /\bya29\.[A-Za-z0-9_-]{30,}/],
+  ["filled secret variable", /^[ 	]*(IG_ACCESS_TOKEN|CLAUDE_API_KEY|ANTHROPIC_API_KEY|OPENAI_API_KEY|SUPABASE_SECRET_KEY|SUPABASE_SERVICE_ROLE_KEY|IG_CLIENT_SECRET|YT_CLIENT_SECRET|YT_REFRESH_TOKEN)[ 	]*=[ 	]*["']?[A-Za-z0-9_\-./]{12,}/m],
 ];
 const JWT = /eyJ[A-Za-z0-9_-]{10,}\.(eyJ[A-Za-z0-9_-]{10,})\.[A-Za-z0-9_-]{10,}/g;
 
