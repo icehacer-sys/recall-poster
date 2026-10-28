@@ -1,7 +1,8 @@
 name: ci
 
 # Secret-free checks for every PR and push: lint (actionlint plus a secret scan), typecheck, offline
-# tests with faked Instagram and Supabase, and dry runs. No secrets are used, nothing is posted.
+# tests with faked Instagram, YouTube, Google OAuth, and Supabase, and dry runs. No secrets are used,
+# nothing is posted or uploaded.
 on:
   pull_request:
   push:
@@ -40,11 +41,16 @@ jobs:
         working-directory: comments
       - name: reels offline test (faked Instagram and Supabase)
         run: npm run -s reels:test
+      - name: youtube uploader offline test (faked Google, YouTube, Supabase, and gh)
+        run: npm run -s yt:test
       - name: comments rules and budget tests
         run: npm test
         working-directory: comments
       - name: comments cloud test (lost state, thread check, caps, redaction, encryption)
         run: npm run -s cloud:test
+        working-directory: comments
+      - name: youtube comments test (draft mode, thread check, caps, no links, redaction, encryption)
+        run: npm run -s yt:cloud:test
         working-directory: comments
 
   dry-run:
@@ -62,6 +68,8 @@ jobs:
         env:
           REELS_HOSTING: signed
         run: npm run -s reels:dry
+      - name: youtube dry run (no secrets, no network)
+        run: npm run -s yt:dry
       - name: comments fixtures offline (no model, no Instagram)
         run: npm run -s offline
         working-directory: comments

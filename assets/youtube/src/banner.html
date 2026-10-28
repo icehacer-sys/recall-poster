@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Recall Engine YouTube banner</title>
+<!--
+  YouTube channel banner, 2560 x 1440 (owner, 28 Oct 2026). Rendered by scripts/render-youtube-assets.mjs
+  on the NVIDIA GPU. Everything that must be read sits inside the 1546 x 423 safe area in the middle
+  (x 507 to 2053, y 508 to 931): that strip is all a phone shows. Desktop shows the full-width band
+  (y 508 to 931) and TVs show the whole canvas, so the edges carry only texture.
+  Logo: brand/recall-v2 (periwinkle #8DA6FF symbol, #F7F8FC wordmark). Fonts are injected by the render
+  script (Hanken Grotesk from the creator kit). Add ?guides=1 to see the crop boxes.
+-->
+<style>
+  :root {
+    --navy-0: #050814;
+    --navy-1: #0a1024;
+    --navy-2: #111a3a;
+    --peri: #8da6ff;
+    --cobalt: #365cf5;
+    --ink: #f7f8fc;
+    --ink-soft: #c3cbe6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 2560px; height: 1440px; overflow: hidden; background: var(--navy-0); }
+  .canvas {
+    position: relative;
+    width: 2560px;
+    height: 1440px;
+    background:
+      radial-gradient(1100px 520px at 50% 50%, rgba(141, 166, 255, 0.16), transparent 70%),
+      radial-gradient(900px 600px at 18% 78%, rgba(54, 92, 245, 0.20), transparent 70%),
+      radial-gradient(800px 520px at 86% 22%, rgba(54, 92, 245, 0.14), transparent 70%),
+      linear-gradient(180deg, var(--navy-1) 0%, var(--navy-0) 55%, #04060f 100%);
+    overflow: hidden;
+  }
+  /* Cockpit grid, fading out from the centre. */
+  .grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(141, 166, 255, 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(141, 166, 255, 0.07) 1px, transparent 1px);
+    background-size: 64px 64px;
+    background-position: 32px 16px;
+    -webkit-mask-image: radial-gradient(1500px 760px at 50% 50%, #000 30%, transparent 100%);
+    mask-image: radial-gradient(1500px 760px at 50% 50%, #000 30%, transparent 100%);
+  }
+  /* Fine dot texture across the whole canvas. */
+  .dots {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(247, 248, 252, 0.06) 1px, transparent 1.4px);
+    background-size: 16px 16px;
+    opacity: 0.6;
+  }
+  /* Two quiet horizontal rules that frame the desktop band. */
+  .rule {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(141, 166, 255, 0.28) 30%, rgba(141, 166, 255, 0.28) 70%, transparent);
+  }
+  .rule.top { top: 486px; }
+  .rule.bottom { top: 953px; }
+  /* Large symbol watermark in the TV-only corners. */
+  .mark {
+    position: absolute;
+    width: 760px;
+    opacity: 0.05;
+    filter: blur(0.3px);
+  }
+  .mark.left { left: -180px; top: -170px; transform: rotate(-8deg); }
+  .mark.right { right: -150px; bottom: -210px; transform: rotate(6deg); }
+  .safe {
+    position: absolute;
+    left: 507px;
+    top: 508px;
+    width: 1546px;
+    height: 423px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 44px;
+  }
+  .logo {
+    height: 138px;
+    width: auto;
+    filter: drop-shadow(0 0 42px rgba(141, 166, 255, 0.28));
+  }
+  .line {
+    font-family: "Hanken Grotesk", "Segoe UI", system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 1.15;
+    letter-spacing: -0.005em;
+    color: var(--ink-soft);
+    text-align: center;
+    white-space: nowrap;
+  }
+  .line strong { font-weight: 600; color: var(--peri); }
+  /* Review guides (?guides=1): the phone safe area and the desktop band. */
+  .guide { position: absolute; pointer-events: none; display: none; }
+  .guides .guide { display: block; }
+  .guide.safe-box { left: 507px; top: 508px; width: 1546px; height: 423px; outline: 3px dashed #ff8a3d; }
+  .guide.band { left: 0; top: 508px; width: 2560px; height: 423px; outline: 3px dashed #3ddc97; }
+  .guide.label { font: 600 28px "Segoe UI", sans-serif; color: #ff8a3d; left: 520px; top: 466px; }
+  .guide.label.band-label { color: #3ddc97; left: 24px; }
+</style>
+</head>
+<body>
+  <div class="canvas" id="canvas">
+    <div class="grid"></div>
+    <div class="dots"></div>
+    <div class="rule top"></div>
+    <div class="rule bottom"></div>
+    <img class="mark left" src="recall-engine-symbol-dark.svg" alt="">
+    <img class="mark right" src="recall-engine-symbol-dark.svg" alt="">
+    <div class="safe">
+      <img class="logo" src="recall-engine-horizontal-dark.svg" alt="Recall Engine">
+      <p class="line"><strong>30,000+</strong> medical questions for all five years of medical school.</p>
+    </div>
+    <div class="guide band"></div>
+    <div class="guide safe-box"></div>
+    <div class="guide label band-label">desktop band 2560 x 423</div>
+    <div class="guide label">phone safe area 1546 x 423</div>
+  </div>
+  <script>
+    if (new URLSearchParams(location.search).get("guides") === "1") document.getElementById("canvas").classList.add("guides");
+  </script>
+</body>
+</html>

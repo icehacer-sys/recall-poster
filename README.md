@@ -154,3 +154,143 @@ caption line matches is recorded as already live and never posted again.
 days). Until both exist, the workflows exit with "secrets missing". Stop everything with
 `gh variable set CLOUD_BOTS --body off --repo icehacer-sys/recall-poster` (`on` or delete it to resume).
 No Supabase key ever goes to GitHub.
+
+## YouTube (Recall Engine channel, @recallengineapp)
+
+Two bots for the YouTube channel (owner, 28 Oct 2026). Both are **off** until the owner turns them on.
+Once `YT_BOTS` is on, the uploader's scheduled runs are live uploads. Every upload stays **private**
+until `YT_PUBLIC` is on (that variable is the public latch). The comment bot only drafts until
+`YT_REPLIES` is `live`.
+
+| Workflow | Schedule (UTC cron, gated in Cairo time) | What it does |
+|---|---|---|
+| `.github/workflows/youtube.yml` | hourly, 08:00 to 23:30 Cairo | uploads the due Short (`npm run yt:live`) and commits `reels/youtube-state.json` (video ids only) |
+| `.github/workflows/youtube-comments.yml` | every 15 min, 20:00 to 02:00 Cairo | drafts replies under the channel's own Shorts, or posts them once `YT_REPLIES=live`. Encrypted state, like `comments.yml` |
+
+### Switches (repository variables)
+
+| Variable | Unset (default) | Turned on |
+|---|---|---|
+| `YT_BOTS` | both workflows stop at the gate | `on`: both run (the secrets must exist too) |
+| `YT_PUBLIC` | uploads stay **private** with no publish time. The owner publishes in YouTube Studio | `on`: uploads go up private with `publishAt` = the slot and YouTube publishes them on time |
+| `YT_REPLIES` | the comment bot only **drafts** (owner list: `cd comments`, then `npm run yt:review`) | `live`: replies post (caps below) |
+| `YT_CROSSPOST` | only reels with `reels/<slug>/youtube.json` are listed | `on`: approved Instagram reels without one are also listed with generated text in dry runs. They never upload: run `npm run yt:sync`, read the text (check the case number), and approve it |
+| `CLOUD_BOTS` | | `off` stops every bot, YouTube included |
+
+Turning `YT_BOTS` off does not cancel a publish time YouTube already holds. Set `"skip": true` in that
+reel's `youtube.json` first (the next run cancels the schedule and keeps the video private), or set the
+video to Private in YouTube Studio.
+
+**Emergency stop:** `gh variable set YT_BOTS --body off -R icehacer-sys/recall-poster`. Then remove the
+grant at [myaccount.google.com/permissions](https://myaccount.google.com/permissions) (Recall Engine >
+Delete all connections) or delete the OAuth client in Google Cloud Console. The `youtube.force-ssl`
+token can also delete videos and comments. Revoke it the moment anything looks wrong.
+
+### Per Short
+
+1. `npm run yt:sync` writes `reels/<slug>/youtube.json` for every approved reel that has none. It lives
+   next to `reel.json` because `reels:sync` rewrites `reel.json` from scratch. The title is the reel's
+   approved hook line plus the case number (at most 100 characters). The description starts with that
+   line, `https://www.recallengine.app`, and the approved "first 7 days free plus 50 credits" line, then
+   the rest of the approved caption and `#Shorts` with the caption hashtags. It records the duration and
+   frame size with ffprobe (a Short must be vertical and at most 3 minutes). New entries start with
+   `"approved": false`: nothing uploads until the owner sets it to `true`.
+2. Slots: one Short a day at 20:00 Cairo by default. `npm run yt:sync -- --reslot` moves passed slots of
+   entries that are not uploaded yet to the next free days.
+3. The uploader downloads the same signed URL as the Instagram publisher (`npm run reels:upload -- <slug>`)
+   and checks the byte size and the sha256 prefix against `reel.json` before uploading.
+4. Two owner decisions per reel. Without them the upload is refused. `containsSyntheticMedia` starts as `null`.
+   YouTube requires the "altered or synthetic content" label only for **realistic** content (a real
+   person made to say or do something, altered real footage, a realistic scene that never happened, or AI
+   music as the focus). Non-realistic animation is exempt. `"musicCleared": true` is needed for every Short
+   over 60 s: such a Short with any copyright claim is blocked worldwide.
+5. `npm run yt:dry` prints the exact `videos.insert` request per entry. No secrets, no network.
+
+**Never twice:** the moment YouTube opens an upload session it is recorded (`sessionOpenedAt`), and the
+video id is saved the moment the upload finishes. Before every upload the channel's 50 newest uploads are
+checked for the hidden tag `re-<slug>` (or the same title). A session that left no video id is never
+retried by the bot. It checks the channel again for 2 h. Then it stops and asks the owner to look in Studio.
+A start that YouTube rejects (4xx) creates no video and records nothing.
+
+**Never public by itself:** the bot never sends `privacyStatus: public`. With `YT_PUBLIC` on it sends a
+publish time. A slot less than 15 minutes ahead (or passed) goes up private and the run asks the owner to
+publish it in Studio.
+
+**Quota:** 4 units per upload plus one call from the separate Video Uploads bucket (100 a day). The
+uploader stops at 1,000 units and 5 uploads per Pacific day and the comment bot at 3,000 units, out of
+the project's 10,000. Runs with nothing due make no API call.
+
+**Comments:** same rules, templates, guards, and Sonnet prompt as the Instagram bot, with a YouTube
+identity line. Replies only under the channel's own Shorts, never a link or a bare web address (the
+sanitizer refuses `evil.com`, `t.me/x`, and "dot com" too), never a subscribe ask. App questions use the
+`youtube_app_question` templates ("the link is on our channel page"). They stay `approved: false` until
+the owner OKs them and go out at most once per commenter per Short and 5 times a day. Held and
+likely-spam comments go to the owner list and are never approved. Caps: 5 replies per run, 30 a day, 15
+per Short a day, 1 per thread, 30 model calls a day, and 3 USD a month. The caps are checked before any
+paid model call. Comment data (names, texts, and ids) is deleted after 30 days: the YouTube API
+Developer Policies require it.
+
+### One-time owner setup
+
+Claude never creates accounts, projects, or OAuth clients. The owner does these steps:
+
+1. YouTube: on the channel's Google account open `youtube.com/verify` and verify the phone number.
+2. [Google Cloud Console](https://console.cloud.google.com), signed in as the channel's Google account:
+   1. Create a project named `Recall Engine YouTube`.
+   2. APIs and Services > Library > **YouTube Data API v3** > Enable.
+   3. Google Auth Platform > Get started: app name `Recall Engine`, support email `hello@recallengine.app`,
+      audience **External**, contact email `hello@recallengine.app`.
+   4. Branding: home page `https://www.recallengine.app`, privacy policy
+      `https://www.recallengine.app/privacy`, terms `https://www.recallengine.app/terms`, authorised
+      domain `recallengine.app`.
+   5. Data access > Add or remove scopes > `https://www.googleapis.com/auth/youtube.force-ssl` > Save.
+   6. Audience > **Publish app** (In production). In Testing, Google ends the refresh token after 7 days.
+      Do not submit for verification: one user is well under the 100-user limit.
+   7. Clients > Create client > **Desktop app**, name `recall-poster` > Create > Download JSON.
+3. On the laptop: `cd W:\Projects\recall-poster`, then
+   `node scripts/youtube-auth.mjs --client "C:\Users\HP\Downloads\client_secret_XXXX.json"`.
+   Sign in, pick the **Recall Engine** channel, and on "Google hasn't verified this app" choose
+   Advanced > Go to Recall Engine > Continue. The script sets the secrets `YT_CLIENT_ID`,
+   `YT_CLIENT_SECRET`, and `YT_REFRESH_TOKEN` and the variable `YT_CHANNEL_ID`. It never prints the token.
+   Then move the downloaded JSON out of Downloads into a private folder outside every repo (for
+   example `D:\Private\google-oauth`). Google shows the client secret only once. Keep it for a
+   future sign-in. `.gitignore` blocks `client_secret*.json` as a last guard.
+4. **Test upload (Phase 0):** the test reel's `youtube.json` needs the two decisions
+   (`containsSyntheticMedia` true or false, and `"musicCleared": true`) committed and pushed to `main`
+   (the workflow reads `main`). Approval and the slot window do not matter for a test. Then
+   `gh variable set YT_BOTS --body on -R icehacer-sys/recall-poster` and
+   `gh workflow run youtube.yml -R icehacer-sys/recall-poster -f mode=test -f slug=<slug>`. The Short goes
+   up Private with no publish time and no subscriber notification. Its signed video URL must still be
+   valid (`npm run reels:upload -- <slug> --force` renews it). In YouTube Studio switch it to Unlisted. If
+   YouTube allows it, turn on scheduled publishing with
+   `gh variable set YT_PUBLIC --body on -R icehacer-sys/recall-poster`. If YouTube keeps it locked to
+   private, leave `YT_PUBLIC` off, publish each Short by hand in Studio, and send the
+   [API audit form](https://support.google.com/youtube/contact/yt_api_form).
+5. Comment replies: read the drafts with `cd comments`, then `npm run yt:review`. When they look right,
+   approve the `youtube_app_question` templates in `comments/data/templates.json` and run
+   `gh variable set YT_REPLIES --body live -R icehacer-sys/recall-poster`.
+
+### Channel art and text (`assets/youtube/`)
+
+- `banner-2560x1440.png` (Studio > Customization > Branding > Banner image). Everything readable sits in
+  the 1546 x 423 middle area that phones show. `banner-safe-area-preview.png` shows the crops.
+- `profile-800x800.png` (Branding > Picture). The recall-v2 symbol, never the old teal R.
+- `channel-description.txt` (Basic info > Description) and `channel-keywords.txt` (Settings > Channel >
+  Keywords). Add the link `Recall Engine` = `https://www.recallengine.app` under Basic info > Links: the
+  channel header link is the only clickable one for Shorts viewers.
+- Sources: `assets/youtube/src/*.html`. Re-render on the NVIDIA GPU through the heavy slot:
+  `node D:/Temp/ClaudeCode/process/heavy-slot.cjs yt-assets --cwd W:/Projects/recall-poster -- node scripts/render-youtube-assets.mjs`
+
+### Commands
+
+```bash
+npm run yt:sync            # write youtube.json for approved reels (approved: false)
+npm run yt:sync -- --reslot
+npm run yt:dry             # exact upload requests, no secrets, no network
+npm run yt:check           # dry run plus a size probe of each signed video URL
+npm run yt:live            # upload (needs YT_CONFIRM_LIVE=yes, which only the workflow sets)
+npm run yt:live -- --test-upload <slug>   # Phase 0: private now, no notification (workflow mode=test)
+npm run yt:unschedule -- <slug>
+npm run yt:test            # offline: faked Google, YouTube, Supabase, and gh
+cd comments && npm run yt:dry    # also yt:draft, yt:live, yt:review, yt:cloud:test
+```

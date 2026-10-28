@@ -1,0 +1,145 @@
+name: youtube
+
+# Uploads Recall Engine YouTube Shorts (owner, 28 Oct 2026). OFF until the owner turns it on: nothing
+# runs unless the repository variable YT_BOTS is "on" AND the OAuth secrets exist. The owner's one-time
+# `node scripts/youtube-auth.mjs` sets YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN, and the
+# variable YT_CHANNEL_ID. CLOUD_BOTS=off stops it too.
+# Once YT_BOTS is on, scheduled runs are LIVE uploads (private ones until YT_PUBLIC is on).
+# What uploads: reels/<slug>/youtube.json with "approved": true, from 24 h before the slot. The variable
+# YT_CROSSPOST=on only LISTS approved Instagram reels that have no youtube.json yet: they never upload.
+# Videos stay PRIVATE with no publish time until the variable YT_PUBLIC is "on". With YT_PUBLIC on they go up private
+# with publishAt = the slot and YouTube publishes them itself. A slot less than 15 minutes ahead is never
+# made public by the bot. One upload per run, two per Cairo day. reels/youtube-state.json (video ids only)
+# is committed back, and the channel's newest uploads are checked before every upload.
+# mode=test uploads one reel (slug required) PRIVATE right now. It ignores the slot window and notifies
+# nobody: the Phase 0 test of what the API project may do.
+# Turning YT_BOTS off does NOT cancel a publish time YouTube already holds: set the video to Private in
+# YouTube Studio, or set "skip": true in its youtube.json while YT_BOTS is still on (the next run cancels it).
+# Quota: 4 units per upload of the 10,000 a day plus 1 call from the separate Video Uploads bucket (100 a
+# day). A run with nothing due makes no API call.
+# Cron is UTC. Egypt is UTC+2 from 29 Oct 2026: the gate keeps 08:00 to 23:30 Cairo.
+on:
+  schedule:
+    - cron: "17 4-21 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "dry = print what would be uploaded. live = upload a due Short (same checks as the schedule). test = upload the slug PRIVATE now (Phase 0)."
+        type: choice
+        options: [dry, live, test]
+        default: dry
+      slug:
+        description: "Optional: only this reel (for example 02-hypoglycaemia)."
+        type: string
+        required: false
+        default: ""
+
+concurrency:
+  group: recall-youtube
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: gate
+        id: gate
+        env:
+          CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          REFRESH: ${{ secrets.YT_REFRESH_TOKEN }}
+          CHANNEL: ${{ vars.YT_CHANNEL_ID }}
+          SWITCH: ${{ vars.YT_BOTS }}
+          ALL_BOTS: ${{ vars.CLOUD_BOTS }}
+          EVENT: ${{ github.event_name }}
+          SLUG: ${{ inputs.slug }}
+          MODE: ${{ inputs.mode }}
+        run: |
+          if [ "$SWITCH" != on ]; then
+            echo "YT_BOTS is not on. Nothing done."
+            echo "go=no" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "$ALL_BOTS" = off ]; then
+            echo "CLOUD_BOTS is off. Nothing done."
+            echo "go=no" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ -z "$CLIENT_ID" ] || [ -z "$CLIENT_SECRET" ] || [ -z "$REFRESH" ] || [ -z "$CHANNEL" ]; then
+            echo "YouTube secrets or YT_CHANNEL_ID missing: the owner runs node scripts/youtube-auth.mjs. Nothing done."
+            echo "go=no" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ -n "$SLUG" ] && ! printf '%s' "$SLUG" | grep -Eq '^[a-z0-9][a-z0-9-]*$'; then
+            echo "::error::slug must be a reel folder name such as 02-hypoglycaemia"
+            exit 1
+          fi
+          if [ "$MODE" = test ] && [ -z "$SLUG" ]; then
+            echo "::error::mode=test needs a slug"
+            exit 1
+          fi
+          now=$(TZ=Africa/Cairo date +%H%M)
+          n=$((10#$now))
+          if [ "$EVENT" = schedule ] && { [ "$n" -lt 800 ] || [ "$n" -gt 2330 ]; }; then
+            echo "outside 08:00 to 23:30 Cairo (now $now). Nothing to do."
+            echo "go=no" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "Cairo time $now."
+          echo "go=yes" >> "$GITHUB_OUTPUT"
+
+      # The newest main, not the commit the run was queued on: a run that waited in the
+      # concurrency queue must see the video ids the run before it pushed.
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.go == 'yes'
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.go == 'yes'
+        with:
+          node-version: "22"
+          cache: npm
+
+      - if: steps.gate.outputs.go == 'yes'
+        run: npm ci --no-audit --no-fund
+
+      - name: youtube
+        if: steps.gate.outputs.go == 'yes'
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          YT_CHANNEL_ID: ${{ vars.YT_CHANNEL_ID }}
+          YT_PUBLIC: ${{ vars.YT_PUBLIC }}
+          YT_CROSSPOST: ${{ vars.YT_CROSSPOST }}
+          YT_STATE_FILE: reels/youtube-state.json
+          YT_CONFIRM_LIVE: ${{ (github.event_name == 'schedule' || inputs.mode == 'live' || inputs.mode == 'test') && 'yes' || '' }}
+          SLUG: ${{ inputs.slug }}
+          MODE: ${{ inputs.mode }}
+        run: |
+          only=()
+          if [ -n "$SLUG" ]; then only=(--only "$SLUG"); fi
+          if [ "$MODE" = test ]; then npm run -s yt:live -- --test-upload "$SLUG"
+          elif [ "$YT_CONFIRM_LIVE" = yes ]; then npm run -s yt:live -- "${only[@]}"
+          else npm run -s yt:dry -- "${only[@]}"; fi
+
+      - name: save youtube state
+        if: always() && steps.gate.outputs.go == 'yes'
+        run: |
+          [ -f reels/youtube-state.json ] || { echo "no youtube state yet"; exit 0; }
+          git config user.name "recall-poster bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add reels/youtube-state.json
+          if git diff --cached --quiet; then echo "youtube state unchanged"; exit 0; fi
+          git commit -m "chore(youtube): record upload state [skip ci]"
+          for _ in 1 2 3 4 5; do
+            git pull --rebase && git push && exit 0
+            sleep 5
+          done
+          echo "::error::could not push reels/youtube-state.json. The channel check before every upload still prevents a second upload."
+          exit 1

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Daily Instagram carousel auto-poster for @recallengine. Generates gpt-image-2 slides + Claude captions for high-yield medical exam content and publishes via the Instagram Graph API.",
+  "description": "Daily Instagram carousel auto-poster for @recallengine, the reels publisher, and the YouTube Shorts uploader for the Recall Engine channel.",
   "engines": {
     "node": ">=18.17"
   },
@@ -22,7 +22,15 @@
     "reels:bucket": "tsx src/reels.ts --bucket",
     "reels:stage-test": "tsx src/reels.ts --stage-test",
     "reels:upload": "tsx src/reels.ts --upload",
-    "secret-scan": "node scripts/secret-scan.mjs"
+    "secret-scan": "node scripts/secret-scan.mjs",
+    "yt:sync": "tsx src/youtube/upload.ts --sync",
+    "yt:dry": "tsx src/youtube/upload.ts --dry-run",
+    "yt:check": "tsx src/youtube/upload.ts --dry-run --check-urls",
+    "yt:live": "tsx src/youtube/upload.ts --live",
+    "yt:unschedule": "tsx src/youtube/upload.ts --unschedule",
+    "yt:auth": "node scripts/youtube-auth.mjs",
+    "yt:test": "node test/yt-test.mjs",
+    "yt:assets": "node scripts/render-youtube-assets.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.1",

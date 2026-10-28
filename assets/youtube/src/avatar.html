@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Recall Engine YouTube profile picture</title>
+<!--
+  Channel profile picture, 800 x 800 (YouTube shows it as a circle down to 98 x 98). The recall-v2
+  symbol (#8DA6FF) sits well inside the circle crop on the brand navy. Rendered by
+  scripts/render-youtube-assets.mjs on the NVIDIA GPU.
+-->
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 800px; height: 800px; overflow: hidden; background: #050814; }
+  .tile {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    display: grid;
+    place-items: center;
+    background:
+      radial-gradient(420px 420px at 50% 46%, rgba(141, 166, 255, 0.22), transparent 70%),
+      radial-gradient(520px 420px at 22% 88%, rgba(54, 92, 245, 0.24), transparent 70%),
+      linear-gradient(180deg, #0c1330 0%, #050814 100%);
+  }
+  .tile::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(141, 166, 255, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(141, 166, 255, 0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: 20px 20px;
+    -webkit-mask-image: radial-gradient(360px 360px at 50% 50%, #000 20%, transparent 100%);
+    mask-image: radial-gradient(360px 360px at 50% 50%, #000 20%, transparent 100%);
+  }
+  img {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    filter: drop-shadow(0 0 36px rgba(141, 166, 255, 0.35));
+  }
+</style>
+</head>
+<body>
+  <div class="tile"><img src="recall-engine-symbol-dark.svg" alt="Recall Engine"></div>
+</body>
+</html>

@@ -22,7 +22,12 @@
     "cloud:pack": "tsx src/cloud-state.ts pack",
     "cloud:unpack": "tsx src/cloud-state.ts unpack",
     "review": "tsx src/cloud-state.ts review",
-    "cloud:test": "bash test/cloud-test.sh"
+    "cloud:test": "bash test/cloud-test.sh",
+    "yt:dry": "tsx src/yt-run.ts --dry-run",
+    "yt:draft": "tsx src/yt-run.ts --draft",
+    "yt:live": "tsx src/yt-run.ts --live",
+    "yt:review": "tsx src/cloud-state.ts review --youtube",
+    "yt:cloud:test": "node test/yt-cloud-test.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.104.1",

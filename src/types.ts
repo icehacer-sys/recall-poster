@@ -100,6 +100,50 @@ export interface Reel {
   media?: ReelMedia;
 }
 
+/**
+ * The YouTube Short for one reel. Kept in its own file, reels/<slug>/youtube.json, because
+ * `npm run reels:sync` rewrites reel.json from scratch. Written by `npm run yt:sync`, edited by hand.
+ */
+export interface ReelYoutube {
+  /** At most 100 characters, no "<" or ">". */
+  title: string;
+  /** At most 5,000 bytes (UTF-8), no "<" or ">". Starts with one line, the site link, and a short call to action. */
+  description: string;
+  /** API tags, at most 500 characters together. The hidden idempotency tag re-<slug> is added by the code. */
+  tags: string[];
+  /** The slot (UTC ISO). With YT_PUBLIC=on the video is uploaded private with publishAt = this, and YouTube publishes it. */
+  publishAt: string;
+  /** Human-readable slot. Informational only. */
+  publishAtCairo?: string;
+  /** "27" = Education. */
+  categoryId: string;
+  /** Language of the title and description ("ar" or "en"). */
+  defaultLanguage: string;
+  /** Language spoken in the video. */
+  defaultAudioLanguage: string;
+  madeForKids: boolean;
+  /**
+   * YouTube "altered or synthetic content" disclosure (status.containsSyntheticMedia). Required only for
+   * realistic altered or synthetic content. The owner decides: null (the default) refuses the upload.
+   */
+  containsSyntheticMedia: boolean | null;
+  /** Owner OK that the music cannot draw a copyright claim (needed for a Short over 60 s). */
+  musicCleared?: boolean;
+  notifySubscribers?: boolean;
+  /** Case number shown in the reel ("02"), parsed from the video file name. */
+  caseNumber?: string;
+  /** Owner OK on this title and description. Nothing uploads while this is false. */
+  approved: boolean;
+  approvedBy?: string;
+  /** Never upload this reel to YouTube (an already scheduled upload is unscheduled). */
+  skip?: boolean;
+  /** Video facts recorded by yt:sync from the local file (Shorts must be vertical and at most 3 minutes). */
+  durationSec?: number;
+  width?: number;
+  height?: number;
+  note?: string;
+}
+
 export interface ReelMedia {
   bucket: string;
   videoPath: string;
