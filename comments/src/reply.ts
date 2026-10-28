@@ -5,7 +5,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { config } from "./config";
 import { claudeKey, recordCall } from "./budget";
-import { SYSTEM_PROMPT } from "./voice";
+import { systemPrompt } from "./voice";
 import { factLines, type ReelFacts } from "./reels";
 import type { Lang } from "./rules";
 
@@ -30,6 +30,9 @@ export type Category =
   | "tag_only"
   | "emoji_only"
   | "other";
+
+/** Which account the comment came from: picks the prompt identity line and the app templates. */
+export type Platform = "instagram" | "youtube";
 
 export interface Decision {
   decision: "reply" | "skip";
@@ -93,10 +96,12 @@ export interface DraftInput {
   priorExchange?: { commenter: string; bot: string };
   /** The rules saw a first-person or family health remark without an explicit request. */
   personalStory?: boolean;
+  /** Default instagram. */
+  platform?: Platform;
 }
 
 export async function modelDecide(input: DraftInput): Promise<Decision> {
-  const { reel, comment, lang, recentReplies, priorExchange, personalStory } = input;
+  const { reel, comment, lang, recentReplies, priorExchange, personalStory, platform } = input;
   const userText = [
     `REEL: ${reel.title}`,
     `VETTED FACTS (the only medical source of truth):\n- ${factLines(reel).join("\n- ")}`,
@@ -124,7 +129,7 @@ export async function modelDecide(input: DraftInput): Promise<Decision> {
     const res = await getClient().messages.create({
       model: config.model,
       max_tokens: 2000,
-      system: [{ type: "text", text: SYSTEM_PROMPT, cache_control: { type: "ephemeral" } }],
+      system: [{ type: "text", text: systemPrompt(platform), cache_control: { type: "ephemeral" } }],
       messages: [{ role: "user", content: userText }],
       output_config: { effort: "low", format: { type: "json_schema", schema: SCHEMA } },
     } as unknown as Anthropic.MessageCreateParamsNonStreaming);

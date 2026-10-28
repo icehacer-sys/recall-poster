@@ -14,10 +14,10 @@ import { dirname, join } from "node:path";
 import { config, ROOT } from "./config";
 import { getComments, getMyUsername, getRecentMedia, ownReplyInThread, replyToComment, type IgComment } from "./instagram";
 import { loadReels, reelForMedia, type ReelFacts } from "./reels";
-import { appIntent, detectLang, isPersonalStory, requestsPersonalAdvice, ruleCheck, type Lang } from "./rules";
-import { modelBroken, modelDecide, offlineDecide, ruleDecision, type Category, type Decision } from "./reply";
+import type { Decision } from "./reply";
 import { State, cairoDate } from "./state";
-import { budgetBlock, claudeKey, ledgerSummary } from "./budget";
+import { claudeKey, ledgerSummary } from "./budget";
+import { decide, loadTemplates, type Ctx } from "./decide";
 
 type Mode = "fixtures" | "dry-run" | "live";
 
@@ -33,88 +33,7 @@ function parseArgs(argv: string[]): Args {
   return { mode, offline: argv.includes("--offline") || !claudeKey(), report: i >= 0 ? argv[i + 1] : undefined };
 }
 
-type Approved<T> = { approved: boolean } & T;
-interface Templates {
-  app_question: Record<"en" | "ar", Approved<{ price: string[]; where: string[] }>>;
-  boundary: Record<"personal" | "scan" | "urgent", Record<"en" | "ar", Approved<{ text: string }>>>;
-}
-
-const templates = JSON.parse(readFileSync(config.templatesFile, "utf8")) as Templates;
-
-// ---------------------------------------------------------------- one comment
-
-interface Ctx {
-  offline: boolean;
-  modelCalls: number;
-  recentReplies: string[];
-  n: number;
-  /** Boundary lines already given ("reel|user|kind"), so each commenter gets one per reel. */
-  boundaries: Set<string>;
-  /** Index of the last app variant used, so consecutive app replies differ. */
-  lastVariant: number;
-}
-
-interface Who {
-  reel: ReelFacts;
-  username: string;
-}
-
-/** App reply: an approved variant for this language and intent, never the one used just before. */
-function appReply(lang: Lang, text: string, ctx: Ctx): Decision {
-  const t = templates.app_question[lang];
-  if (!t?.approved) return ruleDecision("app_question", lang, "app question: the template for this language is not approved yet", true);
-  const intent = appIntent(text);
-  const pool = t[intent];
-  let i = [...text].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7) % pool.length;
-  if (pool.length > 1 && i === ctx.lastVariant) i = (i + 1) % pool.length;
-  ctx.lastVariant = i;
-  return { decision: "reply", category: "app_question", language: lang, reply_text: pool[i], reason: `approved app reply (${intent}, variant ${i + 1})`, source: "template", ownerReview: false };
-}
-
-/**
- * threads-bot boundary (concerns.ts concernAcknowledgment): the approved line, at most once per
- * commenter and reel, never advice. Always listed for the owner too. An unapproved language
- * (Arabic until the owner approves it) is a plain skip for the owner.
- */
-function boundaryReply(kind: "personal" | "scan" | "urgent", category: Category, lang: Lang, who: Who, reason: string, ctx: Ctx): Decision {
-  const key = `${who.reel.slug}|${who.username}|${kind}`;
-  const line = templates.boundary[kind][lang];
-  if (ctx.boundaries.has(key)) return ruleDecision(category, lang, `${reason} | boundary already given to this commenter on this reel`, true);
-  if (!line?.approved) return ruleDecision(category, lang, `${reason} | ${lang === "ar" ? "Arabic" : "this"} boundary line awaits owner approval: "${line?.text ?? ""}"`, true);
-  ctx.boundaries.add(key);
-  return { decision: "reply", category, language: lang, reply_text: line.text, reason: `${reason} | approved boundary line`, source: "template", ownerReview: true };
-}
-
-async function decide(who: Who, text: string, ctx: Ctx, priorExchange?: { commenter: string; bot: string }): Promise<Decision> {
-  const { reel } = who;
-  const lang = detectLang(text);
-  const hit = ruleCheck(text);
-  if (hit?.category === "app_question") return appReply(lang, text, ctx);
-  if (hit?.boundary) return boundaryReply(hit.boundary, hit.category, lang, who, hit.reason, ctx);
-  if (hit) return ruleDecision(hit.category, lang, hit.reason, hit.ownerReview);
-  if (text.trim().length < config.minCommentLength) return ruleDecision("other", lang, "too short", false);
-
-  if (ctx.offline) return offlineDecide(reel, text, lang, ctx.n++);
-  const blocked = ctx.modelCalls >= config.maxModelCalls ? `model call cap (${config.maxModelCalls}) reached for this run` : modelBroken ? `model unavailable this run (${modelBroken.slice(0, 60)})` : budgetBlock();
-  if (blocked) return { ...ruleDecision("other", lang, `${blocked}: retried on a later run`, false), retry: true };
-  ctx.modelCalls++;
-  let d = await modelDecide({ reel, comment: text, lang, recentReplies: ctx.recentReplies, priorExchange, personalStory: isPersonalStory(text) });
-  // threads-bot reply.ts: personal_medical gets the boundary only with an explicit request.
-  // Without one it is skipped (threads-bot rechecks once first; we skip straight away).
-  if (d.category === "personal_medical") {
-    d = requestsPersonalAdvice(text)
-      ? boundaryReply("personal", "personal_medical", lang, who, `model: ${d.reason}`, ctx)
-      : ruleDecision("personal_medical", lang, `no explicit advice request, never a boundary or advice: ${d.reason}`, true);
-  }
-  if (!config.educational && d.decision === "reply" && (d.category === "wrong_guess" || d.category === "case_question")) {
-    d = { ...d, decision: "skip", reply_text: "", reason: `${d.reason} | educational replies off`, ownerReview: true };
-  }
-  if (!config.caseQuestions && d.decision === "reply" && d.category === "case_question") {
-    d = { ...d, decision: "skip", reply_text: "", reason: `case question held for the owner (BOT_CASE_QUESTIONS=off). Draft: "${d.reply_text}"`, ownerReview: true };
-  }
-  if (d.decision === "reply" && d.source === "model") ctx.recentReplies.push(d.reply_text);
-  return d;
-}
+const templates = loadTemplates();
 
 // ---------------------------------------------------------------- report
 
@@ -204,7 +123,7 @@ interface Fixture {
 async function runFixtures(args: Args): Promise<void> {
   const reels = loadReels().reels;
   const fixtures = JSON.parse(readFileSync(join(ROOT, "data", "fixtures", "comments.json"), "utf8")) as Fixture[];
-  const ctx: Ctx = { offline: args.offline, modelCalls: 0, recentReplies: [], n: 0, boundaries: new Set<string>(), lastVariant: -1 };
+  const ctx: Ctx = { offline: args.offline, modelCalls: 0, recentReplies: [], n: 0, boundaries: new Set<string>(), lastVariant: -1, templates };
   console.log(`\nFIXTURES: ${fixtures.length} synthetic comments, ${args.offline ? "OFFLINE (no model)" : `model ${config.model}, cap ${config.maxModelCalls} calls`}. Nothing is posted.\n`);
   const rows: Row[] = [];
   for (const f of fixtures) {
@@ -253,7 +172,7 @@ async function runAccount(args: Args): Promise<void> {
   const reels = loadReels().reels;
   const me = await getMyUsername();
   const media = await getRecentMedia();
-  const ctx: Ctx = { offline: args.offline, modelCalls: 0, recentReplies: [], n: 0, boundaries: new Set<string>(state.boundaryKeys()), lastVariant: -1 };
+  const ctx: Ctx = { offline: args.offline, modelCalls: 0, recentReplies: [], n: 0, boundaries: new Set<string>(state.boundaryKeys()), lastVariant: -1, templates };
   const rows: Row[] = [];
   // A boundary that did not actually post must not count as given.
   const boundaryKind: Record<string, string> = { personal_medical: "personal", scan: "scan", urgent: "urgent" };

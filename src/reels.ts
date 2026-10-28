@@ -32,6 +32,7 @@ import {
 } from "./instagram.js";
 import type { Reel } from "./types.js";
 import { MEDIA_BUCKET, ensureMediaBucket, probeUrl, redactUrl, signMedia, uploadMedia } from "./media.js";
+import { addDays, cairoLabel, captionKey, loadReelsFrom, localToUtcIso, localYmd, signedProblem } from "./reels-manifest.js";
 import {
   STAGING_BUCKET,
   createBucket,
@@ -94,45 +95,9 @@ const MAX_HASHTAGS = 30;
 const MAX_MENTIONS = 20;
 
 // ---------------------------------------------------------------- time helpers
-
-/** Offset (minutes east of UTC) of `tz` at instant `ms`. */
-function tzOffsetMinutes(ms: number, tz: string): number {
-  const part = new Intl.DateTimeFormat("en-US", { timeZone: tz, timeZoneName: "longOffset" })
-    .formatToParts(new Date(ms))
-    .find((p) => p.type === "timeZoneName")?.value;
-  const m = part?.match(/GMT([+-])(\d{2}):?(\d{2})?/);
-  if (!m) return 0;
-  const sign = m[1] === "-" ? -1 : 1;
-  return sign * (Number(m[2]) * 60 + Number(m[3] ?? 0));
-}
-
-/** Local wall time (YYYY-MM-DD + HH:MM in tz) -> UTC ISO. DST-safe (Egypt changes on 29 Oct 2026). */
-export function localToUtcIso(ymd: string, hhmm: string, tz = TZ): string {
-  const [y, mo, d] = ymd.split("-").map(Number);
-  const [h, mi] = hhmm.split(":").map(Number);
-  const wall = Date.UTC(y, mo - 1, d, h, mi);
-  let utc = wall - tzOffsetMinutes(wall, tz) * 60_000;
-  utc = wall - tzOffsetMinutes(utc, tz) * 60_000; // re-evaluate at the real instant
-  return new Date(utc).toISOString();
-}
-
-/** UTC ISO -> "Sun 25 Oct 2026 19:00 Africa/Cairo". */
-export function cairoLabel(iso: string, tz = TZ): string {
-  const d = new Date(iso);
-  const date = new Intl.DateTimeFormat("en-GB", { timeZone: tz, weekday: "short", day: "numeric", month: "short", year: "numeric" }).format(d);
-  const time = new Intl.DateTimeFormat("en-GB", { timeZone: tz, hour: "2-digit", minute: "2-digit", hour12: false }).format(d);
-  return `${date.replace(/,/g, "")} ${time} ${tz}`;
-}
-
-/** Calendar date (YYYY-MM-DD) of an instant in tz. */
-function localYmd(ms: number, tz = TZ): string {
-  return new Intl.DateTimeFormat("en-CA", { timeZone: tz, year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(ms));
-}
-
-function addDays(ymd: string, n: number): string {
-  const [y, m, d] = ymd.split("-").map(Number);
-  return new Date(Date.UTC(y, m - 1, d + n)).toISOString().slice(0, 10);
-}
+// localToUtcIso, cairoLabel, localYmd, and addDays live in reels-manifest.ts (shared with the
+// YouTube uploader). Re-exported here so existing imports keep working.
+export { cairoLabel, captionKey, localToUtcIso };
 
 // ---------------------------------------------------------------- manifest IO
 
@@ -141,15 +106,7 @@ function reelFile(slug: string): string {
 }
 
 export function loadReels(): Reel[] {
-  if (!existsSync(reelsCfg.dir)) return [];
-  const out: Reel[] = [];
-  for (const d of readdirSync(reelsCfg.dir, { withFileTypes: true })) {
-    if (!d.isDirectory()) continue;
-    const f = reelFile(d.name);
-    if (!existsSync(f)) continue;
-    out.push(JSON.parse(readFileSync(f, "utf8")) as Reel);
-  }
-  return out.sort((a, b) => a.postAt.localeCompare(b.postAt) || a.slug.localeCompare(b.slug));
+  return loadReelsFrom(reelsCfg.dir);
 }
 
 function saveReel(reel: Reel): void {
@@ -523,20 +480,6 @@ async function cleanupReel(r: Reel, state: State, why: string): Promise<void> {
 }
 
 // ---------------------------------------------------------------- live
-
-/** Why a signed-mode reel cannot publish now, or null when its media is ready. */
-function signedProblem(r: Reel, now: number): string | null {
-  if (!r.media?.videoUrl) return `no signed media yet: run npm run reels:upload -- ${r.slug} on the laptop`;
-  if (Date.parse(r.media.expiresAt) <= now + 15 * 60_000) return `signed URLs expired or expire within 15 min (${r.media.expiresAt}): rerun npm run reels:upload -- ${r.slug}`;
-  if (r.videoBytes && r.media.videoBytes !== r.videoBytes) return "uploaded video size differs from reel.json (rerun reels:sync and reels:upload)";
-  return null;
-}
-
-/** First caption line, normalised, to recognise a reel that is already live on Instagram. */
-export function captionKey(s: string): string {
-  const first = s.split("\n").map((l) => l.trim()).find((l) => l) ?? "";
-  return first.replace(/[\u064B-\u0652\u0640\u202A-\u202E\u200E\u200F]/g, "").replace(/\s+/g, " ").trim().toLowerCase();
-}
 
 /**
  * Lost-state guard: before creating a new container, read the account's recent media. A post whose

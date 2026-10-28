@@ -50,3 +50,18 @@ EXAMPLES (adapt, do not copy mechanically)
 
 OUTPUT
 Return one JSON object with: language ("ar" or "en"), category, decision ("reply" or "skip"), reply_text (empty when skipping), reason (specific enough for the owner to understand a skip, in English).`;
+
+// YouTube Shorts (owner, 28 Oct 2026): the same rules and voice. Only the identity line changes, plus
+// one YouTube note: links in Shorts comments are dead text and repeated link replies count as spam,
+// so a reply never carries a link or points anywhere (app questions use the YouTube templates).
+export const YT_SYSTEM_PROMPT = SYSTEM_PROMPT.replace(
+  "You draft short replies for @recallengine's Instagram case reels.",
+  "You draft short replies for Recall Engine's YouTube Shorts. You reply only under the channel's own Shorts.",
+).replace(
+  'No hashtags, links, @mentions, prices or "link in bio" in your replies. The application owns every product line.',
+  'No hashtags, links, @mentions, prices, "link in bio" or "check our channel" in your replies. Never ask anyone to like, subscribe or comment. The application owns every product line.',
+);
+
+export function systemPrompt(platform: "instagram" | "youtube" = "instagram"): string {
+  return platform === "youtube" ? YT_SYSTEM_PROMPT : SYSTEM_PROMPT;
+}
