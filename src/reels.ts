@@ -542,12 +542,20 @@ export function captionKey(s: string): string {
  * Lost-state guard: before creating a new container, read the account's recent media. A post whose
  * first caption line matches this reel means it is already live (posted earlier, by hand, or by a run
  * whose state was not saved). Throws when Instagram cannot be read, so nothing posts blind.
+ * A post that the state already credits to ANOTHER reel never counts: two reels may share a caption
+ * (owner 28 Oct: the followers cut and the trial cut of one case).
  */
-async function alreadyLive(r: Reel): Promise<{ id: string; timestamp?: string } | null> {
+async function alreadyLive(r: Reel, claimedByOthers: Set<string>): Promise<{ id: string; timestamp?: string } | null> {
   const key = captionKey(r.caption);
   if (!key) return null;
   const media = await recentMedia();
-  return media.find((m) => captionKey(m.caption ?? "") === key) ?? null;
+  return media.find((m) => !claimedByOthers.has(m.id) && captionKey(m.caption ?? "") === key) ?? null;
+}
+
+/** Instagram media ids the state records for every reel except `slug`. */
+function mediaClaimedByOthers(reels: Reel[], state: State, slug: string): Set<string> {
+  const ids = reels.filter((x) => x.slug !== slug).map((x) => state.get(stateKey(x.slug)).igMediaId);
+  return new Set(ids.filter((id): id is string => !!id));
 }
 
 async function runLive(): Promise<void> {
@@ -630,7 +638,7 @@ async function runLive(): Promise<void> {
         if (s !== "FINISHED" && s !== "IN_PROGRESS") containerId = undefined; // ERROR / EXPIRED / unknown
       }
       if (!containerId) {
-        const live = await alreadyLive(r);
+        const live = await alreadyLive(r, mediaClaimedByOthers(reels, state, r.slug));
         if (live) {
           state.set(key, { postedAt: live.timestamp ?? new Date().toISOString(), igMediaId: live.id, recordedFrom: "found" });
           console.log(`  ${r.slug}: already live on Instagram as ${live.id}. Recorded, not reposted.`);

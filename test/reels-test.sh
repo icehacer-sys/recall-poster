@@ -73,6 +73,15 @@ $CLOUD npx tsx --import ./test/reels-mock-fetch.mjs src/reels.ts --live > "$TMP/
 rm -f "$TMP/state.json"
 CAPTION="$(node -e 'process.stdout.write(JSON.stringify([{id:"LIVE-1",caption:require(process.argv[1]+"/reels/'"$SLUG"'/reel.json").caption,timestamp:new Date().toISOString()}]))' "$TMP")"
 MOCK_IG_MEDIA="$CAPTION" $CLOUD npx tsx --import ./test/reels-mock-fetch.mjs src/reels.ts --live > "$TMP/c3.txt" 2>&1 || true
+# Two reels may share a caption (followers and trial cuts of one case): a live post that the state
+# already credits to the other reel must not block this one.
+node -e '
+const fs=require("fs");const d=process.argv[1];const r=JSON.parse(fs.readFileSync(d+"/reels/'"$SLUG"'/reel.json","utf8"));
+const o={...r,slug:"00-same-caption",sourceFolder:"00-same-caption",postAt:new Date(Date.now()-86400e3).toISOString()};
+fs.mkdirSync(d+"/reels/00-same-caption",{recursive:true});fs.writeFileSync(d+"/reels/00-same-caption/reel.json",JSON.stringify(o));
+fs.writeFileSync(d+"/state.json",JSON.stringify({"reel:00-same-caption":{postedAt:new Date(Date.now()-86000e3).toISOString(),igMediaId:"LIVE-1",recordedFrom:"published"}}));' "$TMP"
+MOCK_IG_MEDIA="$CAPTION" $CLOUD npx tsx --import ./test/reels-mock-fetch.mjs src/reels.ts --live > "$TMP/c5.txt" 2>&1 || true
+rm -rf "$TMP/reels/00-same-caption"
 rm -f "$TMP/state.json"
 node -e '
 const fs=require("fs");const f=process.argv[1]+"/reels/'"$SLUG"'/reel.json";const r=JSON.parse(fs.readFileSync(f,"utf8"));
@@ -81,12 +90,13 @@ if $CLOUD npx tsx --import ./test/reels-mock-fetch.mjs src/reels.ts --live > "$T
 node -e '
 const fs=require("fs");const d=process.argv[1];const rd=(n)=>fs.readFileSync(d+"/"+n,"utf8");
 
-const c1=rd("c1.txt"),c2=rd("c2.txt"),c3=rd("c3.txt"),c4=rd("c4.txt");
+const c1=rd("c1.txt"),c2=rd("c2.txt"),c3=rd("c3.txt"),c4=rd("c4.txt"),c5=rd("c5.txt");
 const checks=[
  ["signed: published exactly once with no Supabase key", (c1.match(/POST \/v21\.0\/me\/media_publish/g)||[]).length===1 && !/storage\/v1\/object\/ig-reel/.test(c1)],
  ["signed: container used the signed video_url", /HEAD \/storage\/v1\/object\/sign\/ig-reel-media/.test(c1)],
  ["signed: second run posted nothing", !/media_publish/.test(c2)],
  ["lost state + reel already on Instagram: recorded, not reposted", /already live on Instagram as LIVE-1/.test(c3) && !/media_publish/.test(c3) && !/POST \/v21\.0\/me\/media$/m.test(c3)],
+ ["same caption, live post credited to another reel: this reel still publishes once", !/already live/.test(c5) && (c5.match(/POST \/v21\.0\/me\/media_publish/g)||[]).length===1],
  ["expired signed URL: refused and the job fails", /expired/.test(c4) && !/media_publish/.test(c4) && process.argv[2]==="1"],
 ];
 let bad=0;for(const [n,ok] of checks){console.log((ok?"ok   ":"FAIL ")+n);if(!ok)bad++;}
