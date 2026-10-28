@@ -28,4 +28,11 @@ Thumbs.db
 /comments/reports/*live*
 /comments/reports/*dry*
 /comments/.orig-from-ig-bot/
+# YouTube comment bot (youtube-comments.yml): same rule, yt-* files in the encrypted Actions cache only.
+/comments/yt-state.json
+/comments/yt-review-queue.json
+/comments/yt-review-queue.cloud.json
+/comments/yt-spend.json
+/comments/yt-quota.json
+/comments/yt-cloud-state.enc
 logs/

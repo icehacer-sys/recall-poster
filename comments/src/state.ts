@@ -12,6 +12,8 @@ interface StateShape {
   dayCounts: Record<string, number>;
   /** "<reel>|<username>|<kind>" boundary lines already given (threads-bot: once per commenter and post). */
   boundaries?: string[];
+  /** YouTube draft mode: comments already drafted for the owner (not handled, so a live run still answers them). */
+  draftedCommentIds?: string[];
 }
 
 export interface ReviewItem {
@@ -53,6 +55,16 @@ export class State {
   /** Mark a comment as done (replied, or listed for the owner) so it is never processed twice. */
   markHandled(commentId: string): void {
     if (!this.handled(commentId)) this.s.handledCommentIds.push(commentId);
+    this.save();
+  }
+
+  drafted(commentId: string): boolean {
+    return (this.s.draftedCommentIds ?? []).includes(commentId);
+  }
+
+  /** Draft mode: never draft (and pay for) the same comment twice. */
+  markDrafted(commentId: string): void {
+    if (!this.drafted(commentId)) this.s.draftedCommentIds = [...(this.s.draftedCommentIds ?? []), commentId].slice(-2000);
     this.save();
   }
 

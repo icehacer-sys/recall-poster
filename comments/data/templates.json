@@ -28,6 +28,35 @@
       ]
     }
   },
+  "youtube_app_question": {
+    "_note": "YouTube app replies (drafted 28 Oct 2026 from the approved Instagram wording, only 'bio' changed to the channel page). Links in Shorts comments are dead text and repeated link replies count as spam, so no URL is ever written. approved: false until the owner OKs them: until then app questions go to the owner list.",
+    "en": {
+      "approved": false,
+      "price": [
+        "You can start free with 7 days of the library plus 50 credits. The link is on our channel page.",
+        "It's free to try first. You get 7 days of the library plus 50 credits and the link's on our channel page.",
+        "Nothing to pay to start. 7 days of the library are free plus 50 credits. The link's on our channel page."
+      ],
+      "where": [
+        "This case is from the Recall Engine library. Your first 7 days are free plus 50 credits and the link is on our channel page.",
+        "Right there on our channel page. Your first 7 days of the library are free plus 50 credits.",
+        "The link's on our channel page. You get 7 days of the library free plus 50 credits to try it."
+      ]
+    },
+    "ar": {
+      "approved": false,
+      "price": [
+        "تقدر تبدأ ببلاش. أول 7 أيام في الـ Library علينا ومعاهم 50 كريدت. اللينك في صفحة القناة",
+        "مش هتدفع حاجة في الأول. 7 أيام في الـ Library ببلاش و50 كريدت هدية واللينك في صفحة القناة",
+        "جرّب الأول ببلاش: 7 أيام في الـ Library ومعاهم 50 كريدت. اللينك عندنا في صفحة القناة"
+      ],
+      "where": [
+        "الحالة دي من الـ Library بتاعة Recall Engine نفسها. أول 7 أيام ببلاش ومعاهم 50 كريدت واللينك في صفحة القناة",
+        "اللينك في صفحة القناة وأول 7 أيام في الـ Library ببلاش ومعاهم 50 كريدت",
+        "هتلاقيه في صفحة القناة. ابدأ بـ 7 أيام في الـ Library ببلاش و50 كريدت هدية"
+      ]
+    }
+  },
   "boundary": {
     "personal": {
       "en": {

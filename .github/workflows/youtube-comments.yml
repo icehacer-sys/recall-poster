@@ -1,0 +1,176 @@
+name: youtube-comments
+
+# Comment replies under the Recall Engine YouTube Shorts, 20:00 to 02:00 Cairo (owner, 28 Oct 2026).
+# OFF until the owner turns it on: nothing runs unless the repository variable YT_BOTS is "on" and the
+# YouTube secrets, YT_CHANNEL_ID, and CLAUDE_API_KEY exist. Even then it only DRAFTS: it posts nothing
+# and saves the proposed replies and the owner list in the encrypted state (on the laptop: cd comments,
+# then npm run yt:review). Replies post only once the variable YT_REPLIES is also "live".
+# YouTube rules: replies only under the channel's own Shorts, never a link, never a subscribe ask, and
+# held or likely-spam comments are listed for the owner and never approved.
+# Caps: 5 replies per run, 30 a day, 15 per Short a day, 1 per thread, 30 model calls a day, and a
+# 3 USD monthly guard (separate from the Instagram bot's 5 USD). Quota: about 4 units per run plus 51 per
+# reply, with a budget of 3,000 of the project's 10,000 daily units.
+# Privacy: this repo is PUBLIC. yt-state.json, yt-review-queue.json, yt-spend.json, and yt-quota.json are
+# never committed. They travel as one AES-256-GCM file in the Actions cache with a 7-day artifact backup,
+# and the run log hides names and texts (BOT_PUBLIC_LOG). Lost state is safe: before every reply the bot
+# asks YouTube whether the channel already replied in that thread, and today's counts come from YouTube.
+# Cron is UTC. Egypt is UTC+2 from 29 Oct 2026: the cron covers both offsets and the gate keeps 20:00 to 02:00.
+on:
+  schedule:
+    - cron: "11-59/15 16-23 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "draft = read comments and save proposed replies for the owner. live = post replies (needs YT_REPLIES=live too)."
+        type: choice
+        options: [draft, live]
+        default: draft
+
+concurrency:
+  group: recall-yt-comments
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  actions: write
+
+env:
+  BOT_STATE_FILE: yt-state.json
+  BOT_REVIEW_FILE: yt-review-queue.json
+  BOT_SPEND_FILE: yt-spend.json
+  BOT_QUOTA_FILE: yt-quota.json
+  BOT_CLOUD_STATE: yt-cloud-state.enc
+
+jobs:
+  reply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: comments
+    steps:
+      - name: gate
+        id: gate
+        working-directory: .
+        env:
+          CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          REFRESH: ${{ secrets.YT_REFRESH_TOKEN }}
+          CLAUDE: ${{ secrets.CLAUDE_API_KEY }}
+          CHANNEL: ${{ vars.YT_CHANNEL_ID }}
+          SWITCH: ${{ vars.YT_BOTS }}
+          ALL_BOTS: ${{ vars.CLOUD_BOTS }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          if [ "$SWITCH" != on ]; then
+            echo "YT_BOTS is not on. Nothing done."
+            echo "go=no" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "$ALL_BOTS" = off ]; then
+            echo "CLOUD_BOTS is off. Nothing done."
+            echo "go=no" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ -z "$CLIENT_ID" ] || [ -z "$CLIENT_SECRET" ] || [ -z "$REFRESH" ] || [ -z "$CHANNEL" ] || [ -z "$CLAUDE" ]; then
+            echo "YouTube secrets, YT_CHANNEL_ID, or CLAUDE_API_KEY missing. Nothing done."
+            echo "go=no" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          now=$(TZ=Africa/Cairo date +%H%M)
+          n=$((10#$now))
+          if [ "$EVENT" = schedule ] && [ "$n" -lt 2000 ] && [ "$n" -ge 200 ]; then
+            echo "outside 20:00 to 02:00 Cairo (now $now). Nothing to do."
+            echo "go=no" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "Cairo time $now."
+          echo "go=yes" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.go == 'yes'
+
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.go == 'yes'
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: comments/package-lock.json
+
+      - if: steps.gate.outputs.go == 'yes'
+        run: npm ci --no-audit --no-fund
+
+      - name: restore encrypted state
+        if: steps.gate.outputs.go == 'yes'
+        uses: actions/cache/restore@v4
+        with:
+          path: comments/yt-cloud-state.enc
+          key: yt-comment-state-${{ github.run_id }}
+          restore-keys: yt-comment-state-
+
+      - name: fall back to the newest state artifact
+        if: steps.gate.outputs.go == 'yes' && hashFiles('comments/yt-cloud-state.enc') == ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          id=$(gh run list -R "$GITHUB_REPOSITORY" -w youtube-comments.yml -s success -L 20 --json databaseId -q '.[].databaseId' | head -1 || true)
+          if [ -n "$id" ]; then gh run download "$id" -R "$GITHUB_REPOSITORY" -n yt-comment-state -D . || echo "no artifact in run $id"; fi
+
+      - name: unpack state
+        if: steps.gate.outputs.go == 'yes'
+        env:
+          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
+        run: npm run -s cloud:unpack
+
+      - name: comments
+        if: steps.gate.outputs.go == 'yes'
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          YT_CHANNEL_ID: ${{ vars.YT_CHANNEL_ID }}
+          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
+          BOT_YT_STATE: ../reels/youtube-state.json
+          BOT_PUBLIC_LOG: "yes"
+          BOT_WINDOW_HOURS: "72"
+          BOT_MAX_REPLIES_PER_RUN: "5"
+          BOT_MAX_MODEL_CALLS: "20"
+          BOT_DAILY_MODEL_CALLS: "30"
+          BOT_MONTHLY_USD: "3"
+          BOT_PER_REEL_DAILY_CAP: "15"
+          BOT_DAILY_CAP: "30"
+          YT_COMMENT_UNIT_BUDGET: "3000"
+          BOT_CONFIRM_LIVE: ${{ vars.YT_REPLIES == 'live' && (github.event_name == 'schedule' || inputs.mode == 'live') && 'yes' || '' }}
+        run: |
+          if [ "$BOT_CONFIRM_LIVE" = yes ]; then npm run -s yt:live; else npm run -s yt:draft; fi
+
+      - name: pack state
+        if: always() && steps.gate.outputs.go == 'yes'
+        env:
+          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
+        run: npm run -s cloud:pack
+
+      - name: save encrypted state
+        if: always() && steps.gate.outputs.go == 'yes' && hashFiles('comments/yt-cloud-state.enc') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: comments/yt-cloud-state.enc
+          key: yt-comment-state-${{ github.run_id }}-${{ github.run_attempt }}
+
+      - name: upload encrypted state (backup and owner list)
+        if: always() && steps.gate.outputs.go == 'yes' && hashFiles('comments/yt-cloud-state.enc') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: yt-comment-state
+          path: comments/yt-cloud-state.enc
+          retention-days: 7
+          overwrite: true
+
+      - name: prune old state caches
+        if: always() && steps.gate.outputs.go == 'yes'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh cache list -R "$GITHUB_REPOSITORY" --key yt-comment-state- --sort created_at --order desc --limit 100 --json id -q '.[10:][].id' |
+            while read -r id; do gh cache delete "$id" -R "$GITHUB_REPOSITORY" || true; done
