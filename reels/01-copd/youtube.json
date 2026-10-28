@@ -1,27 +1,47 @@
 {
-  "title": "الـ saturation طلعت 90%… يبقى مريضة الـ COPD بقت تمام؟ | حالة 01",
-  "description": "الـ saturation طلعت 90%… يبقى مريضة الـ COPD بقت تمام؟ 🩺\nhttps://www.recallengine.app\nالحالة دي من الـ Library بتاعة Recall Engine نفسها. أول 7 أيام ببلاش ومعاهم 50 كريدت.\n\nالحاجة فاطمة على oxygen وصاحية… بس تعبانة أوي والساعة اتناشر وتلت.\n\nإيه خطوتك الجاية دلوقتي؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي عنده نبطشية الأسبوع ده.\nاحفظها قبل امتحان الـ medicine 📌\n\n#Shorts #medstudent #COPD #pulseoximetry #طلبة_طب #RecallEngine",
+  "title": "حالة 01: الـ saturation طلعت 90%… يبقى مريضة الـ COPD بقت تمام؟",
+  "description": "الـ saturation طلعت 90%… يبقى مريضة الـ COPD بقت تمام؟ 🩺\n\nالحاجة فاطمة على oxygen وصاحية… بس تعبانة أوي والساعة اتناشر وتلت.\n\nإيه خطوتك الجاية دلوقتي؟ اكتب إجابتك في الكومنت 👇\n\nحد داخل باطنة؟ ابعتهاله.\nاحفظها قبل امتحان الـ medicine 📌\n\nاللينك في القناة 🔗 recallengine.app\n\n#medstudent #COPD #طلبة_طب",
   "tags": [
     "medstudent",
     "COPD",
-    "pulseoximetry",
     "طلبة طب",
     "Recall Engine",
     "medical student",
-    "clinical case",
-    "Shorts"
+    "clinical case"
   ],
-  "publishAt": "2026-10-29T17:00:00.000Z",
-  "publishAtCairo": "Thu 29 Oct 2026 20:00 Africa/Cairo",
+  "publishAt": "2026-10-29T15:00:00.000Z",
+  "publishAtCairo": "Thu 29 Oct 2026 18:00 Africa/Cairo",
   "categoryId": "27",
   "defaultLanguage": "ar",
   "defaultAudioLanguage": "ar",
   "madeForKids": false,
-  "containsSyntheticMedia": null,
+  "containsSyntheticMedia": false,
+  "musicCleared": true,
   "notifySubscribers": true,
   "caseNumber": "01",
   "approved": false,
-  "durationSec": 90.7,
+  "durationSec": 98.62,
   "width": 1080,
-  "height": 1920
+  "height": 1920,
+  "video": {
+    "file": "reel-case-01-yt.mp4",
+    "folder": "01",
+    "bytes": 80775296,
+    "sha256": "5af25999515e981b2e6dcf121397c8bf29346fa9294f2cfe1a6a99cb5f2076dc",
+    "media": {
+      "bucket": "ig-reel-media",
+      "videoPath": "youtube/01-copd/20261028T202043-reel-case-01-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/01-copd/20261028T202043-reel-case-01-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMDEtY29wZC8yMDI2MTAyOFQyMDIwNDMtcmVlbC1jYXNlLTAxLXl0Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTMyMTg4NzksImV4cCI6MTc5MzgyMzY3OX0.-4t_1uShu19ezFKQ3z16WVbSLdpiCn5nZv0NIqklYas",
+      "videoBytes": 80775296,
+      "uploadedAt": "2026-10-28T20:21:19.286Z",
+      "expiresAt": "2026-11-04T20:20:19.286Z"
+    }
+  },
+  "captions": {
+    "file": "captions-ar.srt",
+    "language": "ar",
+    "name": "العربية"
+  },
+  "slug": "01-copd",
+  "note": "Seat 3 28 Oct: NEW YouTube cut (not the Instagram media in reel.json). Owner picks 1 and 2 applied; approved stays false until the owner OKs this title and description (pick 3)."
 }

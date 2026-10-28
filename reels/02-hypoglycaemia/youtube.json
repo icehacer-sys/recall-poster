@@ -1,27 +1,47 @@
 {
-  "title": "نوبات هلع؟ ولا hypoglycaemia متنكرة؟ | حالة 02",
-  "description": "نوبات هلع؟ ولا hypoglycaemia متنكرة؟ 🩺\nhttps://www.recallengine.app\nالحالة دي من الـ Library بتاعة Recall Engine نفسها. أول 7 أيام ببلاش ومعاهم 50 كريدت.\n\nالعيلة قالت أعصاب… بس كل نوبة كانت بتخلص بعد كوباية عصير.\n\nإيه أول test هتطلبه وإمتى بالظبط؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي داخل النفسية الدورة الجاية.\nاحفظها قبل امتحان الـ medicine 📌\n\n#Shorts #medstudent #hypoglycaemia #insulinoma #طلبة_طب #RecallEngine",
+  "title": "حالة 02: نوبات هلع؟ ولا hypoglycaemia متنكرة؟",
+  "description": "نوبات هلع؟ ولا hypoglycaemia متنكرة؟ 🩺\n\nالعيلة قالت أعصاب… بس كل نوبة كانت بتخلص بعد كوباية عصير.\n\nإيه أول تحليل هتطلبه وإمتى بالظبط؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي داخل النفسية الدورة الجاية.\nاحفظها قبل امتحان الـ medicine 📌\n\nاللينك في القناة 🔗 recallengine.app\n\n#medstudent #hypoglycaemia #طلبة_طب",
   "tags": [
     "medstudent",
     "hypoglycaemia",
-    "insulinoma",
     "طلبة طب",
     "Recall Engine",
     "medical student",
-    "clinical case",
-    "Shorts"
+    "clinical case"
   ],
-  "publishAt": "2026-10-30T18:00:00.000Z",
-  "publishAtCairo": "Fri 30 Oct 2026 20:00 Africa/Cairo",
+  "publishAt": "2026-10-30T14:00:00.000Z",
+  "publishAtCairo": "Fri 30 Oct 2026 16:00 Africa/Cairo",
   "categoryId": "27",
   "defaultLanguage": "ar",
   "defaultAudioLanguage": "ar",
   "madeForKids": false,
-  "containsSyntheticMedia": null,
+  "containsSyntheticMedia": false,
+  "musicCleared": true,
   "notifySubscribers": true,
   "caseNumber": "02",
   "approved": false,
-  "durationSec": 91.8,
+  "durationSec": 94.79,
   "width": 1080,
-  "height": 1920
+  "height": 1920,
+  "video": {
+    "file": "reel-case-02-yt.mp4",
+    "folder": "02",
+    "bytes": 85312074,
+    "sha256": "b72acac3994e74ba8b90d67f96ab7b1d0b86a3383a7d77abf4e2af968cde4154",
+    "media": {
+      "bucket": "ig-reel-media",
+      "videoPath": "youtube/02-hypoglycaemia/20261028T202119-reel-case-02-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/02-hypoglycaemia/20261028T202119-reel-case-02-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMDItaHlwb2dseWNhZW1pYS8yMDI2MTAyOFQyMDIxMTktcmVlbC1jYXNlLTAyLXl0Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTMyMTg5MTYsImV4cCI6MTc5MzgyMzcxNn0.BDAhv1SKpdE8MCVwZc5EoqXrOdEzVL79sGe1UCwYTaw",
+      "videoBytes": 85312074,
+      "uploadedAt": "2026-10-28T20:21:56.528Z",
+      "expiresAt": "2026-11-04T20:20:56.528Z"
+    }
+  },
+  "captions": {
+    "file": "captions-ar.srt",
+    "language": "ar",
+    "name": "العربية"
+  },
+  "slug": "02-hypoglycaemia",
+  "note": "Seat 3 28 Oct: NEW YouTube cut (not the Instagram media in reel.json). Owner picks 1 and 2 applied; approved stays false until the owner OKs this title and description (pick 3)."
 }

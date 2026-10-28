@@ -1,27 +1,47 @@
 {
-  "title": "حساسية عادية؟ ولا anaphylaxis بتقفل الزور؟ | حالة 03",
-  "description": "حساسية عادية؟ ولا anaphylaxis بتقفل الزور؟ 🩺\nhttps://www.recallengine.app\nالحالة دي من الـ Library بتاعة Recall Engine نفسها. أول 7 أيام ببلاش ومعاهم 50 كريدت.\n\nمريم عندها 9 سنين… وبعد خمس دقايق من الـ infusion صوتها اتنبح.\n\nإيه أول دوا هتديه وفين بالظبط؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي داخل الأطفال الدورة الجاية.\nاحفظها قبل امتحان الـ paediatrics 📌\n\n#Shorts #medstudent #anaphylaxis #paediatrics #طلبة_طب #RecallEngine",
+  "title": "حالة 03: حساسية عادية؟ ولا anaphylaxis بتقفل الزور؟",
+  "description": "حساسية عادية؟ ولا anaphylaxis بتقفل الزور؟ 🩺\n\nمريم عندها 9 سنين… وبعد خمس دقايق من الـ infusion صوتها اتنبح.\n\nإيه أول دوا هتديه وفين بالظبط؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي داخل الأطفال الدورة الجاية.\nاحفظها قبل امتحان الـ paediatrics 📌\n\nاللينك في القناة 🔗 recallengine.app\n\n#medstudent #anaphylaxis #طلبة_طب",
   "tags": [
     "medstudent",
     "anaphylaxis",
-    "paediatrics",
     "طلبة طب",
     "Recall Engine",
     "medical student",
-    "clinical case",
-    "Shorts"
+    "clinical case"
   ],
-  "publishAt": "2026-10-31T18:00:00.000Z",
-  "publishAtCairo": "Sat 31 Oct 2026 20:00 Africa/Cairo",
+  "publishAt": "2026-10-31T16:00:00.000Z",
+  "publishAtCairo": "Sat 31 Oct 2026 18:00 Africa/Cairo",
   "categoryId": "27",
   "defaultLanguage": "ar",
   "defaultAudioLanguage": "ar",
   "madeForKids": false,
-  "containsSyntheticMedia": null,
+  "containsSyntheticMedia": false,
+  "musicCleared": true,
   "notifySubscribers": true,
   "caseNumber": "03",
   "approved": false,
-  "durationSec": 89.8,
+  "durationSec": 82.52,
   "width": 1080,
-  "height": 1920
+  "height": 1920,
+  "video": {
+    "file": "reel-case-03-yt.mp4",
+    "folder": "03",
+    "bytes": 64359909,
+    "sha256": "1bdd9e08b0145c32e1cfdb35d5180d1f7854971aa8c626df24bd84da31a2a20a",
+    "media": {
+      "bucket": "ig-reel-media",
+      "videoPath": "youtube/03-anaphylaxis/20261028T202156-reel-case-03-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/03-anaphylaxis/20261028T202156-reel-case-03-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMDMtYW5hcGh5bGF4aXMvMjAyNjEwMjhUMjAyMTU2LXJlZWwtY2FzZS0wMy15dC5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzMjE4OTQyLCJleHAiOjE3OTM4MjM3NDJ9.cb0G9EsXIsFtfJR76ZN-_bFZY-6D01LNYIQQNGfc5ko",
+      "videoBytes": 64359909,
+      "uploadedAt": "2026-10-28T20:22:22.716Z",
+      "expiresAt": "2026-11-04T20:21:22.716Z"
+    }
+  },
+  "captions": {
+    "file": "captions-ar.srt",
+    "language": "ar",
+    "name": "العربية"
+  },
+  "slug": "03-anaphylaxis",
+  "note": "Seat 3 28 Oct: NEW YouTube cut (not the Instagram media in reel.json). Owner picks 1 and 2 applied; approved stays false until the owner OKs this title and description (pick 3)."
 }

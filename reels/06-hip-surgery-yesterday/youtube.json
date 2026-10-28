@@ -1,0 +1,47 @@
+{
+  "title": "حالة 05: عملية hip fracture امبارح… والحاجة زينب عايزة تنزل البحر",
+  "description": "عملية hip fracture امبارح… والحاجة زينب عايزة تنزل البحر 🌊\n\nزميلك بيقول كام يوم في السرير وبعدين partial weight bearing.\n\nالـ implant ثابت ومفيش restrictions. هتعمل إيه؟ اكتب إجابتك في الكومنت 👇\n\nاشترك في القناة عشان الحالة الجاية متفوتكش 📌\n\n#medstudent #hipfracture #طلبة_طب",
+  "tags": [
+    "medstudent",
+    "hip fracture",
+    "طلبة طب",
+    "Recall Engine",
+    "medical student",
+    "clinical case"
+  ],
+  "publishAt": "2026-11-02T16:00:00.000Z",
+  "publishAtCairo": "Mon 2 Nov 2026 18:00 Africa/Cairo",
+  "categoryId": "27",
+  "defaultLanguage": "ar",
+  "defaultAudioLanguage": "ar",
+  "madeForKids": false,
+  "containsSyntheticMedia": false,
+  "musicCleared": true,
+  "notifySubscribers": true,
+  "caseNumber": "05",
+  "approved": false,
+  "durationSec": 102.6,
+  "width": 1080,
+  "height": 1920,
+  "video": {
+    "file": "reel-case-05-yt-upload.mp4",
+    "folder": "05",
+    "bytes": 87337152,
+    "sha256": "cd75af702b45b4bbf8e3e6b9bec5d6d5f8f0c21ec27b9feeb43102a1ac927e4a",
+    "media": {
+      "bucket": "ig-reel-media",
+      "videoPath": "youtube/06-hip-surgery-yesterday/20261028T202248-reel-case-05-yt-upload.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/06-hip-surgery-yesterday/20261028T202248-reel-case-05-yt-upload.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMDYtaGlwLXN1cmdlcnkteWVzdGVyZGF5LzIwMjYxMDI4VDIwMjI0OC1yZWVsLWNhc2UtMDUteXQtdXBsb2FkLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTMyMTkwMDUsImV4cCI6MTc5MzgyMzgwNX0.c-Z8NkcBodQ5zNyFaFC5dAFVmaH0v3kcQznxAnpDVk8",
+      "videoBytes": 87337152,
+      "uploadedAt": "2026-10-28T20:23:25.282Z",
+      "expiresAt": "2026-11-04T20:22:25.282Z"
+    }
+  },
+  "captions": {
+    "file": "captions-ar.srt",
+    "language": "ar",
+    "name": "العربية"
+  },
+  "slug": "06-hip-surgery-yesterday",
+  "note": "Seat 3 28 Oct: NEW YouTube cut (not the Instagram media in reel.json). Owner picks 1 and 2 applied; approved stays false until the owner OKs this title and description (pick 3)."
+}
