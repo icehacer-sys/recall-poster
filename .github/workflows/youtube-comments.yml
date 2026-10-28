@@ -11,7 +11,7 @@ name: youtube-comments
 # 3 USD monthly guard (separate from the Instagram bot's 5 USD). Quota: about 4 units per run plus 51 per
 # reply, with a budget of 3,000 of the project's 10,000 daily units.
 # Privacy: this repo is PUBLIC. yt-state.json, yt-review-queue.json, yt-spend.json, and yt-quota.json are
-# never committed. They travel as one AES-256-GCM file in the Actions cache with a 7-day artifact backup,
+# never committed. Comment data older than 30 days is deleted at every run (YouTube API policy). They travel as one AES-256-GCM file in the Actions cache with a 7-day artifact backup,
 # and the run log hides names and texts (BOT_PUBLIC_LOG). Lost state is safe: before every reply the bot
 # asks YouTube whether the channel already replied in that thread, and today's counts come from YouTube.
 # Cron is UTC. Egypt is UTC+2 from 29 Oct 2026: the cron covers both offsets and the gate keeps 20:00 to 02:00.
@@ -40,6 +40,8 @@ env:
   BOT_SPEND_FILE: yt-spend.json
   BOT_QUOTA_FILE: yt-quota.json
   BOT_CLOUD_STATE: yt-cloud-state.enc
+  # YouTube API Developer Policies III.E.4: comment data is kept at most 30 days (pruned at every pack).
+  BOT_RETENTION_DAYS: "30"
 
 jobs:
   reply:
@@ -87,8 +89,11 @@ jobs:
           echo "Cairo time $now."
           echo "go=yes" >> "$GITHUB_OUTPUT"
 
+      # The newest main: reels/youtube-state.json (video id -> reel) as the uploader last pushed it.
       - uses: actions/checkout@v4
         if: steps.gate.outputs.go == 'yes'
+        with:
+          ref: main
 
       - uses: actions/setup-node@v4
         if: steps.gate.outputs.go == 'yes'

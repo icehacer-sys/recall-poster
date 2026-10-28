@@ -59,7 +59,7 @@ export const YT_SYSTEM_PROMPT = SYSTEM_PROMPT.replace(
   "You draft short replies for Recall Engine's YouTube Shorts. You reply only under the channel's own Shorts.",
 ).replace(
   'No hashtags, links, @mentions, prices or "link in bio" in your replies. The application owns every product line.',
-  'No hashtags, links, @mentions, prices, "link in bio" or "check our channel" in your replies. Never ask anyone to like, subscribe or comment. The application owns every product line.',
+  'No hashtags, links, web addresses, @mentions, prices, "link in bio", or "check our channel" in your replies. Never ask anyone to like, subscribe, or comment. The application owns every product line.',
 );
 
 export function systemPrompt(platform: "instagram" | "youtube" = "instagram"): string {

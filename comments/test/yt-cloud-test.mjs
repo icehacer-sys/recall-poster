@@ -2,7 +2,8 @@
 // calls (the comments are answered by approved templates or the rules), nothing leaves the machine.
 // Proves: draft mode posts nothing and never drafts twice, one reply per thread even when the state is
 // lost, the fresh thread check before posting, caps recounted from YouTube, no links in replies, the
-// right-to-left wrap, redacted public logs, held comments for the owner, and the encrypted state.
+// right-to-left wrap, redacted public logs, held comments for the owner, the app reply limits, the
+// bare-domain guard, 30-day retention, and the encrypted state.
 import { spawnSync } from "node:child_process";
 import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
@@ -65,6 +66,7 @@ const ALL = {
   t5: thread("t5", "student_five", "how much is the app?", true),
   t6: thread("t6", "student_six", "where can I find this app?"),
   t7: thread("t7", "student_seven", "بكام الاشتراك؟"),
+  t8: thread("t8", "student_two", "how much is the app?"),
 };
 function db(ids, opts = {}) {
   writeFileSync(DB, JSON.stringify({ threads: ids.map((i) => structuredClone(ALL[i])), held: opts.held ?? [], stale: !!opts.stale }));
@@ -119,13 +121,39 @@ rmSync(env.BOT_STATE_FILE);
 r = run(["--live"], { BOT_DAILY_CAP: "1" });
 check("lost state: daily cap recounted from YouTube", r.code === 0 && posts() === 0 && /retry later/.test(r.out), r.out);
 
+// ---- app reply limits: one per commenter per Short, BOT_APP_DAILY_CAP a day (recounted from YouTube)
+db(["t2", "t8"]);
+rmSync(env.BOT_STATE_FILE);
+r = run(["--live"]);
+check("app replies: one per commenter per Short, the second goes to the owner list", posts() === 1 && /app_question skip .*OWNER LIST/.test(r.out), r.out);
+db(["t2", "t6"]);
+rmSync(env.BOT_STATE_FILE);
+r = run(["--live"], { BOT_APP_DAILY_CAP: "1" });
+check("app replies: daily app cap", posts() === 1, r.out);
+rmSync(env.BOT_STATE_FILE);
+r = run(["--live"], { BOT_APP_DAILY_CAP: "1" });
+check("lost state: daily app cap recounted from YouTube", posts() === 1, r.out);
+
+db(["t2"]);
 r = run(["--live"], { MOCK_CHANNEL_ID: "UC_OTHER" });
 check("token for another channel: refused, nothing read or posted", r.code !== 0 && /not YT_CHANNEL_ID/.test(r.out) && posts() === 0, r.out);
 
 check("public log hides names, comments, and replies", !outs.some((o) => /student_|spammer|held_user|how much is the app|practise more cases|channel page|صفحة القناة|بكام/.test(o)), outs.join("\n"));
 
+// ---- sanitizer: a bare web address never posts (prompt injection), decimals stay fine
+r = spawnSync(process.execPath, ["--import", "tsx", "-e", `import("./src/reply.ts").then(async (m) => {
+  const { loadReels } = await import("./src/reels.ts");
+  const reel = loadReels().reels.find((x) => x.slug === "03-anaphylaxis");
+  const d = (t, category = "banter") => m.sanitize({ decision: "reply", category, language: "en", reply_text: t, reason: "test", source: "model" }, reel);
+  const bad = ["Ha, ask evil.com about it", "Join t.me/medcases for more", "Message wa.me/201000000", "Shortcut: bit.ly/x1", "It is example dot com"].map((t) => d(t));
+  const ok = d("IM adrenaline 0.3 mL into the outer thigh first.", "case_question");
+  console.log(JSON.stringify({ bad: bad.map((x) => x.decision === "skip" && /web address/.test(x.reason)), ok: ok.decision }));
+})`], { cwd: ROOT, env, encoding: "utf8" });
+const g = JSON.parse(r.stdout.trim().split("\n").at(-1) || "{}");
+check("sanitizer: evil.com, t.me, wa.me, bit.ly, and 'dot com' never post. 0.3 mL still does", g.bad?.length === 5 && g.bad.every(Boolean) && g.ok === "reply", r.stdout + r.stderr);
+
 // ---- prompt identity and encrypted state
-r = spawnSync(process.execPath, ["--import", "tsx", "-e", 'import("./src/voice.ts").then(m=>{const y=m.systemPrompt("youtube"),i=m.systemPrompt();console.log(JSON.stringify({yt:y.includes("Recall Engine\'s YouTube Shorts")&&!y.includes("Instagram case reels")&&y.includes("Never ask anyone to like, subscribe or comment"),ig:i===m.SYSTEM_PROMPT&&i.includes("@recallengine\'s Instagram case reels")}))})'], { cwd: ROOT, encoding: "utf8" });
+r = spawnSync(process.execPath, ["--import", "tsx", "-e", 'import("./src/voice.ts").then(m=>{const y=m.systemPrompt("youtube"),i=m.systemPrompt();console.log(JSON.stringify({yt:y.includes("Recall Engine\'s YouTube Shorts")&&!y.includes("Instagram case reels")&&y.includes("Never ask anyone to like, subscribe, or comment"),ig:i===m.SYSTEM_PROMPT&&i.includes("@recallengine\'s Instagram case reels")}))})'], { cwd: ROOT, encoding: "utf8" });
 const p = JSON.parse(r.stdout.trim().split("\n").at(-1) || "{}");
 check("YouTube prompt: own identity line and no-subscribe rule, Instagram prompt unchanged", p.yt && p.ig, r.stdout + r.stderr);
 
@@ -136,6 +164,19 @@ rmSync(env.BOT_STATE_FILE, { force: true });
 rmSync(env.BOT_QUOTA_FILE, { force: true });
 r = run(["unpack"], {}, "src/cloud-state.ts");
 check("unpack restores the state and the quota ledger", existsSync(env.BOT_STATE_FILE) && existsSync(env.BOT_QUOTA_FILE), r.out);
+
+// ---- 30-day retention (YouTube API Developer Policies III.E.4): old comment data never goes into the saved state
+const oldAt = new Date(Date.now() - 31 * 86_400_000).toISOString();
+const item = (commentId, at) => ({ at, reel: "03-anaphylaxis", mediaId: "V1", commentId, username: "someone", text: "a comment", category: "spam", reason: "test" });
+writeFileSync(env.BOT_REVIEW_FILE, JSON.stringify([item("old1", oldAt), item("new1", now)]));
+writeFileSync(env.BOT_STATE_FILE, JSON.stringify({ handledCommentIds: ["oldH", "newH"], draftedCommentIds: ["oldD"], boundaries: ["03-anaphylaxis|UC_x|personal"], reelDayCounts: {}, dayCounts: {}, storedAt: { "h:oldH": oldAt, "h:newH": now, "d:oldD": oldAt, "b:03-anaphylaxis|UC_x|personal": oldAt } }));
+r = run(["pack"], { BOT_RETENTION_DAYS: "30" }, "src/cloud-state.ts");
+rmSync(env.BOT_STATE_FILE);
+rmSync(env.BOT_REVIEW_FILE);
+run(["unpack"], {}, "src/cloud-state.ts");
+const kept = read(env.BOT_REVIEW_FILE) ?? [];
+const st = read(env.BOT_STATE_FILE) ?? {};
+check("retention: 31-day-old owner-list items, handled and drafted ids, and boundary keys are deleted before packing", r.code === 0 && kept.length === 1 && kept[0].commentId === "new1" && st.handledCommentIds?.join() === "newH" && !st.draftedCommentIds?.length && !st.boundaries?.length, r.out + JSON.stringify({ kept, st }));
 
 rmSync(TMP, { recursive: true, force: true });
 console.log(failed ? `\n${failed} YouTube comment check(s) FAILED` : "\nyt-cloud-test passed");

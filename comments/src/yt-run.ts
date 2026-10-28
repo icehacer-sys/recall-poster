@@ -28,6 +28,12 @@ type Mode = "dry-run" | "draft" | "live";
 const POSTER_DIR = process.env.BOT_POSTER_REELS_DIR ?? join(ROOT, "..", "reels");
 const YT_STATE = process.env.BOT_YT_STATE ?? join(POSTER_DIR, "youtube-state.json");
 const MAX_PER_RUN = Number(process.env.BOT_MAX_REPLIES_PER_RUN) || 5;
+/** App template replies ("the link is on our channel page") per Cairo day: more reads as channel spam. */
+const APP_DAILY = Number(process.env.BOT_APP_DAILY_CAP) || 5;
+// YouTube comment data is kept at most 30 days (API Developer Policies III.E.4). State reads it lazily.
+process.env.BOT_RETENTION_DAYS ||= "30";
+/** Our replies come back with the right-to-left wrap: compare without it. */
+const unwrap = (s: string) => s.replace(/[\u202A-\u202E\u2066-\u2069]/g, "").trim();
 
 /** videoId -> reel slug, from the uploader's public state file. */
 function videoSlugs(): Map<string, string> {
@@ -90,6 +96,14 @@ async function main(): Promise<void> {
   const facts = loadReels().reels;
   const slugs = videoSlugs();
   const ctx: Ctx = { offline, modelCalls: 0, recentReplies: [], n: 0, boundaries: new Set<string>(state.boundaryKeys()), lastVariant: -1, platform: "youtube", templates };
+  if (mode !== "dry-run") state.prune();
+  // App template lines, to recount app replies from YouTube itself (lost state stays safe).
+  const appLines = new Set(
+    (["en", "ar"] as const).flatMap((l) => {
+      const t = templates.youtube_app_question?.[l];
+      return t ? [...t.price, ...t.where].map(unwrap) : [];
+    }),
+  );
 
   const threads = (await channelThreads(channelId)).filter((t) => !t.publishedAt || Date.now() - Date.parse(t.publishedAt) <= config.windowHours * 3_600_000);
   // Held and likely-spam comments: listed for the owner (Studio > Comments), never approved or answered by the bot.
@@ -113,6 +127,11 @@ async function main(): Promise<void> {
 
   let replies = 0;
   const postedHere = new Map<string, number>();
+  let appHere = 0;
+  const appGivenHere = new Set<string>();
+  const isApp = (r: { text: string; authorChannelId?: string }) => ours(r) && appLines.has(unwrap(r.text));
+  const appToday = () => threads.reduce((n, t) => n + t.replies.filter((r) => isApp(r) && r.publishedAt && cairoDate(Date.parse(r.publishedAt)) === today).length, 0);
+  const appAlreadyFor = (videoId: string, who: string) => appGivenHere.has(`${videoId}|${who}`) || threads.some((x) => x.videoId === videoId && (x.authorChannelId ?? x.author) === who && x.replies.some(isApp));
   // A boundary line that did not actually post must not count as given.
   const boundaryKind: Record<string, string> = { personal_medical: "personal", scan: "scan", urgent: "urgent" };
   const ungive = (slug: string, who: string, d: Decision) => {
@@ -134,14 +153,23 @@ async function main(): Promise<void> {
       if (mode === "live") state.markHandled(t.id);
       continue;
     }
-    ctx.recentReplies = threads.filter((x) => x.videoId === t.videoId).flatMap((x) => x.replies.filter(ours).map((r) => r.text)).slice(-20);
-    const d = await decide({ reel, username: t.authorChannelId ?? t.author }, t.text, ctx);
+    // Caps first: a comment that could not be answered anyway is left for a later run before any paid model call.
     const usedVideo = Math.max(state.repliesToday(slug), ytToday(slug)) + (mode === "live" ? 0 : postedHere.get(slug) ?? 0);
     const usedDay = Math.max(state.repliesToday(), ytToday()) + (mode === "live" ? 0 : replies);
+    if (replies >= MAX_PER_RUN || usedDay >= config.dailyCap) {
+      console.log(`  ${replies >= MAX_PER_RUN ? "run" : "daily"} cap reached: the rest waits for a later run (retry later).`);
+      break;
+    }
+    if (usedVideo >= config.perReelDailyCap) continue;
+    const who = t.authorChannelId ?? t.author;
+    ctx.recentReplies = threads.filter((x) => x.videoId === t.videoId).flatMap((x) => x.replies.filter(ours).map((r) => r.text)).slice(-20);
+    const d = await decide({ reel, username: who }, t.text, ctx);
     let row = d;
-    if (d.decision === "reply" && (replies >= MAX_PER_RUN || usedVideo >= config.perReelDailyCap || usedDay >= config.dailyCap)) {
-      row = { ...d, decision: "skip", reason: replies >= MAX_PER_RUN ? "run cap reached (next run)" : "daily cap reached (tomorrow)", ownerReview: false, retry: true };
-      ungive(reel.slug, t.authorChannelId ?? t.author, d);
+    if (d.decision === "reply" && d.category === "app_question") {
+      const appUsed = appToday() + (mode === "live" ? 0 : appHere);
+      if (appAlreadyFor(t.videoId, who) || appUsed >= APP_DAILY) {
+        row = { ...d, decision: "skip", reply_text: "", reason: appUsed >= APP_DAILY ? `app reply limit: ${APP_DAILY} a day (more reads as channel spam)` : "app reply limit: this commenter already got one under this Short", ownerReview: true };
+      }
     }
     printRow(slug, t, row);
     if (row.ownerReview && mode !== "dry-run") {
@@ -159,6 +187,10 @@ async function main(): Promise<void> {
       }
       replies++;
       postedHere.set(slug, (postedHere.get(slug) ?? 0) + 1);
+      if (row.category === "app_question") {
+        appHere++;
+        appGivenHere.add(`${t.videoId}|${who}`);
+      }
       continue;
     }
     try {
@@ -169,6 +201,7 @@ async function main(): Promise<void> {
         continue;
       }
       await replyToComment(t.id, row.reply_text);
+      if (row.category === "app_question") appGivenHere.add(`${t.videoId}|${who}`);
       replies++;
       state.countReply(slug);
       state.saveBoundaries(ctx.boundaries);

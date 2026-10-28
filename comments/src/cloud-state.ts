@@ -18,7 +18,7 @@ import { tmpdir } from "node:os";
 import { basename, join } from "node:path";
 import { config, ROOT } from "./config";
 import { claudeKey, LEDGER } from "./budget";
-import type { ReviewItem } from "./state";
+import { State, retentionDays, type ReviewItem } from "./state";
 
 const ENC_FILE = process.env.BOT_CLOUD_STATE ?? join(ROOT, "cloud-state.enc");
 const REPO = process.env.BOT_REPO ?? "icehacer-sys/recall-poster";
@@ -57,6 +57,11 @@ export function decrypt(blob: string, k = key()): string {
 }
 
 function pack(): void {
+  // BOT_RETENTION_DAYS (the YouTube bot: 30): comment data past the limit never goes into the saved state.
+  if (retentionDays() && (existsSync(config.stateFile) || existsSync(config.reviewFile))) {
+    const { removed } = new State(true).prune();
+    console.log(`retention: ${retentionDays()} days, ${removed} old item(s) deleted.`);
+  }
   const out: Record<string, string> = {};
   for (const [name, path] of Object.entries(FILES())) if (existsSync(path)) out[name] = readFileSync(path, "utf8");
   writeFileSync(ENC_FILE, encrypt(JSON.stringify({ savedAt: new Date().toISOString(), files: out })));
@@ -92,11 +97,14 @@ function review(all: boolean): void {
     const f = readdirSync(dir).find((x) => x.endsWith(".enc"));
     if (!f) continue;
     const parsed = JSON.parse(decrypt(readFileSync(join(dir, f), "utf8"))) as { savedAt: string; files: Record<string, string> };
-    const items = (JSON.parse(parsed.files.review ?? "[]") as ReviewItem[]).filter((i) => all || Date.now() - Date.parse(i.at) < 48 * 3_600_000);
+    // The YouTube copy on the laptop keeps the same 30-day limit as the cloud state.
+    const keepDays = YT ? Number(process.env.BOT_RETENTION_DAYS) || 30 : 0;
+    const kept = (JSON.parse(parsed.files.review ?? "[]") as ReviewItem[]).filter((i) => !keepDays || Date.now() - Date.parse(i.at) < keepDays * 86_400_000);
+    const items = kept.filter((i) => all || Date.now() - Date.parse(i.at) < 48 * 3_600_000);
     console.log(`Owner list from run ${r.databaseId} (state saved ${parsed.savedAt}), ${all ? "all items" : "last 48 h"}: ${items.length}\n`);
     for (const i of items) console.log(`- ${i.at.slice(0, 16)}Z [${i.reel}] ${i.category} @${i.username}: "${i.text.replace(/\s+/g, " ")}"\n    why: ${i.reason}`);
     if (parsed.files.spend) console.log(`\nSpend ledger: ${parsed.files.spend.replace(/\s+/g, " ")}`);
-    writeFileSync(REVIEW_COPY, parsed.files.review ?? "[]");
+    writeFileSync(REVIEW_COPY, JSON.stringify(kept, null, 2) + "\n");
     console.log(`\nSaved to ${basename(REVIEW_COPY)} (gitignored). Answer these ${WORKFLOW === "comments.yml" ? "on Instagram" : "in YouTube Studio"} yourself.`);
     return;
   }

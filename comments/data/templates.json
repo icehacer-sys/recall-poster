@@ -29,7 +29,7 @@
     }
   },
   "youtube_app_question": {
-    "_note": "YouTube app replies (drafted 28 Oct 2026 from the approved Instagram wording, only 'bio' changed to the channel page). Links in Shorts comments are dead text and repeated link replies count as spam, so no URL is ever written. approved: false until the owner OKs them: until then app questions go to the owner list.",
+    "_note": "YouTube app replies (drafted 28 Oct 2026 from the approved Instagram wording, only 'bio' changed to the channel page). Links in Shorts comments are dead text. Repeated link replies count as spam. No URL is ever written. approved: false until the owner OKs them: until then app questions go to the owner list. The bot sends at most one app reply per commenter per Short and 5 a day.",
     "en": {
       "approved": false,
       "price": [

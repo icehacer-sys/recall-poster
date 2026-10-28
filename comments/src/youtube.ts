@@ -11,8 +11,9 @@ import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { ROOT } from "./config";
 
-const API = (process.env.YT_API_BASE ?? "https://www.googleapis.com").replace(/\/+$/, "");
-const TOKEN_URL = process.env.YT_TOKEN_URL ?? "https://oauth2.googleapis.com/token";
+// Fixed hosts: the refresh token, client secret, and access token only ever go to Google (no env override).
+const API = "https://www.googleapis.com";
+const TOKEN_URL = "https://oauth2.googleapis.com/token";
 export const QUOTA_FILE = process.env.BOT_QUOTA_FILE ?? join(ROOT, "yt-quota.json");
 const BUDGET = Number(process.env.YT_COMMENT_UNIT_BUDGET) || 3000;
 
@@ -94,6 +95,8 @@ async function call<T>(method: "GET" | "POST", path: string, query: Record<strin
   const json = (await res.json().catch(() => ({}))) as { error?: { message?: string; errors?: Array<{ reason?: string }> } };
   if (!res.ok) {
     const reason = json.error?.errors?.[0]?.reason;
+    // Google's own daily quota is gone: stop the run instead of failing once per remaining thread.
+    if (res.status === 403 && (reason === "quotaExceeded" || reason === "dailyLimitExceeded")) throw new QuotaError(`YouTube API ${method} ${path} -> 403 ${reason}: the project's daily quota is used up (resets at midnight Pacific)`);
     throw new Error(`YouTube API ${method} ${path} -> ${res.status}${reason ? ` ${reason}` : ""}: ${(json.error?.message ?? "").slice(0, 160)}`);
   }
   return json as T;
