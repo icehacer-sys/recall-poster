@@ -142,6 +142,27 @@ export interface ReelYoutube {
   width?: number;
   height?: number;
   note?: string;
+  /**
+   * The YouTube cut, when it is not the Instagram video (owner, 28 Oct 2026: the YouTube cuts carry a
+   * new voice, style A cards, and the @recallengineapp handle). The bot uploads THIS file and never the
+   * Instagram media. `npm run yt:media -- <slug>` puts it in the private bucket and records `media`.
+   */
+  video?: YoutubeVideo;
+  /** The caption track for the YouTube cut (not uploaded by the bot yet: add it in YouTube Studio). */
+  captions?: { file: string; language: string; name: string };
+}
+
+/** The YouTube cut's file facts and, once uploaded from the laptop, its signed URL. */
+export interface YoutubeVideo {
+  /** The mp4: an absolute path, or a file name in YT_SOURCE_DIR/<folder>. */
+  file: string;
+  /** Folder under YT_SOURCE_DIR (default: caseNumber, e.g. "01"). */
+  folder?: string;
+  bytes: number;
+  /** sha256 of the file: the first 16 hex characters or the whole digest. */
+  sha256: string;
+  /** Signed URL to the private bucket, written by npm run yt:media. */
+  media?: ReelMedia;
 }
 
 export interface ReelMedia {
