@@ -1,0 +1,7 @@
+Recall Engine turns medical lectures into exam practice. On this channel you get short clinical cases that ask for your next move and then show the answer. Write your answer in the comments before the reveal.
+
+The Recall Engine library holds about 31,840 questions, 1,512 topic notes, and 343 clinical skills guides for all five years of medical school. You can also upload your own lecture PDFs or slides and turn them into SBAs, MCQs, flashcards, and high-yield notes.
+
+Start free at https://www.recallengine.app
+
+حالات قصيرة لطلبة الطب بالمصري. اكتب إجابتك في الكومنت قبل ما الحل يظهر وكمّل تمرين على Recall Engine.
