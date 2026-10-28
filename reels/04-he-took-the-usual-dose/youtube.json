@@ -1,6 +1,6 @@
 {
   "title": "حالة 04: ماخدش غير برشامته من الـ codeine… ودلوقتي مش بيفوق",
-  "description": "ماخدش غير برشامته من الـ codeine… ودلوقتي مش بيفوق 🩺\n\nطارق سواق ميكروباص وعنده pinpoint pupils و shallow breathing و unconscious… والـ naloxone فوّقه.\n\nليه جرعته العادية عملت كده؟ تفتكر ده له علاقة بـ genotype معين؟ اكتب إجابتك في الكومنت 👇\n\nصاحبك عنده امتحان pharma؟ ابعتهاله.\nاحفظها قبل امتحان الـ pharmacology 📌\n\nاللينك في القناة 🔗 recallengine.app\n\n#medstudent #codeine #طلبة_طب",
+  "description": "ماخدش غير برشامته من الـ codeine… ودلوقتي مش بيفوق 🩺\n\nطارق سواق ميكروباص وعنده pinpoint pupils و shallow breathing و unconscious… والـ naloxone فوّقه.\n\nليه جرعته العادية عملت كده؟ تفتكر ده له علاقة بـ genotype معين؟ اكتب إجابتك في الكومنت 👇\n\nصاحبك عنده امتحان فارما؟ ابعتهاله.\nاحفظها قبل امتحان الفارما 📌\n\nاللينك في القناة 🔗 https://www.recallengine.app\n\n#طلبة_طب",
   "tags": [
     "medstudent",
     "codeine",
@@ -19,7 +19,7 @@
   "musicCleared": true,
   "notifySubscribers": true,
   "caseNumber": "04",
-  "approved": false,
+  "approved": true,
   "durationSec": 102.07,
   "width": 1080,
   "height": 1920,
@@ -43,5 +43,5 @@
     "name": "العربية"
   },
   "slug": "04-he-took-the-usual-dose",
-  "note": "Seat 3 28 Oct: NEW YouTube cut (not the Instagram media in reel.json). Owner picks 1 and 2 applied; approved stays false until the owner OKs this title and description (pick 3)."
+  "note": "Seat 1 29 Oct: owner OK after the mixed Arabic/English display check (wf_262d2970-d6e, all 5 pass both verifiers). Latin hashtags moved to tags only; no invisible marks."
 }

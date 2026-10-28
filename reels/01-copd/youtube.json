@@ -1,6 +1,6 @@
 {
-  "title": "حالة 01: الـ saturation طلعت 90%… يبقى مريضة الـ COPD بقت تمام؟",
-  "description": "الـ saturation طلعت 90%… يبقى مريضة الـ COPD بقت تمام؟ 🩺\n\nالحاجة فاطمة على oxygen وصاحية… بس تعبانة أوي والساعة اتناشر وتلت.\n\nإيه خطوتك الجاية دلوقتي؟ اكتب إجابتك في الكومنت 👇\n\nحد داخل باطنة؟ ابعتهاله.\nاحفظها قبل امتحان الـ medicine 📌\n\nاللينك في القناة 🔗 recallengine.app\n\n#medstudent #COPD #طلبة_طب",
+  "title": "حالة 01: الـ saturation طلعت تسعين… يبقى مريضة COPD بقت تمام؟",
+  "description": "الـ saturation طلعت تسعين… يبقى مريضة COPD بقت تمام؟ 🩺\n\nالحاجة فاطمة على oxygen وصاحية… بس تعبانة أوي والساعة اتناشر وتلت.\n\nإيه خطوتك الجاية دلوقتي؟ اكتب إجابتك في الكومنت 👇\n\nحد داخل باطنة؟ ابعتهاله.\nاحفظها قبل امتحان الباطنة 📌\n\nاللينك في القناة 🔗 https://www.recallengine.app\n\n#طلبة_طب",
   "tags": [
     "medstudent",
     "COPD",
@@ -19,7 +19,7 @@
   "musicCleared": true,
   "notifySubscribers": true,
   "caseNumber": "01",
-  "approved": false,
+  "approved": true,
   "durationSec": 98.62,
   "width": 1080,
   "height": 1920,
@@ -43,5 +43,5 @@
     "name": "العربية"
   },
   "slug": "01-copd",
-  "note": "Seat 3 28 Oct: NEW YouTube cut (not the Instagram media in reel.json). Owner picks 1 and 2 applied; approved stays false until the owner OKs this title and description (pick 3)."
+  "note": "Seat 1 29 Oct: owner OK after the mixed Arabic/English display check (wf_262d2970-d6e, all 5 pass both verifiers). Latin hashtags moved to tags only; no invisible marks."
 }

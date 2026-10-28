@@ -23,5 +23,6 @@
   "approved": false,
   "durationSec": 98.2,
   "width": 1080,
-  "height": 1920
+  "height": 1920,
+  "skip": true
 }
