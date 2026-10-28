@@ -12,7 +12,7 @@
   "storyDay": "day-30",
   "videoBytes": 52443973,
   "videoSha256": "e5beca26b142c91c",
-  "draft": false,
+  "draft": true,
   "media": {
     "bucket": "ig-reel-media",
     "videoPath": "06-hip-surgery-yesterday/20261028T085001-reel-case-06-day-30.mp4",
