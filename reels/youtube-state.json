@@ -1,0 +1,19 @@
+{
+  "_quota": {
+    "day": "2026-10-28",
+    "units": 3,
+    "uploads": 1
+  },
+  "yt:01-copd": {
+    "videoId": "c5bXg0YPJ7E",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-10-28T20:56:34.848Z",
+    "slotAt": "2026-10-29T15:00:00.000Z",
+    "titleSent": "حالة 01: الـ saturation طلعت تسعين… يبقى مريضة COPD بقت تمام؟",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-10-29T15:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-10-29T15:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  }
+}
