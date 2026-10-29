@@ -19,7 +19,7 @@
   "musicCleared": true,
   "notifySubscribers": true,
   "caseNumber": "07",
-  "approved": true,
+  "approved": false,
   "durationSec": 98.79,
   "width": 1080,
   "height": 1920,
@@ -43,5 +43,5 @@
     "name": "العربية"
   },
   "slug": "07-my-son-s-a-man",
-  "note": "Seat 4 29 Oct: v5 YouTube cut (owner-approved rewrite, seat 3 final voice, @recallengineapp). Title and description by seat 1 (owner quote style); approved true per seat 1 05:52."
+  "note": "Seat 4 29 Oct: v5 YouTube cut (owner-approved rewrite, seat 3 final voice, @recallengineapp). Title and description by seat 1 (owner quote style); approved true per seat 1 05:52. | 29 Oct: held until the row 19 voice fix (طِلِعْت) is rendered"
 }
