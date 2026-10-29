@@ -1,6 +1,6 @@
 {
   "_quota": {
-    "day": "2026-10-28",
+    "day": "2026-10-29",
     "units": 3,
     "uploads": 1
   },
@@ -14,6 +14,18 @@
     "publishAtSent": "2026-10-29T15:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-10-29T15:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:02-hypoglycaemia": {
+    "videoId": "qZBo5BuCr3A",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-10-29T17:25:44.751Z",
+    "slotAt": "2026-10-30T14:00:00.000Z",
+    "titleSent": "حالة 02: \"دي أعصاب يا حبيبتي!\"…",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-10-30T14:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-10-30T14:00:00Z",
     "uploadStatusSeen": "uploaded"
   }
 }
