@@ -1,0 +1,47 @@
+{
+  "title": "حالة 09: \"يا لهوي يا سلمى!\"…",
+  "description": "مين يصدق إن عطسة توقع بنت عشرين سنة من طولها؟ 🤧\n\nسلمى عطست وهي بتذاكر ومسكها صداع جامد فجأة. دلوقتي بتغطي عينيها عشان النور مضايقها وشايفة كل حاجة اتنين وضغطها مية تمانين على تسعين\n\nومامتها فاكرة إن ده من كتر المذاكرة. هتطلبلها إيه؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لحد من دفعتك عنده neuro 🧠\n\nاللينك في القناة 🔗\n\n#طلبة_طب #مخ_وأعصاب",
+  "tags": [
+    "medstudent",
+    "neurology",
+    "طلبة طب",
+    "Recall Engine",
+    "medical student",
+    "clinical case"
+  ],
+  "publishAt": "2026-11-06T16:00:00.000Z",
+  "publishAtCairo": "Fri 6 Nov 2026 18:00 Africa/Cairo",
+  "categoryId": "27",
+  "defaultLanguage": "ar",
+  "defaultAudioLanguage": "ar",
+  "madeForKids": false,
+  "containsSyntheticMedia": false,
+  "musicCleared": true,
+  "notifySubscribers": true,
+  "caseNumber": "10",
+  "approved": true,
+  "durationSec": 98.4,
+  "width": 1080,
+  "height": 1920,
+  "video": {
+    "file": "reel-case-10-yt.mp4",
+    "folder": "10-draft",
+    "bytes": 98388709,
+    "sha256": "a084f011d693419b5f4e521d26407716a3ca8bb82847e7f6e77dc07d6ed0bacd",
+    "media": {
+      "bucket": "ig-reel-media",
+      "videoPath": "youtube/10-who-collapses-from-a-sneeze/20261029T205041-reel-case-10-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/10-who-collapses-from-a-sneeze/20261029T205041-reel-case-10-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTAtd2hvLWNvbGxhcHNlcy1mcm9tLWEtc25lZXplLzIwMjYxMDI5VDIwNTA0MS1yZWVsLWNhc2UtMTAteXQubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzMwNzA4MiwiZXhwIjoxNzkzOTExODgyfQ.ViXmEAccdXoo9cH75d4fM6qCmER4kArOmf9QCKSUUug",
+      "videoBytes": 98388709,
+      "uploadedAt": "2026-10-29T20:51:22.059Z",
+      "expiresAt": "2026-11-05T20:50:22.059Z"
+    }
+  },
+  "captions": {
+    "file": "captions-ar.srt",
+    "language": "ar",
+    "name": "العربية"
+  },
+  "slug": "10-who-collapses-from-a-sneeze",
+  "note": "Seat 4 29 Oct: v5 YouTube cut (owner-approved rewrite, seat 3 final voice, @recallengineapp). Title and description by seat 1 (owner quote style); approved true per seat 1 05:52."
+}
