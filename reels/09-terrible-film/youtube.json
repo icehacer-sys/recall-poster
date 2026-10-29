@@ -19,22 +19,22 @@
   "musicCleared": true,
   "notifySubscribers": true,
   "caseNumber": 8,
-  "approved": false,
+  "approved": true,
   "durationSec": 97.73,
   "width": 1080,
   "height": 1920,
   "video": {
     "file": "reel-case-09-yt.mp4",
     "folder": "09-draft",
-    "bytes": 99351334,
-    "sha256": "7ed1f60a92eb879943ef77c4f775597fb11bb6ef5be96ab0f00d9bdef3384740",
+    "bytes": 99256063,
+    "sha256": "56f64d8bdbbfdfb77debe2323271f9704e855ef092acfeb6d43e83fc6f2360b0",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/09-terrible-film/20261029T072609-reel-case-09-yt.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/09-terrible-film/20261029T072609-reel-case-09-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMDktdGVycmlibGUtZmlsbS8yMDI2MTAyOVQwNzI2MDktcmVlbC1jYXNlLTA5LXl0Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTMyNTg4NTcsImV4cCI6MTc5Mzg2MzY1N30.wlKnravKxxmG6qDBmiJ-hOiEoggxhrC80SbInwRHdbg",
-      "videoBytes": 99351334,
-      "uploadedAt": "2026-10-29T07:27:37.136Z",
-      "expiresAt": "2026-11-05T07:26:37.136Z"
+      "videoPath": "youtube/09-terrible-film/20261029T204647-reel-case-09-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/09-terrible-film/20261029T204647-reel-case-09-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMDktdGVycmlibGUtZmlsbS8yMDI2MTAyOVQyMDQ2NDctcmVlbC1jYXNlLTA5LXl0Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTMzMDY4ODQsImV4cCI6MTc5MzkxMTY4NH0.BmPWCgT1j18Dqkvk-V1wIP_qDJTM7_Tqu9ixK5A9zK8",
+      "videoBytes": 99256063,
+      "uploadedAt": "2026-10-29T20:48:03.387Z",
+      "expiresAt": "2026-11-05T20:47:03.387Z"
     }
   },
   "captions": {
