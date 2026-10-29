@@ -19,22 +19,22 @@
   "musicCleared": true,
   "notifySubscribers": true,
   "caseNumber": 6,
-  "approved": false,
+  "approved": true,
   "durationSec": 99.16,
   "width": 1080,
   "height": 1920,
   "video": {
     "file": "reel-case-08-yt-upload.mp4",
     "folder": "08-draft",
-    "bytes": 85716065,
-    "sha256": "a15ed583da5810d53c711e39260ddd6d38d556efcff8be11b7cc757e70c6ca99",
+    "bytes": 85554113,
+    "sha256": "07f119aa186b7d7f91ce902bb90fc9a1d1c7d16a69b683eb1fc9911ee22ab2e2",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/08-i-just-fell-in-the-field/20261029T032109-reel-case-08-yt-upload.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/08-i-just-fell-in-the-field/20261029T032109-reel-case-08-yt-upload.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMDgtaS1qdXN0LWZlbGwtaW4tdGhlLWZpZWxkLzIwMjYxMDI5VDAzMjEwOS1yZWVsLWNhc2UtMDgteXQtdXBsb2FkLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTMyNDQxMDQsImV4cCI6MTc5Mzg0ODkwNH0.iwWsoZboiTOMSJZXPdn2JnZK4N89xkjKrKPgLEm2TSg",
-      "videoBytes": 85716065,
-      "uploadedAt": "2026-10-29T03:21:44.011Z",
-      "expiresAt": "2026-11-05T03:20:44.011Z"
+      "videoPath": "youtube/08-i-just-fell-in-the-field/20261029T194648-reel-case-08-yt-upload.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/08-i-just-fell-in-the-field/20261029T194648-reel-case-08-yt-upload.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMDgtaS1qdXN0LWZlbGwtaW4tdGhlLWZpZWxkLzIwMjYxMDI5VDE5NDY0OC1yZWVsLWNhc2UtMDgteXQtdXBsb2FkLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTMzMDMyNDcsImV4cCI6MTc5MzkwODA0N30.gDjBuYBuycxCJlAid3Xz-S0OzSC7gaeaG-pi8Q0u7mU",
+      "videoBytes": 85554113,
+      "uploadedAt": "2026-10-29T19:47:26.887Z",
+      "expiresAt": "2026-11-05T19:46:26.887Z"
     }
   },
   "captions": {
