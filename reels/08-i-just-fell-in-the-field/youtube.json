@@ -1,0 +1,47 @@
+{
+  "title": "حالة 08: \"أنا كويس يا دكتور!\"…",
+  "description": "كل عيلة فيها واحد زي عم حسن مبيجيش المستشفى غير لما يقع 😅\n\nعم حسن فلاح أغمى عليه في الغيط. كشفت عليه لقيته alert بس عنده muscle weakness وسماح اللي معاه بتقول إنه متشخص بـ chronic kidney disease\n\nالـ potassium طلع ستة فاصل تسعة والـ ECG فيه peaked T waves. هتديله إيه الأول؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي داخل امتحان باطنة 🫀\n\nاللينك في القناة 🔗 https://www.recallengine.app\n\n#طلبة_طب #باطنة",
+  "tags": [
+    "medstudent",
+    "hyperkalaemia",
+    "طلبة طب",
+    "Recall Engine",
+    "medical student",
+    "clinical case"
+  ],
+  "publishAt": "2026-11-04T16:00:00.000Z",
+  "publishAtCairo": "Wed 4 Nov 2026 18:00 Africa/Cairo",
+  "categoryId": "27",
+  "defaultLanguage": "ar",
+  "defaultAudioLanguage": "ar",
+  "madeForKids": false,
+  "containsSyntheticMedia": false,
+  "musicCleared": true,
+  "notifySubscribers": true,
+  "caseNumber": "08",
+  "approved": true,
+  "durationSec": 99.16,
+  "width": 1080,
+  "height": 1920,
+  "video": {
+    "file": "reel-case-08-yt-upload.mp4",
+    "folder": "08-draft",
+    "bytes": 85716065,
+    "sha256": "a15ed583da5810d53c711e39260ddd6d38d556efcff8be11b7cc757e70c6ca99",
+    "media": {
+      "bucket": "ig-reel-media",
+      "videoPath": "youtube/08-i-just-fell-in-the-field/20261029T032109-reel-case-08-yt-upload.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/08-i-just-fell-in-the-field/20261029T032109-reel-case-08-yt-upload.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMDgtaS1qdXN0LWZlbGwtaW4tdGhlLWZpZWxkLzIwMjYxMDI5VDAzMjEwOS1yZWVsLWNhc2UtMDgteXQtdXBsb2FkLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTMyNDQxMDQsImV4cCI6MTc5Mzg0ODkwNH0.iwWsoZboiTOMSJZXPdn2JnZK4N89xkjKrKPgLEm2TSg",
+      "videoBytes": 85716065,
+      "uploadedAt": "2026-10-29T03:21:44.011Z",
+      "expiresAt": "2026-11-05T03:20:44.011Z"
+    }
+  },
+  "captions": {
+    "file": "captions-ar.srt",
+    "language": "ar",
+    "name": "العربية"
+  },
+  "slug": "08-i-just-fell-in-the-field",
+  "note": "Seat 4 29 Oct: v5 YouTube cut (owner-approved rewrite, seat 3 final voice, @recallengineapp). Title and description by seat 1 (owner quote style); approved true per seat 1 05:52."
+}
