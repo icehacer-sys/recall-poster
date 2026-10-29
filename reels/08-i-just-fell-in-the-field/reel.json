@@ -12,7 +12,7 @@
   "storyDay": "day-01",
   "videoBytes": 49999103,
   "videoSha256": "1b178774537e735e",
-  "draft": false,
+  "draft": true,
   "media": {
     "bucket": "ig-reel-media",
     "videoPath": "08-i-just-fell-in-the-field/20261029T025530-reel-case-08-day-01.mp4",
