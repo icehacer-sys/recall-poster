@@ -1,0 +1,47 @@
+{
+  "title": "حالة 10: \"النونو فين بقى؟!\"…",
+  "description": "جوز مدام هبة جاب الشربات وواقف في الطرقة… بس النونو اتأخر 🍼\n\nمدام هبة دخلت الـ second stage على أربعة وربع الفجر والحكيمة بتقولها خلاص قربتي\n\nوبعدها بخمس دقايق كتف النونو اتزنق والفريق كله جه جري. هتعمل إيه الأول؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي داخل نسا 🤰\n\nاللينك في القناة 🔗\n\n#طلبة_طب #نسا_وتوليد",
+  "tags": [
+    "medstudent",
+    "obstetrics",
+    "طلبة طب",
+    "Recall Engine",
+    "medical student",
+    "clinical case"
+  ],
+  "publishAt": "2026-11-07T16:00:00.000Z",
+  "publishAtCairo": "Sat 7 Nov 2026 18:00 Africa/Cairo",
+  "categoryId": "27",
+  "defaultLanguage": "ar",
+  "defaultAudioLanguage": "ar",
+  "madeForKids": false,
+  "containsSyntheticMedia": false,
+  "musicCleared": true,
+  "notifySubscribers": true,
+  "caseNumber": "11",
+  "approved": true,
+  "durationSec": 99.27,
+  "width": 1080,
+  "height": 1920,
+  "video": {
+    "file": "reel-case-11-yt.mp4",
+    "folder": "11-draft",
+    "bytes": 96557898,
+    "sha256": "d59634c4d47c81c4633e429120b749028faa82d02015f3598d2fcdcb77203624",
+    "media": {
+      "bucket": "ig-reel-media",
+      "videoPath": "youtube/11-the-sharbat-is-ready/20261029T211038-reel-case-11-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/11-the-sharbat-is-ready/20261029T211038-reel-case-11-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTEtdGhlLXNoYXJiYXQtaXMtcmVhZHkvMjAyNjEwMjlUMjExMDM4LXJlZWwtY2FzZS0xMS15dC5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzMzA4MzA4LCJleHAiOjE3OTM5MTMxMDh9.WxsjJgzBHwddiPCAgvTqQ5QRjWA6-WHsKcQNAmxQvnY",
+      "videoBytes": 96557898,
+      "uploadedAt": "2026-10-29T21:11:47.760Z",
+      "expiresAt": "2026-11-05T21:10:47.761Z"
+    }
+  },
+  "captions": {
+    "file": "captions-ar.srt",
+    "language": "ar",
+    "name": "العربية"
+  },
+  "slug": "11-the-sharbat-is-ready",
+  "note": "Seat 4 29 Oct: v5 YouTube cut (owner-approved rewrite, seat 3 final voice, @recallengineapp). Title and description by seat 1 (owner quote style); approved true per seat 1 05:52."
+}
