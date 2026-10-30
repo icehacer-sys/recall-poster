@@ -3,14 +3,24 @@
   "sourceFolder": "12-can-i-order-kofta",
   "video": "reel-case-12-day-05.mp4",
   "cover": "cover.jpg",
-  "captionFile": "caption-instagram.txt",
-  "caption": "الـ potassium كان كويس؟ في الـ DKA ده مش كل الحكاية 🩺\n\nطلب كفتة… والـ insulin بدأ والـ potassium نزل من 4.9 لـ 3.8 mmol/L.\n\nالـ insulin نزّله إزاي؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي عنده امتحان endocrine قريب.\nاحفظها قبل امتحان الـ medicine 📌\n\nاللينك في صفحتنا 🔗\n\n#medstudent #DKA #potassium #طلبة_طب #recallengine",
+  "captionFile": "caption-instagram.v5.txt",
+  "caption": "أول تحليل طلع كويس… وأستاذ شريف بيقول إنه خف 😌\n\nأستاذ شريف عنده DKA وعلى سبعة بدأناله الـ insulin. أول potassium طلع أربعة فاصل تسعة وبعدها بساعتين نزل لتلاتة فاصل تمانية\n\nوأستاذ شريف لسه على الـ insulin. الـ insulin نفسه نزل الـ potassium إزاي؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لحد عنده امتحان endocrine 💉\n\nاللينك في صفحتنا 🔗\n\n#طلبة_طب #باطنة",
   "postAt": "2026-11-03T18:00:00.000Z",
   "postAtCairo": "Tue 3 Nov 2026 20:00 Africa/Cairo",
   "thumbOffsetMs": 0,
   "shareToFeed": true,
   "storyDay": "day-05",
-  "videoBytes": 86234127,
-  "videoSha256": "11b5534e98b9186a",
-  "draft": true
+  "videoBytes": 44531987,
+  "videoSha256": "0e5fe650b4fef979",
+  "draft": false,
+  "media": {
+    "bucket": "ig-reel-media",
+    "videoPath": "12-can-i-order-kofta/20261030T061526-reel-case-12-day-05.mp4",
+    "coverPath": "12-can-i-order-kofta/20261030T061526-cover.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/12-can-i-order-kofta/20261030T061526-reel-case-12-day-05.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzEyLWNhbi1pLW9yZGVyLWtvZnRhLzIwMjYxMDMwVDA2MTUyNi1yZWVsLWNhc2UtMTItZGF5LTA1Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTMzNDA5NDgsImV4cCI6MTc5Mzk0NTc0OH0.KwndscIfTOiAjWD6lXsW10VQIuEMXxg6M-ooGssKHzU",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/12-can-i-order-kofta/20261030T061526-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzEyLWNhbi1pLW9yZGVyLWtvZnRhLzIwMjYxMDMwVDA2MTUyNi1jb3Zlci5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzMzQwOTQ5LCJleHAiOjE3OTM5NDU3NDl9.blzvAO3Wo8pXbvCHLBXpCSpFA8MoI0igaPEgi8WwdAc",
+    "videoBytes": 44531987,
+    "uploadedAt": "2026-10-30T06:15:48.432Z",
+    "expiresAt": "2026-11-06T06:14:48.432Z"
+  }
 }

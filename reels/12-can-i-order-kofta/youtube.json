@@ -1,0 +1,47 @@
+{
+  "title": "حالة 11: \"خلاص يا دكتور أنا خفيت!\"…",
+  "description": "أول تحليل طلع كويس… وأستاذ شريف بيقول إنه خف 😌\n\nأستاذ شريف عنده DKA وعلى سبعة بدأناله الـ insulin. أول potassium طلع أربعة فاصل تسعة وبعدها بساعتين نزل لتلاتة فاصل تمانية\n\nوأستاذ شريف لسه على الـ insulin. الـ insulin نفسه نزل الـ potassium إزاي؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لحد عنده امتحان endocrine 💉\n\nاللينك في القناة 🔗\n\n#طلبة_طب #باطنة",
+  "tags": [
+    "medstudent",
+    "electrolytes",
+    "طلبة طب",
+    "Recall Engine",
+    "medical student",
+    "clinical case"
+  ],
+  "publishAt": "2026-11-08T16:00:00.000Z",
+  "publishAtCairo": "Sun 8 Nov 2026 18:00 Africa/Cairo",
+  "categoryId": "27",
+  "defaultLanguage": "ar",
+  "defaultAudioLanguage": "ar",
+  "madeForKids": false,
+  "containsSyntheticMedia": false,
+  "musicCleared": true,
+  "notifySubscribers": true,
+  "caseNumber": "12",
+  "approved": true,
+  "durationSec": 95.73,
+  "width": 1080,
+  "height": 1920,
+  "video": {
+    "file": "reel-case-12-yt.mp4",
+    "folder": "12-draft",
+    "bytes": 87714005,
+    "sha256": "681a4d3bb8cc8a978025ff0a1143c2d02813214038fd574a0002799450bafbb4",
+    "media": {
+      "bucket": "ig-reel-media",
+      "videoPath": "youtube/12-can-i-order-kofta/20261030T061601-reel-case-12-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/12-can-i-order-kofta/20261030T061601-reel-case-12-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTItY2FuLWktb3JkZXIta29mdGEvMjAyNjEwMzBUMDYxNjAxLXJlZWwtY2FzZS0xMi15dC5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzMzQxMDAxLCJleHAiOjE3OTM5NDU4MDF9.-dQW9CXtvBJqEAPGRGK0e6oe5nVJ6xFN7BXIFA64R10",
+      "videoBytes": 87714005,
+      "uploadedAt": "2026-10-30T06:16:40.403Z",
+      "expiresAt": "2026-11-06T06:15:40.403Z"
+    }
+  },
+  "captions": {
+    "file": "captions-ar.srt",
+    "language": "ar",
+    "name": "العربية"
+  },
+  "slug": "12-can-i-order-kofta",
+  "note": "Seat 4 29 Oct: v5 YouTube cut (owner-approved rewrite, seat 3 final voice, @recallengineapp). Title and description by seat 1 (owner quote style); approved true per seat 1 05:52."
+}
