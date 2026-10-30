@@ -10,17 +10,17 @@
   "thumbOffsetMs": 0,
   "shareToFeed": true,
   "storyDay": "day-02",
-  "videoBytes": 49996934,
-  "videoSha256": "b31101579532a6b6",
+  "videoBytes": 50001374,
+  "videoSha256": "011c91b459f559dc",
   "draft": false,
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "09-terrible-film/20261029T204449-reel-case-09-day-02.mp4",
-    "coverPath": "09-terrible-film/20261029T204449-cover.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/09-terrible-film/20261029T204449-reel-case-09-day-02.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA5LXRlcnJpYmxlLWZpbG0vMjAyNjEwMjlUMjA0NDQ5LXJlZWwtY2FzZS0wOS1kYXktMDIubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzMwNjcyNywiZXhwIjoxNzkzOTExNTI3fQ.NS20WNDiANLwTUZGdSo6tXMEGptKU7pN2Kzr7YBOs7E",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/09-terrible-film/20261029T204449-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA5LXRlcnJpYmxlLWZpbG0vMjAyNjEwMjlUMjA0NDQ5LWNvdmVyLmpwZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTMzMDY3MjksImV4cCI6MTc5MzkxMTUyOX0.qJR7KNYiKmw3nVEe4LgmBT_KouWYpZAiIJfE2y_J6Ps",
-    "videoBytes": 49996934,
-    "uploadedAt": "2026-10-29T20:45:29.378Z",
-    "expiresAt": "2026-11-05T20:44:29.378Z"
+    "videoPath": "09-terrible-film/20261030T175444-reel-case-09-day-02.mp4",
+    "coverPath": "09-terrible-film/20261030T175444-cover.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/09-terrible-film/20261030T175444-reel-case-09-day-02.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA5LXRlcnJpYmxlLWZpbG0vMjAyNjEwMzBUMTc1NDQ0LXJlZWwtY2FzZS0wOS1kYXktMDIubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzM4MjkxNSwiZXhwIjoxNzkzOTg3NzE1fQ.EXJUIg-blEEOeRLlBwa8xFTxo6jLCJjJ-Y-fsJ5OL5o",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/09-terrible-film/20261030T175444-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA5LXRlcnJpYmxlLWZpbG0vMjAyNjEwMzBUMTc1NDQ0LWNvdmVyLmpwZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTMzODI5MTYsImV4cCI6MTc5Mzk4NzcxNn0.OLBjrAcyEkkyntne1LjqhP7zJ2yn-H0CCT00EKtnVYs",
+    "videoBytes": 50001374,
+    "uploadedAt": "2026-10-30T17:55:15.922Z",
+    "expiresAt": "2026-11-06T17:54:15.922Z"
   }
 }
