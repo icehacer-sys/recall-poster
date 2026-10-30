@@ -1,0 +1,47 @@
+{
+  "title": "حالة 13: \"العربية... لسه مخلصتش فلوسها!\"…",
+  "description": "حسام خبط في عمود على الدائري… وكل اللي شاغله العربية 🚗\n\nالإسعاف جابته الطوارئ على الساعة واحدة بالليل. اتخبط في صدره الشمال ونفسه بيضيق\n\nمفيش air entry في الشمال وعنده distended neck veins وضغطه واطي. تفتكر ضغطه واطي ليه؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لحد عنده امتحان surgery 🚑\n\nاللينك في القناة 🔗\n\n#طلبة_طب #جراحة",
+  "tags": [
+    "medstudent",
+    "trauma",
+    "طلبة طب",
+    "Recall Engine",
+    "medical student",
+    "clinical case"
+  ],
+  "publishAt": "2026-11-10T16:00:00.000Z",
+  "publishAtCairo": "Tue 10 Nov 2026 18:00 Africa/Cairo",
+  "categoryId": "27",
+  "defaultLanguage": "ar",
+  "defaultAudioLanguage": "ar",
+  "madeForKids": false,
+  "containsSyntheticMedia": false,
+  "musicCleared": true,
+  "notifySubscribers": true,
+  "caseNumber": "14",
+  "approved": true,
+  "durationSec": 110.03,
+  "width": 1080,
+  "height": 1920,
+  "video": {
+    "file": "reel-case-14-yt-upload.mp4",
+    "folder": "14-draft",
+    "bytes": 96144793,
+    "sha256": "9a8b7fba3b95e51a42f2001706a95d377a064e81a8bdbf93fe46984d17d258e2",
+    "media": {
+      "bucket": "ig-reel-media",
+      "videoPath": "youtube/14-still-paying-for-the-car/20261030T104732-reel-case-14-yt-upload.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/14-still-paying-for-the-car/20261030T104732-reel-case-14-yt-upload.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTQtc3RpbGwtcGF5aW5nLWZvci10aGUtY2FyLzIwMjYxMDMwVDEwNDczMi1yZWVsLWNhc2UtMTQteXQtdXBsb2FkLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTMzNTcyOTksImV4cCI6MTc5Mzk2MjA5OX0.vrY14QvVIYc4seIbCMh4k1iqQetk8bW-wDiMlfrC-v8",
+      "videoBytes": 96144793,
+      "uploadedAt": "2026-10-30T10:48:18.298Z",
+      "expiresAt": "2026-11-06T10:47:18.298Z"
+    }
+  },
+  "captions": {
+    "file": "captions-ar.srt",
+    "language": "ar",
+    "name": "العربية"
+  },
+  "slug": "14-still-paying-for-the-car",
+  "note": "Seat 4 29 Oct: v5 YouTube cut (owner-approved rewrite, seat 3 final voice, @recallengineapp). Title and description by seat 1 (owner quote style); approved true per seat 1 05:52."
+}

@@ -3,14 +3,24 @@
   "sourceFolder": "14-still-paying-for-the-car",
   "video": "reel-case-14-day-07.mp4",
   "cover": "cover.jpg",
-  "captionFile": "caption-instagram.txt",
-  "caption": "حادثة على الدائري؟ والـ primary survey هي اللي هتنقذه 🩺\n\nحسام خبط في عمود نور الساعة واحدة بالليل… وكل اللي شاغله العربية.\n\nبيتكلم كويس بس صدره ساكت من الشمال والضغط واطي: هتعمل إيه الأول؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي داخل الطوارئ الدورة الجاية.\nاحفظها قبل امتحان الـ surgery 📌\n\nاللينك في صفحتنا 🔗\n\n#medstudent #primarysurvey #traumasurgery #طلبة_طب #recallengine",
+  "captionFile": "caption-instagram.v5.txt",
+  "caption": "حسام خبط في عمود على الدائري… وكل اللي شاغله العربية 🚗\n\nالإسعاف جابته الطوارئ على الساعة واحدة بالليل. اتخبط في صدره الشمال ونفسه بيضيق\n\nمفيش air entry في الشمال وعنده distended neck veins وضغطه واطي. تفتكر ضغطه واطي ليه؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لحد عنده امتحان surgery 🚑\n\nاللينك في صفحتنا 🔗\n\n#طلبة_طب #جراحة",
   "postAt": "2026-11-05T18:00:00.000Z",
   "postAtCairo": "Thu 5 Nov 2026 20:00 Africa/Cairo",
   "thumbOffsetMs": 0,
   "shareToFeed": true,
   "storyDay": "day-07",
-  "videoBytes": 81066468,
-  "videoSha256": "67b8f400f91cdeed",
-  "draft": true
+  "videoBytes": 60448339,
+  "videoSha256": "33b06c3b2f92ebaf",
+  "draft": false,
+  "media": {
+    "bucket": "ig-reel-media",
+    "videoPath": "14-still-paying-for-the-car/20261030T104601-reel-case-14-day-07.mp4",
+    "coverPath": "14-still-paying-for-the-car/20261030T104601-cover.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/14-still-paying-for-the-car/20261030T104601-reel-case-14-day-07.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzE0LXN0aWxsLXBheWluZy1mb3ItdGhlLWNhci8yMDI2MTAzMFQxMDQ2MDEtcmVlbC1jYXNlLTE0LWRheS0wNy5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzMzU3MTkxLCJleHAiOjE3OTM5NjE5OTF9._Y_hW6eDy-ygLQ2AEpatn5e-IO-mKXRriu0PYMCMPdg",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/14-still-paying-for-the-car/20261030T104601-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzE0LXN0aWxsLXBheWluZy1mb3ItdGhlLWNhci8yMDI2MTAzMFQxMDQ2MDEtY292ZXIuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzM1NzE5MiwiZXhwIjoxNzkzOTYxOTkyfQ.D9esr5Q-Yary3TF8pKeaBioMmnNNHnN11QKuHE98UW8",
+    "videoBytes": 60448339,
+    "uploadedAt": "2026-10-30T10:46:31.090Z",
+    "expiresAt": "2026-11-06T10:45:31.090Z"
+  }
 }

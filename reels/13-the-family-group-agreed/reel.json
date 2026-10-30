@@ -3,14 +3,24 @@
   "sourceFolder": "13-the-family-group-agreed",
   "video": "reel-case-13-day-06.mp4",
   "cover": "cover.jpg",
-  "captionFile": "caption-instagram.txt",
-  "caption": "دور برد؟ ولا meningitis؟ 🩺\n\nجروب العيلة صوّت إنه برد… بس عنده سخونية وصداع من يومين ودلوقتي رقبته بتوجعه والنور مضايقه.\n\nتعمل إيه في العيادة قبل ما يخرج من الباب؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي داخل الـ family medicine الدورة الجاية.\nاحفظها قبل امتحان الـ paediatrics 📌\n\nاللينك في صفحتنا 🔗\n\n#medstudent #meningitis #paediatrics #طلبة_طب #recallengine",
+  "captionFile": "caption-instagram.v5.txt",
+  "caption": "أم زياد شايفاه شوية دور برد… وبتسألك ينفع نروحه؟ 🤒\n\nزياد عنده سبع سنين وبقاله يومين سخن. الصداع بيزيد ورقبته بتوجعه والنور مضايقه أوي وأغلب يومه نايم\n\nزياد عنده fever و headache و neck stiffness و photophobia. هتعمل إيه في العيادة؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لحد عنده امتحان family medicine قريب 🩺\n\nاللينك في صفحتنا 🔗\n\n#طلبة_طب #طب_الأسرة",
   "postAt": "2026-11-04T18:00:00.000Z",
   "postAtCairo": "Wed 4 Nov 2026 20:00 Africa/Cairo",
   "thumbOffsetMs": 0,
   "shareToFeed": true,
   "storyDay": "day-06",
-  "videoBytes": 83523962,
-  "videoSha256": "a4e9cff067a7e4bf",
-  "draft": true
+  "videoBytes": 47654471,
+  "videoSha256": "3b7bdf1d7edba605",
+  "draft": false,
+  "media": {
+    "bucket": "ig-reel-media",
+    "videoPath": "13-the-family-group-agreed/20261030T104532-reel-case-13-day-06.mp4",
+    "coverPath": "13-the-family-group-agreed/20261030T104532-cover.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/13-the-family-group-agreed/20261030T104532-reel-case-13-day-06.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzEzLXRoZS1mYW1pbHktZ3JvdXAtYWdyZWVkLzIwMjYxMDMwVDEwNDUzMi1yZWVsLWNhc2UtMTMtZGF5LTA2Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTMzNTcxNTQsImV4cCI6MTc5Mzk2MTk1NH0.YWeBEOnJyzu1Bv0Vle0cmUn-Vmx5e2GNTLk8ya1MM0A",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/13-the-family-group-agreed/20261030T104532-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzEzLXRoZS1mYW1pbHktZ3JvdXAtYWdyZWVkLzIwMjYxMDMwVDEwNDUzMi1jb3Zlci5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzMzU3MTU1LCJleHAiOjE3OTM5NjE5NTV9.qy2HhawFN9iG-uK6j9Xxu-QSGb5oOIxEQqgMNg2KS_c",
+    "videoBytes": 47654471,
+    "uploadedAt": "2026-10-30T10:45:54.662Z",
+    "expiresAt": "2026-11-06T10:44:54.662Z"
+  }
 }

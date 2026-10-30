@@ -1,0 +1,47 @@
+{
+  "title": "حالة 12: \"ده دور برد يا دكتور\"…",
+  "description": "أم زياد شايفاه شوية دور برد… وبتسألك ينفع نروحه؟ 🤒\n\nزياد عنده سبع سنين وبقاله يومين سخن. الصداع بيزيد ورقبته بتوجعه والنور مضايقه أوي وأغلب يومه نايم\n\nزياد عنده fever و headache و neck stiffness و photophobia. هتعمل إيه في العيادة؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لحد عنده امتحان family medicine قريب 🩺\n\nاللينك في القناة 🔗\n\n#طلبة_طب #طب_الأسرة",
+  "tags": [
+    "medstudent",
+    "paediatrics",
+    "طلبة طب",
+    "Recall Engine",
+    "medical student",
+    "clinical case"
+  ],
+  "publishAt": "2026-11-09T16:00:00.000Z",
+  "publishAtCairo": "Mon 9 Nov 2026 18:00 Africa/Cairo",
+  "categoryId": "27",
+  "defaultLanguage": "ar",
+  "defaultAudioLanguage": "ar",
+  "madeForKids": false,
+  "containsSyntheticMedia": false,
+  "musicCleared": true,
+  "notifySubscribers": true,
+  "caseNumber": "13",
+  "approved": true,
+  "durationSec": 103.63,
+  "width": 1080,
+  "height": 1920,
+  "video": {
+    "file": "reel-case-13-yt.mp4",
+    "folder": "13-draft",
+    "bytes": 87648309,
+    "sha256": "25581c86c08c10a5a79b9c311ebd1b1dce12609a06246e0125c4ca28949fe651",
+    "media": {
+      "bucket": "ig-reel-media",
+      "videoPath": "youtube/13-the-family-group-agreed/20261030T104643-reel-case-13-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/13-the-family-group-agreed/20261030T104643-reel-case-13-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTMtdGhlLWZhbWlseS1ncm91cC1hZ3JlZWQvMjAyNjEwMzBUMTA0NjQzLXJlZWwtY2FzZS0xMy15dC5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzMzU3MjQ4LCJleHAiOjE3OTM5NjIwNDh9.KMhBvvrwaZT45aCSbP4YzVZNgQ5GxuDdDKJOJaUExD0",
+      "videoBytes": 87648309,
+      "uploadedAt": "2026-10-30T10:47:27.200Z",
+      "expiresAt": "2026-11-06T10:46:27.200Z"
+    }
+  },
+  "captions": {
+    "file": "captions-ar.srt",
+    "language": "ar",
+    "name": "العربية"
+  },
+  "slug": "13-the-family-group-agreed",
+  "note": "Seat 4 29 Oct: v5 YouTube cut (owner-approved rewrite, seat 3 final voice, @recallengineapp). Title and description by seat 1 (owner quote style); approved true per seat 1 05:52."
+}
