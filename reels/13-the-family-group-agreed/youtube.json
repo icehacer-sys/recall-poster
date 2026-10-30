@@ -31,10 +31,10 @@
     "media": {
       "bucket": "ig-reel-media",
       "videoPath": "youtube/13-the-family-group-agreed/20261030T104643-reel-case-13-yt.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/13-the-family-group-agreed/20261030T104643-reel-case-13-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTMtdGhlLWZhbWlseS1ncm91cC1hZ3JlZWQvMjAyNjEwMzBUMTA0NjQzLXJlZWwtY2FzZS0xMy15dC5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzMzU3MjQ4LCJleHAiOjE3OTM5NjIwNDh9.KMhBvvrwaZT45aCSbP4YzVZNgQ5GxuDdDKJOJaUExD0",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/13-the-family-group-agreed/20261030T104643-reel-case-13-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTMtdGhlLWZhbWlseS1ncm91cC1hZ3JlZWQvMjAyNjEwMzBUMTA0NjQzLXJlZWwtY2FzZS0xMy15dC5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzMzY5NzE1LCJleHAiOjE3OTQ0OTkyMDV9.7_mXnWCmGi4BeViQ0axzJ1LO3Qd9jsWVxEApFsOBX7E",
       "videoBytes": 87648309,
       "uploadedAt": "2026-10-30T10:47:27.200Z",
-      "expiresAt": "2026-11-06T10:46:27.200Z"
+      "expiresAt": "2026-11-12T15:59:00.141Z"
     }
   },
   "captions": {

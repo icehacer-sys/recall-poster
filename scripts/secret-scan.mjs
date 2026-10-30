@@ -1,5 +1,5 @@
 // Secret scan over tracked files (CI and before every push): API keys, tokens, and Supabase keys must
-// never reach this PUBLIC repo. Signed Storage URLs in reels/*/reel.json are allowed: their JWT is
+// never reach this PUBLIC repo. Signed Storage URLs in reels/*/reel.json and reels/*/youtube.json are allowed: their JWT is
 // object-scoped and has no "role" claim. Any JWT with a role claim (anon or service_role key) fails.
 // Usage: node scripts/secret-scan.mjs [file ...]   (default: git ls-files)
 import { execFileSync } from "node:child_process";
@@ -48,9 +48,9 @@ for (const f of files) {
     } catch {
       /* not a JWT payload */
     }
-    const signedUrl = /reels\/[^/]+\/reel\.json$/.test(f) && payload.url && !payload.role;
+    const signedUrl = /reels\/[^/]+\/(reel|youtube)\.json$/.test(f) && payload.url && !payload.role;
     if (!signedUrl) {
-      console.log(`FAIL ${f}: contains a JWT${payload.role ? ` with role "${payload.role}"` : ""} (only signed Storage URLs in reels/*/reel.json are allowed)`);
+      console.log(`FAIL ${f}: contains a JWT${payload.role ? ` with role "${payload.role}"` : ""} (only signed Storage URLs in reels/*/reel.json and reels/*/youtube.json are allowed)`);
       bad++;
     }
   }
