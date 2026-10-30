@@ -10,17 +10,17 @@
   "thumbOffsetMs": 0,
   "shareToFeed": true,
   "storyDay": "day-04",
-  "videoBytes": 47073022,
-  "videoSha256": "39d4fe1330cc2304",
-  "draft": true,
+  "videoBytes": 47073389,
+  "videoSha256": "7843a2c9cce77ae4",
+  "draft": false,
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "11-the-sharbat-is-ready/20261029T210859-reel-case-11-day-04.mp4",
-    "coverPath": "11-the-sharbat-is-ready/20261029T210859-cover.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/11-the-sharbat-is-ready/20261029T210859-reel-case-11-day-04.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzExLXRoZS1zaGFyYmF0LWlzLXJlYWR5LzIwMjYxMDI5VDIxMDg1OS1yZWVsLWNhc2UtMTEtZGF5LTA0Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTMzMDgxNjAsImV4cCI6MTc5MzkxMjk2MH0.3EiA5AHScwowMRk9eeWj66teXfasQ6rEiIjk9BC5cS8",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/11-the-sharbat-is-ready/20261029T210859-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzExLXRoZS1zaGFyYmF0LWlzLXJlYWR5LzIwMjYxMDI5VDIxMDg1OS1jb3Zlci5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzMzA4MTYyLCJleHAiOjE3OTM5MTI5NjJ9.d_FDLklRKsM7t3yA1wrCqtjkdXaY9n7nLTmtDCfGUDQ",
-    "videoBytes": 47073022,
-    "uploadedAt": "2026-10-29T21:09:21.620Z",
-    "expiresAt": "2026-11-05T21:08:21.620Z"
+    "videoPath": "11-the-sharbat-is-ready/20261030T163227-reel-case-11-day-04.mp4",
+    "coverPath": "11-the-sharbat-is-ready/20261030T163227-cover.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/11-the-sharbat-is-ready/20261030T163227-reel-case-11-day-04.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzExLXRoZS1zaGFyYmF0LWlzLXJlYWR5LzIwMjYxMDMwVDE2MzIyNy1yZWVsLWNhc2UtMTEtZGF5LTA0Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTMzNzc5NzQsImV4cCI6MTc5Mzk4Mjc3NH0.iQbcyxIY5WUEv9eLNZ7yYs7A6dTuW24ups9NRgn48Do",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/11-the-sharbat-is-ready/20261030T163227-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzExLXRoZS1zaGFyYmF0LWlzLXJlYWR5LzIwMjYxMDMwVDE2MzIyNy1jb3Zlci5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzMzc3OTc1LCJleHAiOjE3OTM5ODI3NzV9.88VtomfS2Ck9f2d-nRUT4EQuyaPnm3R7HMVpPdRcoRE",
+    "videoBytes": 47073389,
+    "uploadedAt": "2026-10-30T16:32:54.638Z",
+    "expiresAt": "2026-11-06T16:31:54.638Z"
   }
 }
