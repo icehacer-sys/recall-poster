@@ -10,17 +10,17 @@
   "thumbOffsetMs": 0,
   "shareToFeed": true,
   "storyDay": "day-31",
-  "videoBytes": 46889870,
-  "videoSha256": "6f8e79b98a9c0108",
-  "draft": true,
+  "videoBytes": 46891063,
+  "videoSha256": "18ba7e3f8149b571",
+  "draft": false,
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "07-my-son-s-a-man/20261029T193146-reel-case-07-day-31.mp4",
-    "coverPath": "07-my-son-s-a-man/20261029T193146-cover.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/07-my-son-s-a-man/20261029T193146-reel-case-07-day-31.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA3LW15LXNvbi1zLWEtbWFuLzIwMjYxMDI5VDE5MzE0Ni1yZWVsLWNhc2UtMDctZGF5LTMxLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTMzMDIzMjksImV4cCI6MTc5MzkwNzEyOX0.RFfEvxPyj-AuGBbEjMRVHFfxauUp_2vZqk2hAVpO4jU",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/07-my-son-s-a-man/20261029T193146-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA3LW15LXNvbi1zLWEtbWFuLzIwMjYxMDI5VDE5MzE0Ni1jb3Zlci5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzMzAyMzMwLCJleHAiOjE3OTM5MDcxMzB9.pOmlH5ugAceA6VtHeXUMh1Kaf2NMCn_sChoPmvGnsPg",
-    "videoBytes": 46889870,
-    "uploadedAt": "2026-10-29T19:32:10.039Z",
-    "expiresAt": "2026-11-05T19:31:10.039Z"
+    "videoPath": "07-my-son-s-a-man/20261031T103504-reel-case-07-day-31.mp4",
+    "coverPath": "07-my-son-s-a-man/20261031T103504-cover.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/07-my-son-s-a-man/20261031T103504-reel-case-07-day-31.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA3LW15LXNvbi1zLWEtbWFuLzIwMjYxMDMxVDEwMzUwNC1yZWVsLWNhc2UtMDctZGF5LTMxLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTM0NDI5MzIsImV4cCI6MTc5NDA0NzczMn0.xXoVjvYyyCUYHE1WZ8TEGCT7E6hx07sifGrSlr9XUCM",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/07-my-son-s-a-man/20261031T103504-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzA3LW15LXNvbi1zLWEtbWFuLzIwMjYxMDMxVDEwMzUwNC1jb3Zlci5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzNDQyOTMzLCJleHAiOjE3OTQwNDc3MzN9.9n1kDrrQDGMZfpFllznk14iTXPFm4EyLxOeaE472qz4",
+    "videoBytes": 46891063,
+    "uploadedAt": "2026-10-31T10:35:33.808Z",
+    "expiresAt": "2026-11-07T10:34:33.808Z"
   }
 }
