@@ -1,0 +1,47 @@
+{
+  "title": "حالة 18: \"دي شوية صفرا\"…",
+  "description": "مدام رانيا فاكراها شوية صفرا… بس النهارده بقت متلخبطة 🟡\n\nعمرها ما اشتكت من كبدها وبقالها عشر أيام تعبانة والصفار بيزيد. ودلوقتي بتسأل إحنا الصبح ولا بالليل؟\n\nالـ INR طلع اتنين فاصل واحد ومفيش نزيف وكله بيقول هاتوا plasma. هتعمل إيه؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي عنده باطنة 🩺\n\nاللينك في القناة 🔗\n\n#طلبة_طب #باطنة",
+  "tags": [
+    "medstudent",
+    "internal medicine",
+    "طلبة طب",
+    "Recall Engine",
+    "medical student",
+    "clinical case"
+  ],
+  "publishAt": "2026-11-15T16:00:00.000Z",
+  "publishAtCairo": "Sun 15 Nov 2026 18:00 Africa/Cairo",
+  "categoryId": "27",
+  "defaultLanguage": "ar",
+  "defaultAudioLanguage": "ar",
+  "madeForKids": false,
+  "containsSyntheticMedia": false,
+  "musicCleared": true,
+  "notifySubscribers": true,
+  "caseNumber": "21",
+  "approved": true,
+  "durationSec": 109.12,
+  "width": 1080,
+  "height": 1920,
+  "video": {
+    "file": "reel-case-21-yt-upload.mp4",
+    "folder": "21-draft",
+    "bytes": 91694615,
+    "sha256": "c53b38ccc2e418f2426dcd8a515f19881ee7477e6541afccc6ecdf7e60f78563",
+    "media": {
+      "bucket": "ig-reel-media",
+      "videoPath": "youtube/21-just-a-bit-of-yellow/20261031T195801-reel-case-21-yt-upload.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/21-just-a-bit-of-yellow/20261031T195801-reel-case-21-yt-upload.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjEtanVzdC1hLWJpdC1vZi15ZWxsb3cvMjAyNjEwMzFUMTk1ODAxLXJlZWwtY2FzZS0yMS15dC11cGxvYWQubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzQ3NjcyMSwiZXhwIjoxNzk0NzcyNzIxfQ.nXzaspMGCsRaMfRaywN4x0WdOz4KhtsB9K5BIXyM7I8",
+      "videoBytes": 91694615,
+      "uploadedAt": "2026-10-31T19:58:41.882Z",
+      "expiresAt": "2026-11-15T19:57:41.882Z"
+    }
+  },
+  "captions": {
+    "file": "captions-ar.srt",
+    "language": "ar",
+    "name": "العربية"
+  },
+  "slug": "21-just-a-bit-of-yellow",
+  "note": "Seat 4 29 Oct: v5 YouTube cut (owner-approved rewrite, seat 3 final voice, @recallengineapp). Title and description by seat 1 (owner quote style); approved true per seat 1 05:52."
+}
