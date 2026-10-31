@@ -27,7 +27,15 @@
     "file": "reel-case-15-yt-upload.mp4",
     "folder": "15-draft",
     "bytes": 96590116,
-    "sha256": "af18330494acd9752f1613f1b04aa3995283e89361e26e37884dac3e3de34043"
+    "sha256": "af18330494acd9752f1613f1b04aa3995283e89361e26e37884dac3e3de34043",
+    "media": {
+      "bucket": "ig-reel-media",
+      "videoPath": "youtube/15-two-arms-two-numbers/20261031T121602-reel-case-15-yt-upload.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/15-two-arms-two-numbers/20261031T121602-reel-case-15-yt-upload.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTUtdHdvLWFybXMtdHdvLW51bWJlcnMvMjAyNjEwMzFUMTIxNjAyLXJlZWwtY2FzZS0xNS15dC11cGxvYWQubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzQ0OTAxMSwiZXhwIjoxNzk0NjU4NjExfQ.F7VHrqq_W-SFpYM8dHkywojBspd6R05wq6C702M72bQ",
+      "videoBytes": 96590116,
+      "uploadedAt": "2026-10-31T12:16:52.306Z",
+      "expiresAt": "2026-11-14T12:15:52.306Z"
+    }
   },
   "captions": {
     "file": "captions-ar.srt",

@@ -30,11 +30,11 @@
     "sha256": "44c4f0d97667e64b321c4b789752cc418a17e226008f06431866e88b3bf624f6",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/07-my-son-s-a-man/20261031T105449-reel-case-07-yt.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/07-my-son-s-a-man/20261031T105449-reel-case-07-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMDctbXktc29uLXMtYS1tYW4vMjAyNjEwMzFUMTA1NDQ5LXJlZWwtY2FzZS0wNy15dC5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzNDQ0MTUyLCJleHAiOjE3OTQwNDg5NTJ9.Z88FHFVyzsazXh36BC1EDqGKDOhC0rqoB7sPiKUr9A8",
+      "videoPath": "youtube/07-my-son-s-a-man/20261031T121652-reel-case-07-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/07-my-son-s-a-man/20261031T121652-reel-case-07-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMDctbXktc29uLXMtYS1tYW4vMjAyNjEwMzFUMTIxNjUyLXJlZWwtY2FzZS0wNy15dC5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzNDQ5MDcxLCJleHAiOjE3OTQ2NTg2NzF9.GzSLDlxAOVySGQn7-6ZUzRg3w_nquT80Z6uNR4D1yUQ",
       "videoBytes": 83015123,
-      "uploadedAt": "2026-10-31T10:55:53.045Z",
-      "expiresAt": "2026-11-07T10:54:53.045Z"
+      "uploadedAt": "2026-10-31T12:17:51.352Z",
+      "expiresAt": "2026-11-14T12:16:51.352Z"
     }
   },
   "captions": {
