@@ -1,0 +1,47 @@
+{
+  "title": "حالة 17: \"الحقيني يا نور... بطني!\"…",
+  "description": "الحاجة سعاد بتاخد مسكن من الصيدلية كل يوم… بقالها شهرين 💊\n\nمن أربع ساعات مسكها وجع فجأة في فم معدتها وبقى في بطنها كلها لحد طرف كتافها. نبضها مية واتناشر وضغطها مية وتمانية على ستة وستين\n\nلما كشفت عليها لقيت rigid abdomen و loss of liver dullness. تفتكر عندها إيه؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لحد عنده امتحان surgery 🩺\n\nاللينك في القناة 🔗\n\n#طلبة_طب #جراحة",
+  "tags": [
+    "medstudent",
+    "surgery",
+    "طلبة طب",
+    "Recall Engine",
+    "medical student",
+    "clinical case"
+  ],
+  "publishAt": "2026-11-14T16:00:00.000Z",
+  "publishAtCairo": "Sat 14 Nov 2026 18:00 Africa/Cairo",
+  "categoryId": "27",
+  "defaultLanguage": "ar",
+  "defaultAudioLanguage": "ar",
+  "madeForKids": false,
+  "containsSyntheticMedia": false,
+  "musicCleared": true,
+  "notifySubscribers": true,
+  "caseNumber": "17",
+  "approved": true,
+  "durationSec": 106.65,
+  "width": 1080,
+  "height": 1920,
+  "video": {
+    "file": "reel-case-17-yt-upload.mp4",
+    "folder": "17-draft",
+    "bytes": 82761778,
+    "sha256": "cd9002706054daa035eca079946ea49e83df9c9659093e500902bc9ff33b3723",
+    "media": {
+      "bucket": "ig-reel-media",
+      "videoPath": "youtube/17-the-painkiller-from-the-pharmacy/20261031T195539-reel-case-17-yt-upload.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/17-the-painkiller-from-the-pharmacy/20261031T195539-reel-case-17-yt-upload.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTctdGhlLXBhaW5raWxsZXItZnJvbS10aGUtcGhhcm1hY3kvMjAyNjEwMzFUMTk1NTM5LXJlZWwtY2FzZS0xNy15dC11cGxvYWQubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzQ3NjU3NSwiZXhwIjoxNzk0Njg2MTc1fQ.WfYaNw5yrYmZcITvSil48gK19kEL7ae3kGF7vwKJjcg",
+      "videoBytes": 82761778,
+      "uploadedAt": "2026-10-31T19:56:15.176Z",
+      "expiresAt": "2026-11-14T19:55:15.176Z"
+    }
+  },
+  "captions": {
+    "file": "captions-ar.srt",
+    "language": "ar",
+    "name": "العربية"
+  },
+  "slug": "17-the-painkiller-from-the-pharmacy",
+  "note": "Seat 4 29 Oct: v5 YouTube cut (owner-approved rewrite, seat 3 final voice, @recallengineapp). Title and description by seat 1 (owner quote style); approved true per seat 1 05:52."
+}
