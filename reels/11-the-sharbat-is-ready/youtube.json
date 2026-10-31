@@ -1,5 +1,5 @@
 {
-  "title": "حالة 10: \"النونو فين بقى؟!\"…",
+  "title": "حالة 07: \"النونو فين بقى؟!\"…",
   "description": "جوز مدام هبة جاب الشربات وواقف في الطرقة… بس النونو اتأخر 🍼\n\nمدام هبة دخلت الـ second stage على أربعة وربع الفجر والحكيمة بتقولها خلاص قربتي\n\nوبعدها بخمس دقايق كتف النونو اتزنق والفريق كله جه جري. هتعمل إيه الأول؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي داخل نسا 🤰\n\nاللينك في القناة 🔗\n\n#طلبة_طب #نسا_وتوليد",
   "tags": [
     "medstudent",
@@ -9,8 +9,8 @@
     "medical student",
     "clinical case"
   ],
-  "publishAt": "2026-11-07T16:00:00.000Z",
-  "publishAtCairo": "Sat 7 Nov 2026 18:00 Africa/Cairo",
+  "publishAt": "2026-11-04T16:00:00.000Z",
+  "publishAtCairo": "Wed 4 Nov 2026 18:00 Africa/Cairo",
   "categoryId": "27",
   "defaultLanguage": "ar",
   "defaultAudioLanguage": "ar",
@@ -26,15 +26,15 @@
   "video": {
     "file": "reel-case-11-yt.mp4",
     "folder": "11-draft",
-    "bytes": 96557898,
-    "sha256": "d59634c4d47c81c4633e429120b749028faa82d02015f3598d2fcdcb77203624",
+    "bytes": 96558217,
+    "sha256": "3fbaaf848d8fdc2d18a86d2c7614b164a4b0f1a89c3508d1163c0f520520ec06",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/11-the-sharbat-is-ready/20261029T211038-reel-case-11-yt.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/11-the-sharbat-is-ready/20261029T211038-reel-case-11-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTEtdGhlLXNoYXJiYXQtaXMtcmVhZHkvMjAyNjEwMjlUMjExMDM4LXJlZWwtY2FzZS0xMS15dC5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzMzY5NzEzLCJleHAiOjE3OTQzMjY0MDN9.9PBFccP2EnBaw4_edrapXqdBrNRVb0yoZoO0-HvhKYw",
-      "videoBytes": 96557898,
-      "uploadedAt": "2026-10-29T21:11:47.760Z",
-      "expiresAt": "2026-11-10T15:59:00.141Z"
+      "videoPath": "youtube/11-the-sharbat-is-ready/20261031T105553-reel-case-11-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/11-the-sharbat-is-ready/20261031T105553-reel-case-11-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTEtdGhlLXNoYXJiYXQtaXMtcmVhZHkvMjAyNjEwMzFUMTA1NTUzLXJlZWwtY2FzZS0xMS15dC5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzNDQ0MjI4LCJleHAiOjE3OTQwNDkwMjh9.jlMWfCCTq4UTtGYsRC0Db5pBQIL35K7kw2Ix_rpJBec",
+      "videoBytes": 96558217,
+      "uploadedAt": "2026-10-31T10:57:09.360Z",
+      "expiresAt": "2026-11-07T10:56:09.360Z"
     }
   },
   "captions": {
@@ -43,5 +43,5 @@
     "name": "العربية"
   },
   "slug": "11-the-sharbat-is-ready",
-  "note": "Seat 4 29 Oct: v5 YouTube cut (owner-approved rewrite, seat 3 final voice, @recallengineapp). Title and description by seat 1 (owner quote style); approved true per seat 1 05:52."
+  "note": "Seat 4 29 Oct: v5 YouTube cut (owner-approved rewrite, seat 3 final voice, @recallengineapp). Title and description by seat 1 (owner quote style); approved true per seat 1 05:52. | 31 Oct seat 1: owner swap (LOG 7099), kicker and title حالة 07, slot Wed 4 Nov 2026 18:00 Africa/Cairo; cut re-rendered with only the kicker changed."
 }
