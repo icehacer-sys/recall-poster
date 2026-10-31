@@ -1,0 +1,47 @@
+{
+  "title": "حالة 19: \"يا أستاذ هشام دي تالت مرة تسلم عليا!\"…",
+  "description": "أستاذ هشام سلم على مدام مي تالت مرة… وهو مصمم إنه دور برد 🤧\n\nكان قافل الشبابيك من البرد ومشغل دفاية بايظة. وبعدها بشوية بقى مصدع ودايخ ومتلخبط ومفيش ريحة غاز\n\nفي الطوارئ لقيته confused والـ pulse oximeter طلع تمام بس أنا مصدقتوش. هتديله إيه؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي عنده امتحان tox 🧪\n\nاللينك في القناة 🔗\n\n#طلبة_طب #سموم",
+  "tags": [
+    "medstudent",
+    "toxicology",
+    "طلبة طب",
+    "Recall Engine",
+    "medical student",
+    "clinical case"
+  ],
+  "publishAt": "2026-11-16T16:00:00.000Z",
+  "publishAtCairo": "Mon 16 Nov 2026 18:00 Africa/Cairo",
+  "categoryId": "27",
+  "defaultLanguage": "ar",
+  "defaultAudioLanguage": "ar",
+  "madeForKids": false,
+  "containsSyntheticMedia": false,
+  "musicCleared": true,
+  "notifySubscribers": true,
+  "caseNumber": "18",
+  "approved": true,
+  "durationSec": 107.8,
+  "width": 1080,
+  "height": 1920,
+  "video": {
+    "file": "reel-case-18-yt-upload.mp4",
+    "folder": "18-draft",
+    "bytes": 86450892,
+    "sha256": "b36ea08ee0ffebca6246d538ee127385c66ca83f6b543c54b419a7621080a99b",
+    "media": {
+      "bucket": "ig-reel-media",
+      "videoPath": "youtube/18-no-smell-normal-saturation/20261031T222310-reel-case-18-yt-upload.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/18-no-smell-normal-saturation/20261031T222310-reel-case-18-yt-upload.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTgtbm8tc21lbGwtbm9ybWFsLXNhdHVyYXRpb24vMjAyNjEwMzFUMjIyMzEwLXJlZWwtY2FzZS0xOC15dC11cGxvYWQubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzQ4NTQzMSwiZXhwIjoxNzk0OTU0MjMxfQ.AnIX-qhyEfcFM5zsZp2Jxbovj4Ii7G0PZlQddnzGbkE",
+      "videoBytes": 86450892,
+      "uploadedAt": "2026-10-31T22:23:51.293Z",
+      "expiresAt": "2026-11-17T22:22:51.293Z"
+    }
+  },
+  "captions": {
+    "file": "captions-ar.srt",
+    "language": "ar",
+    "name": "العربية"
+  },
+  "slug": "18-no-smell-normal-saturation",
+  "note": "Seat 4 29 Oct: v5 YouTube cut (owner-approved rewrite, seat 3 final voice, @recallengineapp). Title and description by seat 1 (owner quote style); approved true per seat 1 05:52."
+}

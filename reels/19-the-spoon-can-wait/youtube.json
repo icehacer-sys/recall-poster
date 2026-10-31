@@ -1,0 +1,47 @@
+{
+  "title": "حالة 20: \"افتح بقك يا بابا\"…",
+  "description": "سماح بتقول لباباها افتح بقك… بس عم حسن مش قادر يبلع حتى ريقه 😶\n\nعم حسن متشخص بالسكر وزوره واجعه أوي من اتناشر ساعة. في الطوارئ لقيته في الـ tripod position وعنده muffled voice و stridor\n\nبصيت في بقه بسرعة لقيت mild redness بس. هتعمل إيه؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لحد من دفعتك عنده ENT 👂\n\nاللينك في القناة 🔗\n\n#طلبة_طب #أنف_وأذن_وحنجرة",
+  "tags": [
+    "medstudent",
+    "ENT",
+    "طلبة طب",
+    "Recall Engine",
+    "medical student",
+    "clinical case"
+  ],
+  "publishAt": "2026-11-17T16:00:00.000Z",
+  "publishAtCairo": "Tue 17 Nov 2026 18:00 Africa/Cairo",
+  "categoryId": "27",
+  "defaultLanguage": "ar",
+  "defaultAudioLanguage": "ar",
+  "madeForKids": false,
+  "containsSyntheticMedia": false,
+  "musicCleared": true,
+  "notifySubscribers": true,
+  "caseNumber": "19",
+  "approved": true,
+  "durationSec": 98.6,
+  "width": 1080,
+  "height": 1920,
+  "video": {
+    "file": "reel-case-19-yt.mp4",
+    "folder": "19-draft",
+    "bytes": 94320173,
+    "sha256": "11dd54940035f58d5f72bae6f4057cb6bc81ec20e2604ffa32996f00a5e2cd29",
+    "media": {
+      "bucket": "ig-reel-media",
+      "videoPath": "youtube/19-the-spoon-can-wait/20261031T222351-reel-case-19-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/19-the-spoon-can-wait/20261031T222351-reel-case-19-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTktdGhlLXNwb29uLWNhbi13YWl0LzIwMjYxMDMxVDIyMjM1MS1yZWVsLWNhc2UtMTkteXQubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzQ4NTQ3MSwiZXhwIjoxNzk0OTU0MjcxfQ.LGlr66zMFl87t-eZ6-OToVL3UL82MFaOFwXo_DxPFuk",
+      "videoBytes": 94320173,
+      "uploadedAt": "2026-10-31T22:24:31.233Z",
+      "expiresAt": "2026-11-17T22:23:31.233Z"
+    }
+  },
+  "captions": {
+    "file": "captions-ar.srt",
+    "language": "ar",
+    "name": "العربية"
+  },
+  "slug": "19-the-spoon-can-wait",
+  "note": "Seat 4 29 Oct: v5 YouTube cut (owner-approved rewrite, seat 3 final voice, @recallengineapp). Title and description by seat 1 (owner quote style); approved true per seat 1 05:52."
+}
