@@ -1,6 +1,6 @@
 {
   "_quota": {
-    "day": "2026-10-30",
+    "day": "2026-10-31",
     "units": 3,
     "uploads": 1
   },
@@ -38,6 +38,18 @@
     "publishAtSent": "2026-10-31T16:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-10-31T16:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:04-he-took-the-usual-dose": {
+    "videoId": "3MsWklAXLOc",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-10-31T16:05:39.512Z",
+    "slotAt": "2026-11-01T16:00:00.000Z",
+    "titleSent": "حالة 04: \"طارق! يا طارق! اصحى!\"…",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-11-01T16:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-11-01T16:00:00Z",
     "uploadStatusSeen": "uploaded"
   }
 }
