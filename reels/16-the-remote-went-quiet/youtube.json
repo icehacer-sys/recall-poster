@@ -1,0 +1,47 @@
+{
+  "title": "حالة 16: \"يا لهوي البطارية راحت فين؟!\"…",
+  "description": "ياسين عنده تلات سنين وكان بيلعب بالريموت… ومامته بتدور على البطارية 🔋\n\nمامته شافته بيحط حاجة من الريموت في بقه من ساعة. لما كشفت عليه لقيته alert وبيشرب وعنده mild drooling\n\nفي الـ X-ray لقيت disc عشرين ملي في الـ upper oesophagus حواليه double rim. هتعمله إيه؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي عنده امتحان ENT 👂\n\nاللينك في القناة 🔗\n\n#طلبة_طب #أنف_وأذن_وحنجرة",
+  "tags": [
+    "medstudent",
+    "ENT",
+    "طلبة طب",
+    "Recall Engine",
+    "medical student",
+    "clinical case"
+  ],
+  "publishAt": "2026-11-13T16:00:00.000Z",
+  "publishAtCairo": "Fri 13 Nov 2026 18:00 Africa/Cairo",
+  "categoryId": "27",
+  "defaultLanguage": "ar",
+  "defaultAudioLanguage": "ar",
+  "madeForKids": false,
+  "containsSyntheticMedia": false,
+  "musicCleared": true,
+  "notifySubscribers": true,
+  "caseNumber": "16",
+  "approved": true,
+  "durationSec": 99.93,
+  "width": 1080,
+  "height": 1920,
+  "video": {
+    "file": "reel-case-16-yt.mp4",
+    "folder": "16-draft",
+    "bytes": 86068184,
+    "sha256": "e9346bacbe459b2f912e826f4f83c00f836f594be32ba6da39dff0318af41d8e",
+    "media": {
+      "bucket": "ig-reel-media",
+      "videoPath": "youtube/16-the-remote-went-quiet/20261031T155318-reel-case-16-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/16-the-remote-went-quiet/20261031T155318-reel-case-16-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTYtdGhlLXJlbW90ZS13ZW50LXF1aWV0LzIwMjYxMDMxVDE1NTMxOC1yZWVsLWNhc2UtMTYteXQubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzQ2MjA1MCwiZXhwIjoxNzk0NjcxNjUwfQ.rh32P2W5sSIgIC08Q5f68HlsRdnmNqIQ_aoj5_22Yso",
+      "videoBytes": 86068184,
+      "uploadedAt": "2026-10-31T15:54:10.869Z",
+      "expiresAt": "2026-11-14T15:53:10.869Z"
+    }
+  },
+  "captions": {
+    "file": "captions-ar.srt",
+    "language": "ar",
+    "name": "العربية"
+  },
+  "slug": "16-the-remote-went-quiet",
+  "note": "Seat 4 29 Oct: v5 YouTube cut (owner-approved rewrite, seat 3 final voice, @recallengineapp). Title and description by seat 1 (owner quote style); approved true per seat 1 05:52."
+}

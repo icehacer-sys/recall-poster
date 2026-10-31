@@ -1,0 +1,47 @@
+{
+  "title": "حالة 15: \"يا بنتي ده شد عضلي!\"…",
+  "description": "ليلى مصممة إنه شد عضلي من الشنطة… بس أنا مكنتش مطمن 🧳\n\nمدام رشا عندها أربعة وتلاتين سنة وقعدت ساعات طويلة في الطيارة. وبعدها بتلات أيام بقت بتنهج جامد وصدرها بيوجعها كل ما تتنفس\n\nوالـ chest X-ray طلعت سليمة خالص. تفتكر عندها إيه؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي عنده باطنة 🫁\n\nاللينك في القناة 🔗\n\n#طلبة_طب #باطنة",
+  "tags": [
+    "medstudent",
+    "emergency medicine",
+    "طلبة طب",
+    "Recall Engine",
+    "medical student",
+    "clinical case"
+  ],
+  "publishAt": "2026-11-12T16:00:00.000Z",
+  "publishAtCairo": "Thu 12 Nov 2026 18:00 Africa/Cairo",
+  "categoryId": "27",
+  "defaultLanguage": "ar",
+  "defaultAudioLanguage": "ar",
+  "madeForKids": false,
+  "containsSyntheticMedia": false,
+  "musicCleared": true,
+  "notifySubscribers": true,
+  "caseNumber": "20",
+  "approved": true,
+  "durationSec": 104.25,
+  "width": 1080,
+  "height": 1920,
+  "video": {
+    "file": "reel-case-20-yt-upload.mp4",
+    "folder": "20-draft",
+    "bytes": 89385691,
+    "sha256": "af1e188bbe94b907dc2c6decb08af60e9ab7d8b106b83d05e5ae5d42021b9aa7",
+    "media": {
+      "bucket": "ig-reel-media",
+      "videoPath": "youtube/20-breathless-after-the-flight/20261031T151726-reel-case-20-yt-upload.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/20-breathless-after-the-flight/20261031T151726-reel-case-20-yt-upload.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjAtYnJlYXRobGVzcy1hZnRlci10aGUtZmxpZ2h0LzIwMjYxMDMxVDE1MTcyNi1yZWVsLWNhc2UtMjAteXQtdXBsb2FkLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTM0NTk5MDgsImV4cCI6MTc5NDY2OTUwOH0.VUCs6qqmdzikKMDNx4WNS0lOmdKzrsUKrx1uqUF6LHw",
+      "videoBytes": 89385691,
+      "uploadedAt": "2026-10-31T15:18:28.608Z",
+      "expiresAt": "2026-11-14T15:17:28.608Z"
+    }
+  },
+  "captions": {
+    "file": "captions-ar.srt",
+    "language": "ar",
+    "name": "العربية"
+  },
+  "slug": "20-breathless-after-the-flight",
+  "note": "Seat 4 29 Oct: v5 YouTube cut (owner-approved rewrite, seat 3 final voice, @recallengineapp). Title and description by seat 1 (owner quote style); approved true per seat 1 05:52."
+}
