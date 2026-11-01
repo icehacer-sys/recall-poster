@@ -15,12 +15,12 @@
   "draft": false,
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "10-who-collapses-from-a-sneeze/20261029T204940-reel-case-10-day-03.mp4",
-    "coverPath": "10-who-collapses-from-a-sneeze/20261029T204940-cover.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/10-who-collapses-from-a-sneeze/20261029T204940-reel-case-10-day-03.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzEwLXdoby1jb2xsYXBzZXMtZnJvbS1hLXNuZWV6ZS8yMDI2MTAyOVQyMDQ5NDAtcmVlbC1jYXNlLTEwLWRheS0wMy5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzMzA3MDA0LCJleHAiOjE3OTM5MTE4MDR9.ZVP8Z-YWLQbxpLw44vUfWn3UkhA8hhz-80Lf3BMl_4Y",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/10-who-collapses-from-a-sneeze/20261029T204940-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzEwLXdoby1jb2xsYXBzZXMtZnJvbS1hLXNuZWV6ZS8yMDI2MTAyOVQyMDQ5NDAtY292ZXIuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzMwNzAwNiwiZXhwIjoxNzkzOTExODA2fQ.fIgZSisWuI2DiHr7l0OQNmiw_e6H9G8ER5_137LfIWs",
+    "videoPath": "10-who-collapses-from-a-sneeze/20261101T133224-reel-case-10-day-03.mp4",
+    "coverPath": "10-who-collapses-from-a-sneeze/20261101T133224-cover.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/10-who-collapses-from-a-sneeze/20261101T133224-reel-case-10-day-03.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzEwLXdoby1jb2xsYXBzZXMtZnJvbS1hLXNuZWV6ZS8yMDI2MTEwMVQxMzMyMjQtcmVlbC1jYXNlLTEwLWRheS0wMy5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzNTM5OTY5LCJleHAiOjE3OTQxNDQ3Njl9.mOq7KISIaanPvAm4Rjt6PSL_sOk-gIg8rucUd6gtixQ",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/10-who-collapses-from-a-sneeze/20261101T133224-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzEwLXdoby1jb2xsYXBzZXMtZnJvbS1hLXNuZWV6ZS8yMDI2MTEwMVQxMzMyMjQtY292ZXIuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzUzOTk3MCwiZXhwIjoxNzk0MTQ0NzcwfQ.gmftp_PT0wGBJZA0wd5SuB2R6uteJEks4dhXMPn28FM",
     "videoBytes": 48834718,
-    "uploadedAt": "2026-10-29T20:50:05.680Z",
-    "expiresAt": "2026-11-05T20:49:05.680Z"
+    "uploadedAt": "2026-11-01T13:32:50.689Z",
+    "expiresAt": "2026-11-08T13:31:50.689Z"
   }
 }
