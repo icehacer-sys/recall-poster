@@ -10,17 +10,17 @@
   "thumbOffsetMs": 0,
   "shareToFeed": true,
   "storyDay": "day-03",
-  "videoBytes": 48834718,
-  "videoSha256": "9179a86b57b684b2",
+  "videoBytes": 48832952,
+  "videoSha256": "f3354b3ec70a8156",
   "draft": false,
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "10-who-collapses-from-a-sneeze/20261101T133224-reel-case-10-day-03.mp4",
-    "coverPath": "10-who-collapses-from-a-sneeze/20261101T133224-cover.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/10-who-collapses-from-a-sneeze/20261101T133224-reel-case-10-day-03.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzEwLXdoby1jb2xsYXBzZXMtZnJvbS1hLXNuZWV6ZS8yMDI2MTEwMVQxMzMyMjQtcmVlbC1jYXNlLTEwLWRheS0wMy5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzNTM5OTY5LCJleHAiOjE3OTQxNDQ3Njl9.mOq7KISIaanPvAm4Rjt6PSL_sOk-gIg8rucUd6gtixQ",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/10-who-collapses-from-a-sneeze/20261101T133224-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzEwLXdoby1jb2xsYXBzZXMtZnJvbS1hLXNuZWV6ZS8yMDI2MTEwMVQxMzMyMjQtY292ZXIuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzUzOTk3MCwiZXhwIjoxNzk0MTQ0NzcwfQ.gmftp_PT0wGBJZA0wd5SuB2R6uteJEks4dhXMPn28FM",
-    "videoBytes": 48834718,
-    "uploadedAt": "2026-11-01T13:32:50.689Z",
-    "expiresAt": "2026-11-08T13:31:50.689Z"
+    "videoPath": "10-who-collapses-from-a-sneeze/20261101T145843-reel-case-10-day-03.mp4",
+    "coverPath": "10-who-collapses-from-a-sneeze/20261101T145843-cover.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/10-who-collapses-from-a-sneeze/20261101T145843-reel-case-10-day-03.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzEwLXdoby1jb2xsYXBzZXMtZnJvbS1hLXNuZWV6ZS8yMDI2MTEwMVQxNDU4NDMtcmVlbC1jYXNlLTEwLWRheS0wMy5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzNTQ1MTQzLCJleHAiOjE3OTQxNDk5NDN9.A4B9Y-Pqnj1M_mnnPjasqfXN0pzf_M_gZ1_gghc5wp0",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/10-who-collapses-from-a-sneeze/20261101T145843-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzEwLXdoby1jb2xsYXBzZXMtZnJvbS1hLXNuZWV6ZS8yMDI2MTEwMVQxNDU4NDMtY292ZXIuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzU0NTE0NCwiZXhwIjoxNzk0MTQ5OTQ0fQ.XX12fEbmb-HdWWNiMWdbtwQHI-37ElAgh6qf8hkG7Wo",
+    "videoBytes": 48832952,
+    "uploadedAt": "2026-11-01T14:59:04.465Z",
+    "expiresAt": "2026-11-08T14:58:04.465Z"
   }
 }
