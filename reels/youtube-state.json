@@ -1,6 +1,6 @@
 {
   "_quota": {
-    "day": "2026-10-31",
+    "day": "2026-11-01",
     "units": 3,
     "uploads": 1
   },
@@ -50,6 +50,18 @@
     "publishAtSent": "2026-11-01T16:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-11-01T16:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:06-hip-surgery-yesterday": {
+    "videoId": "aMCvY0WEbVM",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-11-01T17:08:32.881Z",
+    "slotAt": "2026-11-02T16:00:00.000Z",
+    "titleSent": "حالة 05: \"ده أنا نازلة البحر!\"…",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-11-02T16:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-11-02T16:00:00Z",
     "uploadStatusSeen": "uploaded"
   }
 }
