@@ -15,12 +15,12 @@
   "draft": false,
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "12-can-i-order-kofta/20261030T061526-reel-case-12-day-05.mp4",
-    "coverPath": "12-can-i-order-kofta/20261030T061526-cover.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/12-can-i-order-kofta/20261030T061526-reel-case-12-day-05.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzEyLWNhbi1pLW9yZGVyLWtvZnRhLzIwMjYxMDMwVDA2MTUyNi1yZWVsLWNhc2UtMTItZGF5LTA1Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTMzNDA5NDgsImV4cCI6MTc5Mzk0NTc0OH0.KwndscIfTOiAjWD6lXsW10VQIuEMXxg6M-ooGssKHzU",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/12-can-i-order-kofta/20261030T061526-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzEyLWNhbi1pLW9yZGVyLWtvZnRhLzIwMjYxMDMwVDA2MTUyNi1jb3Zlci5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzMzQwOTQ5LCJleHAiOjE3OTM5NDU3NDl9.blzvAO3Wo8pXbvCHLBXpCSpFA8MoI0igaPEgi8WwdAc",
+    "videoPath": "12-can-i-order-kofta/20261102T185521-reel-case-12-day-05.mp4",
+    "coverPath": "12-can-i-order-kofta/20261102T185521-cover.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/12-can-i-order-kofta/20261102T185521-reel-case-12-day-05.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzEyLWNhbi1pLW9yZGVyLWtvZnRhLzIwMjYxMTAyVDE4NTUyMS1yZWVsLWNhc2UtMTItZGF5LTA1Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTM2NDU3NTIsImV4cCI6MTc5NDI1MDU1Mn0.4fm7EmARLZRzUATZj-yi_0saDNHx4tgP8KaWQdeDvug",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/12-can-i-order-kofta/20261102T185521-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzEyLWNhbi1pLW9yZGVyLWtvZnRhLzIwMjYxMTAyVDE4NTUyMS1jb3Zlci5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzNjQ1NzU0LCJleHAiOjE3OTQyNTA1NTR9.KGub2DIR052DyPyun29Rpyzpxn3STdFPpjpSiLoVA98",
     "videoBytes": 44531987,
-    "uploadedAt": "2026-10-30T06:15:48.432Z",
-    "expiresAt": "2026-11-06T06:14:48.432Z"
+    "uploadedAt": "2026-11-02T18:55:54.328Z",
+    "expiresAt": "2026-11-09T18:54:54.328Z"
   }
 }
