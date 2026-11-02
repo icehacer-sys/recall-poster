@@ -13,6 +13,8 @@
   "videoBytes": 48832952,
   "videoSha256": "f3354b3ec70a8156",
   "draft": false,
+  "manual": true,
+  "note": "owner scheduled it by hand on Instagram for 7 PM on 2 Nov; the founder reel takes 3 Nov",
   "media": {
     "bucket": "ig-reel-media",
     "videoPath": "10-who-collapses-from-a-sneeze/20261101T145843-reel-case-10-day-03.mp4",
