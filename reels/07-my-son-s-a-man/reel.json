@@ -13,6 +13,8 @@
   "videoBytes": 46891063,
   "videoSha256": "18ba7e3f8149b571",
   "draft": false,
+  "manual": true,
+  "note": "owner posted it by hand on Instagram at 7 PM on 2 Nov (labelled case 10 on the video)",
   "media": {
     "bucket": "ig-reel-media",
     "videoPath": "07-my-son-s-a-man/20261031T103504-reel-case-07-day-31.mp4",
