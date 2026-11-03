@@ -24,17 +24,17 @@
   "width": 1080,
   "height": 1920,
   "video": {
-    "file": "reel-case-10-yt.mp4",
+    "file": "reel-case-10-yt-recallin.mp4",
     "folder": "10-draft",
-    "bytes": 98388709,
-    "sha256": "a084f011d693419b5f4e521d26407716a3ca8bb82847e7f6e77dc07d6ed0bacd",
+    "bytes": 88992829,
+    "sha256": "be66a85c8f79202b2f0f407c0874d32658523c839a71120e4c7cc7affd4cf66b",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/10-who-collapses-from-a-sneeze/20261029T205041-reel-case-10-yt.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/10-who-collapses-from-a-sneeze/20261029T205041-reel-case-10-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTAtd2hvLWNvbGxhcHNlcy1mcm9tLWEtc25lZXplLzIwMjYxMDI5VDIwNTA0MS1yZWVsLWNhc2UtMTAteXQubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzM2OTcxMiwiZXhwIjoxNzk0MjQwMDAyfQ.rcTfezYAKL1DSzBGjuHsW5IvLaTrZ-dxgh0iaYTkznE",
-      "videoBytes": 98388709,
-      "uploadedAt": "2026-10-29T20:51:22.059Z",
-      "expiresAt": "2026-11-09T15:59:00.141Z"
+      "videoPath": "youtube/10-who-collapses-from-a-sneeze/20261103T125458-reel-case-10-yt-recallin.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/10-who-collapses-from-a-sneeze/20261103T125458-reel-case-10-yt-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTAtd2hvLWNvbGxhcHNlcy1mcm9tLWEtc25lZXplLzIwMjYxMTAzVDEyNTQ1OC1yZWVsLWNhc2UtMTAteXQtcmVjYWxsaW4ubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzcxMDUzOSwiZXhwIjoxNzk0MzE1MzM5fQ.fWvqrpXTNp3vcE_l-wjCtBivHX2x-H9fnlUUtA_TN8A",
+      "videoBytes": 88992829,
+      "uploadedAt": "2026-11-03T12:55:35.816Z",
+      "expiresAt": "2026-11-10T12:54:35.816Z"
     }
   },
   "captions": {
