@@ -1,8 +1,8 @@
 {
   "slug": "21-just-a-bit-of-yellow",
   "sourceFolder": "21-just-a-bit-of-yellow",
-  "video": "reel-case-21-day-14.mp4",
-  "cover": "cover.jpg",
+  "video": "reel-case-21-day-14-recallin.mp4",
+  "cover": "cover-recallin.jpg",
   "captionFile": "caption-instagram.reza.txt",
   "caption": "عمرها ما اشتكت من كبدها. طب ليه متلخبطة؟\n\nمدام رانيا عمرها ما اشتكت من كبدها وتعبانة بقالها 10 أيام. عندها jaundice و confusion جديدة والـ INR 2.1 ومفيش نزيف. هتعمل إيه دلوقتي؟\n\nA. نديها platelets و FFP\nB. نديها IV methylprednisolone\nC. نحوّلها ICU بدري\n\nاكتب إجابتك في الكومنت قبل ما تنزل 👇\n\n⚠️ الإجابة تحت. اتفرج الأول.\n.\n.\n.\nالإجابة C. تحويل ICU بدري.\nacute liver failure يعني encephalopathy و INR 1.5 أو أكتر والكبد كان سليم والتعب مكملش 26 أسبوع.\nالـ platelets والـ FFP بس مع نزيف شغال أو قبل procedure.\nvitamin K مرة واحدة والـ INR بنتابع بيه.\nPPI عشان ميحصلش GI bleeding. وقيس السكر ولو نزل عالجه.\nلو السبب paracetamol يبقى NAC على طول.\n\n📚 المرجع: محاضرة Hepatology عن Acute liver failure\nReviewed under clinician oversight\n\nابعتها لصاحبك اللي سهران في الطوارئ الليلة 🟡\nالعب حالات زي دي من محاضراتك في Recall Engine. اللينك في صفحتنا 🔗\n\n#medstudent #emergencymedicine #طلبة_طب #recallengine",
   "postAt": "2026-11-10T18:00:00.000Z",
@@ -10,17 +10,17 @@
   "thumbOffsetMs": 0,
   "shareToFeed": true,
   "storyDay": "day-14",
-  "videoBytes": 52692502,
-  "videoSha256": "88ba1eb98fe7c437",
+  "videoBytes": 48918189,
+  "videoSha256": "63f86d1fad04c5b6",
   "draft": false,
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "21-just-a-bit-of-yellow/20261031T195730-reel-case-21-day-14.mp4",
-    "coverPath": "21-just-a-bit-of-yellow/20261031T195730-cover.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/21-just-a-bit-of-yellow/20261031T195730-reel-case-21-day-14.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzIxLWp1c3QtYS1iaXQtb2YteWVsbG93LzIwMjYxMDMxVDE5NTczMC1yZWVsLWNhc2UtMjEtZGF5LTE0Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTM0NzY2NzcsImV4cCI6MTc5NDQyNzA3N30.hBi_zMSxINWz6NG3CKkDXemBv7kWdy_Z_rQZJ6asY6A",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/21-just-a-bit-of-yellow/20261031T195730-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzIxLWp1c3QtYS1iaXQtb2YteWVsbG93LzIwMjYxMDMxVDE5NTczMC1jb3Zlci5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzNDc2Njc3LCJleHAiOjE3OTQ0MjcwNzd9.VPs1DME51xN9zIajMmOnECsJXHRtLejUnk1IBlJqHig",
-    "videoBytes": 52692502,
-    "uploadedAt": "2026-10-31T19:57:58.053Z",
-    "expiresAt": "2026-11-11T19:56:58.053Z"
+    "videoPath": "21-just-a-bit-of-yellow/20261103T130832-reel-case-21-day-14-recallin.mp4",
+    "coverPath": "21-just-a-bit-of-yellow/20261103T130832-cover-recallin.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/21-just-a-bit-of-yellow/20261103T130832-reel-case-21-day-14-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzIxLWp1c3QtYS1iaXQtb2YteWVsbG93LzIwMjYxMTAzVDEzMDgzMi1yZWVsLWNhc2UtMjEtZGF5LTE0LXJlY2FsbGluLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTM3MTEzMzcsImV4cCI6MTc5NDQ4ODkzN30.FU9UJPtPu_jiK8nSbF0HfWQjh3znWFAWiAmIBjK21I4",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/21-just-a-bit-of-yellow/20261103T130832-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzIxLWp1c3QtYS1iaXQtb2YteWVsbG93LzIwMjYxMTAzVDEzMDgzMi1jb3Zlci1yZWNhbGxpbi5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzNzExMzM4LCJleHAiOjE3OTQ0ODg5Mzh9.gs-3jw3qfx2yh0SIB6b070g834oVrT0BpfCG0nC0X-c",
+    "videoBytes": 48918189,
+    "uploadedAt": "2026-11-03T13:08:55.700Z",
+    "expiresAt": "2026-11-12T13:07:55.700Z"
   }
 }
