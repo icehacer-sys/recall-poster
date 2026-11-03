@@ -1,6 +1,6 @@
 name: reels
 
-# Publishes the due @recallengine reel from the cloud (owner GO, 24 Oct 2026). No laptop needed.
+# Publishes the due @recallin.app reel from the cloud (owner GO, 24 Oct 2026). No laptop needed.
 # Media: reels/<slug>/reel.json carries 7-day signed URLs to the PRIVATE Supabase bucket ig-reel-media,
 # written on the laptop by `npm run reels:upload -- <slug> --push`. This workflow has no Supabase key.
 # Safety: both live latches, the 3-hour late window, one reel per run, reels/state.json committed back,

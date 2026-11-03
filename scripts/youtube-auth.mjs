@@ -6,12 +6,12 @@
 // It opens Google's consent page in the browser (Desktop app client, loopback redirect on
 // 127.0.0.1, PKCE, one scope: youtube.force-ssl, which covers uploads and comment replies). After he
 // approves with the Recall Engine channel, it receives the code on the loopback address, exchanges it,
-// checks the token belongs to @recallengineapp, and writes YT_CLIENT_ID, YT_CLIENT_SECRET, and
+// checks the token belongs to @recallin, and writes YT_CLIENT_ID, YT_CLIENT_SECRET, and
 // YT_REFRESH_TOKEN straight into GitHub with `gh secret set` (through stdin), plus the public
 // YT_CHANNEL_ID repository variable. The refresh token is never printed, logged, or written to disk
 // (unless --env is given: then it also goes into this folder's gitignored .env for local runs).
 //
-// Options: --repo owner/name (default icehacer-sys/recall-poster), --handle @recallengineapp,
+// Options: --repo owner/name (default icehacer-sys/recall-poster), --handle @recallin,
 // --force (accept a different channel), --env (also write .env), --no-browser (print the link only).
 import { createHash, randomBytes } from "node:crypto";
 import { createServer } from "node:http";
@@ -24,7 +24,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
 const opt = (name, fallback) => (args.includes(name) ? args[args.indexOf(name) + 1] : fallback);
 const REPO = opt("--repo", "icehacer-sys/recall-poster");
-const HANDLE = opt("--handle", "@recallengineapp").toLowerCase();
+const HANDLE = opt("--handle", "@recallin").toLowerCase();
 const SCOPE = "https://www.googleapis.com/auth/youtube.force-ssl";
 // Fixed hosts: the client secret and tokens only ever go to Google (no env override).
 const AUTH_URL = "https://accounts.google.com/o/oauth2/v2/auth";
