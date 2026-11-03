@@ -1,6 +1,6 @@
 {
   "_quota": {
-    "day": "2026-11-01",
+    "day": "2026-11-03",
     "units": 3,
     "uploads": 1
   },
@@ -62,6 +62,18 @@
     "publishAtSent": "2026-11-02T16:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-11-02T16:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:08-i-just-fell-in-the-field": {
+    "videoId": "dkKPGWrqVLY",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-11-03T11:55:29.059Z",
+    "slotAt": "2026-11-03T16:00:00.000Z",
+    "titleSent": "حالة 06: \"أنا كويس يا دكتور!\"…",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-11-03T16:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-11-03T16:00:00Z",
     "uploadStatusSeen": "uploaded"
   }
 }
