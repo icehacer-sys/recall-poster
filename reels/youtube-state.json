@@ -1,8 +1,8 @@
 {
   "_quota": {
     "day": "2026-11-03",
-    "units": 3,
-    "uploads": 1
+    "units": 6,
+    "uploads": 2
   },
   "yt:01-copd": {
     "videoId": "c5bXg0YPJ7E",
@@ -74,6 +74,18 @@
     "publishAtSent": "2026-11-03T16:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-11-03T16:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:11-the-sharbat-is-ready": {
+    "videoId": "XGrmly0P7EE",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-11-03T19:29:20.560Z",
+    "slotAt": "2026-11-04T16:00:00.000Z",
+    "titleSent": "حالة 07: \"النونو فين بقى؟!\"…",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-11-04T16:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-11-04T16:00:00Z",
     "uploadStatusSeen": "uploaded"
   }
 }
