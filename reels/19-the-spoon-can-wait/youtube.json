@@ -24,17 +24,17 @@
   "width": 1080,
   "height": 1920,
   "video": {
-    "file": "reel-case-19-yt.mp4",
+    "file": "reel-case-19-yt-recallin.mp4",
     "folder": "19-draft",
-    "bytes": 94320173,
-    "sha256": "11dd54940035f58d5f72bae6f4057cb6bc81ec20e2604ffa32996f00a5e2cd29",
+    "bytes": 83211544,
+    "sha256": "d9e1c362d0c0bba9f6eee4743747f5f897e0e583bada6eea82129bd4fff4b997",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/19-the-spoon-can-wait/20261031T222351-reel-case-19-yt.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/19-the-spoon-can-wait/20261031T222351-reel-case-19-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTktdGhlLXNwb29uLWNhbi13YWl0LzIwMjYxMDMxVDIyMjM1MS1yZWVsLWNhc2UtMTkteXQubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzQ4NTQ3MSwiZXhwIjoxNzk0OTU0MjcxfQ.LGlr66zMFl87t-eZ6-OToVL3UL82MFaOFwXo_DxPFuk",
-      "videoBytes": 94320173,
-      "uploadedAt": "2026-10-31T22:24:31.233Z",
-      "expiresAt": "2026-11-17T22:23:31.233Z"
+      "videoPath": "youtube/19-the-spoon-can-wait/20261103T144429-reel-case-19-yt-recallin.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/19-the-spoon-can-wait/20261103T144429-reel-case-19-yt-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTktdGhlLXNwb29uLWNhbi13YWl0LzIwMjYxMTAzVDE0NDQyOS1yZWVsLWNhc2UtMTkteXQtcmVjYWxsaW4ubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzcxNzExMiwiZXhwIjoxNzk1MDk5NTEyfQ.orIi35XPNUmr8VDOfePU8WmyCPioSsmabcUrdqVEkFI",
+      "videoBytes": 83211544,
+      "uploadedAt": "2026-11-03T14:45:08.998Z",
+      "expiresAt": "2026-11-19T14:44:08.998Z"
     }
   },
   "captions": {

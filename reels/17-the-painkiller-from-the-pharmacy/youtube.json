@@ -24,17 +24,17 @@
   "width": 1080,
   "height": 1920,
   "video": {
-    "file": "reel-case-17-yt-upload.mp4",
+    "file": "reel-case-17-yt-upload-recallin.mp4",
     "folder": "17-draft",
-    "bytes": 82761778,
-    "sha256": "cd9002706054daa035eca079946ea49e83df9c9659093e500902bc9ff33b3723",
+    "bytes": 76328485,
+    "sha256": "7bbc4056ebc2ba89754e7b321df15a654f9e329899b94e820985412c0996d8f6",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/17-the-painkiller-from-the-pharmacy/20261031T195539-reel-case-17-yt-upload.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/17-the-painkiller-from-the-pharmacy/20261031T195539-reel-case-17-yt-upload.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTctdGhlLXBhaW5raWxsZXItZnJvbS10aGUtcGhhcm1hY3kvMjAyNjEwMzFUMTk1NTM5LXJlZWwtY2FzZS0xNy15dC11cGxvYWQubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzQ3NjU3NSwiZXhwIjoxNzk0Njg2MTc1fQ.WfYaNw5yrYmZcITvSil48gK19kEL7ae3kGF7vwKJjcg",
-      "videoBytes": 82761778,
-      "uploadedAt": "2026-10-31T19:56:15.176Z",
-      "expiresAt": "2026-11-14T19:55:15.176Z"
+      "videoPath": "youtube/17-the-painkiller-from-the-pharmacy/20261103T144243-reel-case-17-yt-upload-recallin.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/17-the-painkiller-from-the-pharmacy/20261103T144243-reel-case-17-yt-upload-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTctdGhlLXBhaW5raWxsZXItZnJvbS10aGUtcGhhcm1hY3kvMjAyNjExMDNUMTQ0MjQzLXJlZWwtY2FzZS0xNy15dC11cGxvYWQtcmVjYWxsaW4ubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzcxNzAwMCwiZXhwIjoxNzk1MDk5NDAwfQ.lYLPrcMpkurrUFdYdda_II74xHUbS7I0ys7Rbcio42Y",
+      "videoBytes": 76328485,
+      "uploadedAt": "2026-11-03T14:43:16.577Z",
+      "expiresAt": "2026-11-19T14:42:16.577Z"
     }
   },
   "captions": {

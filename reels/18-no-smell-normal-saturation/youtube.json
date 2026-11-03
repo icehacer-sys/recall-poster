@@ -24,17 +24,17 @@
   "width": 1080,
   "height": 1920,
   "video": {
-    "file": "reel-case-18-yt-upload.mp4",
+    "file": "reel-case-18-yt-upload-recallin.mp4",
     "folder": "18-draft",
-    "bytes": 86450892,
-    "sha256": "b36ea08ee0ffebca6246d538ee127385c66ca83f6b543c54b419a7621080a99b",
+    "bytes": 79468747,
+    "sha256": "e13562bf2d36b73871cc8df1908f0c0e76d97bece875b1d1122b50c275aa9da0",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/18-no-smell-normal-saturation/20261031T222310-reel-case-18-yt-upload.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/18-no-smell-normal-saturation/20261031T222310-reel-case-18-yt-upload.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTgtbm8tc21lbGwtbm9ybWFsLXNhdHVyYXRpb24vMjAyNjEwMzFUMjIyMzEwLXJlZWwtY2FzZS0xOC15dC11cGxvYWQubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzQ4NTQzMSwiZXhwIjoxNzk0OTU0MjMxfQ.AnIX-qhyEfcFM5zsZp2Jxbovj4Ii7G0PZlQddnzGbkE",
-      "videoBytes": 86450892,
-      "uploadedAt": "2026-10-31T22:23:51.293Z",
-      "expiresAt": "2026-11-17T22:22:51.293Z"
+      "videoPath": "youtube/18-no-smell-normal-saturation/20261103T144355-reel-case-18-yt-upload-recallin.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/18-no-smell-normal-saturation/20261103T144355-reel-case-18-yt-upload-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTgtbm8tc21lbGwtbm9ybWFsLXNhdHVyYXRpb24vMjAyNjExMDNUMTQ0MzU1LXJlZWwtY2FzZS0xOC15dC11cGxvYWQtcmVjYWxsaW4ubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzcxNzA3MiwiZXhwIjoxNzk1MDk5NDcyfQ.g8u-r-KX5LxO5G--qV0lSKxqTz5rcs60lDt9RZhEz_I",
+      "videoBytes": 79468747,
+      "uploadedAt": "2026-11-03T14:44:29.153Z",
+      "expiresAt": "2026-11-19T14:43:29.153Z"
     }
   },
   "captions": {

@@ -24,17 +24,17 @@
   "width": 1080,
   "height": 1920,
   "video": {
-    "file": "reel-case-21-yt-upload.mp4",
+    "file": "reel-case-21-yt-upload-recallin.mp4",
     "folder": "21-draft",
-    "bytes": 91694615,
-    "sha256": "c53b38ccc2e418f2426dcd8a515f19881ee7477e6541afccc6ecdf7e60f78563",
+    "bytes": 86799587,
+    "sha256": "3b409b187bb426ffc38e28e4bf0cb21df6162fd08d4eecd45346ba6b71189306",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/21-just-a-bit-of-yellow/20261031T195801-reel-case-21-yt-upload.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/21-just-a-bit-of-yellow/20261031T195801-reel-case-21-yt-upload.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjEtanVzdC1hLWJpdC1vZi15ZWxsb3cvMjAyNjEwMzFUMTk1ODAxLXJlZWwtY2FzZS0yMS15dC11cGxvYWQubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzQ3NjcyMSwiZXhwIjoxNzk0NzcyNzIxfQ.nXzaspMGCsRaMfRaywN4x0WdOz4KhtsB9K5BIXyM7I8",
-      "videoBytes": 91694615,
-      "uploadedAt": "2026-10-31T19:58:41.882Z",
-      "expiresAt": "2026-11-15T19:57:41.882Z"
+      "videoPath": "youtube/21-just-a-bit-of-yellow/20261103T144316-reel-case-21-yt-upload-recallin.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/21-just-a-bit-of-yellow/20261103T144316-reel-case-21-yt-upload-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjEtanVzdC1hLWJpdC1vZi15ZWxsb3cvMjAyNjExMDNUMTQ0MzE2LXJlZWwtY2FzZS0yMS15dC11cGxvYWQtcmVjYWxsaW4ubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzcxNzAzOCwiZXhwIjoxNzk1MDk5NDM4fQ.1G07PfY93gys7KaW_BsGWblPRJ343tCu9nEIj7AIFZE",
+      "videoBytes": 86799587,
+      "uploadedAt": "2026-11-03T14:43:55.304Z",
+      "expiresAt": "2026-11-19T14:42:55.305Z"
     }
   },
   "captions": {
