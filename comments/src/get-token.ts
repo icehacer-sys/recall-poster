@@ -1,7 +1,7 @@
-// One-time token helper for @recallengine, Instagram API with Instagram Login only
+// One-time token helper for @recallin.app, Instagram API with Instagram Login only
 // (graph.instagram.com). No Facebook Page and no Facebook Login are involved.
 //
-//   npm run token:url          print the authorization URL to open (signed in as @recallengine)
+//   npm run token:url          print the authorization URL to open (signed in as @recallin.app)
 //   npm run token -- <code>    exchange the ?code= for a long-lived (~60 day) token
 //   npm run token:refresh      refresh the current token before it expires (any time after 24 h)
 //
@@ -57,7 +57,7 @@ if (arg === "--refresh") {
     `&redirect_uri=${encodeURIComponent(need("IG_REDIRECT_URI"))}` +
     `&scope=${encodeURIComponent(SCOPES)}` +
     "&response_type=code";
-  console.log("\n1) Open this URL signed in as @recallengine on Instagram and approve:\n");
+  console.log("\n1) Open this URL signed in as @recallin.app on Instagram and approve:\n");
   console.log(url);
   console.log("\n2) You land on the redirect URI with ?code=... in the address bar. Copy the code (drop a trailing #_), then run:\n   npm run token -- <code>\n");
 } else {

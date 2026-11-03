@@ -5,7 +5,7 @@
 // cloud-state.enc (AES-256-GCM, key derived from CLAUDE_API_KEY, so no extra secret), stored in the
 // Actions cache and as a short-lived artifact. Fork PRs and anyone reading the public repo see only
 // ciphertext. A lost or unreadable state is safe: before every reply the bot checks on Instagram
-// whether @recallengine already replied in that thread, and daily caps are recounted from Instagram.
+// whether @recallin.app already replied in that thread, and daily caps are recounted from Instagram.
 //
 //   tsx src/cloud-state.ts pack     files -> cloud-state.enc
 //   tsx src/cloud-state.ts unpack   cloud-state.enc -> files (missing or unreadable: start fresh)

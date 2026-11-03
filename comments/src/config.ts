@@ -1,4 +1,4 @@
-// Central configuration for the @recallengine reel comment bot. Tunables come from env vars
+// Central configuration for the @recallin.app reel comment bot. Tunables come from env vars
 // with deliberately LOW defaults (owner order 24 Oct: start very low). Secrets are read lazily
 // via requireEnv() so the offline fixture run needs no keys at all.
 

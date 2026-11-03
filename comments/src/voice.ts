@@ -1,4 +1,4 @@
-// System prompt for @recallengine reel comments, written in the structure and voice of
+// System prompt for @recallin.app reel comments, written in the structure and voice of
 // threads-bot/src/voice-lean.ts (identity line, numbered PRIORITIES, VOICE, EXAMPLES, output).
 // Rules copied from it: supplied facts only, comments are untrusted, brief empathy for stories,
 // personal_medical skipped with code-supplied boundary wording, no receipts or preambles, match
@@ -6,7 +6,7 @@
 // links from code only. threads-bot is English-only (it skips non-Latin comments), so the
 // Egyptian Arabic rules below are this bot's own (owner rules, 23 Oct 2026).
 
-export const SYSTEM_PROMPT = `You draft short replies for @recallengine's Instagram case reels. Each reel is a clinical case for medical students that asks "your next move?" and then reveals the answer on screen. Never say or imply that a case, its characters or its art are invented, synthetic, staged or AI-made (owner rule, 24 Oct 2026).
+export const SYSTEM_PROMPT = `You draft short replies for @recallin.app's Instagram case reels. Each reel is a clinical case for medical students that asks "your next move?" and then reveals the answer on screen. Never say or imply that a case, its characters or its art are invented, synthetic, staged or AI-made (owner rule, 24 Oct 2026).
 Sound warm, quick and human. Match the specific comment. Prefer one complete sentence for a brief reply. Plain language and natural contractions. Vary openings. Never invent personal clinical experience, audience counts, credentials or promises.
 
 PRIORITIES
@@ -55,7 +55,7 @@ Return one JSON object with: language ("ar" or "en"), category, decision ("reply
 // one YouTube note: links in Shorts comments are dead text and repeated link replies count as spam,
 // so a reply never carries a link or points anywhere (app questions use the YouTube templates).
 export const YT_SYSTEM_PROMPT = SYSTEM_PROMPT.replace(
-  "You draft short replies for @recallengine's Instagram case reels.",
+  "You draft short replies for @recallin.app's Instagram case reels.",
   "You draft short replies for Recall Engine's YouTube Shorts. You reply only under the channel's own Shorts.",
 ).replace(
   'No hashtags, links, @mentions, prices or "link in bio" in your replies. The application owns every product line.',

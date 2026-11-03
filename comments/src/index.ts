@@ -1,9 +1,9 @@
-// Orchestrator + CLI for the @recallengine reel comment bot.
+// Orchestrator + CLI for the @recallin.app reel comment bot.
 //
 //   npm run demo      Fixture comments through the full pipeline (rules, template, model). No
 //                     Instagram access, nothing posted. Writes a markdown report with --report.
 //   npm run offline   Same, but no model calls at all (rules, template, and exact-answer matching).
-//   npm run dry       Reads the REAL comments under recent @recallengine reels (read-only) and prints
+//   npm run dry       Reads the REAL comments under recent @recallin.app reels (read-only) and prints
 //                     what it would do. Nothing posted, no state written.
 //   npm run live      Posts replies. Requires BOT_CONFIRM_LIVE=yes. Only inside BOT_ACTIVE_WINDOWS.
 //
