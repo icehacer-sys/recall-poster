@@ -132,6 +132,9 @@ function pickVideo(files: string[]): string | undefined {
   const phone = mp4.filter((f) => /-phone\.mp4$/i.test(f));
   // The master is the plain render: the shortest non-phone name (skips e.g. *-browser-720p.mp4).
   const master = mp4.filter((f) => !/-phone\.mp4$/i.test(f)).sort((a, b) => a.length - b.length || a.localeCompare(b));
+  // 3 Nov 2026: the account is now @recallin.app. A *-recallin.mp4 render carries the new watermark and wins.
+  const renamed = master.find((f) => /-recallin\.mp4$/i.test(f));
+  if (renamed && reelsCfg.videoVariant !== "phone") return renamed;
   return reelsCfg.videoVariant === "phone" ? phone[0] ?? master[0] : master[0] ?? phone[0];
 }
 
@@ -159,7 +162,7 @@ function runSync(): void {
       console.log(`  ${folder}: no ${captionFile}, skipped`);
       continue;
     }
-    const cover = files.includes("cover.jpg") ? "cover.jpg" : "";
+    const cover = files.includes("cover-recallin.jpg") ? "cover-recallin.jpg" : files.includes("cover.jpg") ? "cover.jpg" : "";
     const storyDay = video.match(/day-(\d+)/i)?.[1];
     const prev = existing.get(folder);
 
