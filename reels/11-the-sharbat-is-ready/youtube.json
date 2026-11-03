@@ -24,17 +24,17 @@
   "width": 1080,
   "height": 1920,
   "video": {
-    "file": "reel-case-11-yt.mp4",
+    "file": "reel-case-11-yt-recallin.mp4",
     "folder": "11-draft",
-    "bytes": 96558217,
-    "sha256": "3fbaaf848d8fdc2d18a86d2c7614b164a4b0f1a89c3508d1163c0f520520ec06",
+    "bytes": 83187857,
+    "sha256": "06454deb8072739014dca5d907f3648120eae30cae246e3bb5210cf0a19e7396",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/11-the-sharbat-is-ready/20261031T105553-reel-case-11-yt.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/11-the-sharbat-is-ready/20261031T105553-reel-case-11-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTEtdGhlLXNoYXJiYXQtaXMtcmVhZHkvMjAyNjEwMzFUMTA1NTUzLXJlZWwtY2FzZS0xMS15dC5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzNDQ0MjI4LCJleHAiOjE3OTQwNDkwMjh9.jlMWfCCTq4UTtGYsRC0Db5pBQIL35K7kw2Ix_rpJBec",
-      "videoBytes": 96558217,
-      "uploadedAt": "2026-10-31T10:57:09.360Z",
-      "expiresAt": "2026-11-07T10:56:09.360Z"
+      "videoPath": "youtube/11-the-sharbat-is-ready/20261103T184636-reel-case-11-yt-recallin.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/11-the-sharbat-is-ready/20261103T184636-reel-case-11-yt-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTEtdGhlLXNoYXJiYXQtaXMtcmVhZHkvMjAyNjExMDNUMTg0NjM2LXJlZWwtY2FzZS0xMS15dC1yZWNhbGxpbi5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzNzMxNjMzLCJleHAiOjE3OTQzMzY0MzN9.dieO0KxsoqtP3CJNGYF6BQ-Dc909qZJFaqgknh-qfx0",
+      "videoBytes": 83187857,
+      "uploadedAt": "2026-11-03T18:47:14.239Z",
+      "expiresAt": "2026-11-10T18:46:14.239Z"
     }
   },
   "captions": {
