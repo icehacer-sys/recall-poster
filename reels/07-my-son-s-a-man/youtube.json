@@ -24,17 +24,17 @@
   "width": 1080,
   "height": 1920,
   "video": {
-    "file": "reel-case-07-yt.mp4",
+    "file": "reel-case-07-yt-recallin.mp4",
     "folder": "07-draft",
-    "bytes": 83015123,
-    "sha256": "44c4f0d97667e64b321c4b789752cc418a17e226008f06431866e88b3bf624f6",
+    "bytes": 74126782,
+    "sha256": "addbaa34ee9522b18d8821cb59646a1fd15e00688916bc38772558683a587ac2",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/07-my-son-s-a-man/20261031T121652-reel-case-07-yt.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/07-my-son-s-a-man/20261031T121652-reel-case-07-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMDctbXktc29uLXMtYS1tYW4vMjAyNjEwMzFUMTIxNjUyLXJlZWwtY2FzZS0wNy15dC5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzNDQ5MDcxLCJleHAiOjE3OTQ2NTg2NzF9.GzSLDlxAOVySGQn7-6ZUzRg3w_nquT80Z6uNR4D1yUQ",
-      "videoBytes": 83015123,
-      "uploadedAt": "2026-10-31T12:17:51.352Z",
-      "expiresAt": "2026-11-14T12:16:51.352Z"
+      "videoPath": "youtube/07-my-son-s-a-man/20261103T185951-reel-case-07-yt-recallin.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/07-my-son-s-a-man/20261103T185951-reel-case-07-yt-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMDctbXktc29uLXMtYS1tYW4vMjAyNjExMDNUMTg1OTUxLXJlZWwtY2FzZS0wNy15dC1yZWNhbGxpbi5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzNzMyNDI0LCJleHAiOjE3OTQzMzcyMjR9.A-4BukfIb1gYX7Z-fbmzCub6SlY4da66bJhe5z1lP7M",
+      "videoBytes": 74126782,
+      "uploadedAt": "2026-11-03T19:00:24.714Z",
+      "expiresAt": "2026-11-10T18:59:24.714Z"
     }
   },
   "captions": {
