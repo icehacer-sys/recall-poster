@@ -24,17 +24,17 @@
   "width": 1080,
   "height": 1920,
   "video": {
-    "file": "reel-case-20-yt-upload.mp4",
+    "file": "reel-case-20-yt-upload-recallin.mp4",
     "folder": "20-draft",
-    "bytes": 89385691,
-    "sha256": "af1e188bbe94b907dc2c6decb08af60e9ab7d8b106b83d05e5ae5d42021b9aa7",
+    "bytes": 85364205,
+    "sha256": "896fce196c98cfdb74f71eea13def9127fe1750a6fac109f07787b9d421b481a",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/20-breathless-after-the-flight/20261031T151726-reel-case-20-yt-upload.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/20-breathless-after-the-flight/20261031T151726-reel-case-20-yt-upload.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjAtYnJlYXRobGVzcy1hZnRlci10aGUtZmxpZ2h0LzIwMjYxMDMxVDE1MTcyNi1yZWVsLWNhc2UtMjAteXQtdXBsb2FkLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTM0NTk5MDgsImV4cCI6MTc5NDY2OTUwOH0.VUCs6qqmdzikKMDNx4WNS0lOmdKzrsUKrx1uqUF6LHw",
-      "videoBytes": 89385691,
-      "uploadedAt": "2026-10-31T15:18:28.608Z",
-      "expiresAt": "2026-11-14T15:17:28.608Z"
+      "videoPath": "youtube/20-breathless-after-the-flight/20261103T133245-reel-case-20-yt-upload-recallin.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/20-breathless-after-the-flight/20261103T133245-reel-case-20-yt-upload-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjAtYnJlYXRobGVzcy1hZnRlci10aGUtZmxpZ2h0LzIwMjYxMTAzVDEzMzI0NS1yZWVsLWNhc2UtMjAteXQtdXBsb2FkLXJlY2FsbGluLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTM3MTI4MDQsImV4cCI6MTc5NDc0OTYwNH0.7AoUYCQ5LlKkI60883N8CgwDudL4PpH0myJS15diQQE",
+      "videoBytes": 85364205,
+      "uploadedAt": "2026-11-03T13:33:21.102Z",
+      "expiresAt": "2026-11-15T13:32:21.102Z"
     }
   },
   "captions": {

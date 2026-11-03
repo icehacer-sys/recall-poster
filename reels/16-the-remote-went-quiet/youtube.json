@@ -24,17 +24,17 @@
   "width": 1080,
   "height": 1920,
   "video": {
-    "file": "reel-case-16-yt.mp4",
+    "file": "reel-case-16-yt-recallin.mp4",
     "folder": "16-draft",
-    "bytes": 86068184,
-    "sha256": "e9346bacbe459b2f912e826f4f83c00f836f594be32ba6da39dff0318af41d8e",
+    "bytes": 68580115,
+    "sha256": "f925ae6465aa38de8a5ab162c906cd3d308eedc627e9ccbff619fb03a92665ed",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/16-the-remote-went-quiet/20261031T155318-reel-case-16-yt.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/16-the-remote-went-quiet/20261031T155318-reel-case-16-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTYtdGhlLXJlbW90ZS13ZW50LXF1aWV0LzIwMjYxMDMxVDE1NTMxOC1yZWVsLWNhc2UtMTYteXQubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzQ2MjA1MCwiZXhwIjoxNzk0NjcxNjUwfQ.rh32P2W5sSIgIC08Q5f68HlsRdnmNqIQ_aoj5_22Yso",
-      "videoBytes": 86068184,
-      "uploadedAt": "2026-10-31T15:54:10.869Z",
-      "expiresAt": "2026-11-14T15:53:10.869Z"
+      "videoPath": "youtube/16-the-remote-went-quiet/20261103T133321-reel-case-16-yt-recallin.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/16-the-remote-went-quiet/20261103T133321-reel-case-16-yt-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTYtdGhlLXJlbW90ZS13ZW50LXF1aWV0LzIwMjYxMTAzVDEzMzMyMS1yZWVsLWNhc2UtMTYteXQtcmVjYWxsaW4ubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzcxMjgzMywiZXhwIjoxNzk0NzQ5NjMzfQ.VO3Kt0xT2M5Y60iQu2GXMZEuLIi2qf3R_qXSte7M-cA",
+      "videoBytes": 68580115,
+      "uploadedAt": "2026-11-03T13:33:50.162Z",
+      "expiresAt": "2026-11-15T13:32:50.162Z"
     }
   },
   "captions": {
