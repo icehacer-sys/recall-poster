@@ -1,8 +1,8 @@
 {
   "_quota": {
-    "day": "2026-11-03",
-    "units": 6,
-    "uploads": 2
+    "day": "2026-11-04",
+    "units": 3,
+    "uploads": 1
   },
   "yt:01-copd": {
     "videoId": "c5bXg0YPJ7E",
@@ -86,6 +86,18 @@
     "publishAtSent": "2026-11-04T16:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-11-04T16:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:09-terrible-film": {
+    "videoId": "1BPHQK03EaE",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-11-04T19:43:45.561Z",
+    "slotAt": "2026-11-05T16:00:00.000Z",
+    "titleSent": "حالة 08: \"الفيلم ده وحش... عيني واجعاني منه!\"…",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-11-05T16:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-11-05T16:00:00Z",
     "uploadStatusSeen": "uploaded"
   }
 }
