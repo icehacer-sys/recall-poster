@@ -10,17 +10,17 @@
   "thumbOffsetMs": 0,
   "shareToFeed": true,
   "storyDay": "day-05",
-  "videoBytes": 40925036,
-  "videoSha256": "e13394d9f02f69e6",
+  "videoBytes": 40929126,
+  "videoSha256": "c9d8dc9701a0fe29",
   "draft": false,
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "12-can-i-order-kofta/20261103T133203-reel-case-12-day-05-recallin.mp4",
-    "coverPath": "12-can-i-order-kofta/20261103T133203-cover-recallin.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/12-can-i-order-kofta/20261103T133203-reel-case-12-day-05-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzEyLWNhbi1pLW9yZGVyLWtvZnRhLzIwMjYxMTAzVDEzMzIwMy1yZWVsLWNhc2UtMTItZGF5LTA1LXJlY2FsbGluLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTM3MTI3NDUsImV4cCI6MTc5NDY2MzE0NX0.KSZpboUuTG5F1EwDK5bcXDzozY167UOEtB_CtrT8ks0",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/12-can-i-order-kofta/20261103T133203-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzEyLWNhbi1pLW9yZGVyLWtvZnRhLzIwMjYxMTAzVDEzMzIwMy1jb3Zlci1yZWNhbGxpbi5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzNzEyNzQ3LCJleHAiOjE3OTQ2NjMxNDd9.BZEQXadBIrm86hI12ccnFfVknS7jyclvWLQhtznehgE",
-    "videoBytes": 40925036,
-    "uploadedAt": "2026-11-03T13:32:24.588Z",
-    "expiresAt": "2026-11-14T13:31:24.588Z"
+    "videoPath": "12-can-i-order-kofta/20261105T165522-reel-case-12-day-05-recallin.mp4",
+    "coverPath": "12-can-i-order-kofta/20261105T165522-cover-recallin.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/12-can-i-order-kofta/20261105T165522-reel-case-12-day-05-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzEyLWNhbi1pLW9yZGVyLWtvZnRhLzIwMjYxMTA1VDE2NTUyMi1yZWVsLWNhc2UtMTItZGF5LTA1LXJlY2FsbGluLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTM4OTc3NDgsImV4cCI6MTc5NDUwMjU0OH0.1abjd1o9Husi6q_kQf5VSYDAGXzqtxoRINiMYRSq60o",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/12-can-i-order-kofta/20261105T165522-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzEyLWNhbi1pLW9yZGVyLWtvZnRhLzIwMjYxMTA1VDE2NTUyMi1jb3Zlci1yZWNhbGxpbi5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzODk3NzUwLCJleHAiOjE3OTQ1MDI1NTB9.mztfsWydSqBKlX2n74WEMy349YEOZhXJsHantDZ35DU",
+    "videoBytes": 40929126,
+    "uploadedAt": "2026-11-05T16:55:49.590Z",
+    "expiresAt": "2026-11-12T16:54:49.590Z"
   }
 }
