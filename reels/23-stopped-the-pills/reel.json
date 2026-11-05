@@ -12,5 +12,15 @@
   "storyDay": "day-16",
   "videoBytes": 38126723,
   "videoSha256": "593337aca91fd166",
-  "draft": false
+  "draft": false,
+  "media": {
+    "bucket": "ig-reel-media",
+    "videoPath": "23-stopped-the-pills/20261105T170745-reel-case-23-day-16-recallin.mp4",
+    "coverPath": "23-stopped-the-pills/20261105T170745-cover-recallin.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/23-stopped-the-pills/20261105T170745-reel-case-23-day-16-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzIzLXN0b3BwZWQtdGhlLXBpbGxzLzIwMjYxMTA1VDE3MDc0NS1yZWVsLWNhc2UtMjMtZGF5LTE2LXJlY2FsbGluLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTM4OTg0OTgsImV4cCI6MTc5NjMxNzY5OH0.lHlHLlmbSXVfOH8MFw8Om7AbDHwSzkf455I7W9FCQRA",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/23-stopped-the-pills/20261105T170745-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzIzLXN0b3BwZWQtdGhlLXBpbGxzLzIwMjYxMTA1VDE3MDc0NS1jb3Zlci1yZWNhbGxpbi5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzODk4NDk5LCJleHAiOjE3OTYzMTc2OTl9.2_blU0Tj1FH5IJnIgedoV56-x4PPuOn9qCw958mqlWU",
+    "videoBytes": 38126723,
+    "uploadedAt": "2026-11-05T17:08:19.456Z",
+    "expiresAt": "2026-12-03T17:07:19.456Z"
+  }
 }

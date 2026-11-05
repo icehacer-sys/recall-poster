@@ -12,5 +12,15 @@
   "storyDay": "day-19",
   "videoBytes": 40984526,
   "videoSha256": "a35585730f7ce3e7",
-  "draft": false
+  "draft": false,
+  "media": {
+    "bucket": "ig-reel-media",
+    "videoPath": "26-he-is-just-teething/20261105T171023-reel-case-26-day-19-recallin.mp4",
+    "coverPath": "26-he-is-just-teething/20261105T171023-cover-recallin.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/26-he-is-just-teething/20261105T171023-reel-case-26-day-19-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI2LWhlLWlzLWp1c3QtdGVldGhpbmcvMjAyNjExMDVUMTcxMDIzLXJlZWwtY2FzZS0yNi1kYXktMTktcmVjYWxsaW4ubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5Mzg5ODY1NCwiZXhwIjoxNzk2MzE3ODU0fQ.fs2LXdcertpmWP4Nx3JSyE_vrE5P2MOBNV8SsGOmCak",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/26-he-is-just-teething/20261105T171023-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI2LWhlLWlzLWp1c3QtdGVldGhpbmcvMjAyNjExMDVUMTcxMDIzLWNvdmVyLXJlY2FsbGluLmpwZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTM4OTg2NTUsImV4cCI6MTc5NjMxNzg1NX0.qEzVPeWGt7PaObebnQF1YATgEPKUWVrv-3PHxG0x54w",
+    "videoBytes": 40984526,
+    "uploadedAt": "2026-11-05T17:10:55.674Z",
+    "expiresAt": "2026-12-03T17:09:55.674Z"
+  }
 }

@@ -12,5 +12,15 @@
   "storyDay": "day-15",
   "videoBytes": 38289121,
   "videoSha256": "df62cf4cbf3dc18a",
-  "draft": false
+  "draft": false,
+  "media": {
+    "bucket": "ig-reel-media",
+    "videoPath": "22-heart-wont-settle/20261105T170703-reel-case-22-day-15-recallin.mp4",
+    "coverPath": "22-heart-wont-settle/20261105T170703-cover-recallin.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/22-heart-wont-settle/20261105T170703-reel-case-22-day-15-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzIyLWhlYXJ0LXdvbnQtc2V0dGxlLzIwMjYxMTA1VDE3MDcwMy1yZWVsLWNhc2UtMjItZGF5LTE1LXJlY2FsbGluLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTM4OTg0NjEsImV4cCI6MTc5NjMxNzY2MX0.ZDpLnLLncZydvRFHUJtrygFQmTI4tFqNCEHTKZfojmA",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/22-heart-wont-settle/20261105T170703-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzIyLWhlYXJ0LXdvbnQtc2V0dGxlLzIwMjYxMTA1VDE3MDcwMy1jb3Zlci1yZWNhbGxpbi5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzODk4NDYzLCJleHAiOjE3OTYzMTc2NjN9.-Ijz6DAndG9qnwpocXOeQIkdbw-y6O5CPMbTf3QoAHs",
+    "videoBytes": 38289121,
+    "uploadedAt": "2026-11-05T17:07:45.787Z",
+    "expiresAt": "2026-12-03T17:06:45.787Z"
+  }
 }

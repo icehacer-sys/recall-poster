@@ -12,5 +12,15 @@
   "storyDay": "day-25",
   "videoBytes": 37430394,
   "videoSha256": "e00418ea9b923c31",
-  "draft": false
+  "draft": false,
+  "media": {
+    "bucket": "ig-reel-media",
+    "videoPath": "31-just-my-throat/20261105T171055-reel-case-31-day-25-recallin.mp4",
+    "coverPath": "31-just-my-throat/20261105T171055-cover-recallin.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/31-just-my-throat/20261105T171055-reel-case-31-day-25-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzMxLWp1c3QtbXktdGhyb2F0LzIwMjYxMTA1VDE3MTA1NS1yZWVsLWNhc2UtMzEtZGF5LTI1LXJlY2FsbGluLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTM4OTg2ODQsImV4cCI6MTc5NjMxNzg4NH0.8rXGypP47OJLvmQHVdUC53yQUfEK5aZxV1czbaKRyR0",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/31-just-my-throat/20261105T171055-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzMxLWp1c3QtbXktdGhyb2F0LzIwMjYxMTA1VDE3MTA1NS1jb3Zlci1yZWNhbGxpbi5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzODk4Njg1LCJleHAiOjE3OTYzMTc4ODV9.72HuMgcv6lvE0GjRWz3uWlN8ALlvQv_MfZH3eO8MA3I",
+    "videoBytes": 37430394,
+    "uploadedAt": "2026-11-05T17:11:25.322Z",
+    "expiresAt": "2026-12-03T17:10:25.322Z"
+  }
 }

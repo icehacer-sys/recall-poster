@@ -12,5 +12,15 @@
   "storyDay": "day-22",
   "videoBytes": 35654797,
   "videoSha256": "4aca354d5a45d623",
-  "draft": false
+  "draft": false,
+  "media": {
+    "bucket": "ig-reel-media",
+    "videoPath": "29-so-she-wont-dry-out/20261105T171148-reel-case-29-day-22-recallin.mp4",
+    "coverPath": "29-so-she-wont-dry-out/20261105T171148-cover-recallin.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/29-so-she-wont-dry-out/20261105T171148-reel-case-29-day-22-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI5LXNvLXNoZS13b250LWRyeS1vdXQvMjAyNjExMDVUMTcxMTQ4LXJlZWwtY2FzZS0yOS1kYXktMjItcmVjYWxsaW4ubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5Mzg5ODczMCwiZXhwIjoxNzk2MzE3OTMwfQ.Y9eA8OmjgIcqskNmeKb7FOhqcAEcfmszOXH2fc7-cAw",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/29-so-she-wont-dry-out/20261105T171148-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI5LXNvLXNoZS13b250LWRyeS1vdXQvMjAyNjExMDVUMTcxMTQ4LWNvdmVyLXJlY2FsbGluLmpwZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTM4OTg3MzAsImV4cCI6MTc5NjMxNzkzMH0.hU81UC24R_hWq-vehZ577123xc2wFIasxSGf5uaqLiU",
+    "videoBytes": 35654797,
+    "uploadedAt": "2026-11-05T17:12:10.391Z",
+    "expiresAt": "2026-12-03T17:11:10.391Z"
+  }
 }

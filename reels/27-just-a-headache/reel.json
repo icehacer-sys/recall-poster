@@ -12,5 +12,15 @@
   "storyDay": "day-20",
   "videoBytes": 34005546,
   "videoSha256": "f6d40cdb3535665b",
-  "draft": false
+  "draft": false,
+  "media": {
+    "bucket": "ig-reel-media",
+    "videoPath": "27-just-a-headache/20261105T171125-reel-case-27-day-20-recallin.mp4",
+    "coverPath": "27-just-a-headache/20261105T171125-cover-recallin.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/27-just-a-headache/20261105T171125-reel-case-27-day-20-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI3LWp1c3QtYS1oZWFkYWNoZS8yMDI2MTEwNVQxNzExMjUtcmVlbC1jYXNlLTI3LWRheS0yMC1yZWNhbGxpbi5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzODk4NzA3LCJleHAiOjE3OTYzMTc5MDd9.1X54q25t-EACZobp2UC4FpJ5-4bACgMRIPi1tXcNvco",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/27-just-a-headache/20261105T171125-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI3LWp1c3QtYS1oZWFkYWNoZS8yMDI2MTEwNVQxNzExMjUtY292ZXItcmVjYWxsaW4uanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5Mzg5ODcwOCwiZXhwIjoxNzk2MzE3OTA4fQ.LIRn6L9hpv79qxYhEdQISoeejeH3niJwCbIG_vdgGOM",
+    "videoBytes": 34005546,
+    "uploadedAt": "2026-11-05T17:11:47.871Z",
+    "expiresAt": "2026-12-03T17:10:47.871Z"
+  }
 }

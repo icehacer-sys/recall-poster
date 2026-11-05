@@ -12,5 +12,15 @@
   "storyDay": "day-21",
   "videoBytes": 40344825,
   "videoSha256": "8aee52e50d388bbd",
-  "draft": false
+  "draft": false,
+  "media": {
+    "bucket": "ig-reel-media",
+    "videoPath": "28-the-pain-is-inside/20261105T170855-reel-case-28-day-21-recallin.mp4",
+    "coverPath": "28-the-pain-is-inside/20261105T170855-cover-recallin.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/28-the-pain-is-inside/20261105T170855-reel-case-28-day-21-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI4LXRoZS1wYWluLWlzLWluc2lkZS8yMDI2MTEwNVQxNzA4NTUtcmVlbC1jYXNlLTI4LWRheS0yMS1yZWNhbGxpbi5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzODk4NTU2LCJleHAiOjE3OTYzMTc3NTZ9.UpNxf13BbdwDBvzy4OUuvYfYvsM_3R2f_fM5nmM5odc",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/28-the-pain-is-inside/20261105T170855-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI4LXRoZS1wYWluLWlzLWluc2lkZS8yMDI2MTEwNVQxNzA4NTUtY292ZXItcmVjYWxsaW4uanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5Mzg5ODU1OCwiZXhwIjoxNzk2MzE3NzU4fQ.nK_3KKHZSfkHPDOEjxEz9RG9kXSPTA1spLaLFPlQC-c",
+    "videoBytes": 40344825,
+    "uploadedAt": "2026-11-05T17:09:18.450Z",
+    "expiresAt": "2026-12-03T17:08:18.450Z"
+  }
 }

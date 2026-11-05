@@ -12,5 +12,15 @@
   "storyDay": "day-18",
   "videoBytes": 34322266,
   "videoSha256": "73132c13a667f56d",
-  "draft": false
+  "draft": false,
+  "media": {
+    "bucket": "ig-reel-media",
+    "videoPath": "25-the-tremor-is-from-the-medicine/20261105T170918-reel-case-25-day-18-recallin.mp4",
+    "coverPath": "25-the-tremor-is-from-the-medicine/20261105T170918-cover-recallin.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/25-the-tremor-is-from-the-medicine/20261105T170918-reel-case-25-day-18-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI1LXRoZS10cmVtb3ItaXMtZnJvbS10aGUtbWVkaWNpbmUvMjAyNjExMDVUMTcwOTE4LXJlZWwtY2FzZS0yNS1kYXktMTgtcmVjYWxsaW4ubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5Mzg5ODU5NCwiZXhwIjoxNzk2MzE3Nzk0fQ.4Xy-Ixxq5pRutqiRxLzRxGWF9cPn2Y4mzjhz2oP1jKE",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/25-the-tremor-is-from-the-medicine/20261105T170918-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI1LXRoZS10cmVtb3ItaXMtZnJvbS10aGUtbWVkaWNpbmUvMjAyNjExMDVUMTcwOTE4LWNvdmVyLXJlY2FsbGluLmpwZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTM4OTg1OTUsImV4cCI6MTc5NjMxNzc5NX0.pxlSdZ-P_UdhpUWd3ZrZaeiCQSTXgX5ybjYKzXdqaAQ",
+    "videoBytes": 34322266,
+    "uploadedAt": "2026-11-05T17:09:55.751Z",
+    "expiresAt": "2026-12-03T17:08:55.751Z"
+  }
 }
