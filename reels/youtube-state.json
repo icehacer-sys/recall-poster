@@ -1,6 +1,6 @@
 {
   "_quota": {
-    "day": "2026-11-04",
+    "day": "2026-11-05",
     "units": 3,
     "uploads": 1
   },
@@ -98,6 +98,18 @@
     "publishAtSent": "2026-11-05T16:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-11-05T16:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:10-who-collapses-from-a-sneeze": {
+    "videoId": "Ak-oB92n0YM",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-11-05T20:39:11.491Z",
+    "slotAt": "2026-11-06T16:00:00.000Z",
+    "titleSent": "حالة 09: \"يا لهوي يا سلمى!\"…",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-11-06T16:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-11-06T16:00:00Z",
     "uploadStatusSeen": "uploaded"
   }
 }
