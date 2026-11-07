@@ -153,7 +153,7 @@ const g = JSON.parse(r.stdout.trim().split("\n").at(-1) || "{}");
 check("sanitizer: evil.com, t.me, wa.me, bit.ly, and 'dot com' never post. 0.3 mL still does", g.bad?.length === 5 && g.bad.every(Boolean) && g.ok === "reply", r.stdout + r.stderr);
 
 // ---- prompt identity and encrypted state
-r = spawnSync(process.execPath, ["--import", "tsx", "-e", 'import("./src/voice.ts").then(m=>{const y=m.systemPrompt("youtube"),i=m.systemPrompt();console.log(JSON.stringify({yt:y.includes("Recall Engine\'s YouTube Shorts")&&!y.includes("Instagram case reels")&&y.includes("Never ask anyone to like, subscribe, or comment"),ig:i===m.SYSTEM_PROMPT&&i.includes("@recallengine\'s Instagram case reels")}))})'], { cwd: ROOT, encoding: "utf8" });
+r = spawnSync(process.execPath, ["--import", "tsx", "-e", 'import("./src/voice.ts").then(m=>{const y=m.systemPrompt("youtube"),i=m.systemPrompt();console.log(JSON.stringify({yt:y.includes("Recall Engine\'s YouTube Shorts")&&!y.includes("Instagram case reels")&&y.includes("Never ask anyone to like, subscribe, or comment"),ig:i===m.SYSTEM_PROMPT&&i.includes("@recallin.app\'s Instagram case reels")}))})'], { cwd: ROOT, encoding: "utf8" });
 const p = JSON.parse(r.stdout.trim().split("\n").at(-1) || "{}");
 check("YouTube prompt: own identity line and no-subscribe rule, Instagram prompt unchanged", p.yt && p.ig, r.stdout + r.stderr);
 

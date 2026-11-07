@@ -48,7 +48,7 @@ globalThis.fetch = async (input, init = {}) => {
     if (headers.authorization !== "Bearer fake-access-token" && !u.searchParams.get("upload_id")) return json({ error: { code: 401, message: "no auth", errors: [{ reason: "authError" }] } }, 401);
     const path = u.pathname;
     if (path === "/youtube/v3/channels" && method === "GET") {
-      return json({ items: [{ id: process.env.MOCK_CHANNEL_ID || "UC_TEST", snippet: { title: "Recall Engine", customUrl: "@recallengineapp" }, contentDetails: { relatedPlaylists: { uploads: "UU_TEST" } } }] });
+      return json({ items: [{ id: process.env.MOCK_CHANNEL_ID || "UC_TEST", snippet: { title: "Recall Engine", customUrl: "@recallin" }, contentDetails: { relatedPlaylists: { uploads: "UU_TEST" } } }] });
     }
     if (path === "/youtube/v3/playlistItems" && method === "GET") {
       const items = [...db.videos].reverse().slice(0, 50).map((v) => ({ contentDetails: { videoId: v.id } }));

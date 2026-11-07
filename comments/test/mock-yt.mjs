@@ -20,7 +20,7 @@ globalThis.fetch = async (input, init = {}) => {
   if ((init.headers ?? {}).Authorization !== "Bearer fake-access-token") return json({ error: { message: "no auth" } }, 401);
   const db = load();
   const path = u.pathname;
-  if (path === "/youtube/v3/channels") return json({ items: [{ id: CHANNEL, snippet: { title: "Recall Engine", customUrl: "@recallengineapp" } }] });
+  if (path === "/youtube/v3/channels") return json({ items: [{ id: CHANNEL, snippet: { title: "Recall Engine", customUrl: "@recallin" } }] });
   if (path === "/youtube/v3/commentThreads" && method === "GET") {
     if (u.searchParams.get("allThreadsRelatedToChannelId") !== CHANNEL) return json({ error: { message: "wrong channel" } }, 400);
     const status = u.searchParams.get("moderationStatus") ?? "published";
