@@ -1,0 +1,41 @@
+{
+  "title": "حالة 24: \"سيبوه يا دكتور\"…",
+  "description": "مدام منى متأكدة إنه هيفوق لوحده زي كل مرة… بس المرة دي غير 🧠\n\nأستاذ وليد متشخص بـ epilepsy ونسي الدوا يومين. جاتله تشنجات في البيت وتاني في الإسعاف ومفاقش بينهم\n\nالـ airway اتأمن والسكر طلع كويس والـ cannula اتركبت. هتديله إيه دلوقتي؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي عنده neuro 🧠\n\nاللينك في القناة 🔗\n\n#طلبة_طب #مخ_وأعصاب",
+  "tags": [
+    "medstudent",
+    "neurology",
+    "طلبة طب",
+    "Recall Engine",
+    "medical student",
+    "clinical case"
+  ],
+  "publishAt": "2026-11-20T16:00:00.000Z",
+  "publishAtCairo": "Fri 20 Nov 2026 18:00 Africa/Cairo",
+  "categoryId": "27",
+  "defaultLanguage": "ar",
+  "defaultAudioLanguage": "ar",
+  "madeForKids": false,
+  "containsSyntheticMedia": false,
+  "musicCleared": true,
+  "notifySubscribers": true,
+  "caseNumber": "24",
+  "approved": true,
+  "durationSec": 112.23,
+  "width": 1080,
+  "height": 1920,
+  "video": {
+    "file": "W:/Recall Engine Review/reels-week1-20261023/v2-story/day-17/final/reel-day-17-v2-yt.mp4",
+    "bytes": 48002697,
+    "sha256": "805bcde3e8010a7eeb60d3f65d09cfec60ebf776e4cf35c7fa3ca7ed698fdb5d",
+    "media": {
+      "bucket": "ig-reel-media",
+      "videoPath": "youtube/24-he-always-wakes-up/20261107T153040-reel-day-17-v2-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/24-he-always-wakes-up/20261107T153040-reel-day-17-v2-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjQtaGUtYWx3YXlzLXdha2VzLXVwLzIwMjYxMTA3VDE1MzA0MC1yZWVsLWRheS0xNy12Mi15dC5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk0MDY1NDcxLCJleHAiOjE3OTY0ODQ2NzF9._dfYkkOIAHpZoP2G6xmzxt7i9flss7DCpgakT9haHQs",
+      "videoBytes": 48002697,
+      "uploadedAt": "2026-11-07T15:31:07.999Z",
+      "expiresAt": "2026-12-05T15:30:07.999Z"
+    }
+  },
+  "slug": "24-he-always-wakes-up",
+  "note": "Seat 4 7 Nov: v2 YouTube cut; title, description, and tags from the case script YouTube block; burned-in number kept (owner via seat 1: YouTube skips 21); titles approved by the owner in chat on 7 Nov (\"Ok titles\")."
+}

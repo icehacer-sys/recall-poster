@@ -1,0 +1,41 @@
+{
+  "title": "حالة 23: \"أنا مش محتاجة دوا الغدة يا دكتور... بطلته من أسبوعين!\"…",
+  "description": "مدام هالة حست إنها مش محتاجة دوا الغدة… بس بنتها جابتها الطوارئ 🌡️\n\nمتشخصة بـ Graves disease وسخنة من الصبح ومش بتهدى. لما كشفت عليها لقيت عندها fever و agitation و tachyarrhythmia و confusion.\n\nسحبنا التحاليل وزميلي قال نستنى النتيجة. هتعمل إيه؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي عنده باطنة 🩺\n\nاللينك في القناة 🔗\n\n#طلبة_طب #باطنة",
+  "tags": [
+    "medstudent",
+    "endocrinology",
+    "طلبة طب",
+    "Recall Engine",
+    "medical student",
+    "clinical case"
+  ],
+  "publishAt": "2026-11-19T16:00:00.000Z",
+  "publishAtCairo": "Thu 19 Nov 2026 18:00 Africa/Cairo",
+  "categoryId": "27",
+  "defaultLanguage": "ar",
+  "defaultAudioLanguage": "ar",
+  "madeForKids": false,
+  "containsSyntheticMedia": false,
+  "musicCleared": true,
+  "notifySubscribers": true,
+  "caseNumber": "23",
+  "approved": true,
+  "durationSec": 113.27,
+  "width": 1080,
+  "height": 1920,
+  "video": {
+    "file": "W:/Recall Engine Review/reels-week1-20261023/v2-story/day-16/final/reel-day-16-v2-yt.mp4",
+    "bytes": 38147257,
+    "sha256": "b330dcc75042215899e343083f93920be28b53267a4678d13378b5caf1425f4b",
+    "media": {
+      "bucket": "ig-reel-media",
+      "videoPath": "youtube/23-stopped-the-pills/20261107T153022-reel-day-16-v2-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/23-stopped-the-pills/20261107T153022-reel-day-16-v2-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjMtc3RvcHBlZC10aGUtcGlsbHMvMjAyNjExMDdUMTUzMDIyLXJlZWwtZGF5LTE2LXYyLXl0Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQwNjU0NDQsImV4cCI6MTc5NjQ4NDY0NH0.q3g3AxqQv7CZi25QA1dPBCN95n9E4qfE6srqzdD3SSE",
+      "videoBytes": 38147257,
+      "uploadedAt": "2026-11-07T15:30:40.220Z",
+      "expiresAt": "2026-12-05T15:29:40.220Z"
+    }
+  },
+  "slug": "23-stopped-the-pills",
+  "note": "Seat 4 7 Nov: v2 YouTube cut; title, description, and tags from the case script YouTube block; burned-in number kept (owner via seat 1: YouTube skips 21); titles approved by the owner in chat on 7 Nov (\"Ok titles\")."
+}
