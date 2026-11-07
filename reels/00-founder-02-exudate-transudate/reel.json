@@ -11,5 +11,15 @@
   "shareToFeed": true,
   "videoBytes": 57588331,
   "videoSha256": "c823ba3e304a6b3c",
-  "draft": false
+  "draft": false,
+  "media": {
+    "bucket": "ig-reel-media",
+    "videoPath": "00-founder-02-exudate-transudate/20261107T212835-reel-founder-02-exudate-transudate.mp4",
+    "coverPath": "00-founder-02-exudate-transudate/20261107T212835-cover.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/00-founder-02-exudate-transudate/20261107T212835-reel-founder-02-exudate-transudate.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzAwLWZvdW5kZXItMDItZXh1ZGF0ZS10cmFuc3VkYXRlLzIwMjYxMTA3VDIxMjgzNS1yZWVsLWZvdW5kZXItMDItZXh1ZGF0ZS10cmFuc3VkYXRlLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQwODY5NDcsImV4cCI6MTc5NDg2NDU0N30.jKIWyW8YifRNgVG2O93cKUX3Jd5zi599jsas3thH0nI",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/00-founder-02-exudate-transudate/20261107T212835-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzAwLWZvdW5kZXItMDItZXh1ZGF0ZS10cmFuc3VkYXRlLzIwMjYxMTA3VDIxMjgzNS1jb3Zlci5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk0MDg2OTQ4LCJleHAiOjE3OTQ4NjQ1NDh9.6WjPZ9em5ECwIuIz94C4HeOlihEU6NsSDLlHqQY8Nkg",
+    "videoBytes": 57588331,
+    "uploadedAt": "2026-11-07T21:29:04.935Z",
+    "expiresAt": "2026-11-16T21:28:04.935Z"
+  }
 }

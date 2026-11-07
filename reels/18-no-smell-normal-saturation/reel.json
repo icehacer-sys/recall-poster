@@ -15,12 +15,12 @@
   "draft": false,
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "18-no-smell-normal-saturation/20261103T132049-reel-case-18-day-11-recallin.mp4",
-    "coverPath": "18-no-smell-normal-saturation/20261103T132049-cover-recallin.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/18-no-smell-normal-saturation/20261103T132049-reel-case-18-day-11-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzE4LW5vLXNtZWxsLW5vcm1hbC1zYXR1cmF0aW9uLzIwMjYxMTAzVDEzMjA0OS1yZWVsLWNhc2UtMTgtZGF5LTExLXJlY2FsbGluLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTM3MTIwNzMsImV4cCI6MTc5NDU3NjA3M30.GiLkMtZI0DmxWmRWeNZJurSZxiCEYwm9FSB0lELaEH4",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/18-no-smell-normal-saturation/20261103T132049-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzE4LW5vLXNtZWxsLW5vcm1hbC1zYXR1cmF0aW9uLzIwMjYxMTAzVDEzMjA0OS1jb3Zlci1yZWNhbGxpbi5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzNzEyMDc0LCJleHAiOjE3OTQ1NzYwNzR9.35k6T9a1qiAhIMKJn733J4MYL1YFZpyFL3ooE_YUTgg",
+    "videoPath": "18-no-smell-normal-saturation/20261107T212928-reel-case-18-day-11-recallin.mp4",
+    "coverPath": "18-no-smell-normal-saturation/20261107T212928-cover-recallin.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/18-no-smell-normal-saturation/20261107T212928-reel-case-18-day-11-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzE4LW5vLXNtZWxsLW5vcm1hbC1zYXR1cmF0aW9uLzIwMjYxMTA3VDIxMjkyOC1yZWVsLWNhc2UtMTgtZGF5LTExLXJlY2FsbGluLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQwODY5OTIsImV4cCI6MTc5NDg2NDU5Mn0.ERl2Symobi9yHA18QDkUtjHDof7zjm_rOxh5BiOAkhg",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/18-no-smell-normal-saturation/20261107T212928-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzE4LW5vLXNtZWxsLW5vcm1hbC1zYXR1cmF0aW9uLzIwMjYxMTA3VDIxMjkyOC1jb3Zlci1yZWNhbGxpbi5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk0MDg2OTkzLCJleHAiOjE3OTQ4NjQ1OTN9.JRtYskvzEqzlQzaN4Vj16VLBfimkQsVVe0c4Oy5Nxjw",
     "videoBytes": 43856590,
-    "uploadedAt": "2026-11-03T13:21:10.991Z",
-    "expiresAt": "2026-11-13T13:20:10.991Z"
+    "uploadedAt": "2026-11-07T21:29:49.373Z",
+    "expiresAt": "2026-11-16T21:28:49.373Z"
   }
 }
