@@ -1,6 +1,6 @@
 {
   "_quota": {
-    "day": "2026-11-06",
+    "day": "2026-11-07",
     "units": 3,
     "uploads": 1
   },
@@ -122,6 +122,18 @@
     "publishAtSent": "2026-11-07T16:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-11-07T16:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:12-can-i-order-kofta": {
+    "videoId": "BW95v0_Eevc",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-11-07T16:50:23.956Z",
+    "slotAt": "2026-11-08T16:00:00.000Z",
+    "titleSent": "حالة 11: \"خلاص يا دكتور أنا خفيت!\"…",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-11-08T16:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-11-08T16:00:00Z",
     "uploadStatusSeen": "uploaded"
   }
 }
