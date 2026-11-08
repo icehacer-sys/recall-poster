@@ -9,17 +9,17 @@
   "postAtCairo": "Sun 8 Nov 2026 19:00 Africa/Cairo",
   "thumbOffsetMs": 0,
   "shareToFeed": true,
-  "videoBytes": 58658811,
-  "videoSha256": "1423b2b27d4ff081",
-  "draft": true,
+  "videoBytes": 83943411,
+  "videoSha256": "5fd7fdfb6e84e764",
+  "draft": false,
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "00-founder-02-exudate-transudate/20261107T232510-reel-founder-02-exudate-transudate.mp4",
-    "coverPath": "00-founder-02-exudate-transudate/20261107T232510-cover.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/00-founder-02-exudate-transudate/20261107T232510-reel-founder-02-exudate-transudate.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzAwLWZvdW5kZXItMDItZXh1ZGF0ZS10cmFuc3VkYXRlLzIwMjYxMTA3VDIzMjUxMC1yZWVsLWZvdW5kZXItMDItZXh1ZGF0ZS10cmFuc3VkYXRlLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQwOTM5NDMsImV4cCI6MTc5NDY5ODc0M30.4kpqVIxZ7wPmOTW1e623Fro31NV7dKcUIRSUm8-CIkk",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/00-founder-02-exudate-transudate/20261107T232510-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzAwLWZvdW5kZXItMDItZXh1ZGF0ZS10cmFuc3VkYXRlLzIwMjYxMTA3VDIzMjUxMC1jb3Zlci5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk0MDkzOTQ0LCJleHAiOjE3OTQ2OTg3NDR9.if52FUXOAlRYAb7rk5CzUMp8orciNFfKb1KX6i8EVIc",
-    "videoBytes": 58658811,
-    "uploadedAt": "2026-11-07T23:25:40.941Z",
-    "expiresAt": "2026-11-14T23:24:40.941Z"
+    "videoPath": "00-founder-02-exudate-transudate/20261108T135231-reel-founder-02-exudate-transudate.mp4",
+    "coverPath": "00-founder-02-exudate-transudate/20261108T135231-cover.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/00-founder-02-exudate-transudate/20261108T135231-reel-founder-02-exudate-transudate.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzAwLWZvdW5kZXItMDItZXh1ZGF0ZS10cmFuc3VkYXRlLzIwMjYxMTA4VDEzNTIzMS1yZWVsLWZvdW5kZXItMDItZXh1ZGF0ZS10cmFuc3VkYXRlLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQxNDU5OTAsImV4cCI6MTc5NDc1MDc5MH0.kXs4u8DMdKF52sK5eyXmbS7kWeMqgcre-cQF2wSxBgU",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/00-founder-02-exudate-transudate/20261108T135231-cover.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzAwLWZvdW5kZXItMDItZXh1ZGF0ZS10cmFuc3VkYXRlLzIwMjYxMTA4VDEzNTIzMS1jb3Zlci5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk0MTQ1OTkxLCJleHAiOjE3OTQ3NTA3OTF9.xNUtqktCw0SbbCs7ELD3uxfNNQYEInX5qcEzm4PlJn4",
+    "videoBytes": 83943411,
+    "uploadedAt": "2026-11-08T13:53:11.810Z",
+    "expiresAt": "2026-11-15T13:52:11.810Z"
   }
 }
