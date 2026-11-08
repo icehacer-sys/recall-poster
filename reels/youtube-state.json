@@ -1,6 +1,6 @@
 {
   "_quota": {
-    "day": "2026-11-07",
+    "day": "2026-11-08",
     "units": 3,
     "uploads": 1
   },
@@ -134,6 +134,18 @@
     "publishAtSent": "2026-11-08T16:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-11-08T16:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:13-the-family-group-agreed": {
+    "videoId": "TB4ZRYjCisQ",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-11-08T17:05:39.942Z",
+    "slotAt": "2026-11-09T16:00:00.000Z",
+    "titleSent": "حالة 12: \"ده دور برد يا دكتور\"…",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-11-09T16:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-11-09T16:00:00Z",
     "uploadStatusSeen": "uploaded"
   }
 }
