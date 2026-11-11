@@ -1,8 +1,8 @@
 {
   "_quota": {
-    "day": "2026-11-10",
-    "units": 6,
-    "uploads": 2
+    "day": "2026-11-11",
+    "units": 3,
+    "uploads": 1
   },
   "yt:01-copd": {
     "videoId": "c5bXg0YPJ7E",
@@ -170,6 +170,18 @@
     "publishAtSent": "2026-11-11T16:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-11-11T16:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:20-breathless-after-the-flight": {
+    "videoId": "D1O5nLe14KM",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-11-11T19:34:29.725Z",
+    "slotAt": "2026-11-12T16:00:00.000Z",
+    "titleSent": "حالة 15: \"يا بنتي ده شد عضلي!\"…",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-11-12T16:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-11-12T16:00:00Z",
     "uploadStatusSeen": "uploaded"
   }
 }
