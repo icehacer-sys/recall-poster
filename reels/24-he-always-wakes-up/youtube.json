@@ -20,20 +20,20 @@
   "notifySubscribers": true,
   "caseNumber": "24",
   "approved": true,
-  "durationSec": 112.23,
+  "durationSec": 127.02,
   "width": 1080,
   "height": 1920,
   "video": {
-    "file": "W:/Recall Engine Review/reels-week1-20261023/v2-story/day-17/final/reel-day-17-v2-yt.mp4",
-    "bytes": 48002697,
-    "sha256": "805bcde3e8010a7eeb60d3f65d09cfec60ebf776e4cf35c7fa3ca7ed698fdb5d",
+    "file": "W:/Recall Engine Review/reels-week1-20261023/READY-TO-SCHEDULE/24-he-always-wakes-up/reel-case-24-day-17-recallin.v8-yt.mp4",
+    "bytes": 63028595,
+    "sha256": "894abd1ebc1913e18dd15dac603d87b111e8de6d4d9f606022c382ee2e103a0a",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/24-he-always-wakes-up/20261107T153040-reel-day-17-v2-yt.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/24-he-always-wakes-up/20261107T153040-reel-day-17-v2-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjQtaGUtYWx3YXlzLXdha2VzLXVwLzIwMjYxMTA3VDE1MzA0MC1yZWVsLWRheS0xNy12Mi15dC5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk0MDY1NDcxLCJleHAiOjE3OTY0ODQ2NzF9._dfYkkOIAHpZoP2G6xmzxt7i9flss7DCpgakT9haHQs",
-      "videoBytes": 48002697,
-      "uploadedAt": "2026-11-07T15:31:07.999Z",
-      "expiresAt": "2026-12-05T15:30:07.999Z"
+      "videoPath": "youtube/24-he-always-wakes-up/20261113T134751-reel-case-24-day-17-recallin.v8-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/24-he-always-wakes-up/20261113T134751-reel-case-24-day-17-recallin.v8-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjQtaGUtYWx3YXlzLXdha2VzLXVwLzIwMjYxMTEzVDEzNDc1MS1yZWVsLWNhc2UtMjQtZGF5LTE3LXJlY2FsbGluLnY4LXl0Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQ1Nzc3MTAsImV4cCI6MTc5NTc4NzMxMH0.V3qN59owKw0jF5SdLPkKrCsYPMfPutuiuwv_Bwcb6PI",
+      "videoBytes": 63028595,
+      "uploadedAt": "2026-11-13T13:48:30.547Z",
+      "expiresAt": "2026-11-27T13:47:30.547Z"
     }
   },
   "slug": "24-he-always-wakes-up",
