@@ -1,6 +1,6 @@
 {
   "_quota": {
-    "day": "2026-11-12",
+    "day": "2026-11-13",
     "units": 3,
     "uploads": 1
   },
@@ -194,6 +194,18 @@
     "publishAtSent": "2026-11-13T16:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-11-13T16:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:17-the-painkiller-from-the-pharmacy": {
+    "videoId": "hUJ2OOZBb1s",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-11-13T19:39:27.210Z",
+    "slotAt": "2026-11-14T16:00:00.000Z",
+    "titleSent": "حالة 17: \"الحقيني يا نور... بطني!\"…",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-11-14T16:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-11-14T16:00:00Z",
     "uploadStatusSeen": "uploaded"
   }
 }
