@@ -20,20 +20,20 @@
   "notifySubscribers": true,
   "caseNumber": "28",
   "approved": true,
-  "durationSec": 106.72,
+  "durationSec": 148.59,
   "width": 1080,
   "height": 1920,
   "video": {
-    "file": "W:/Recall Engine Review/reels-week1-20261023/v2-story/day-21/final/reel-day-21-v2-yt.mp4",
-    "bytes": 40327357,
-    "sha256": "e29374b39b107ea22cc73b625f83f939091dbbc97849c589debe0df589c8b84e",
+    "file": "W:/Recall Engine Review/reels-week1-20261023/READY-TO-SCHEDULE/28-the-pain-is-inside/reel-case-28-day-21-recallin.v8.mp4",
+    "bytes": 75719992,
+    "sha256": "c889651e342c7567a3f747a3903e30542654037f702e0c8156bed8f0d59dc424",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/28-the-pain-is-inside/20261107T153108-reel-day-21-v2-yt.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/28-the-pain-is-inside/20261107T153108-reel-day-21-v2-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjgtdGhlLXBhaW4taXMtaW5zaWRlLzIwMjYxMTA3VDE1MzEwOC1yZWVsLWRheS0yMS12Mi15dC5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk0MDY1NDkwLCJleHAiOjE3OTY0ODQ2OTB9.us7OsLp16ZASz4MDjLuyZXWfeEp5_ko7LQeU7FtvTD4",
-      "videoBytes": 40327357,
-      "uploadedAt": "2026-11-07T15:31:26.499Z",
-      "expiresAt": "2026-12-05T15:30:26.499Z"
+      "videoPath": "youtube/28-the-pain-is-inside/20261113T235356-reel-case-28-day-21-recallin.v8.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/28-the-pain-is-inside/20261113T235356-reel-case-28-day-21-recallin.v8.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjgtdGhlLXBhaW4taXMtaW5zaWRlLzIwMjYxMTEzVDIzNTM1Ni1yZWVsLWNhc2UtMjgtZGF5LTIxLXJlY2FsbGluLnY4Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQ2MTQwODYsImV4cCI6MTc5NTgyMzY4Nn0.a2VCRkBUtpu4CpnwB9PwoTjiElFK1uIaeFuBG0GvVnQ",
+      "videoBytes": 75719992,
+      "uploadedAt": "2026-11-13T23:54:46.735Z",
+      "expiresAt": "2026-11-27T23:53:46.735Z"
     }
   },
   "slug": "28-the-pain-is-inside",
