@@ -20,20 +20,20 @@
   "notifySubscribers": true,
   "caseNumber": "23",
   "approved": true,
-  "durationSec": 113.27,
+  "durationSec": 131.17,
   "width": 1080,
   "height": 1920,
   "video": {
-    "file": "W:/Recall Engine Review/reels-week1-20261023/v2-story/day-16/final/reel-day-16-v2-yt.mp4",
-    "bytes": 38147257,
-    "sha256": "b330dcc75042215899e343083f93920be28b53267a4678d13378b5caf1425f4b",
+    "file": "W:/Recall Engine Review/reels-week1-20261023/READY-TO-SCHEDULE/23-stopped-the-pills/reel-case-23-day-16-recallin.v8b-yt.mp4",
+    "bytes": 66605666,
+    "sha256": "95107fee5d4d6dabbc996488026d7c54b09684dc71bfc8bc397018c12461665f",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/23-stopped-the-pills/20261107T153022-reel-day-16-v2-yt.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/23-stopped-the-pills/20261107T153022-reel-day-16-v2-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjMtc3RvcHBlZC10aGUtcGlsbHMvMjAyNjExMDdUMTUzMDIyLXJlZWwtZGF5LTE2LXYyLXl0Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQwNjU0NDQsImV4cCI6MTc5NjQ4NDY0NH0.q3g3AxqQv7CZi25QA1dPBCN95n9E4qfE6srqzdD3SSE",
-      "videoBytes": 38147257,
-      "uploadedAt": "2026-11-07T15:30:40.220Z",
-      "expiresAt": "2026-12-05T15:29:40.220Z"
+      "videoPath": "youtube/23-stopped-the-pills/20261113T132824-reel-case-23-day-16-recallin.v8b-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/23-stopped-the-pills/20261113T132824-reel-case-23-day-16-recallin.v8b-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjMtc3RvcHBlZC10aGUtcGlsbHMvMjAyNjExMTNUMTMyODI0LXJlZWwtY2FzZS0yMy1kYXktMTYtcmVjYWxsaW4udjhiLXl0Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQ1NzY1NTQsImV4cCI6MTc5NTE4MTM1NH0.KaPdB5FhXh88oWfGM1Mcc-0yL3yND8OT8HhGCl6CAxc",
+      "videoBytes": 66605666,
+      "uploadedAt": "2026-11-13T13:29:14.503Z",
+      "expiresAt": "2026-11-20T13:28:14.503Z"
     }
   },
   "slug": "23-stopped-the-pills",
