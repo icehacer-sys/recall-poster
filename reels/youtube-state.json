@@ -1,6 +1,6 @@
 {
   "_quota": {
-    "day": "2026-11-13",
+    "day": "2026-11-14",
     "units": 3,
     "uploads": 1
   },
@@ -206,6 +206,18 @@
     "publishAtSent": "2026-11-14T16:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-11-14T16:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:21-just-a-bit-of-yellow": {
+    "videoId": "qf0VYU1h54o",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-11-14T17:58:48.987Z",
+    "slotAt": "2026-11-15T16:00:00.000Z",
+    "titleSent": "حالة 18: \"دي شوية صفرا\"…",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-11-15T16:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-11-15T16:00:00Z",
     "uploadStatusSeen": "uploaded"
   }
 }
