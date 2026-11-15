@@ -16,9 +16,9 @@
   "defaultLanguage": "ar",
   "defaultAudioLanguage": "ar",
   "madeForKids": false,
-  "containsSyntheticMedia": false,
+  "containsSyntheticMedia": true,
   "notifySubscribers": true,
   "approved": true,
   "slug": "92-knuckle-crack-v2",
-  "note": "Knuckle remake with burned-in captions (owner approved 16 Nov 00:28). Same cut as Instagram. containsSyntheticMedia false as on 91 until the owner decides."
+  "note": "Knuckle remake with burned-in captions (owner approved 16 Nov 00:28). Same cut as Instagram. containsSyntheticMedia true: realistic AI skin (owner approved 16 Nov)."
 }

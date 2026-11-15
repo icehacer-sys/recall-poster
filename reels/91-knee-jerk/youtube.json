@@ -15,9 +15,9 @@
   "defaultLanguage": "ar",
   "defaultAudioLanguage": "ar",
   "madeForKids": false,
-  "containsSyntheticMedia": false,
+  "containsSyntheticMedia": true,
   "notifySubscribers": true,
   "approved": true,
   "slug": "91-knee-jerk",
-  "note": "Captioned test (owner, 15 Nov 2026): same cut as Instagram (burned-in captions, L2 and L4). Title from SCRIPT-v3 YouTube line. containsSyntheticMedia false matches the case reels: confirm in Studio if unsure."
+  "note": "Captioned test (owner, 15 Nov 2026): same cut as Instagram (burned-in captions, L2 and L4). Title from SCRIPT-v3 YouTube line. containsSyntheticMedia true: realistic AI skin (owner approved 16 Nov)."
 }
