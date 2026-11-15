@@ -20,28 +20,22 @@
   "notifySubscribers": true,
   "caseNumber": "21",
   "approved": true,
-  "durationSec": 109.12,
+  "durationSec": 122.77,
   "width": 1080,
   "height": 1920,
   "video": {
-    "file": "reel-case-21-yt-upload-recallin.mp4",
-    "folder": "21-draft",
-    "bytes": 86799587,
-    "sha256": "3b409b187bb426ffc38e28e4bf0cb21df6162fd08d4eecd45346ba6b71189306",
+    "file": "W:/Recall Engine Review/reels-week1-20261023/READY-TO-SCHEDULE/21-just-a-bit-of-yellow/reel-case-21-day-14-recallin.v8.mp4",
+    "bytes": 65204894,
+    "sha256": "353b5efdd231181c1c171f7c3552b8aca5db7a327b916fd351eb5f0aed5951a4",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/21-just-a-bit-of-yellow/20261103T144316-reel-case-21-yt-upload-recallin.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/21-just-a-bit-of-yellow/20261103T144316-reel-case-21-yt-upload-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjEtanVzdC1hLWJpdC1vZi15ZWxsb3cvMjAyNjExMDNUMTQ0MzE2LXJlZWwtY2FzZS0yMS15dC11cGxvYWQtcmVjYWxsaW4ubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzcxNzAzOCwiZXhwIjoxNzk1MDk5NDM4fQ.1G07PfY93gys7KaW_BsGWblPRJ343tCu9nEIj7AIFZE",
-      "videoBytes": 86799587,
-      "uploadedAt": "2026-11-03T14:43:55.304Z",
-      "expiresAt": "2026-11-19T14:42:55.305Z"
+      "videoPath": "youtube/21-just-a-bit-of-yellow/20261115T055458-reel-case-21-day-14-recallin.v8.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/21-just-a-bit-of-yellow/20261115T055458-reel-case-21-day-14-recallin.v8.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjEtanVzdC1hLWJpdC1vZi15ZWxsb3cvMjAyNjExMTVUMDU1NDU4LXJlZWwtY2FzZS0yMS1kYXktMTQtcmVjYWxsaW4udjgubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NDcyMjEyNSwiZXhwIjoxNzk1MzI2OTI1fQ.L_-fFZAssvEjrmFhVXjnbw2Gxg686lLlNEAELf4CIY4",
+      "videoBytes": 65204894,
+      "uploadedAt": "2026-11-15T05:55:25.618Z",
+      "expiresAt": "2026-11-22T05:54:25.618Z"
     }
   },
-  "captions": {
-    "file": "captions-ar.srt",
-    "language": "ar",
-    "name": "العربية"
-  },
   "slug": "21-just-a-bit-of-yellow",
-  "note": "Seat 4 29 Oct: v5 YouTube cut (owner-approved rewrite, seat 3 final voice, @recallengineapp). Title and description by seat 1 (owner quote style); approved true per seat 1 05:52."
+  "note": "Seat 4 29 Oct: v5 YouTube cut (owner-approved rewrite, seat 3 final voice, @recallengineapp). Title and description by seat 1 (owner quote style); approved true per seat 1 05:52. | Seat 1 15 Nov: owner deleted the old v5 Short (qf0VYU1h54o) and asked for the updated one; now the Instagram v8 master (one render per case, @recallin.app), on-screen حالة 18, same title and description, burned-in captions so no SRT."
 }

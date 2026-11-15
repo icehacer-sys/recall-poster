@@ -208,7 +208,7 @@
     "publishAtSeen": "2026-11-14T16:00:00Z",
     "uploadStatusSeen": "uploaded"
   },
-  "yt:21-just-a-bit-of-yellow": {
+  "yt:21-just-a-bit-of-yellow~old-v5": {
     "videoId": "qf0VYU1h54o",
     "recordedFrom": "uploaded",
     "uploadedAt": "2026-11-14T17:58:48.987Z",
@@ -218,6 +218,8 @@
     "publishAtSent": "2026-11-15T16:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-11-15T16:00:00Z",
-    "uploadStatusSeen": "uploaded"
+    "uploadStatusSeen": "uploaded",
+    "retiredAt": "2026-11-15T05:54:52.519Z",
+    "retiredWhy": "owner deleted this old v5 Short on 15 Nov; kept so the lost-state guard never claims it for the v8 upload"
   }
 }
