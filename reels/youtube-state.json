@@ -1,6 +1,6 @@
 {
   "_quota": {
-    "day": "2026-11-14",
+    "day": "2026-11-15",
     "units": 3,
     "uploads": 1
   },
@@ -221,5 +221,17 @@
     "uploadStatusSeen": "uploaded",
     "retiredAt": "2026-11-15T05:54:52.519Z",
     "retiredWhy": "owner deleted this old v5 Short on 15 Nov; kept so the lost-state guard never claims it for the v8 upload"
+  },
+  "yt:21-just-a-bit-of-yellow": {
+    "videoId": "oOh9OSgroME",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-11-15T11:56:06.750Z",
+    "slotAt": "2026-11-15T16:00:00.000Z",
+    "titleSent": "حالة 18: \"دي شوية صفرا\"…",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-11-15T16:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-11-15T16:00:00Z",
+    "uploadStatusSeen": "uploaded"
   }
 }
