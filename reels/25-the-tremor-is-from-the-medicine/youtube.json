@@ -20,20 +20,20 @@
   "notifySubscribers": true,
   "caseNumber": "25",
   "approved": true,
-  "durationSec": 138.83,
+  "durationSec": 138.8,
   "width": 1080,
   "height": 1920,
   "video": {
-    "file": "W:/Recall Engine Review/reels-week1-20261023/READY-TO-SCHEDULE/25-the-tremor-is-from-the-medicine/reel-case-25-day-18-recallin.v8b.mp4",
-    "bytes": 70221936,
-    "sha256": "947696971b02e8007d996794d3d1a0c051d5a7712dbaa98ccdf8249a8d071717",
+    "file": "W:/Recall Engine Review/reels-week1-20261023/READY-TO-SCHEDULE/25-the-tremor-is-from-the-medicine/reel-case-25-day-18-recallin.v9.mp4",
+    "bytes": 70181759,
+    "sha256": "cdcfb214eb4173cfbfa5d7ed4bd62c450670cd897cbe8aa82245da4e00ed7289",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/25-the-tremor-is-from-the-medicine/20261113T235316-reel-case-25-day-18-recallin.v8b.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/25-the-tremor-is-from-the-medicine/20261113T235316-reel-case-25-day-18-recallin.v8b.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjUtdGhlLXRyZW1vci1pcy1mcm9tLXRoZS1tZWRpY2luZS8yMDI2MTExM1QyMzUzMTYtcmVlbC1jYXNlLTI1LWRheS0xOC1yZWNhbGxpbi52OGIubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NDYxNDAzNSwiZXhwIjoxNzk1ODIzNjM1fQ.aNbd5ECHaq4vKWf-H8Lyv0ssISOsvGDQKoKJ50lfNd4",
-      "videoBytes": 70221936,
-      "uploadedAt": "2026-11-13T23:53:54.940Z",
-      "expiresAt": "2026-11-27T23:52:54.940Z"
+      "videoPath": "youtube/25-the-tremor-is-from-the-medicine/20261115T181929-reel-case-25-day-18-recallin.v9.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/25-the-tremor-is-from-the-medicine/20261115T181929-reel-case-25-day-18-recallin.v9.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjUtdGhlLXRyZW1vci1pcy1mcm9tLXRoZS1tZWRpY2luZS8yMDI2MTExNVQxODE5MjktcmVlbC1jYXNlLTI1LWRheS0xOC1yZWNhbGxpbi52OS5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk0NzY2ODAzLCJleHAiOjE3OTU5NzY0MDN9.1f2gyiCREpKqm5k18DCWu4JHNYcJ1n_alsF2scCAwsM",
+      "videoBytes": 70181759,
+      "uploadedAt": "2026-11-15T18:20:03.291Z",
+      "expiresAt": "2026-11-29T18:19:03.291Z"
     }
   },
   "slug": "25-the-tremor-is-from-the-medicine",

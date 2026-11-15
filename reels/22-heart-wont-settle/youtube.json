@@ -20,20 +20,20 @@
   "notifySubscribers": true,
   "caseNumber": "22",
   "approved": true,
-  "durationSec": 104.46,
+  "durationSec": 124.6,
   "width": 1080,
   "height": 1920,
   "video": {
-    "file": "W:/Recall Engine Review/reels-week1-20261023/v2-story/day-15/final/reel-day-15-v2-yt.mp4",
-    "bytes": 38371141,
-    "sha256": "33b9179e90b742e4a3475714943e9a1ebe1044f2e13ea46c96a4bb78c7e0ece5",
+    "file": "W:/Recall Engine Review/reels-week1-20261023/READY-TO-SCHEDULE/22-heart-wont-settle/reel-case-22-day-15-recallin.v9.mp4",
+    "bytes": 61777730,
+    "sha256": "56df2ea44453e6bce66d10a20a77afb635ba97831a06e36fd37b9541f7d26d9d",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/22-heart-wont-settle/20261107T153003-reel-day-15-v2-yt.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/22-heart-wont-settle/20261107T153003-reel-day-15-v2-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjItaGVhcnQtd29udC1zZXR0bGUvMjAyNjExMDdUMTUzMDAzLXJlZWwtZGF5LTE1LXYyLXl0Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQwNjU0MjYsImV4cCI6MTc5NjQ4NDYyNn0.GHb0YlzFJuUi0g2IAhVxps1PZ1RLICmdgjTf1O8bu0U",
-      "videoBytes": 38371141,
-      "uploadedAt": "2026-11-07T15:30:22.739Z",
-      "expiresAt": "2026-12-05T15:29:22.739Z"
+      "videoPath": "youtube/22-heart-wont-settle/20261115T181824-reel-case-22-day-15-recallin.v9.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/22-heart-wont-settle/20261115T181824-reel-case-22-day-15-recallin.v9.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjItaGVhcnQtd29udC1zZXR0bGUvMjAyNjExMTVUMTgxODI0LXJlZWwtY2FzZS0yMi1kYXktMTUtcmVjYWxsaW4udjkubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NDc2NjczNCwiZXhwIjoxNzk1OTc2MzM0fQ.Zg8AF9SeZN6BDWjwBi0bMor-NAa8JKx9YH8yoj8_oLI",
+      "videoBytes": 61777730,
+      "uploadedAt": "2026-11-15T18:18:54.000Z",
+      "expiresAt": "2026-11-29T18:17:54.000Z"
     }
   },
   "slug": "22-heart-wont-settle",
