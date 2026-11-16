@@ -1,5 +1,5 @@
 {
-  "title": "حالة 28: \"ده بيسنن يا دكتور!\"…",
+  "title": "حالة 23: \"ده بيسنن يا دكتور!\"…",
   "description": "مدام سارة شايفة إن يوسف بيسنن… بس الحفاضة قالت حاجة تانية 👶\n\nيوسف عنده تمن شهور ومن امبارح بيصرخ فجأة ويهدى ويرجع يصرخ والنوبات بتقرب وبتطول\n\nلقيت mass في الـ right upper quadrant والحفاضة فيها red currant jelly stool. هتأكد التشخيص بإيه؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي عنده أطفال 🩺\n\nاللينك في القناة 🔗\n\n#طلبة_طب #أطفال",
   "tags": [
     "medstudent",
@@ -9,8 +9,8 @@
     "medical student",
     "clinical case"
   ],
-  "publishAt": "2026-11-24T19:00:00.000Z",
-  "publishAtCairo": "Tue 24 Nov 2026 21:00 Africa/Cairo",
+  "publishAt": "2026-11-19T19:00:00.000Z",
+  "publishAtCairo": "Thu 19 Nov 2026 21:00 Africa/Cairo",
   "categoryId": "27",
   "defaultLanguage": "ar",
   "defaultAudioLanguage": "ar",
@@ -20,23 +20,22 @@
   "notifySubscribers": true,
   "caseNumber": "26",
   "approved": true,
-  "durationSec": 109.77,
+  "durationSec": 112.1,
   "width": 1080,
   "height": 1920,
   "video": {
-    "file": "W:/Recall Engine Review/reels-week1-20261023/v2-story/day-19/final/reel-day-19-v2-yt.mp4",
-    "bytes": 40978385,
-    "sha256": "7202a4f7d4e20190fcd7b66c7a44679efe613181ab2197aeb120b46f38439ce0",
+    "file": "W:/Recall Engine Promo/case-reels-audit-20261109/case26-v9/out/reel-case-26-v9-yt.mp4",
+    "bytes": 54887141,
+    "sha256": "320ba99809890fedfe92a56774768b8cc2d94c6f6e16842e18f0d629b8d39ffa",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/26-he-is-just-teething/20261107T153202-reel-day-19-v2-yt.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/26-he-is-just-teething/20261107T153202-reel-day-19-v2-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjYtaGUtaXMtanVzdC10ZWV0aGluZy8yMDI2MTEwN1QxNTMyMDItcmVlbC1kYXktMTktdjIteXQubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NDA2NTU0NSwiZXhwIjoxNzk2NDg0NzQ1fQ.7ti6sKy9r37RGJ8AhJWhtLh6k5OOdScm6oaMOgp8fYs",
-      "videoBytes": 40978385,
-      "uploadedAt": "2026-11-07T15:32:21.409Z",
-      "expiresAt": "2026-12-05T15:31:21.409Z"
+      "videoPath": "youtube/26-he-is-just-teething/20261116T232546-reel-case-26-v9-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/26-he-is-just-teething/20261116T232546-reel-case-26-v9-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjYtaGUtaXMtanVzdC10ZWV0aGluZy8yMDI2MTExNlQyMzI1NDYtcmVlbC1jYXNlLTI2LXY5LXl0Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQ4NzE1NzQsImV4cCI6MTc5NTQ3NjM3NH0.pROi8TMBhzDIeBrcNIdDIP_umAflsCioBYBzwprwwY0",
+      "videoBytes": 54887141,
+      "uploadedAt": "2026-11-16T23:26:11.942Z",
+      "expiresAt": "2026-11-23T23:25:11.942Z"
     }
   },
   "slug": "26-he-is-just-teething",
-  "note": "Seat 4 7 Nov: v2 YouTube cut; title, description, and tags from the case script YouTube block; burned-in number kept (owner via seat 1: YouTube skips 21); titles approved by the owner in chat on 7 Nov (\"Ok titles\").",
-  "skip": true
+  "note": "Seat 4 17 Nov 2026: v9 YouTube cut; number حالة 23 by post order (owner 16 Nov 12:06); title and description kept except the number. Seat 4 7 Nov: v2 YouTube cut; title, description, and tags from the case script YouTube block; burned-in number kept (owner via seat 1: YouTube skips 21); titles approved by the owner in chat on 7 Nov (\"Ok titles\")."
 }
