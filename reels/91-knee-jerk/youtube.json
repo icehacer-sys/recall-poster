@@ -15,7 +15,7 @@
   "defaultLanguage": "ar",
   "defaultAudioLanguage": "ar",
   "madeForKids": false,
-  "containsSyntheticMedia": true,
+  "containsSyntheticMedia": false,
   "notifySubscribers": true,
   "approved": true,
   "slug": "91-knee-jerk",

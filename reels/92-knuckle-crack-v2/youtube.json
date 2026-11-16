@@ -16,7 +16,7 @@
   "defaultLanguage": "ar",
   "defaultAudioLanguage": "ar",
   "madeForKids": false,
-  "containsSyntheticMedia": true,
+  "containsSyntheticMedia": false,
   "notifySubscribers": true,
   "approved": true,
   "slug": "92-knuckle-crack-v2",
