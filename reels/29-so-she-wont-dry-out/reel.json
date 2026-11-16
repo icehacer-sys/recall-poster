@@ -12,7 +12,7 @@
   "storyDay": "day-22",
   "videoBytes": 35654797,
   "videoSha256": "4aca354d5a45d623",
-  "draft": false,
+  "draft": true,
   "media": {
     "bucket": "ig-reel-media",
     "videoPath": "29-so-she-wont-dry-out/20261105T171148-reel-case-29-day-22-recallin.mp4",
@@ -22,5 +22,6 @@
     "videoBytes": 35654797,
     "uploadedAt": "2026-11-05T17:12:10.391Z",
     "expiresAt": "2026-12-03T17:11:10.391Z"
-  }
+  },
+  "holdNote": "Seat 4 16 Nov 2026: held. Owner via seat 1 (11:55): remake from scratch on the v9 pipeline at 100 to 110 s; no old or forced cut posts. New postAt set when the remake is uploaded."
 }

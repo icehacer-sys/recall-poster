@@ -12,7 +12,7 @@
   "storyDay": "day-25",
   "videoBytes": 37430394,
   "videoSha256": "e00418ea9b923c31",
-  "draft": false,
+  "draft": true,
   "media": {
     "bucket": "ig-reel-media",
     "videoPath": "31-just-my-throat/20261105T171055-reel-case-31-day-25-recallin.mp4",
@@ -22,5 +22,6 @@
     "videoBytes": 37430394,
     "uploadedAt": "2026-11-05T17:11:25.322Z",
     "expiresAt": "2026-12-03T17:10:25.322Z"
-  }
+  },
+  "holdNote": "Seat 4 16 Nov 2026: held. Owner via seat 1 (11:55): remake from scratch on the v9 pipeline at 100 to 110 s; no old or forced cut posts. New postAt set when the remake is uploaded."
 }

@@ -12,7 +12,7 @@
   "storyDay": "day-15",
   "videoBytes": 61777730,
   "videoSha256": "56df2ea44453e6bc",
-  "draft": false,
+  "draft": true,
   "media": {
     "bucket": "ig-reel-media",
     "videoPath": "22-heart-wont-settle/20261115T181004-reel-case-22-day-15-recallin.v9.mp4",
@@ -22,5 +22,6 @@
     "videoBytes": 61777730,
     "uploadedAt": "2026-11-15T18:10:31.245Z",
     "expiresAt": "2026-11-29T18:09:31.245Z"
-  }
+  },
+  "holdNote": "Seat 4 16 Nov 2026: held. Owner via seat 1 (11:55): remake from scratch on the v9 pipeline at 100 to 110 s; no old or forced cut posts. New postAt set when the remake is uploaded."
 }

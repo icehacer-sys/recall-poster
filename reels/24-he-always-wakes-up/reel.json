@@ -12,7 +12,7 @@
   "storyDay": "day-17",
   "videoBytes": 62996720,
   "videoSha256": "bcfcb777a2507ef7",
-  "draft": false,
+  "draft": true,
   "media": {
     "bucket": "ig-reel-media",
     "videoPath": "24-he-always-wakes-up/20261115T181111-reel-case-24-day-17-recallin.v9.mp4",
@@ -22,5 +22,6 @@
     "videoBytes": 62996720,
     "uploadedAt": "2026-11-15T18:11:42.769Z",
     "expiresAt": "2026-11-29T18:10:42.769Z"
-  }
+  },
+  "holdNote": "Seat 4 16 Nov 2026: held. Owner via seat 1 (11:55): remake from scratch on the v9 pipeline at 100 to 110 s; no old or forced cut posts. New postAt set when the remake is uploaded."
 }

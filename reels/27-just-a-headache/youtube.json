@@ -37,5 +37,6 @@
     }
   },
   "slug": "27-just-a-headache",
-  "note": "Seat 4 7 Nov: v2 YouTube cut; title, description, and tags from the case script YouTube block; burned-in number kept (owner via seat 1: YouTube skips 21); titles approved by the owner in chat on 7 Nov (\"Ok titles\")."
+  "note": "Seat 4 7 Nov: v2 YouTube cut; title, description, and tags from the case script YouTube block; burned-in number kept (owner via seat 1: YouTube skips 21); titles approved by the owner in chat on 7 Nov (\"Ok titles\").",
+  "skip": true
 }
