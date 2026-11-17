@@ -1,27 +1,26 @@
 {
   "slug": "31-just-my-throat",
   "sourceFolder": "31-just-my-throat",
-  "video": "reel-case-31-day-25-recallin.mp4",
+  "video": "reel-case-31-v9-recallin.mp4",
   "cover": "cover-recallin.jpg",
   "captionFile": "caption-instagram.txt",
   "caption": "عايز حاجة للسخونية ويمشي طب ليه مش هنسيبه يمشي؟\n\nعم فتحي عنده 63 سنة ومتشخص بـ oesophageal cancer وخد جرعة الكيماوي التانية من 10 أيام.\n\nحرارته 38.6 وزوره بيوجعه وجهاز الـ CBC عطلان والنتيجة هتتأخر 3 ساعات.\n\nهتعمل إيه؟\n\nA. IV antibiotics دلوقتي قبل الـ CBC\nB. نستنى الـ neutrophil count الأول\nC. paracetamol ونقيس الحرارة تاني بعد 4 ساعات\n\nاكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي سهران في الطوارئ الليلة 🌡️\n\n#طلبة_طب #باطنة",
-  "postAt": "2026-12-01T19:00:00.000Z",
-  "postAtCairo": "Tue 1 Dec 2026 21:00 Africa/Cairo",
+  "postAt": "2026-11-21T19:00:00.000Z",
+  "postAtCairo": "Sat 21 Nov 2026 21:00 Africa/Cairo",
   "thumbOffsetMs": 0,
   "shareToFeed": true,
-  "storyDay": "day-25",
-  "videoBytes": 37430394,
-  "videoSha256": "e00418ea9b923c31",
-  "draft": true,
+  "videoBytes": 51669281,
+  "videoSha256": "3b62920ba89a6952",
+  "draft": false,
+  "note": "Seat 4 17 Nov 2026: v9 rebuild (rules A to D, eleven_v4); owner approved in chat 17 Nov (\"Approve 27, 29, 31\"). Owner schedule 16 Nov 21:22: Sat 21 Nov 2026 21:00 on IG and YouTube. On screen حالة 24.",
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "31-just-my-throat/20261105T171055-reel-case-31-day-25-recallin.mp4",
-    "coverPath": "31-just-my-throat/20261105T171055-cover-recallin.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/31-just-my-throat/20261105T171055-reel-case-31-day-25-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzMxLWp1c3QtbXktdGhyb2F0LzIwMjYxMTA1VDE3MTA1NS1yZWVsLWNhc2UtMzEtZGF5LTI1LXJlY2FsbGluLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTM4OTg2ODQsImV4cCI6MTc5NjMxNzg4NH0.8rXGypP47OJLvmQHVdUC53yQUfEK5aZxV1czbaKRyR0",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/31-just-my-throat/20261105T171055-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzMxLWp1c3QtbXktdGhyb2F0LzIwMjYxMTA1VDE3MTA1NS1jb3Zlci1yZWNhbGxpbi5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzODk4Njg1LCJleHAiOjE3OTYzMTc4ODV9.72HuMgcv6lvE0GjRWz3uWlN8ALlvQv_MfZH3eO8MA3I",
-    "videoBytes": 37430394,
-    "uploadedAt": "2026-11-05T17:11:25.322Z",
-    "expiresAt": "2026-12-03T17:10:25.322Z"
-  },
-  "holdNote": "Seat 4 16 Nov 2026: held. Owner via seat 1 (11:55): remake from scratch on the v9 pipeline at 100 to 110 s; no old or forced cut posts. New postAt set when the remake is uploaded."
+    "videoPath": "31-just-my-throat/20261117T003325-reel-case-31-v9-recallin.mp4",
+    "coverPath": "31-just-my-throat/20261117T003325-cover-recallin.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/31-just-my-throat/20261117T003325-reel-case-31-v9-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzMxLWp1c3QtbXktdGhyb2F0LzIwMjYxMTE3VDAwMzMyNS1yZWVsLWNhc2UtMzEtdjktcmVjYWxsaW4ubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NDg3NTYzMCwiZXhwIjoxNzk1OTEyNDMwfQ.eNZmrb6J_jGRcQJy6YsO_8uQ9X6sRpAqRxs42vauvyw",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/31-just-my-throat/20261117T003325-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzMxLWp1c3QtbXktdGhyb2F0LzIwMjYxMTE3VDAwMzMyNS1jb3Zlci1yZWNhbGxpbi5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk0ODc1NjMxLCJleHAiOjE3OTU5MTI0MzF9.lZ-FPwX3pM3N8pWTU6nBxu-mlK8-vGE4ZZPjiqddUn4",
+    "videoBytes": 51669281,
+    "uploadedAt": "2026-11-17T00:33:48.623Z",
+    "expiresAt": "2026-11-29T00:32:48.623Z"
+  }
 }
