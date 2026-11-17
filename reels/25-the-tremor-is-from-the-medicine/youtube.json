@@ -1,5 +1,5 @@
 {
-  "title": "حالة 26: \"الرعشة دي من الدوا يا دكتور\"…",
+  "title": "حالة 30: \"الرعشة دي من الدوا يا دكتور\"…",
   "description": "ياسمين متأكدة إن رعشة مامتها من الدوا… بس النهارده مش قادرة تمشي 💊\n\nمدام نجوى متشخصة بـ bipolar disorder وبتاخد lithium. من تلات أيام عندها نزلة معوية وبتستفرغ وبتشرب قليل\n\nدلوقتي عندها coarse tremor و ataxia و dysarthria. تفتكر عندها إيه؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي عنده psychiatry 💊\n\nاللينك في القناة 🔗\n\n#طلبة_طب #طب_نفسي",
   "tags": [
     "medstudent",
@@ -9,8 +9,8 @@
     "medical student",
     "clinical case"
   ],
-  "publishAt": "2026-11-22T19:00:00.000Z",
-  "publishAtCairo": "Sun 22 Nov 2026 21:00 Africa/Cairo",
+  "publishAt": "2026-12-03T19:00:00.000Z",
+  "publishAtCairo": "Thu 3 Dec 2026 21:00 Africa/Cairo",
   "categoryId": "27",
   "defaultLanguage": "ar",
   "defaultAudioLanguage": "ar",
@@ -20,23 +20,22 @@
   "notifySubscribers": true,
   "caseNumber": "25",
   "approved": true,
-  "durationSec": 138.8,
+  "durationSec": 109,
   "width": 1080,
   "height": 1920,
   "video": {
-    "file": "W:/Recall Engine Review/reels-week1-20261023/READY-TO-SCHEDULE/25-the-tremor-is-from-the-medicine/reel-case-25-day-18-recallin.v9.mp4",
-    "bytes": 70181759,
-    "sha256": "cdcfb214eb4173cfbfa5d7ed4bd62c450670cd897cbe8aa82245da4e00ed7289",
+    "file": "W:/Recall Engine Promo/case-reels-audit-20261109/case25-v9/out/reel-case-25-v9-yt.mp4",
+    "bytes": 54710603,
+    "sha256": "0d8052f489f6ad20dc69705c31ed33c615997206612775c72a1b7c11ce941f53",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/25-the-tremor-is-from-the-medicine/20261115T181929-reel-case-25-day-18-recallin.v9.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/25-the-tremor-is-from-the-medicine/20261115T181929-reel-case-25-day-18-recallin.v9.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjUtdGhlLXRyZW1vci1pcy1mcm9tLXRoZS1tZWRpY2luZS8yMDI2MTExNVQxODE5MjktcmVlbC1jYXNlLTI1LWRheS0xOC1yZWNhbGxpbi52OS5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk0NzY2ODAzLCJleHAiOjE3OTU5NzY0MDN9.1f2gyiCREpKqm5k18DCWu4JHNYcJ1n_alsF2scCAwsM",
-      "videoBytes": 70181759,
-      "uploadedAt": "2026-11-15T18:20:03.291Z",
-      "expiresAt": "2026-11-29T18:19:03.291Z"
+      "videoPath": "youtube/25-the-tremor-is-from-the-medicine/20261117T103806-reel-case-25-v9-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/25-the-tremor-is-from-the-medicine/20261117T103806-reel-case-25-v9-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjUtdGhlLXRyZW1vci1pcy1mcm9tLXRoZS1tZWRpY2luZS8yMDI2MTExN1QxMDM4MDYtcmVlbC1jYXNlLTI1LXY5LXl0Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQ5MTE5MTMsImV4cCI6MTc5NjcyNjMxM30.bRnKxhuJeJ7QvWc8aAX6Rg5G1Ra4c4zeR2hr13XIg24",
+      "videoBytes": 54710603,
+      "uploadedAt": "2026-11-17T10:38:34.037Z",
+      "expiresAt": "2026-12-08T10:37:34.037Z"
     }
   },
   "slug": "25-the-tremor-is-from-the-medicine",
-  "note": "Seat 4 7 Nov: v2 YouTube cut; title, description, and tags from the case script YouTube block; burned-in number kept (owner via seat 1: YouTube skips 21); titles approved by the owner in chat on 7 Nov (\"Ok titles\").",
-  "skip": true
+  "note": "Seat 4 17 Nov 2026: v9 YouTube cut; number حالة 30 by post order (owner 16 Nov 12:06). Seat 4 7 Nov: v2 YouTube cut; title, description, and tags from the case script YouTube block; burned-in number kept (owner via seat 1: YouTube skips 21); titles approved by the owner in chat on 7 Nov (\"Ok titles\")."
 }
