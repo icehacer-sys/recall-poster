@@ -1,27 +1,26 @@
 {
   "slug": "25-the-tremor-is-from-the-medicine",
   "sourceFolder": "25-the-tremor-is-from-the-medicine",
-  "video": "reel-case-25-day-18-recallin.v9.mp4",
-  "cover": "cover-recallin.v8.jpg",
+  "video": "reel-case-25-v9-recallin.mp4",
+  "cover": "cover-recallin.jpg",
   "captionFile": "caption-instagram.txt",
   "caption": "الرعشة من الدوا.\n\nطب ليه مش قادرة تمشي؟\n\nمدام نجوى متشخصة بـ bipolar disorder وبتاخد lithium من سنين ومن 3 أيام عندها نزلة معوية وبتستفرغ وبتشرب قليل ودلوقتي عندها coarse tremor و ataxia و dysarthria ومش عارفة هي فين.\n\nتفتكر عندها إيه؟\n\nA. side effect عادي من الـ lithium\nB. نزلة معوية بس\nC. lithium toxicity\n\nاكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي عنده psychiatry 💊\n\n#طلبة_طب #طب_نفسي",
-  "postAt": "2026-11-25T19:00:00.000Z",
-  "postAtCairo": "Wed 25 Nov 2026 21:00 Africa/Cairo",
+  "postAt": "2026-12-03T19:00:00.000Z",
+  "postAtCairo": "Thu 3 Dec 2026 21:00 Africa/Cairo",
   "thumbOffsetMs": 0,
   "shareToFeed": true,
-  "storyDay": "day-18",
-  "videoBytes": 70181759,
-  "videoSha256": "cdcfb214eb4173cf",
-  "draft": true,
+  "videoBytes": 56246180,
+  "videoSha256": "429d0fcf949928de",
+  "draft": false,
+  "note": "Seat 4 17 Nov 2026: v9 rebuild (rules A to D, eleven_v4); owner approved in chat 17 Nov (\"all approved but case 32\"). Owner schedule: Thu 3 Dec 2026 21:00 on IG and YouTube. On screen حالة 30.",
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "25-the-tremor-is-from-the-medicine/20261115T181220-reel-case-25-day-18-recallin.v9.mp4",
-    "coverPath": "25-the-tremor-is-from-the-medicine/20261115T181220-cover-recallin.v8.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/25-the-tremor-is-from-the-medicine/20261115T181220-reel-case-25-day-18-recallin.v9.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI1LXRoZS10cmVtb3ItaXMtZnJvbS10aGUtbWVkaWNpbmUvMjAyNjExMTVUMTgxMjIwLXJlZWwtY2FzZS0yNS1kYXktMTgtcmVjYWxsaW4udjkubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NDc2NjM3MCwiZXhwIjoxNzk1OTc1OTcwfQ.PqmbknPmDEXa1Spk-ALbGres1URSMx58lUqFK484YVA",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/25-the-tremor-is-from-the-medicine/20261115T181220-cover-recallin.v8.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI1LXRoZS10cmVtb3ItaXMtZnJvbS10aGUtbWVkaWNpbmUvMjAyNjExMTVUMTgxMjIwLWNvdmVyLXJlY2FsbGluLnY4LmpwZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQ3NjYzNzEsImV4cCI6MTc5NTk3NTk3MX0.uItxFzu4JvdS3gPhMnNPYcRxm6sn67SIF4YBlHZqScI",
-    "videoBytes": 70181759,
-    "uploadedAt": "2026-11-15T18:12:52.210Z",
-    "expiresAt": "2026-11-29T18:11:52.210Z"
-  },
-  "holdNote": "Seat 4 16 Nov 2026: held. Owner via seat 1 (11:55): remake from scratch on the v9 pipeline at 100 to 110 s; no old or forced cut posts. New postAt set when the remake is uploaded."
+    "videoPath": "25-the-tremor-is-from-the-medicine/20261117T103735-reel-case-25-v9-recallin.mp4",
+    "coverPath": "25-the-tremor-is-from-the-medicine/20261117T103735-cover-recallin.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/25-the-tremor-is-from-the-medicine/20261117T103735-reel-case-25-v9-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI1LXRoZS10cmVtb3ItaXMtZnJvbS10aGUtbWVkaWNpbmUvMjAyNjExMTdUMTAzNzM1LXJlZWwtY2FzZS0yNS12OS1yZWNhbGxpbi5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk0OTExODc5LCJleHAiOjE3OTY3MjYyNzl9._6hIDeUrMDiKbj8bHGBJzQ7CEHIidiArh-T43Xqsdgg",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/25-the-tremor-is-from-the-medicine/20261117T103735-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI1LXRoZS10cmVtb3ItaXMtZnJvbS10aGUtbWVkaWNpbmUvMjAyNjExMTdUMTAzNzM1LWNvdmVyLXJlY2FsbGluLmpwZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQ5MTE4ODAsImV4cCI6MTc5NjcyNjI4MH0.UGS3ySlOSsNJoocppF9oVJy4YwVshJiq3z3hFnwAEFU",
+    "videoBytes": 56246180,
+    "uploadedAt": "2026-11-17T10:38:00.733Z",
+    "expiresAt": "2026-12-08T10:37:00.733Z"
+  }
 }
