@@ -1,27 +1,26 @@
 {
   "slug": "22-heart-wont-settle",
   "sourceFolder": "22-heart-wont-settle",
-  "video": "reel-case-22-day-15-recallin.v9.mp4",
-  "cover": "cover-recallin.v8.jpg",
+  "video": "reel-case-22-v9-recallin.mp4",
+  "cover": "cover-recallin.jpg",
   "captionFile": "caption-instagram.txt",
   "caption": "قاعدة مكانها والضغط normal طب ليه قلبها مش راضي يهدى؟\n\nمدام نهى عندها 35 سنة وفجأة قلبها ابتدى يدق بسرعة والـ ECG طلع regular narrow complex tachycardia ومفيش P waves.\n\nتفتكر عندها إيه؟\n\nA. Rapid AF\nB. SVT\nC. VT\n\nاكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي عنده باطنة 🫀\n\n#طلبة_طب #باطنة",
-  "postAt": "2026-11-16T19:00:00.000Z",
-  "postAtCairo": "Mon 16 Nov 2026 21:00 Africa/Cairo",
+  "postAt": "2026-11-27T19:00:00.000Z",
+  "postAtCairo": "Fri 27 Nov 2026 21:00 Africa/Cairo",
   "thumbOffsetMs": 0,
   "shareToFeed": true,
-  "storyDay": "day-15",
-  "videoBytes": 61777730,
-  "videoSha256": "56df2ea44453e6bc",
-  "draft": true,
+  "videoBytes": 54257452,
+  "videoSha256": "4cec1c3749eb0065",
+  "draft": false,
+  "note": "Seat 4 17 Nov 2026: v9 rebuild (rules A to D, eleven_v4); owner approved in chat 17 Nov (\"all approved but case 32\"). Owner schedule: Fri 27 Nov 2026 21:00 on IG and YouTube. On screen حالة 27.",
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "22-heart-wont-settle/20261115T181004-reel-case-22-day-15-recallin.v9.mp4",
-    "coverPath": "22-heart-wont-settle/20261115T181004-cover-recallin.v8.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/22-heart-wont-settle/20261115T181004-reel-case-22-day-15-recallin.v9.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzIyLWhlYXJ0LXdvbnQtc2V0dGxlLzIwMjYxMTE1VDE4MTAwNC1yZWVsLWNhc2UtMjItZGF5LTE1LXJlY2FsbGluLnY5Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQ3NjYyMzAsImV4cCI6MTc5NTk3NTgzMH0.uYxY__0MzuH-vwxrkNwBJnJjgWFF39Np-Z0z0ozSMbk",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/22-heart-wont-settle/20261115T181004-cover-recallin.v8.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzIyLWhlYXJ0LXdvbnQtc2V0dGxlLzIwMjYxMTE1VDE4MTAwNC1jb3Zlci1yZWNhbGxpbi52OC5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk0NzY2MjMxLCJleHAiOjE3OTU5NzU4MzF9.CKGxTVcQnxojHYxTXU-vpciG0Qu7CBZVnqPt9-XX65k",
-    "videoBytes": 61777730,
-    "uploadedAt": "2026-11-15T18:10:31.245Z",
-    "expiresAt": "2026-11-29T18:09:31.245Z"
-  },
-  "holdNote": "Seat 4 16 Nov 2026: held. Owner via seat 1 (11:55): remake from scratch on the v9 pipeline at 100 to 110 s; no old or forced cut posts. New postAt set when the remake is uploaded."
+    "videoPath": "22-heart-wont-settle/20261117T103421-reel-case-22-v9-recallin.mp4",
+    "coverPath": "22-heart-wont-settle/20261117T103421-cover-recallin.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/22-heart-wont-settle/20261117T103421-reel-case-22-v9-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzIyLWhlYXJ0LXdvbnQtc2V0dGxlLzIwMjYxMTE3VDEwMzQyMS1yZWVsLWNhc2UtMjItdjktcmVjYWxsaW4ubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NDkxMTY4NiwiZXhwIjoxNzk2NzI2MDg2fQ.0ZzPZj_hkk1UFVux4XWVTbvUI7HcdzXHUXuf6Mp9mGY",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/22-heart-wont-settle/20261117T103421-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzIyLWhlYXJ0LXdvbnQtc2V0dGxlLzIwMjYxMTE3VDEwMzQyMS1jb3Zlci1yZWNhbGxpbi5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk0OTExNjg3LCJleHAiOjE3OTY3MjYwODd9._E8suZce-P-nXE1_YprsiA8BwYfMtVlo6pPPRGIO50w",
+    "videoBytes": 54257452,
+    "uploadedAt": "2026-11-17T10:34:47.855Z",
+    "expiresAt": "2026-12-08T10:33:47.855Z"
+  }
 }
