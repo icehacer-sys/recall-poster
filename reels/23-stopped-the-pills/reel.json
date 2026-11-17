@@ -1,27 +1,26 @@
 {
   "slug": "23-stopped-the-pills",
   "sourceFolder": "23-stopped-the-pills",
-  "video": "reel-case-23-day-16-recallin.v9.mp4",
-  "cover": "cover-recallin.v8.jpg",
+  "video": "reel-case-23-v9-recallin.mp4",
+  "cover": "cover-recallin.jpg",
   "captionFile": "caption-instagram.txt",
   "caption": "قالت إنها مش محتاجة الدوا.\n\nطب ليه سخنة ومتلخبطة؟\n\nمدام هالة متشخصة بـ Graves' disease وبطلت دوا الغدة من أسبوعين وجت الطوارئ وعندها fever و agitation و tachyarrhythmia و confusion.\n\nهتعمل إيه دلوقتي؟\n\nA. نبدأ العلاج على طول\nB. نستنى نتيجة التحاليل الأول\nC. نعمل radioiodine uptake test الأول\n\nاكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي سهران في الطوارئ الليلة 🌡️\n\n#طلبة_طب #باطنة",
-  "postAt": "2026-11-19T19:00:00.000Z",
-  "postAtCairo": "Thu 19 Nov 2026 21:00 Africa/Cairo",
+  "postAt": "2026-11-29T19:00:00.000Z",
+  "postAtCairo": "Sun 29 Nov 2026 21:00 Africa/Cairo",
   "thumbOffsetMs": 0,
   "shareToFeed": true,
-  "storyDay": "day-16",
-  "videoBytes": 66628966,
-  "videoSha256": "3b03420402803be2",
-  "draft": true,
+  "videoBytes": 54115677,
+  "videoSha256": "55ae5e3ebc50c62e",
+  "draft": false,
+  "note": "Seat 4 17 Nov 2026: v9 rebuild (rules A to D, eleven_v4); owner approved in chat 17 Nov (\"all approved but case 32\"). Owner schedule: Sun 29 Nov 2026 21:00 on IG and YouTube. On screen حالة 28.",
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "23-stopped-the-pills/20261115T181031-reel-case-23-day-16-recallin.v9.mp4",
-    "coverPath": "23-stopped-the-pills/20261115T181031-cover-recallin.v8.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/23-stopped-the-pills/20261115T181031-reel-case-23-day-16-recallin.v9.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzIzLXN0b3BwZWQtdGhlLXBpbGxzLzIwMjYxMTE1VDE4MTAzMS1yZWVsLWNhc2UtMjMtZGF5LTE2LXJlY2FsbGluLnY5Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQ3NjYyNjksImV4cCI6MTc5NTk3NTg2OX0.enFKSLQ06owkwtT7Fr-0OWzLCC_d4lkomJi9a5OoU1c",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/23-stopped-the-pills/20261115T181031-cover-recallin.v8.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzIzLXN0b3BwZWQtdGhlLXBpbGxzLzIwMjYxMTE1VDE4MTAzMS1jb3Zlci1yZWNhbGxpbi52OC5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk0NzY2MjcwLCJleHAiOjE3OTU5NzU4NzB9.0JyCNUoJI9bdhrquxPgjvBHHRLUPQVYGdmWZor_TdOM",
-    "videoBytes": 66628966,
-    "uploadedAt": "2026-11-15T18:11:11.221Z",
-    "expiresAt": "2026-11-29T18:10:11.221Z"
-  },
-  "holdNote": "Seat 4 16 Nov 2026: held. Owner via seat 1 (11:55): remake from scratch on the v9 pipeline at 100 to 110 s; no old or forced cut posts. New postAt set when the remake is uploaded."
+    "videoPath": "23-stopped-the-pills/20261117T103525-reel-case-23-v9-recallin.mp4",
+    "coverPath": "23-stopped-the-pills/20261117T103525-cover-recallin.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/23-stopped-the-pills/20261117T103525-reel-case-23-v9-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzIzLXN0b3BwZWQtdGhlLXBpbGxzLzIwMjYxMTE3VDEwMzUyNS1yZWVsLWNhc2UtMjMtdjktcmVjYWxsaW4ubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NDkxMTc0OSwiZXhwIjoxNzk2NzI2MTQ5fQ.mdau918RmbTdLOt2QRCix2XbF1MajPLgwxux7ecP4Og",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/23-stopped-the-pills/20261117T103525-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzIzLXN0b3BwZWQtdGhlLXBpbGxzLzIwMjYxMTE3VDEwMzUyNS1jb3Zlci1yZWNhbGxpbi5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk0OTExNzUwLCJleHAiOjE3OTY3MjYxNTB9.6odA0ZFO42xg86y5lrisA9FaqNEUZbB-8R0nzX8MHfI",
+    "videoBytes": 54115677,
+    "uploadedAt": "2026-11-17T10:35:50.365Z",
+    "expiresAt": "2026-12-08T10:34:50.365Z"
+  }
 }
