@@ -1,27 +1,26 @@
 {
   "slug": "28-the-pain-is-inside",
   "sourceFolder": "28-the-pain-is-inside",
-  "video": "reel-case-28-day-21-recallin.v9.mp4",
-  "cover": "cover-recallin.v8.jpg",
+  "video": "reel-case-28-v9-recallin.mp4",
+  "cover": "cover-recallin.jpg",
   "captionFile": "caption-instagram.txt",
   "caption": "مبيوجعش لما تدوس طب ليه بيتوجع كده؟\n\nأستاذ مجدي عنده 60 سنة ومتشخص بـ atrial fibrillation وبياخد warfarin والوجع مسكه فجأة في بطنه كلها وعنده soft abdomen من غير tenderness و absent bowel sounds والـ INR 1.3.\n\nتفتكر عنده إيه؟\n\nA. acute pancreatitis\nB. acute mesenteric ischaemia\nC. retroperitoneal haematoma\n\nاكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي سهران في الطوارئ الليلة 🩺\n\n#طلبة_طب #جراحة",
-  "postAt": "2026-11-23T19:00:00.000Z",
-  "postAtCairo": "Mon 23 Nov 2026 21:00 Africa/Cairo",
+  "postAt": "2026-12-05T19:00:00.000Z",
+  "postAtCairo": "Sat 5 Dec 2026 21:00 Africa/Cairo",
   "thumbOffsetMs": 0,
   "shareToFeed": true,
-  "storyDay": "day-21",
-  "videoBytes": 75810419,
-  "videoSha256": "68995466d04b7706",
-  "draft": true,
+  "videoBytes": 56703798,
+  "videoSha256": "10f24ea8ad42cb4d",
+  "draft": false,
+  "note": "Seat 4 17 Nov 2026: v9 rebuild (rules A to D, eleven_v4); owner approved in chat 17 Nov (\"all approved but case 32\"). Owner schedule: Sat 5 Dec 2026 21:00 on IG and YouTube. On screen حالة 31.",
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "28-the-pain-is-inside/20261115T181142-reel-case-28-day-21-recallin.v9.mp4",
-    "coverPath": "28-the-pain-is-inside/20261115T181142-cover-recallin.v8.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/28-the-pain-is-inside/20261115T181142-reel-case-28-day-21-recallin.v9.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI4LXRoZS1wYWluLWlzLWluc2lkZS8yMDI2MTExNVQxODExNDItcmVlbC1jYXNlLTI4LWRheS0yMS1yZWNhbGxpbi52OS5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk0NzY2MzM5LCJleHAiOjE3OTU5NzU5Mzl9.ufgCnXyugxe75qbQPBXG8553ZnWaewqKVCLV9QGN_gg",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/28-the-pain-is-inside/20261115T181142-cover-recallin.v8.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI4LXRoZS1wYWluLWlzLWluc2lkZS8yMDI2MTExNVQxODExNDItY292ZXItcmVjYWxsaW4udjguanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NDc2NjM0MCwiZXhwIjoxNzk1OTc1OTQwfQ.Az_mS0Uoem4pL-mRWUp9f0Vh0DwKyaQaQuB8BIGJO_M",
-    "videoBytes": 75810419,
-    "uploadedAt": "2026-11-15T18:12:20.278Z",
-    "expiresAt": "2026-11-29T18:11:20.278Z"
-  },
-  "holdNote": "Seat 4 16 Nov 2026: held. Owner via seat 1 (11:55): remake from scratch on the v9 pipeline at 100 to 110 s; no old or forced cut posts. New postAt set when the remake is uploaded."
+    "videoPath": "28-the-pain-is-inside/20261117T103841-reel-case-28-v9-recallin.mp4",
+    "coverPath": "28-the-pain-is-inside/20261117T103841-cover-recallin.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/28-the-pain-is-inside/20261117T103841-reel-case-28-v9-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI4LXRoZS1wYWluLWlzLWluc2lkZS8yMDI2MTExN1QxMDM4NDEtcmVlbC1jYXNlLTI4LXY5LXJlY2FsbGluLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQ5MTE5NDUsImV4cCI6MTc5NjcyNjM0NX0.OTUbaMiUzo2TFHgOj0BncXUwN3mKqG7fAXMIsHBDcVs",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/28-the-pain-is-inside/20261117T103841-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI4LXRoZS1wYWluLWlzLWluc2lkZS8yMDI2MTExN1QxMDM4NDEtY292ZXItcmVjYWxsaW4uanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NDkxMTk0NSwiZXhwIjoxNzk2NzI2MzQ1fQ.r0n_GbAMgy7ZIxNx3DWpvkDWrdeXNewYZpzglX6kfzg",
+    "videoBytes": 56703798,
+    "uploadedAt": "2026-11-17T10:39:06.241Z",
+    "expiresAt": "2026-12-08T10:38:06.241Z"
+  }
 }
