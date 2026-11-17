@@ -1,5 +1,5 @@
 {
-  "title": "حالة 22: \"يا دكتور قلبي مش راضي يهدى وأنا قاعدة مكاني!\"…",
+  "title": "حالة 27: \"يا دكتور قلبي مش راضي يهدى وأنا قاعدة مكاني!\"…",
   "description": "زميلي قال دي rapid AF… بس أنا مكنتش مطمن 🫀\n\nمدام نهى عندها خمسة وتلاتين سنة وفجأة قلبها ابتدى يدق بسرعة والضغط normal\n\nالـ ECG طلع narrow complex tachycardia حوالي ميتين والـ rhythm regular ومفيش P waves. تفتكر عندها إيه؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي عنده باطنة 🩺\n\nاللينك في القناة 🔗\n\n#طلبة_طب #باطنة",
   "tags": [
     "medstudent",
@@ -9,8 +9,8 @@
     "medical student",
     "clinical case"
   ],
-  "publishAt": "2026-11-18T19:00:00.000Z",
-  "publishAtCairo": "Wed 18 Nov 2026 21:00 Africa/Cairo",
+  "publishAt": "2026-11-27T19:00:00.000Z",
+  "publishAtCairo": "Fri 27 Nov 2026 21:00 Africa/Cairo",
   "categoryId": "27",
   "defaultLanguage": "ar",
   "defaultAudioLanguage": "ar",
@@ -20,23 +20,22 @@
   "notifySubscribers": true,
   "caseNumber": "22",
   "approved": true,
-  "durationSec": 124.6,
+  "durationSec": 112,
   "width": 1080,
   "height": 1920,
   "video": {
-    "file": "W:/Recall Engine Review/reels-week1-20261023/READY-TO-SCHEDULE/22-heart-wont-settle/reel-case-22-day-15-recallin.v9.mp4",
-    "bytes": 61777730,
-    "sha256": "56df2ea44453e6bce66d10a20a77afb635ba97831a06e36fd37b9541f7d26d9d",
+    "file": "W:/Recall Engine Promo/case-reels-audit-20261109/case22-v9/out/reel-case-22-v9-yt.mp4",
+    "bytes": 53961936,
+    "sha256": "4f8ff1b4c3ddad44e86ee17f7040ec05f25044737b7059c0b7d63ed59a709d3a",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/22-heart-wont-settle/20261115T181824-reel-case-22-day-15-recallin.v9.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/22-heart-wont-settle/20261115T181824-reel-case-22-day-15-recallin.v9.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjItaGVhcnQtd29udC1zZXR0bGUvMjAyNjExMTVUMTgxODI0LXJlZWwtY2FzZS0yMi1kYXktMTUtcmVjYWxsaW4udjkubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NDc2NjczNCwiZXhwIjoxNzk1OTc2MzM0fQ.Zg8AF9SeZN6BDWjwBi0bMor-NAa8JKx9YH8yoj8_oLI",
-      "videoBytes": 61777730,
-      "uploadedAt": "2026-11-15T18:18:54.000Z",
-      "expiresAt": "2026-11-29T18:17:54.000Z"
+      "videoPath": "youtube/22-heart-wont-settle/20261117T103455-reel-case-22-v9-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/22-heart-wont-settle/20261117T103455-reel-case-22-v9-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjItaGVhcnQtd29udC1zZXR0bGUvMjAyNjExMTdUMTAzNDU1LXJlZWwtY2FzZS0yMi12OS15dC5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk0OTExNzE3LCJleHAiOjE3OTY3MjYxMTd9.Gs6Gdew85aHies9zodbnnOmQMmmA_Ec4-9pRA9MSapU",
+      "videoBytes": 53961936,
+      "uploadedAt": "2026-11-17T10:35:18.063Z",
+      "expiresAt": "2026-12-08T10:34:18.063Z"
     }
   },
   "slug": "22-heart-wont-settle",
-  "note": "Seat 4 7 Nov: v2 YouTube cut; title, description, and tags from the case script YouTube block; burned-in number kept (owner via seat 1: YouTube skips 21); titles approved by the owner in chat on 7 Nov (\"Ok titles\").",
-  "skip": true
+  "note": "Seat 4 17 Nov 2026: v9 YouTube cut; number حالة 27 by post order (owner 16 Nov 12:06). Seat 4 7 Nov: v2 YouTube cut; title, description, and tags from the case script YouTube block; burned-in number kept (owner via seat 1: YouTube skips 21); titles approved by the owner in chat on 7 Nov (\"Ok titles\")."
 }
