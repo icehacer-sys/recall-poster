@@ -1,27 +1,26 @@
 {
   "slug": "24-he-always-wakes-up",
   "sourceFolder": "24-he-always-wakes-up",
-  "video": "reel-case-24-day-17-recallin.v9.mp4",
-  "cover": "cover-recallin.v8.jpg",
+  "video": "reel-case-24-v9-recallin.mp4",
+  "cover": "cover-recallin.jpg",
   "captionFile": "caption-instagram.txt",
   "caption": "كل مرة بيفوق لوحده طب ليه المرة دي لأ؟\n\nأستاذ وليد متشخص بـ epilepsy ونسي الدوا يومين وجاتله تشنجات في البيت وتاني في الإسعاف ومفاقش بينهم والسكر طلع كويس.\n\nهتديله إيه دلوقتي؟\n\nA. IV levetiracetam\nB. IM midazolam\nC. نستنى يفوق لوحده\n\nاكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي عنده neuro 🧠\n\n#طلبة_طب #مخ_وأعصاب",
-  "postAt": "2026-11-21T19:00:00.000Z",
-  "postAtCairo": "Sat 21 Nov 2026 21:00 Africa/Cairo",
+  "postAt": "2026-12-01T19:00:00.000Z",
+  "postAtCairo": "Tue 1 Dec 2026 21:00 Africa/Cairo",
   "thumbOffsetMs": 0,
   "shareToFeed": true,
-  "storyDay": "day-17",
-  "videoBytes": 62996720,
-  "videoSha256": "bcfcb777a2507ef7",
-  "draft": true,
+  "videoBytes": 56957370,
+  "videoSha256": "fe974044a927ddd6",
+  "draft": false,
+  "note": "Seat 4 17 Nov 2026: v9 rebuild (rules A to D, eleven_v4); owner approved in chat 17 Nov (\"all approved but case 32\"). Owner schedule: Tue 1 Dec 2026 21:00 on IG and YouTube. On screen حالة 29.",
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "24-he-always-wakes-up/20261115T181111-reel-case-24-day-17-recallin.v9.mp4",
-    "coverPath": "24-he-always-wakes-up/20261115T181111-cover-recallin.v8.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/24-he-always-wakes-up/20261115T181111-reel-case-24-day-17-recallin.v9.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI0LWhlLWFsd2F5cy13YWtlcy11cC8yMDI2MTExNVQxODExMTEtcmVlbC1jYXNlLTI0LWRheS0xNy1yZWNhbGxpbi52OS5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk0NzY2MzAxLCJleHAiOjE3OTU5NzU5MDF9.oJj2Yy-KQTrLmUFU8J7hS9Vx01ogTw_nnLz3v7JZqPk",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/24-he-always-wakes-up/20261115T181111-cover-recallin.v8.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI0LWhlLWFsd2F5cy13YWtlcy11cC8yMDI2MTExNVQxODExMTEtY292ZXItcmVjYWxsaW4udjguanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NDc2NjMwMiwiZXhwIjoxNzk1OTc1OTAyfQ.qmkYg3a5K_8lh73fvT0f9MJch3RtlalRU5Daed76gzU",
-    "videoBytes": 62996720,
-    "uploadedAt": "2026-11-15T18:11:42.769Z",
-    "expiresAt": "2026-11-29T18:10:42.769Z"
-  },
-  "holdNote": "Seat 4 16 Nov 2026: held. Owner via seat 1 (11:55): remake from scratch on the v9 pipeline at 100 to 110 s; no old or forced cut posts. New postAt set when the remake is uploaded."
+    "videoPath": "24-he-always-wakes-up/20261117T103627-reel-case-24-v9-recallin.mp4",
+    "coverPath": "24-he-always-wakes-up/20261117T103627-cover-recallin.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/24-he-always-wakes-up/20261117T103627-reel-case-24-v9-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI0LWhlLWFsd2F5cy13YWtlcy11cC8yMDI2MTExN1QxMDM2MjctcmVlbC1jYXNlLTI0LXY5LXJlY2FsbGluLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQ5MTE4MTMsImV4cCI6MTc5NjcyNjIxM30.pW_l-STDSlVL5ksY4X9k6S38Gb3Fot_REVFA4MbmScg",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/24-he-always-wakes-up/20261117T103627-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI0LWhlLWFsd2F5cy13YWtlcy11cC8yMDI2MTExN1QxMDM2MjctY292ZXItcmVjYWxsaW4uanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NDkxMTgxNCwiZXhwIjoxNzk2NzI2MjE0fQ.ixR7jmm2HyHhr-52BHSazFQfZ8JD9Mpcc7U0b-zd71g",
+    "videoBytes": 56957370,
+    "uploadedAt": "2026-11-17T10:36:55.014Z",
+    "expiresAt": "2026-12-08T10:35:55.014Z"
+  }
 }
