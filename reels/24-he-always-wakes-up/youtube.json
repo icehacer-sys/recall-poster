@@ -1,5 +1,5 @@
 {
-  "title": "حالة 24: \"سيبوه يا دكتور\"…",
+  "title": "حالة 29: \"سيبوه يا دكتور\"…",
   "description": "مدام منى متأكدة إنه هيفوق لوحده زي كل مرة… بس المرة دي غير 🧠\n\nأستاذ وليد متشخص بـ epilepsy ونسي الدوا يومين. جاتله تشنجات في البيت وتاني في الإسعاف ومفاقش بينهم\n\nالـ airway اتأمن والسكر طلع كويس والـ cannula اتركبت. هتديله إيه دلوقتي؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي عنده neuro 🧠\n\nاللينك في القناة 🔗\n\n#طلبة_طب #مخ_وأعصاب",
   "tags": [
     "medstudent",
@@ -9,8 +9,8 @@
     "medical student",
     "clinical case"
   ],
-  "publishAt": "2026-11-20T19:00:00.000Z",
-  "publishAtCairo": "Fri 20 Nov 2026 21:00 Africa/Cairo",
+  "publishAt": "2026-12-01T19:00:00.000Z",
+  "publishAtCairo": "Tue 1 Dec 2026 21:00 Africa/Cairo",
   "categoryId": "27",
   "defaultLanguage": "ar",
   "defaultAudioLanguage": "ar",
@@ -20,23 +20,22 @@
   "notifySubscribers": true,
   "caseNumber": "24",
   "approved": true,
-  "durationSec": 127.02,
+  "durationSec": 115,
   "width": 1080,
   "height": 1920,
   "video": {
-    "file": "W:/Recall Engine Review/reels-week1-20261023/READY-TO-SCHEDULE/24-he-always-wakes-up/reel-case-24-day-17-recallin.v9-yt.mp4",
-    "bytes": 63001877,
-    "sha256": "a6edac53e48c3ee3e30c7a9b53728822b1ba854b56357b0b800da19383d7a270",
+    "file": "W:/Recall Engine Promo/case-reels-audit-20261109/case24-v9/out/reel-case-24-v9-yt.mp4",
+    "bytes": 56860332,
+    "sha256": "1558357fc2769bd72da4cff6a3c438da6e7dda1c22ac7fc53357fd53a2a994c2",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/24-he-always-wakes-up/20261115T185642-reel-case-24-day-17-recallin.v9-yt.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/24-he-always-wakes-up/20261115T185642-reel-case-24-day-17-recallin.v9-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjQtaGUtYWx3YXlzLXdha2VzLXVwLzIwMjYxMTE1VDE4NTY0Mi1yZWVsLWNhc2UtMjQtZGF5LTE3LXJlY2FsbGluLnY5LXl0Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQ3NjkwMjgsImV4cCI6MTc5NTk3ODYyOH0.NVlNp4sBHbKTbyCxD928xazrxZzaISu2N-IejzGccLM",
-      "videoBytes": 63001877,
-      "uploadedAt": "2026-11-15T18:57:08.485Z",
-      "expiresAt": "2026-11-29T18:56:08.485Z"
+      "videoPath": "youtube/24-he-always-wakes-up/20261117T103702-reel-case-24-v9-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/24-he-always-wakes-up/20261117T103702-reel-case-24-v9-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjQtaGUtYWx3YXlzLXdha2VzLXVwLzIwMjYxMTE3VDEwMzcwMi1yZWVsLWNhc2UtMjQtdjkteXQubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NDkxMTg0OCwiZXhwIjoxNzk2NzI2MjQ4fQ.MY1r4xNb5YVOGihL_AZhh1OWnUu_Kl33EYjFqiaHuNk",
+      "videoBytes": 56860332,
+      "uploadedAt": "2026-11-17T10:37:28.245Z",
+      "expiresAt": "2026-12-08T10:36:28.245Z"
     }
   },
   "slug": "24-he-always-wakes-up",
-  "note": "Seat 4 7 Nov: v2 YouTube cut; title, description, and tags from the case script YouTube block; burned-in number kept (owner via seat 1: YouTube skips 21); titles approved by the owner in chat on 7 Nov (\"Ok titles\").",
-  "skip": true
+  "note": "Seat 4 17 Nov 2026: v9 YouTube cut; number حالة 29 by post order (owner 16 Nov 12:06). Seat 4 7 Nov: v2 YouTube cut; title, description, and tags from the case script YouTube block; burned-in number kept (owner via seat 1: YouTube skips 21); titles approved by the owner in chat on 7 Nov (\"Ok titles\")."
 }
