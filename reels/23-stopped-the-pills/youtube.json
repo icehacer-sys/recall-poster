@@ -1,5 +1,5 @@
 {
-  "title": "حالة 23: \"أنا مش محتاجة دوا الغدة يا دكتور... بطلته من أسبوعين!\"…",
+  "title": "حالة 28: \"أنا مش محتاجة دوا الغدة يا دكتور... بطلته من أسبوعين!\"…",
   "description": "مدام هالة حست إنها مش محتاجة دوا الغدة… بس بنتها جابتها الطوارئ 🌡️\n\nمتشخصة بـ Graves disease وسخنة من الصبح ومش بتهدى. لما كشفت عليها لقيت عندها fever و agitation و tachyarrhythmia و confusion.\n\nسحبنا التحاليل وزميلي قال نستنى النتيجة. هتعمل إيه؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لصاحبك اللي عنده باطنة 🩺\n\nاللينك في القناة 🔗\n\n#طلبة_طب #باطنة",
   "tags": [
     "medstudent",
@@ -9,8 +9,8 @@
     "medical student",
     "clinical case"
   ],
-  "publishAt": "2026-11-19T19:00:00.000Z",
-  "publishAtCairo": "Thu 19 Nov 2026 21:00 Africa/Cairo",
+  "publishAt": "2026-11-29T19:00:00.000Z",
+  "publishAtCairo": "Sun 29 Nov 2026 21:00 Africa/Cairo",
   "categoryId": "27",
   "defaultLanguage": "ar",
   "defaultAudioLanguage": "ar",
@@ -20,23 +20,22 @@
   "notifySubscribers": true,
   "caseNumber": "23",
   "approved": true,
-  "durationSec": 131.17,
+  "durationSec": 107,
   "width": 1080,
   "height": 1920,
   "video": {
-    "file": "W:/Recall Engine Review/reels-week1-20261023/READY-TO-SCHEDULE/23-stopped-the-pills/reel-case-23-day-16-recallin.v9-yt.mp4",
-    "bytes": 66737418,
-    "sha256": "b53b1ec71f18203825b45879ebca8bffb9aadd369695d697f5f3eb660fe70ee2",
+    "file": "W:/Recall Engine Promo/case-reels-audit-20261109/case23-v9/out/reel-case-23-v9-yt.mp4",
+    "bytes": 52751104,
+    "sha256": "f4aa40bcd87e16e439701f682d345cdf3889760cf269c53a8c20136c0fbada4b",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/23-stopped-the-pills/20261115T185608-reel-case-23-day-16-recallin.v9-yt.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/23-stopped-the-pills/20261115T185608-reel-case-23-day-16-recallin.v9-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjMtc3RvcHBlZC10aGUtcGlsbHMvMjAyNjExMTVUMTg1NjA4LXJlZWwtY2FzZS0yMy1kYXktMTYtcmVjYWxsaW4udjkteXQubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NDc2OTAwMiwiZXhwIjoxNzk1OTc4NjAyfQ.aY9z2zCbrVnhxvEDCrMq1zoLNvBtSob9-GOTc2DW4tY",
-      "videoBytes": 66737418,
-      "uploadedAt": "2026-11-15T18:56:42.501Z",
-      "expiresAt": "2026-11-29T18:55:42.501Z"
+      "videoPath": "youtube/23-stopped-the-pills/20261117T103557-reel-case-23-v9-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/23-stopped-the-pills/20261117T103557-reel-case-23-v9-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjMtc3RvcHBlZC10aGUtcGlsbHMvMjAyNjExMTdUMTAzNTU3LXJlZWwtY2FzZS0yMy12OS15dC5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk0OTExNzc5LCJleHAiOjE3OTY3MjYxNzl9.IoWSw8M8uAp6LDQudoCj2l7tuXURHEwf8pquimxmQq0",
+      "videoBytes": 52751104,
+      "uploadedAt": "2026-11-17T10:36:19.717Z",
+      "expiresAt": "2026-12-08T10:35:19.717Z"
     }
   },
   "slug": "23-stopped-the-pills",
-  "note": "Seat 4 7 Nov: v2 YouTube cut; title, description, and tags from the case script YouTube block; burned-in number kept (owner via seat 1: YouTube skips 21); titles approved by the owner in chat on 7 Nov (\"Ok titles\").",
-  "skip": true
+  "note": "Seat 4 17 Nov 2026: v9 YouTube cut; number حالة 28 by post order (owner 16 Nov 12:06). Seat 4 7 Nov: v2 YouTube cut; title, description, and tags from the case script YouTube block; burned-in number kept (owner via seat 1: YouTube skips 21); titles approved by the owner in chat on 7 Nov (\"Ok titles\")."
 }
