@@ -1,6 +1,6 @@
 {
   "_quota": {
-    "day": "2026-11-16",
+    "day": "2026-11-17",
     "units": 3,
     "uploads": 1
   },
@@ -256,6 +256,18 @@
     "publishAtSent": "2026-11-16T17:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-11-16T17:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:92-knuckle-crack-v2": {
+    "videoId": "BfKv6DGD_9o",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-11-17T13:21:05.088Z",
+    "slotAt": "2026-11-17T17:00:00.000Z",
+    "titleSent": "لما بتطرقع صوابعك الصوت ده مش عضم بيخبط في عضم",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-11-17T17:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-11-17T17:00:00Z",
     "uploadStatusSeen": "uploaded"
   }
 }
