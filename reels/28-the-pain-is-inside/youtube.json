@@ -1,5 +1,5 @@
 {
-  "title": "حالة 25: \"دوس يا دكتور مبيوجعش... الوجع من جوه!\"…",
+  "title": "حالة 31: \"دوس يا دكتور مبيوجعش... الوجع من جوه!\"…",
   "description": "أستاذ مجدي قال للدكتور دوس مبيوجعش… بس الوجع من جوه 😣\n\nعنده ستين سنة ومتشخص بـ atrial fibrillation وبياخد warfarin. الوجع مسكه فجأة في بطنه كلها ووصل لآخره في ثواني\n\nلقيت soft abdomen من غير tenderness و absent bowel sounds والـ INR واحد فاصل تلاتة. تفتكر عنده إيه؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لحد عنده امتحان surgery 🩺\n\nاللينك في القناة 🔗\n\n#طلبة_طب #جراحة",
   "tags": [
     "medstudent",
@@ -9,8 +9,8 @@
     "medical student",
     "clinical case"
   ],
-  "publishAt": "2026-11-21T19:00:00.000Z",
-  "publishAtCairo": "Sat 21 Nov 2026 21:00 Africa/Cairo",
+  "publishAt": "2026-12-05T19:00:00.000Z",
+  "publishAtCairo": "Sat 5 Dec 2026 21:00 Africa/Cairo",
   "categoryId": "27",
   "defaultLanguage": "ar",
   "defaultAudioLanguage": "ar",
@@ -20,23 +20,22 @@
   "notifySubscribers": true,
   "caseNumber": "28",
   "approved": true,
-  "durationSec": 148.6,
+  "durationSec": 111,
   "width": 1080,
   "height": 1920,
   "video": {
-    "file": "W:/Recall Engine Review/reels-week1-20261023/READY-TO-SCHEDULE/28-the-pain-is-inside/reel-case-28-day-21-recallin.v9.mp4",
-    "bytes": 75810419,
-    "sha256": "68995466d04b77061171d314754af8b309da7580be1900d79df3546123e41d1e",
+    "file": "W:/Recall Engine Promo/case-reels-audit-20261109/case28-v9/out/reel-case-28-v9-yt.mp4",
+    "bytes": 55271887,
+    "sha256": "d9b609feecb0559c95e6df2a5a0a30fe92866200f4712f47fe8bf2edc03e7ce1",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/28-the-pain-is-inside/20261115T181854-reel-case-28-day-21-recallin.v9.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/28-the-pain-is-inside/20261115T181854-reel-case-28-day-21-recallin.v9.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjgtdGhlLXBhaW4taXMtaW5zaWRlLzIwMjYxMTE1VDE4MTg1NC1yZWVsLWNhc2UtMjgtZGF5LTIxLXJlY2FsbGluLnY5Lm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQ3NjY3NjksImV4cCI6MTc5NTk3NjM2OX0.q0H48ANJOn10nNBeUdLiAOFG2NxZIyuvgPVbW4VcGaU",
-      "videoBytes": 75810419,
-      "uploadedAt": "2026-11-15T18:19:29.297Z",
-      "expiresAt": "2026-11-29T18:18:29.297Z"
+      "videoPath": "youtube/28-the-pain-is-inside/20261117T103925-reel-case-28-v9-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/28-the-pain-is-inside/20261117T103925-reel-case-28-v9-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjgtdGhlLXBhaW4taXMtaW5zaWRlLzIwMjYxMTE3VDEwMzkyNS1yZWVsLWNhc2UtMjgtdjkteXQubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NDkxMTk4OCwiZXhwIjoxNzk2NzI2Mzg4fQ.MSDi6ZHn3JSB9P1gjdx-Sr4TLB9lTVwpG1lhkrGPZGA",
+      "videoBytes": 55271887,
+      "uploadedAt": "2026-11-17T10:39:48.915Z",
+      "expiresAt": "2026-12-08T10:38:48.915Z"
     }
   },
   "slug": "28-the-pain-is-inside",
-  "note": "Seat 4 7 Nov: v2 YouTube cut; title, description, and tags from the case script YouTube block; burned-in number kept (owner via seat 1: YouTube skips 21); titles approved by the owner in chat on 7 Nov (\"Ok titles\").",
-  "skip": true
+  "note": "Seat 4 17 Nov 2026: v9 YouTube cut; number حالة 31 by post order (owner 16 Nov 12:06). Seat 4 7 Nov: v2 YouTube cut; title, description, and tags from the case script YouTube block; burned-in number kept (owner via seat 1: YouTube skips 21); titles approved by the owner in chat on 7 Nov (\"Ok titles\")."
 }
