@@ -43,5 +43,6 @@
     "name": "العربية"
   },
   "slug": "19-the-spoon-can-wait",
-  "note": "Seat 4 29 Oct: v5 YouTube cut (owner-approved rewrite, seat 3 final voice, @recallengineapp). Title and description by seat 1 (owner quote style); approved true per seat 1 05:52. Moved from Tue 18:00 to the 21:00 case-reel slot (owner pre-approval via seat 1, 16 Nov 03:29)."
+  "note": "Seat 4 29 Oct: v5 YouTube cut (owner-approved rewrite, seat 3 final voice, @recallengineapp). Title and description by seat 1 (owner quote style); approved true per seat 1 05:52. Moved from Tue 18:00 to the 21:00 case-reel slot (owner pre-approval via seat 1, 16 Nov 03:29). | 18 Nov 2026 seat 2: skip true (owner: \"Yes, cancel it\"; the YouTube cut is the old version). Cancels the 21:00 Cairo publish; the video stays private.",
+  "skip": true
 }
