@@ -1,7 +1,7 @@
 {
   "slug": "12b-case21-kofta-v10",
   "sourceFolder": "12-can-i-order-kofta",
-  "video": "reel-case-21-day-14-recallin.v10.mp4",
+  "video": "reel-case-21-day-14-recallin.v10-hook.mp4",
   "cover": "cover-recallin.v8.jpg",
   "captionFile": "caption-instagram.v5.txt",
   "caption": "أول تحليل طلع كويس… وأستاذ شريف بيقول إنه خف 😌\n\nأستاذ شريف عنده DKA وعلى سبعة بدأناله الـ insulin.\n\nأول potassium طلع أربعة فاصل تسعة وبعدها بساعتين نزل لتلاتة فاصل تمانية\n\nوأستاذ شريف لسه على الـ insulin.\n\nالـ insulin نفسه نزل الـ potassium إزاي؟ اكتب إجابتك في الكومنت 👇\n\nابعتها لحد عنده امتحان باطنة 💉\n\nاللينك في صفحتنا 🔗\n\n#طلبة_طب #باطنة",
@@ -10,19 +10,19 @@
   "thumbOffsetMs": 0,
   "shareToFeed": true,
   "storyDay": "day-05",
-  "videoBytes": 54086325,
-  "videoSha256": "36ca260d986d3f38",
+  "videoBytes": 54069029,
+  "videoSha256": "4405123f249bcbc6",
   "draft": false,
+  "manual": true,
+  "note": "YouTube-only entry (owner 18 Nov 2026 \"Yes, upload v10\"): the v10 case 21 render that Instagram posted on 15 Nov under 12-can-i-order-kofta. manual true: the Instagram bot never publishes it.",
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "12-can-i-order-kofta/20261115T110824-reel-case-21-day-14-recallin.v10.mp4",
-    "coverPath": "12-can-i-order-kofta/20261115T110824-cover-recallin.v8.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/12-can-i-order-kofta/20261115T110824-reel-case-21-day-14-recallin.v10.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzEyLWNhbi1pLW9yZGVyLWtvZnRhLzIwMjYxMTE1VDExMDgyNC1yZWVsLWNhc2UtMjEtZGF5LTE0LXJlY2FsbGluLnYxMC5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk0NzQwOTI5LCJleHAiOjE3OTUzNDU3Mjl9.z8xq5RW47g59kjpHRSthqCrpSm05tZj6NDcWnsL_r1c",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/12-can-i-order-kofta/20261115T110824-cover-recallin.v8.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzEyLWNhbi1pLW9yZGVyLWtvZnRhLzIwMjYxMTE1VDExMDgyNC1jb3Zlci1yZWNhbGxpbi52OC5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk0NzQwOTMwLCJleHAiOjE3OTUzNDU3MzB9.dCIWM0wrGnQR4l-VU4hVw8puzG9SFhBTNlSZgtbNqNo",
-    "videoBytes": 54086325,
-    "uploadedAt": "2026-11-15T11:08:50.690Z",
-    "expiresAt": "2026-11-22T11:07:50.690Z"
-  },
-  "manual": true,
-  "note": "YouTube-only entry (owner 18 Nov 2026 \"Yes, upload v10\"): the v10 case 21 render that Instagram posted on 15 Nov under 12-can-i-order-kofta. manual true: the Instagram bot never publishes it."
+    "videoPath": "12b-case21-kofta-v10/20261118T222930-reel-case-21-day-14-recallin.v10-hook.mp4",
+    "coverPath": "12b-case21-kofta-v10/20261118T222930-cover-recallin.v8.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/12b-case21-kofta-v10/20261118T222930-reel-case-21-day-14-recallin.v10-hook.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzEyYi1jYXNlMjEta29mdGEtdjEwLzIwMjYxMTE4VDIyMjkzMC1yZWVsLWNhc2UtMjEtZGF5LTE0LXJlY2FsbGluLnYxMC1ob29rLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTUwNDA5OTgsImV4cCI6MTc5NTY0NTc5OH0.wqFgEpxeDc9iPGIhGFJk8TyXvCIMAgHKzYxQQCmswPw",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/12b-case21-kofta-v10/20261118T222930-cover-recallin.v8.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzEyYi1jYXNlMjEta29mdGEtdjEwLzIwMjYxMTE4VDIyMjkzMC1jb3Zlci1yZWNhbGxpbi52OC5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MDQwOTk5LCJleHAiOjE3OTU2NDU3OTl9.jyWpZQsv7uFsLes2uKrsbLEsA96hB2-Q3u7tOhxprt8",
+    "videoBytes": 54069029,
+    "uploadedAt": "2026-11-18T22:29:57.766Z",
+    "expiresAt": "2026-11-25T22:28:57.766Z"
+  }
 }
