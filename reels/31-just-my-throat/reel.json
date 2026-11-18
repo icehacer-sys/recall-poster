@@ -9,18 +9,18 @@
   "postAtCairo": "Thu 19 Nov 2026 21:00 Africa/Cairo",
   "thumbOffsetMs": 0,
   "shareToFeed": true,
-  "videoBytes": 51665008,
-  "videoSha256": "4c31c9c1f669488d",
+  "videoBytes": 51667361,
+  "videoSha256": "cc851492228ef12c",
   "draft": false,
-  "note": "Seat 4 17 Nov 2026: v9 rebuild (rules A to D, eleven_v4); owner approved in chat 17 Nov (\"Approve 27, 29, 31\"). Owner schedule 16 Nov 21:22: Sat 21 Nov 2026 21:00 on IG and YouTube. On screen حالة 24. | 18 Nov 2026 seat 2: owner \"everyday should be posted a reel case at 9:00 PM\": one case a day, in case order.",
+  "note": "Seat 4 17 Nov 2026: v9 rebuild (rules A to D, eleven_v4); owner approved in chat 17 Nov (\"Approve 27, 29, 31\"). Owner schedule 16 Nov 21:22: Sat 21 Nov 2026 21:00 on IG and YouTube. On screen حالة 24. | 18 Nov 2026 seat 2: owner \"everyday should be posted a reel case at 9:00 PM\": one case a day, in case order. | 19 Nov 2026 seat 2: Fathy voice fix (owner pick \"4 (remix+EQ)\", then \"Yes, swap it\"): hook2 cut.",
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "31-just-my-throat/20261118T222831-reel-case-31-v9-recallin.mp4",
-    "coverPath": "31-just-my-throat/20261118T222831-cover-recallin.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/31-just-my-throat/20261118T222831-reel-case-31-v9-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzMxLWp1c3QtbXktdGhyb2F0LzIwMjYxMTE4VDIyMjgzMS1yZWVsLWNhc2UtMzEtdjktcmVjYWxsaW4ubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NTA0MDkzOCwiZXhwIjoxNzk1NjQ1NzM4fQ.Sgh9FqX2U9vNx1PCzmSsWvkh7-HLsxMOK5AnY20IpPA",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/31-just-my-throat/20261118T222831-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzMxLWp1c3QtbXktdGhyb2F0LzIwMjYxMTE4VDIyMjgzMS1jb3Zlci1yZWNhbGxpbi5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MDQwOTM5LCJleHAiOjE3OTU2NDU3Mzl9.PRB5QgAbDpBoKDVCN0JxTLqk01ncJfHUV5VqnJ17X_k",
-    "videoBytes": 51665008,
-    "uploadedAt": "2026-11-18T22:28:57.300Z",
-    "expiresAt": "2026-11-25T22:27:57.300Z"
+    "videoPath": "31-just-my-throat/20261118T233955-reel-case-31-v9-recallin.mp4",
+    "coverPath": "31-just-my-throat/20261118T233955-cover-recallin.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/31-just-my-throat/20261118T233955-reel-case-31-v9-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzMxLWp1c3QtbXktdGhyb2F0LzIwMjYxMTE4VDIzMzk1NS1yZWVsLWNhc2UtMzEtdjktcmVjYWxsaW4ubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NTA0NTIyMiwiZXhwIjoxNzk1NjUwMDIyfQ.HaAvNO0x4kgoZYGklZC26L-VxGIJCoxAWgJdxREVnlk",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/31-just-my-throat/20261118T233955-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzMxLWp1c3QtbXktdGhyb2F0LzIwMjYxMTE4VDIzMzk1NS1jb3Zlci1yZWNhbGxpbi5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MDQ1MjIyLCJleHAiOjE3OTU2NTAwMjJ9.DrAjkGTJiZFutlto2Kcl3eVMVMQ5r8LOYOOLNa6Ti8A",
+    "videoBytes": 51667361,
+    "uploadedAt": "2026-11-18T23:40:20.646Z",
+    "expiresAt": "2026-11-25T23:39:20.646Z"
   }
 }
