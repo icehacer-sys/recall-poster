@@ -23,26 +23,11 @@
   "durationSec": 98.6,
   "width": 1080,
   "height": 1920,
-  "video": {
-    "file": "reel-case-19-yt-recallin.mp4",
-    "folder": "19-draft",
-    "bytes": 83211544,
-    "sha256": "d9e1c362d0c0bba9f6eee4743747f5f897e0e583bada6eea82129bd4fff4b997",
-    "media": {
-      "bucket": "ig-reel-media",
-      "videoPath": "youtube/19-the-spoon-can-wait/20261103T144429-reel-case-19-yt-recallin.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/19-the-spoon-can-wait/20261103T144429-reel-case-19-yt-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMTktdGhlLXNwb29uLWNhbi13YWl0LzIwMjYxMTAzVDE0NDQyOS1yZWVsLWNhc2UtMTkteXQtcmVjYWxsaW4ubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzcxNzExMiwiZXhwIjoxNzk1MDk5NTEyfQ.orIi35XPNUmr8VDOfePU8WmyCPioSsmabcUrdqVEkFI",
-      "videoBytes": 83211544,
-      "uploadedAt": "2026-11-03T14:45:08.998Z",
-      "expiresAt": "2026-11-19T14:44:08.998Z"
-    }
-  },
   "captions": {
     "file": "captions-ar.srt",
     "language": "ar",
     "name": "العربية"
   },
   "slug": "19-the-spoon-can-wait",
-  "note": "Seat 4 29 Oct: v5 YouTube cut (owner-approved rewrite, seat 3 final voice, @recallengineapp). Title and description by seat 1 (owner quote style); approved true per seat 1 05:52. Moved from Tue 18:00 to the 21:00 case-reel slot (owner pre-approval via seat 1, 16 Nov 03:29). | 18 Nov 2026 seat 2: skip true (owner: \"Yes, cancel it\"; the YouTube cut is the old version). Cancels the 21:00 Cairo publish; the video stays private.",
-  "skip": true
+  "note": "Seat 4 29 Oct: v5 YouTube cut (owner-approved rewrite, seat 3 final voice, @recallengineapp). Title and description by seat 1 (owner quote style); approved true per seat 1 05:52. Moved from Tue 18:00 to the 21:00 case-reel slot (owner pre-approval via seat 1, 16 Nov 03:29). | 18 Nov 2026 seat 2: skip true (owner: \"Yes, cancel it\"; the YouTube cut is the old version). Cancels the 21:00 Cairo publish; the video stays private. | 18 Nov 2026 19:4x seat 2: owner deleted the old private upload (3 Nov yt cut) and wants the updated version today. The YouTube cut is now the Instagram v8 render (reel.json media); skip removed."
 }
