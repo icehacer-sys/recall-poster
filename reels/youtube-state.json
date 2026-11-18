@@ -1,8 +1,8 @@
 {
   "_quota": {
     "day": "2026-11-18",
-    "units": 3,
-    "uploads": 1
+    "units": 6,
+    "uploads": 2
   },
   "yt:01-copd": {
     "videoId": "c5bXg0YPJ7E",
@@ -280,6 +280,18 @@
     "publishAtSent": "2026-11-18T19:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-11-18T19:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:93-stubbed-toe": {
+    "videoId": "xxlYIayp1ng",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-11-18T16:04:50.903Z",
+    "slotAt": "2026-11-18T17:00:00.000Z",
+    "titleSent": "ليه صباعك الصغير بيوجعك مرتين لما يخبط في السرير؟",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-11-18T17:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-11-18T17:00:00Z",
     "uploadStatusSeen": "uploaded"
   }
 }
