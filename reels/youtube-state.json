@@ -1,8 +1,8 @@
 {
   "_quota": {
     "day": "2026-11-18",
-    "units": 58,
-    "uploads": 2
+    "units": 61,
+    "uploads": 3
   },
   "yt:01-copd": {
     "videoId": "c5bXg0YPJ7E",
@@ -280,6 +280,18 @@
     "publishAtSent": "2026-11-18T17:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-11-18T17:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:19-the-spoon-can-wait": {
+    "videoId": "YyA5N8FYjs4",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-11-18T17:37:04.057Z",
+    "slotAt": "2026-11-18T19:00:00.000Z",
+    "titleSent": "حالة 20: \"افتح بقك يا بابا\"…",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-11-18T19:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-11-18T19:00:00Z",
     "uploadStatusSeen": "uploaded"
   }
 }
