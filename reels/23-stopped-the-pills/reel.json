@@ -9,18 +9,18 @@
   "postAtCairo": "Mon 23 Nov 2026 21:00 Africa/Cairo",
   "thumbOffsetMs": 0,
   "shareToFeed": true,
-  "videoBytes": 54115677,
-  "videoSha256": "55ae5e3ebc50c62e",
+  "videoBytes": 53123769,
+  "videoSha256": "6f07bee498f2427b",
   "draft": false,
-  "note": "Seat 4 17 Nov 2026: v9 rebuild (rules A to D, eleven_v4); owner approved in chat 17 Nov (\"all approved but case 32\"). Owner schedule: Sun 29 Nov 2026 21:00 on IG and YouTube. On screen حالة 28. | 18 Nov 2026 seat 2: owner \"everyday should be posted a reel case at 9:00 PM\": one case a day, in case order.",
+  "note": "Seat 4 17 Nov 2026: v9 rebuild (rules A to D, eleven_v4); owner approved in chat 17 Nov (\"all approved but case 32\"). Owner schedule: Sun 29 Nov 2026 21:00 on IG and YouTube. On screen حالة 28. | 18 Nov 2026 seat 2: owner \"everyday should be posted a reel case at 9:00 PM\": one case a day, in case order. | 19 Nov 2026 seat 2: new opening approved by the owner (\"take 4 / 1st new take approved\"): hook5 cut.",
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "23-stopped-the-pills/20261117T103525-reel-case-23-v9-recallin.mp4",
-    "coverPath": "23-stopped-the-pills/20261117T103525-cover-recallin.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/23-stopped-the-pills/20261117T103525-reel-case-23-v9-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzIzLXN0b3BwZWQtdGhlLXBpbGxzLzIwMjYxMTE3VDEwMzUyNS1yZWVsLWNhc2UtMjMtdjktcmVjYWxsaW4ubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NDkxMTc0OSwiZXhwIjoxNzk2NzI2MTQ5fQ.mdau918RmbTdLOt2QRCix2XbF1MajPLgwxux7ecP4Og",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/23-stopped-the-pills/20261117T103525-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzIzLXN0b3BwZWQtdGhlLXBpbGxzLzIwMjYxMTE3VDEwMzUyNS1jb3Zlci1yZWNhbGxpbi5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk0OTExNzUwLCJleHAiOjE3OTY3MjYxNTB9.6odA0ZFO42xg86y5lrisA9FaqNEUZbB-8R0nzX8MHfI",
-    "videoBytes": 54115677,
-    "uploadedAt": "2026-11-17T10:35:50.365Z",
-    "expiresAt": "2026-12-08T10:34:50.365Z"
+    "videoPath": "23-stopped-the-pills/20261119T021747-reel-case-23-v9-recallin.mp4",
+    "coverPath": "23-stopped-the-pills/20261119T021747-cover-recallin.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/23-stopped-the-pills/20261119T021747-reel-case-23-v9-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzIzLXN0b3BwZWQtdGhlLXBpbGxzLzIwMjYxMTE5VDAyMTc0Ny1yZWVsLWNhc2UtMjMtdjktcmVjYWxsaW4ubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NTA1NDY5MCwiZXhwIjoxNzk1NjU5NDkwfQ.L5p2sdyg0o0yWbGIX-oGO1pEmWBcWIfx46Kr_GyZuXE",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/23-stopped-the-pills/20261119T021747-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzIzLXN0b3BwZWQtdGhlLXBpbGxzLzIwMjYxMTE5VDAyMTc0Ny1jb3Zlci1yZWNhbGxpbi5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MDU0NjkwLCJleHAiOjE3OTU2NTk0OTB9.iNmfLF4_9W42MpGY6NGfOcHWWj85sVQkzKHolnTJ2iA",
+    "videoBytes": 53123769,
+    "uploadedAt": "2026-11-19T02:18:11.440Z",
+    "expiresAt": "2026-11-26T02:17:11.440Z"
   }
 }

@@ -9,18 +9,18 @@
   "postAtCairo": "Sun 22 Nov 2026 21:00 Africa/Cairo",
   "thumbOffsetMs": 0,
   "shareToFeed": true,
-  "videoBytes": 54257452,
-  "videoSha256": "4cec1c3749eb0065",
+  "videoBytes": 53865372,
+  "videoSha256": "4d77e2db5888fd8c",
   "draft": false,
-  "note": "Seat 4 17 Nov 2026: v9 rebuild (rules A to D, eleven_v4); owner approved in chat 17 Nov (\"all approved but case 32\"). Owner schedule: Fri 27 Nov 2026 21:00 on IG and YouTube. On screen حالة 27. | 18 Nov 2026 seat 2: owner \"everyday should be posted a reel case at 9:00 PM\": one case a day, in case order.",
+  "note": "Seat 4 17 Nov 2026: v9 rebuild (rules A to D, eleven_v4); owner approved in chat 17 Nov (\"all approved but case 32\"). Owner schedule: Fri 27 Nov 2026 21:00 on IG and YouTube. On screen حالة 27. | 18 Nov 2026 seat 2: owner \"everyday should be posted a reel case at 9:00 PM\": one case a day, in case order. | 19 Nov 2026 seat 2: new opening approved by the owner (\"case 27 good / alby hede take 3 is approved\"): hook5 cut.",
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "22-heart-wont-settle/20261117T103421-reel-case-22-v9-recallin.mp4",
-    "coverPath": "22-heart-wont-settle/20261117T103421-cover-recallin.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/22-heart-wont-settle/20261117T103421-reel-case-22-v9-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzIyLWhlYXJ0LXdvbnQtc2V0dGxlLzIwMjYxMTE3VDEwMzQyMS1yZWVsLWNhc2UtMjItdjktcmVjYWxsaW4ubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NDkxMTY4NiwiZXhwIjoxNzk2NzI2MDg2fQ.0ZzPZj_hkk1UFVux4XWVTbvUI7HcdzXHUXuf6Mp9mGY",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/22-heart-wont-settle/20261117T103421-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzIyLWhlYXJ0LXdvbnQtc2V0dGxlLzIwMjYxMTE3VDEwMzQyMS1jb3Zlci1yZWNhbGxpbi5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk0OTExNjg3LCJleHAiOjE3OTY3MjYwODd9._E8suZce-P-nXE1_YprsiA8BwYfMtVlo6pPPRGIO50w",
-    "videoBytes": 54257452,
-    "uploadedAt": "2026-11-17T10:34:47.855Z",
-    "expiresAt": "2026-12-08T10:33:47.855Z"
+    "videoPath": "22-heart-wont-settle/20261119T021654-reel-case-22-v9-recallin.mp4",
+    "coverPath": "22-heart-wont-settle/20261119T021654-cover-recallin.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/22-heart-wont-settle/20261119T021654-reel-case-22-v9-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzIyLWhlYXJ0LXdvbnQtc2V0dGxlLzIwMjYxMTE5VDAyMTY1NC1yZWVsLWNhc2UtMjItdjktcmVjYWxsaW4ubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NTA1NDYzOSwiZXhwIjoxNzk1NjU5NDM5fQ.A0NOfl-EXweCYdS8YXmnUITlkRHeclIvlKLwRZECJR8",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/22-heart-wont-settle/20261119T021654-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzIyLWhlYXJ0LXdvbnQtc2V0dGxlLzIwMjYxMTE5VDAyMTY1NC1jb3Zlci1yZWNhbGxpbi5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MDU0NjQwLCJleHAiOjE3OTU2NTk0NDB9.s7U8CjrW7T_i8fFaKXP81L0x6QcClGBYZQ893LUPcvw",
+    "videoBytes": 53865372,
+    "uploadedAt": "2026-11-19T02:17:21.254Z",
+    "expiresAt": "2026-11-26T02:16:21.254Z"
   }
 }
