@@ -29,11 +29,11 @@
     "sha256": "65b1116d95f948fbb31e54a0884a1866052b9221a5619062859018bc90a4be8b",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/28-the-pain-is-inside/20261119T013028-reel-case-28-v9-hook2-yt.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/28-the-pain-is-inside/20261119T013028-reel-case-28-v9-hook2-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjgtdGhlLXBhaW4taXMtaW5zaWRlLzIwMjYxMTE5VDAxMzAyOC1yZWVsLWNhc2UtMjgtdjktaG9vazIteXQubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NTA1MTg1MywiZXhwIjoxNzk1NjU2NjUzfQ.yrBt5xgsbH1-ptjqPaToLRbzV_-yZwGViN6ja3-neBc",
+      "videoPath": "youtube/28-the-pain-is-inside/20261119T023639-reel-case-28-v9-hook2-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/28-the-pain-is-inside/20261119T023639-reel-case-28-v9-hook2-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMjgtdGhlLXBhaW4taXMtaW5zaWRlLzIwMjYxMTE5VDAyMzYzOS1yZWVsLWNhc2UtMjgtdjktaG9vazIteXQubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NTA1NTgyMiwiZXhwIjoxNzk2MjY1NDIyfQ.E61FJcXciQFNH6Q0EhEB4F5NIpvkx-y1XUf8pM6e1JE",
       "videoBytes": 54687565,
-      "uploadedAt": "2026-11-19T01:30:53.734Z",
-      "expiresAt": "2026-11-26T01:29:53.734Z"
+      "uploadedAt": "2026-11-19T02:37:02.791Z",
+      "expiresAt": "2026-12-03T02:36:02.791Z"
     }
   },
   "slug": "28-the-pain-is-inside",

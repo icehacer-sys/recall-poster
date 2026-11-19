@@ -29,11 +29,11 @@
     "sha256": "300e913903e5b5681f240e00c27932e5dfe945cfdef0bf03bdebbfa731b95c2b",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/32-belly-of-plenty/20261119T022157-reel-case-32-v9-hook3-yt.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/32-belly-of-plenty/20261119T022157-reel-case-32-v9-hook3-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMzItYmVsbHktb2YtcGxlbnR5LzIwMjYxMTE5VDAyMjE1Ny1yZWVsLWNhc2UtMzItdjktaG9vazMteXQubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NTA1NDkzOSwiZXhwIjoxNzk1NjU5NzM5fQ._iX9SBx1KM0KwiC7WSwnmEzGC6NqUfq6LrQ7ItLQmZ4",
+      "videoPath": "youtube/32-belly-of-plenty/20261119T023704-reel-case-32-v9-hook3-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/32-belly-of-plenty/20261119T023704-reel-case-32-v9-hook3-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMzItYmVsbHktb2YtcGxlbnR5LzIwMjYxMTE5VDAyMzcwNC1yZWVsLWNhc2UtMzItdjktaG9vazMteXQubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NTA1NTg0NSwiZXhwIjoxNzk2MjY1NDQ1fQ.5xrJxVkersQOkBphOy6kivIeeZms907xqM68sibuhGc",
       "videoBytes": 50963851,
-      "uploadedAt": "2026-11-19T02:22:20.156Z",
-      "expiresAt": "2026-11-26T02:21:20.156Z"
+      "uploadedAt": "2026-11-19T02:37:25.891Z",
+      "expiresAt": "2026-12-03T02:36:25.891Z"
     }
   },
   "slug": "32-belly-of-plenty",
