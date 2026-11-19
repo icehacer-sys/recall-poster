@@ -9,18 +9,18 @@
   "postAtCairo": "Fri 20 Nov 2026 21:00 Africa/Cairo",
   "thumbOffsetMs": 0,
   "shareToFeed": true,
-  "videoBytes": 49086665,
-  "videoSha256": "94b8c68fc6a1ba9e",
+  "videoBytes": 50596229,
+  "videoSha256": "84ec4fac5955e75f",
   "draft": false,
-  "note": "Seat 4 17 Nov 2026: v9 rebuild (rules A to D, eleven_v4); owner approved in chat 17 Nov (\"Approve 27, 29, 31\"). Owner schedule 16 Nov 21:22: Mon 23 Nov 2026 21:00 on IG and YouTube. On screen حالة 25. | 18 Nov 2026 seat 2: owner \"everyday should be posted a reel case at 9:00 PM\": one case a day, in case order.",
+  "note": "Seat 4 17 Nov 2026: v9 rebuild (rules A to D, eleven_v4); owner approved in chat 17 Nov (\"Approve 27, 29, 31\"). Owner schedule 16 Nov 21:22: Mon 23 Nov 2026 21:00 on IG and YouTube. On screen حالة 25. | 18 Nov 2026 seat 2: owner \"everyday should be posted a reel case at 9:00 PM\": one case a day, in case order. | 19 Nov 2026 seat 2: new opening approved by the owner (\"approved\"): hook2 cut.",
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "27-just-a-headache/20261117T003426-reel-case-27-v9-recallin.mp4",
-    "coverPath": "27-just-a-headache/20261117T003426-cover-recallin.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/27-just-a-headache/20261117T003426-reel-case-27-v9-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI3LWp1c3QtYS1oZWFkYWNoZS8yMDI2MTExN1QwMDM0MjYtcmVlbC1jYXNlLTI3LXY5LXJlY2FsbGluLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQ4NzU2OTEsImV4cCI6MTc5NTkxMjQ5MX0.EGXVbgLQ7petglW33dJ5yVRRS_Hp0HCh_OfrDDNHwHE",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/27-just-a-headache/20261117T003426-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI3LWp1c3QtYS1oZWFkYWNoZS8yMDI2MTExN1QwMDM0MjYtY292ZXItcmVjYWxsaW4uanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NDg3NTY5MiwiZXhwIjoxNzk1OTEyNDkyfQ.sjQWoE9ZViRYfMYzxrF2edG6tUMr7nEFmkB6UFsWuuM",
-    "videoBytes": 49086665,
-    "uploadedAt": "2026-11-17T00:34:50.082Z",
-    "expiresAt": "2026-11-29T00:33:50.082Z"
+    "videoPath": "27-just-a-headache/20261119T015702-reel-case-27-v9-recallin.mp4",
+    "coverPath": "27-just-a-headache/20261119T015702-cover-recallin.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/27-just-a-headache/20261119T015702-reel-case-27-v9-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI3LWp1c3QtYS1oZWFkYWNoZS8yMDI2MTExOVQwMTU3MDItcmVlbC1jYXNlLTI3LXY5LXJlY2FsbGluLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTUwNTM0NDUsImV4cCI6MTc5NTY1ODI0NX0.zzPVV1launvlOSPdOEFSGiLyL-NU6oIdMpppDNQFiiw",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/27-just-a-headache/20261119T015702-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI3LWp1c3QtYS1oZWFkYWNoZS8yMDI2MTExOVQwMTU3MDItY292ZXItcmVjYWxsaW4uanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NTA1MzQ0NiwiZXhwIjoxNzk1NjU4MjQ2fQ.REGdxMEHsQNJSzixT52gncPr99qvs3lDEXXCUqolcpM",
+    "videoBytes": 50596229,
+    "uploadedAt": "2026-11-19T01:57:26.730Z",
+    "expiresAt": "2026-11-26T01:56:26.730Z"
   }
 }
