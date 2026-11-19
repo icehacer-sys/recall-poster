@@ -9,18 +9,18 @@
   "postAtCairo": "Tue 24 Nov 2026 21:00 Africa/Cairo",
   "thumbOffsetMs": 0,
   "shareToFeed": true,
-  "videoBytes": 56957370,
-  "videoSha256": "fe974044a927ddd6",
+  "videoBytes": 57201284,
+  "videoSha256": "eaab6226faef4616",
   "draft": false,
-  "note": "Seat 4 17 Nov 2026: v9 rebuild (rules A to D, eleven_v4); owner approved in chat 17 Nov (\"all approved but case 32\"). Owner schedule: Tue 1 Dec 2026 21:00 on IG and YouTube. On screen حالة 29. | 18 Nov 2026 seat 2: owner \"everyday should be posted a reel case at 9:00 PM\": one case a day, in case order.",
+  "note": "Seat 4 17 Nov 2026: v9 rebuild (rules A to D, eleven_v4); owner approved in chat 17 Nov (\"all approved but case 32\"). Owner schedule: Tue 1 Dec 2026 21:00 on IG and YouTube. On screen حالة 29. | 18 Nov 2026 seat 2: owner \"everyday should be posted a reel case at 9:00 PM\": one case a day, in case order. | 19 Nov 2026 seat 2: new opening approved by the owner (\"case 29 take two is perfect\"): hook2 cut.",
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "24-he-always-wakes-up/20261117T103627-reel-case-24-v9-recallin.mp4",
-    "coverPath": "24-he-always-wakes-up/20261117T103627-cover-recallin.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/24-he-always-wakes-up/20261117T103627-reel-case-24-v9-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI0LWhlLWFsd2F5cy13YWtlcy11cC8yMDI2MTExN1QxMDM2MjctcmVlbC1jYXNlLTI0LXY5LXJlY2FsbGluLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQ5MTE4MTMsImV4cCI6MTc5NjcyNjIxM30.pW_l-STDSlVL5ksY4X9k6S38Gb3Fot_REVFA4MbmScg",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/24-he-always-wakes-up/20261117T103627-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI0LWhlLWFsd2F5cy13YWtlcy11cC8yMDI2MTExN1QxMDM2MjctY292ZXItcmVjYWxsaW4uanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NDkxMTgxNCwiZXhwIjoxNzk2NzI2MjE0fQ.ixR7jmm2HyHhr-52BHSazFQfZ8JD9Mpcc7U0b-zd71g",
-    "videoBytes": 56957370,
-    "uploadedAt": "2026-11-17T10:36:55.014Z",
-    "expiresAt": "2026-12-08T10:35:55.014Z"
+    "videoPath": "24-he-always-wakes-up/20261119T012730-reel-case-24-v9-recallin.mp4",
+    "coverPath": "24-he-always-wakes-up/20261119T012730-cover-recallin.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/24-he-always-wakes-up/20261119T012730-reel-case-24-v9-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI0LWhlLWFsd2F5cy13YWtlcy11cC8yMDI2MTExOVQwMTI3MzAtcmVlbC1jYXNlLTI0LXY5LXJlY2FsbGluLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTUwNTE2NzQsImV4cCI6MTc5NTY1NjQ3NH0.NBa0bTEs15G3zIwJI6HeH5ALk5Z1asOF9ZtdfRZkXIg",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/24-he-always-wakes-up/20261119T012730-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI0LWhlLWFsd2F5cy13YWtlcy11cC8yMDI2MTExOVQwMTI3MzAtY292ZXItcmVjYWxsaW4uanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NTA1MTY3NSwiZXhwIjoxNzk1NjU2NDc1fQ.lKXeXlYfLSkB54dPny1qIc58rEBEe7U0Ll1RnZcw3R0",
+    "videoBytes": 57201284,
+    "uploadedAt": "2026-11-19T01:27:56.480Z",
+    "expiresAt": "2026-11-26T01:26:56.480Z"
   }
 }

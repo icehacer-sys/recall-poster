@@ -9,18 +9,18 @@
   "postAtCairo": "Thu 26 Nov 2026 21:00 Africa/Cairo",
   "thumbOffsetMs": 0,
   "shareToFeed": true,
-  "videoBytes": 56703798,
-  "videoSha256": "10f24ea8ad42cb4d",
+  "videoBytes": 56117149,
+  "videoSha256": "86d71d7428bfd182",
   "draft": false,
-  "note": "Seat 4 17 Nov 2026: v9 rebuild (rules A to D, eleven_v4); owner approved in chat 17 Nov (\"all approved but case 32\"). Owner schedule: Sat 5 Dec 2026 21:00 on IG and YouTube. On screen حالة 31. | 18 Nov 2026 seat 2: owner \"everyday should be posted a reel case at 9:00 PM\": one case a day, in case order.",
+  "note": "Seat 4 17 Nov 2026: v9 rebuild (rules A to D, eleven_v4); owner approved in chat 17 Nov (\"all approved but case 32\"). Owner schedule: Sat 5 Dec 2026 21:00 on IG and YouTube. On screen حالة 31. | 18 Nov 2026 seat 2: owner \"everyday should be posted a reel case at 9:00 PM\": one case a day, in case order. | 19 Nov 2026 seat 2: new opening approved by the owner (\"case 31 good\"): hook2 cut.",
   "media": {
     "bucket": "ig-reel-media",
-    "videoPath": "28-the-pain-is-inside/20261117T103841-reel-case-28-v9-recallin.mp4",
-    "coverPath": "28-the-pain-is-inside/20261117T103841-cover-recallin.jpg",
-    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/28-the-pain-is-inside/20261117T103841-reel-case-28-v9-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI4LXRoZS1wYWluLWlzLWluc2lkZS8yMDI2MTExN1QxMDM4NDEtcmVlbC1jYXNlLTI4LXY5LXJlY2FsbGluLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQ5MTE5NDUsImV4cCI6MTc5NjcyNjM0NX0.OTUbaMiUzo2TFHgOj0BncXUwN3mKqG7fAXMIsHBDcVs",
-    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/28-the-pain-is-inside/20261117T103841-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI4LXRoZS1wYWluLWlzLWluc2lkZS8yMDI2MTExN1QxMDM4NDEtY292ZXItcmVjYWxsaW4uanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NDkxMTk0NSwiZXhwIjoxNzk2NzI2MzQ1fQ.r0n_GbAMgy7ZIxNx3DWpvkDWrdeXNewYZpzglX6kfzg",
-    "videoBytes": 56703798,
-    "uploadedAt": "2026-11-17T10:39:06.241Z",
-    "expiresAt": "2026-12-08T10:38:06.241Z"
+    "videoPath": "28-the-pain-is-inside/20261119T012831-reel-case-28-v9-recallin.mp4",
+    "coverPath": "28-the-pain-is-inside/20261119T012831-cover-recallin.jpg",
+    "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/28-the-pain-is-inside/20261119T012831-reel-case-28-v9-recallin.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI4LXRoZS1wYWluLWlzLWluc2lkZS8yMDI2MTExOVQwMTI4MzEtcmVlbC1jYXNlLTI4LXY5LXJlY2FsbGluLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTUwNTE3MzUsImV4cCI6MTc5NTY1NjUzNX0.X8oX7BoYjIGLPnS2q-b_VoSrHE5TN4wMthVhoaSqyBU",
+    "coverUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/28-the-pain-is-inside/20261119T012831-cover-recallin.jpg?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhLzI4LXRoZS1wYWluLWlzLWluc2lkZS8yMDI2MTExOVQwMTI4MzEtY292ZXItcmVjYWxsaW4uanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NTA1MTczNiwiZXhwIjoxNzk1NjU2NTM2fQ.a1oi3ij5RPDmK54V1xf9CW8lKZAyG3RkqT7-bd6Kh4E",
+    "videoBytes": 56117149,
+    "uploadedAt": "2026-11-19T01:28:57.412Z",
+    "expiresAt": "2026-11-26T01:27:57.412Z"
   }
 }
