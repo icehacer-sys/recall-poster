@@ -1,8 +1,8 @@
 {
   "_quota": {
-    "day": "2026-11-18",
-    "units": 64,
-    "uploads": 3
+    "day": "2026-11-19",
+    "units": 3,
+    "uploads": 1
   },
   "yt:01-copd": {
     "videoId": "c5bXg0YPJ7E",
@@ -292,6 +292,18 @@
     "publishAtSent": "2026-11-18T19:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-11-18T19:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:94-rub-bump": {
+    "videoId": "TQjdn9DA64I",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-11-19T13:00:16.473Z",
+    "slotAt": "2026-11-19T17:00:00.000Z",
+    "titleSent": "ليه لما بتدعك مكان الخبطة الوجع بيخف؟",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-11-19T17:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-11-19T17:00:00Z",
     "uploadStatusSeen": "uploaded"
   }
 }
