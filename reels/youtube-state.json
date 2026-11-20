@@ -1,8 +1,8 @@
 {
   "_quota": {
     "day": "2026-11-20",
-    "units": 3,
-    "uploads": 1
+    "units": 6,
+    "uploads": 2
   },
   "yt:01-copd": {
     "videoId": "c5bXg0YPJ7E",
@@ -328,6 +328,18 @@
     "publishAtSent": "2026-11-20T18:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-11-20T18:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:26-he-is-just-teething": {
+    "videoId": "QQUX9I_Cp3k",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-11-20T18:04:51.622Z",
+    "slotAt": "2026-11-21T18:00:00.000Z",
+    "titleSent": "حالة 23: \"أهو رجع يصرخ تاني!\"…",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-11-21T18:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-11-21T18:00:00Z",
     "uploadStatusSeen": "uploaded"
   }
 }
