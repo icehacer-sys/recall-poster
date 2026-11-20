@@ -1,8 +1,8 @@
 {
   "_quota": {
-    "day": "2026-11-19",
-    "units": 9,
-    "uploads": 2
+    "day": "2026-11-20",
+    "units": 3,
+    "uploads": 1
   },
   "yt:01-copd": {
     "videoId": "c5bXg0YPJ7E",
@@ -316,6 +316,18 @@
     "publishAtSent": "2026-11-19T19:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-11-19T19:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:30-the-gas-looked-normal": {
+    "videoId": "PPH_0ur8kYw",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-11-20T12:51:19.781Z",
+    "slotAt": "2026-11-20T18:00:00.000Z",
+    "titleSent": "حالة 22: \"البخاخة... مبقتش... بتريّحني\"…",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-11-20T18:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-11-20T18:00:00Z",
     "uploadStatusSeen": "uploaded"
   }
 }
