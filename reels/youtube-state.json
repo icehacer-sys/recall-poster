@@ -1,7 +1,7 @@
 {
   "_quota": {
-    "day": "2026-11-21",
-    "units": 3,
+    "day": "2026-11-22",
+    "units": 4,
     "uploads": 1
   },
   "yt:01-copd": {
@@ -352,6 +352,18 @@
     "publishAtSent": "2026-11-22T18:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-11-22T18:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:27-just-a-headache": {
+    "videoId": "xuxPnqjfaSA",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-11-22T18:04:47.559Z",
+    "slotAt": "2026-11-23T18:00:00.000Z",
+    "titleSent": "حالة 25: \"يا نهى! نامي شوية وهتبقي كويسة!\"…",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-11-23T18:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-11-23T18:00:00Z",
     "uploadStatusSeen": "uploaded"
   }
 }
