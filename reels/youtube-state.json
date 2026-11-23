@@ -1,6 +1,6 @@
 {
   "_quota": {
-    "day": "2026-11-22",
+    "day": "2026-11-23",
     "units": 4,
     "uploads": 1
   },
@@ -364,6 +364,18 @@
     "publishAtSent": "2026-11-23T18:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-11-23T18:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:29-so-she-wont-dry-out": {
+    "videoId": "PKNLI8FFHhw",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-11-23T18:04:55.647Z",
+    "slotAt": "2026-11-24T18:00:00.000Z",
+    "titleSent": "حالة 26: \"مخلياها تشرب مية كتير يا دكتور عشان جسمها مينشفش!\"…",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-11-24T18:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-11-24T18:00:00Z",
     "uploadStatusSeen": "uploaded"
   }
 }
