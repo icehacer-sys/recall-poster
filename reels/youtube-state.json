@@ -1,6 +1,6 @@
 {
   "_quota": {
-    "day": "2026-11-23",
+    "day": "2026-11-24",
     "units": 4,
     "uploads": 1
   },
@@ -376,6 +376,18 @@
     "publishAtSent": "2026-11-24T18:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-11-24T18:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:22-heart-wont-settle": {
+    "videoId": "v2epa63mNX4",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-11-24T16:05:01.839Z",
+    "slotAt": "2026-11-25T16:00:00.000Z",
+    "titleSent": "حالة 27: \"يا دكتور قلبي مش راضي يهدى وأنا قاعدة مكاني!\"…",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-11-25T16:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-11-25T16:00:00Z",
     "uploadStatusSeen": "uploaded"
   }
 }
