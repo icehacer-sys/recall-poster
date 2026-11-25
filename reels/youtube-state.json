@@ -1,6 +1,6 @@
 {
   "_quota": {
-    "day": "2026-11-24",
+    "day": "2026-11-25",
     "units": 4,
     "uploads": 1
   },
@@ -388,6 +388,18 @@
     "publishAtSent": "2026-11-25T16:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-11-25T16:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:23-stopped-the-pills": {
+    "videoId": "80g4vRGMFww",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-11-25T17:04:50.846Z",
+    "slotAt": "2026-11-26T17:00:00.000Z",
+    "titleSent": "حالة 28: \"مش محتاجة دوا! بطلته من أسبوعين!\"…",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-11-26T17:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-11-26T17:00:00Z",
     "uploadStatusSeen": "uploaded"
   }
 }
