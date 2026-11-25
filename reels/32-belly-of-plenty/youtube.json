@@ -24,18 +24,18 @@
   "width": 1080,
   "height": 1920,
   "video": {
-    "file": "W:/Recall Engine Promo/case-reels-audit-20261109/case32-coeliac-v9/out/reel-case-32-v9-hook3-yt.mp4",
-    "bytes": 50963851,
-    "sha256": "300e913903e5b5681f240e00c27932e5dfe945cfdef0bf03bdebbfa731b95c2b",
+    "file": "W:/Recall Engine Promo/case-reels-audit-20261109/case32-coeliac-v9/out/reel-case-32-v9-semi-yt.mp4",
+    "bytes": 51169962,
+    "sha256": "968b0007ffa6a9c0480c9a680a97710408cd45423abee90872ae59cd589bac4f",
     "media": {
       "bucket": "ig-reel-media",
-      "videoPath": "youtube/32-belly-of-plenty/20261119T023704-reel-case-32-v9-hook3-yt.mp4",
-      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/32-belly-of-plenty/20261119T023704-reel-case-32-v9-hook3-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMzItYmVsbHktb2YtcGxlbnR5LzIwMjYxMTE5VDAyMzcwNC1yZWVsLWNhc2UtMzItdjktaG9vazMteXQubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NTA1NTg0NSwiZXhwIjoxNzk2MjY1NDQ1fQ.5xrJxVkersQOkBphOy6kivIeeZms907xqM68sibuhGc",
-      "videoBytes": 50963851,
-      "uploadedAt": "2026-11-19T02:37:25.891Z",
-      "expiresAt": "2026-12-03T02:36:25.891Z"
+      "videoPath": "youtube/32-belly-of-plenty/20261125T165334-reel-case-32-v9-semi-yt.mp4",
+      "videoUrl": "https://mlmdecvfiyizhuwvyptp.supabase.co/storage/v1/object/sign/ig-reel-media/youtube/32-belly-of-plenty/20261125T165334-reel-case-32-v9-semi-yt.mp4?token=eyJraWQiOiI3NmJkMDkzNi05NDE2LTRjYmYtOGIwNC1mNDgwMTljZDUwYzAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpZy1yZWVsLW1lZGlhL3lvdXR1YmUvMzItYmVsbHktb2YtcGxlbnR5LzIwMjYxMTI1VDE2NTMzNC1yZWVsLWNhc2UtMzItdjktc2VtaS15dC5tcDQiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1NjI1NjQ5LCJleHAiOjE3OTYyMzA0NDl9.cj1ibh06wGGuWILB4OR_OThO8G9mITky8NrhrWTIYA4",
+      "videoBytes": 51169962,
+      "uploadedAt": "2026-11-25T16:54:05.460Z",
+      "expiresAt": "2026-12-02T16:53:05.460Z"
     }
   },
   "slug": "32-belly-of-plenty",
-  "note": "Seat 4 17 Nov 2026: v9 YouTube cut of the coeliac reel; on screen حالة 32 by post order. | 18 Nov 2026 seat 2: owner \"everyday should be posted a reel case at 9:00 PM\": one case a day, in case order."
+  "note": "Seat 4 17 Nov 2026: v9 YouTube cut of the coeliac reel; on screen حالة 32 by post order. | 18 Nov 2026 seat 2: owner \"everyday should be posted a reel case at 9:00 PM\": one case a day, in case order. | 25 Nov 6:53 PM seat 2: semi-realistic redraw with realistic imaging and the high chair blood test scene, rendered on the GPU (owner: \"Yes, swap it\")."
 }
