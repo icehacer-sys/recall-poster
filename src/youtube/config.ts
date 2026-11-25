@@ -54,7 +54,7 @@ export const yt = {
   /** Try thumbnails.set with the reel cover (50 units). Shorts thumbnails are Partner Program only, so off. */
   thumbnails: onOff("YT_THUMBNAIL"),
   /** Default slot for new YouTube entries. */
-  postTime: process.env.YT_POST_TIME ?? "18:00",
+  postTime: process.env.YT_POST_TIME ?? "19:00",
   siteUrl: "https://www.recallengine.app",
   // Fixed hosts: the refresh token, client secret, and access token only ever go to Google (no env override).
   apiBase: "https://www.googleapis.com",
