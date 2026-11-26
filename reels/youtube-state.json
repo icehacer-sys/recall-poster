@@ -1,6 +1,6 @@
 {
   "_quota": {
-    "day": "2026-11-25",
+    "day": "2026-11-26",
     "units": 4,
     "uploads": 1
   },
@@ -400,6 +400,16 @@
     "publishAtSent": "2026-11-26T17:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-11-26T17:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:95-warraq-tribute": {
+    "videoId": "0a8UFf-tajU",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-11-26T14:15:54.127Z",
+    "slotAt": "2026-11-26T14:26:00.000Z",
+    "titleSent": "ربنا يرحم ضحايا حريق الدائري | حالة تعليمية عن حروق مجرى النفس",
+    "privacyStatusSent": "private",
+    "privacyStatusSeen": "private",
     "uploadStatusSeen": "uploaded"
   }
 }
