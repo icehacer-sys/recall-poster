@@ -79,8 +79,8 @@ let r = run(["--sync"]);
 const a = ytJson("a-case");
 const lines = a.description.split("\n");
 check("yt:sync writes youtube.json with approved false", r.code === 0 && a.approved === false, r.out);
-check("title: approved hook line plus the case number, at most 100 characters", a.title === "نوبات هلع؟ ولا hypoglycaemia متنكرة؟ | حالة 02" && [...a.title].length <= 100, a.title);
-check("description: one line, the site link, then a short call to action", lines[1] === "https://www.recallengine.app" && lines[0].startsWith("نوبات هلع") && /Recall Engine/.test(lines[2]), a.description);
+check("title: approved hook line, the case number, the topic, and the brand, at most 100 characters", a.title === "نوبات هلع؟ ولا hypoglycaemia متنكرة؟ | حالة 02 | Clinical case | Recall Engine" && [...a.title].length <= 100, a.title);
+check("description: hook line, brand and topic line, the site link, then a short call to action", lines[0].startsWith("نوبات هلع") && lines[1] === "Recall Engine | Clinical case | حالة لطلبة الطب" && lines[2] === "https://www.recallengine.app" && /Recall Engine/.test(lines[3]), a.description);
 check("description: #Shorts and the caption hashtags, no Instagram link line", /#Shorts #medstudent/.test(a.description) && /#RecallEngine/.test(a.description) && !/اللينك في صفحتنا/.test(a.description), a.description);
 check("Education category, not for kids, synthetic-content label left for the owner (null)", a.categoryId === "27" && a.madeForKids === false && a.containsSyntheticMedia === null);
 

@@ -42,13 +42,64 @@ function hashtagsOf(caption: string): string[] {
 
 const chars = (s: string) => [...s].length;
 
-/** Hook line + " | حالة 02" (or " | Case 02"), at most 100 characters, no "<" or ">". */
+export const BRAND = "Recall Engine";
+export const DEFAULT_TOPIC = "Clinical case";
+
+// Specialty hashtags (English or Arabic, lower case, no "#") -> the topic shown in titles and
+// descriptions. Only specialties are listed: a case reel is a diagnosis challenge, so a diagnosis
+// hashtag (for example #hipfracture) must never become the topic. Owner rule, 26 Nov 2026: every
+// reel title and description carries "Recall Engine" plus the topic, so AI search can cite us.
+const SPECIALTIES: Record<string, string> = {
+  pediatrics: "Pediatrics", paediatrics: "Pediatrics", "أطفال": "Pediatrics", "اطفال": "Pediatrics",
+  neurology: "Neurology", "مخ_وأعصاب": "Neurology", "أعصاب": "Neurology", "اعصاب": "Neurology",
+  psychiatry: "Psychiatry", "نفسية": "Psychiatry", "طب_نفسي": "Psychiatry",
+  surgery: "Surgery", "جراحة": "Surgery",
+  emergencymedicine: "Emergency medicine", emergency: "Emergency medicine", "طوارئ": "Emergency medicine",
+  orthopaedics: "Orthopaedics", orthopedics: "Orthopaedics", "عظام": "Orthopaedics",
+  cardiology: "Cardiology", "قلب": "Cardiology",
+  endocrinology: "Endocrinology", "غدد": "Endocrinology",
+  respiratory: "Respiratory medicine", pulmonology: "Respiratory medicine", "صدر": "Respiratory medicine",
+  gastroenterology: "Gastroenterology", "جهاز_هضمي": "Gastroenterology",
+  nephrology: "Nephrology", "كلى": "Nephrology",
+  obstetrics: "Obstetrics and gynaecology", gynaecology: "Obstetrics and gynaecology", obgyn: "Obstetrics and gynaecology", "نسا": "Obstetrics and gynaecology", "نساء_وتوليد": "Obstetrics and gynaecology",
+  dermatology: "Dermatology", "جلدية": "Dermatology",
+  haematology: "Haematology", hematology: "Haematology",
+  rheumatology: "Rheumatology",
+  infectiousdisease: "Infectious disease",
+  internalmedicine: "Internal medicine", "باطنة": "Internal medicine",
+  pharmacology: "Pharmacology", "فارما": "Pharmacology",
+};
+
+/** The first specialty among the given hashtags or tags, else "Clinical case". */
+export function topicOf(words: string[]): string {
+  for (const w of words) {
+    const key = w.replace(/^#/, "").trim().toLowerCase().replace(/\s+/g, "_");
+    if (SPECIALTIES[key]) return SPECIALTIES[key];
+  }
+  return DEFAULT_TOPIC;
+}
+
+export function topicFor(reel: Reel): string {
+  return topicOf(hashtagsOf(reel.caption));
+}
+
+/** " | Neurology | Recall Engine": the brand and topic suffix every reel title ends with. */
+export function brandSuffix(topic: string): string {
+  return ` | ${topic} | ${BRAND}`;
+}
+
+/** The second description line: brand plus topic, in the reel's language. */
+export function brandLine(lang: "ar" | "en", topic: string): string {
+  return lang === "ar" ? `${BRAND} | ${topic} | حالة لطلبة الطب` : `${BRAND} | ${topic} case for medical students`;
+}
+
+/** Hook line + " | حالة 02 | Neurology | Recall Engine", at most 100 characters, no "<" or ">". */
 export function titleFor(reel: Reel): string {
   const lang = isArabic(reel.caption) ? "ar" : "en";
   const hook = (paragraphs(reel.caption)[0] ?? reel.slug).split("\n")[0];
   const clean = hook.replace(EMOJI, "").replace(/[<>]/g, "").replace(/\s*[—–]\s*/g, ": ").replace(/\s+/g, " ").trim();
   const n = caseNumberOf(reel);
-  const suffix = n ? (lang === "ar" ? ` | حالة ${n}` : ` | Case ${n}`) : "";
+  const suffix = (n ? (lang === "ar" ? ` | حالة ${n}` : ` | Case ${n}`) : "") + brandSuffix(topicFor(reel));
   let base = clean;
   if (chars(base) + chars(suffix) > MAX_TITLE) {
     const room = MAX_TITLE - chars(suffix) - 1;
@@ -74,7 +125,7 @@ export function descriptionFor(reel: Reel): string {
     .filter((p) => !/^(#[\p{L}\p{N}_]+\s*)+$/u.test(p))
     .map((p) => p.split("\n").filter((l) => !IG_ONLY.test(l)).join("\n").trim())
     .filter(Boolean);
-  return [[hook, yt.siteUrl, CTA[lang]].join("\n"), ...body, hashtagsFor(reel).join(" ")].join("\n\n").replace(/[<>]/g, "");
+  return [[hook, brandLine(lang, topicFor(reel)), yt.siteUrl, CTA[lang]].join("\n"), ...body, hashtagsFor(reel).join(" ")].join("\n\n").replace(/[<>]/g, "");
 }
 
 /** API tags: the caption's hashtags as words plus the brand. The idempotency tag is added at upload. */
