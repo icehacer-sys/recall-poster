@@ -251,6 +251,7 @@ export function preflightYoutube(slug: string, y: ReelYoutube): Check {
   if (Number.isNaN(Date.parse(y.publishAt))) errors.push(`publishAt is not a valid date: ${y.publishAt}`);
   if (!y.defaultLanguage || !y.defaultAudioLanguage) errors.push("defaultLanguage and defaultAudioLanguage are required");
   if (y.durationSec == null) warnings.push("duration unknown (run npm run yt:sync on the laptop to record it)");
+  else if ((y as { longForm?: boolean }).longForm === true) warnings.push(`longForm: ${y.durationSec.toFixed(1)} s uploads as a regular vertical video, not a Short (owner 26 Nov 2026, Warraq tribute)`);
   else {
     if (y.durationSec > MAX_SHORT_SECONDS) errors.push(`video is ${y.durationSec.toFixed(1)} s: a Short is at most ${MAX_SHORT_SECONDS} s`);
     // support.google.com/youtube/answer/15424877: a Short over 1 minute with ANY active copyright claim is blocked worldwide.
