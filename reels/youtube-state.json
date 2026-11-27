@@ -1,8 +1,8 @@
 {
   "_quota": {
     "day": "2026-11-27",
-    "units": 4,
-    "uploads": 1
+    "units": 8,
+    "uploads": 2
   },
   "yt:01-copd": {
     "videoId": "c5bXg0YPJ7E",
@@ -432,6 +432,18 @@
     "titleSent": "ربنا يرحم ضحايا حريق الدائري | حالة تعليمية عن حروق مجرى النفس",
     "privacyStatusSent": "private",
     "privacyStatusSeen": "private",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:25-the-tremor-is-from-the-medicine": {
+    "videoId": "DI5C6Az4Ncc",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-11-27T17:04:55.481Z",
+    "slotAt": "2026-11-28T17:00:00.000Z",
+    "titleSent": "حالة 30: \"يا ماما! الكوباية!\"… | Psychiatry | Recall Engine",
+    "privacyStatusSent": "private",
+    "publishAtSent": "2026-11-28T17:00:00.000Z",
+    "privacyStatusSeen": "private",
+    "publishAtSeen": "2026-11-28T17:00:00Z",
     "uploadStatusSeen": "uploaded"
   }
 }
