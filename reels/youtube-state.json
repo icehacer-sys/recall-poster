@@ -1,8 +1,8 @@
 {
   "_quota": {
-    "day": "2026-11-26",
-    "units": 8,
-    "uploads": 2
+    "day": "2026-11-27",
+    "units": 4,
+    "uploads": 1
   },
   "yt:01-copd": {
     "videoId": "c5bXg0YPJ7E",
@@ -422,6 +422,16 @@
     "publishAtSent": "2026-11-27T17:00:00.000Z",
     "privacyStatusSeen": "private",
     "publishAtSeen": "2026-11-27T17:00:00Z",
+    "uploadStatusSeen": "uploaded"
+  },
+  "yt:95-warraq-tribute-short": {
+    "videoId": "HykT9keptUw",
+    "recordedFrom": "uploaded",
+    "uploadedAt": "2026-11-27T13:49:27.349Z",
+    "slotAt": "2026-11-27T12:00:00.000Z",
+    "titleSent": "ربنا يرحم ضحايا حريق الدائري | حالة تعليمية عن حروق مجرى النفس",
+    "privacyStatusSent": "private",
+    "privacyStatusSeen": "private",
     "uploadStatusSeen": "uploaded"
   }
 }
